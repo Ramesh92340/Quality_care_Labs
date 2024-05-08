@@ -4,7 +4,8 @@ namespace App\Controllers;
 
 use App\Models\LoginModel;
 use App\Models\PackageModel;
-
+use App\Models\CategoryModel;
+use App\Models\TestModel;
 
 class Admin extends BaseController
 {
@@ -55,19 +56,29 @@ class Admin extends BaseController
 
     public function dashboard()
     {
-        return view('admin/dashboard');
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        return view('admin/dashboard', $data);
     }
 
     public function packages()
     {
         $package = new PackageModel();
         $data['pack'] = $package->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
         return view('admin/packages',  $data);
     }
 
     public function add_package()
     {
-        return view('admin/add_package');
+        $package = new PackageModel();
+        $data['pack'] = $package->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        return view('admin/add_package', $data);
     }
 
 
@@ -87,14 +98,57 @@ class Admin extends BaseController
 
         $data2 = $package->insert($data);
         if ($data2 == true) {
-            return redirect()->to('package' )->with('success', "Package added Successfully");
+            return redirect()->to('package')->with('success', "Package added Successfully");
         } else {
-            return redirect()->to('package' )->with('blog-error', "Package added failed");
+            return redirect()->to('package')->with('blog-error', "Package added failed");
         }
     }
 
-    public function edit_package($id)
+    public function edit($id)
     {
         $package = new PackageModel();
+        $data['pack'] = $package->findAll();
+        $data['pack1'] = $package->get_by_id($id);
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        return view('admin/edit_package', $data);
+    }
+
+    public function update_data()
+    {
+        $package = new  PackageModel();
+
+        $id = $this->request->getPost('pack_id');
+
+        $data = [
+            'package_name' => $this->request->getPost('pack_name'),
+            'package_price' => $this->request->getPost('pack_price')
+        ];
+
+        // Call the update_date() method on the $package object
+        $data2 = $package->update_date($id, $data);
+
+        if ($data2 == true) {
+            return redirect()->to('package')->with('success', "Package Updated Successfully");
+        } else {
+            return redirect()->to('package')->with('blog-error', "Package Updated failed");
+        }
+    }
+
+    public function delete($id)
+    {
+        $package = new  PackageModel();
+        $cate = new CategoryModel();
+        $test = new TestModel();
+
+        $data2 = $package->where('id',$id)->delete();
+        $date3 = $cate->where('Package', $id)->delete();
+        $data4 = $test->where('package_id', $id)->delete();
+
+        if ($data2 && $date3 && $data4 == true) {
+            return redirect()->to('package')->with('success', "Package Deleted Successfully");
+        } else {
+            return redirect()->to('package')->with('blog-error', "Package Deleted failed");
+        }
     }
 }

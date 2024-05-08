@@ -32,8 +32,24 @@ $routes->get('admin/dashboard', 'Admin::dashboard');
 $routes->get('package', 'Admin::packages');
 $routes->get('add_package','Admin::add_package');
 $routes->post('insert/package', 'Admin::insert');
+$routes->get('edit/package/(:num)','Admin::edit/$1');
+$routes->post('update/package' ,'Admin::update_data');
+$routes->get('delete/package/(:num)', 'Admin::delete/$1');
 
-
+//category routes
 $routes->get('category', 'Category');
 $routes->get('add_category', 'Category::add_category');
 $routes->post('insert/category', 'Category::insert');
+$routes->get('edit/category/(:num)','Category::edit/$1');
+$routes->post('update/category','Category::update');
+$routes->get('delete/category/(:num)' , 'Category::delete/$1');
+
+
+//test Routes
+
+$routes->get('test/(:num)', 'Tests::index/$1');
+$routes->get('add-test/(:num)', 'Tests::add_test/$1');
+$routes->post('insert/test', 'Tests::insert');
+$routes->get('edit/test/(:num)' , 'Tests::edit/$1');
+$routes->post('update/test', 'Tests::update');
+$routes->get('delete/test/(:num)/(:num)','Tests::delete/$1/$2');

@@ -20,4 +20,25 @@ class PackageModel extends Model
     {
         return $this->save($data);
     }
+
+    public function get_with_cate()
+    {
+        $this->from('packages as p');
+        $this->join('category as c', 'p.id = c.package');
+        $this->select('p.* , c.name, c.id');
+        return $this->findAll();
+    }
+
+    public function get_by_id($id)
+    {
+        $this->where('id',$id);
+        return $this->first();
+    }
+
+    public function update_date($id, $data)
+    {
+        // print_r($id);
+
+        return $this->where('id', $id)->set($data)->update();
+    }
 }

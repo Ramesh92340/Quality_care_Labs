@@ -23,9 +23,28 @@ class CategoryModel extends Model
 
     public function get_date_package()
     {
-        $this->from('category');
-        $this->join('packages', 'category.package = packages.id');
-        $this->select('category.*, packages.package_name');
+     
+        $this->from('category as c');
+
+        $this->join('packages as p', 'c.package = p.id');
+
+        $this->distinct();
+
+        $this->select('c.*, p.package_name');
+
+    
         return $this->findAll();
+    }
+
+    public function get_by_id($id)
+    {
+        $this->where('id', $id);
+        return $this->findAll();
+    }
+
+    public function get_by_id_2($id)
+    {
+        $this->where('id', $id);
+        return $this->first();
     }
 }

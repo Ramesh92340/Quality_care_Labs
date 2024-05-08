@@ -6,11 +6,11 @@
         <!-- <div class="section-header-back">
                 <a href="<?= base_url(); ?>sliders" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div> -->
-        <h1>Category</h1>
+        <h1>Tests</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="<?= base_url(); ?>">Dashboard</a></div>
             <!-- <div class="breadcrumb-item"><a href="<?= base_url(); ?>">Sliders</a></div> -->
-            <div class="breadcrumb-item"> Category</div>
+            <div class="breadcrumb-item"> Tests</div>
         </div>
     </div>
     <?php
@@ -39,8 +39,8 @@
     <div class="section-body">
         <div class="card">
             <div class="card-header">
-                <h4>Category
-                    <a href="<?= base_url() ?>add_category" class="btn btn-primary float-end">Add</a>
+                <h4>Test
+                    <a href="<?= base_url() ?>add-test/<?= $id ?>" class="btn btn-primary float-end">Add</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -50,7 +50,7 @@
                             <tr>
                                 <th class="text-center">Si No</th>
                                 <th class="text-center">Name</th>
-                                <th class="text-center">Package</th>
+                                <!-- <th class="text-center">Package</th> -->
                                 <!-- <th class="text-center">No of Items</th>
                                 <th class="text-center">Price</th>
                                 <th class="text-center">Status</th> -->
@@ -58,24 +58,23 @@
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
-                            <?php if (isset($category) && !empty($category)) : ?>
+                            <?php if (isset($test) && !empty($test)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($category as $pk) : ?>
+                                <?php foreach ($test as $ts) : ?>
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
-                                        <td class="text-center"><?= $pk['name']; ?></td>
-                                        <td class="text-center"><?= $pk['package_name'] ?></td>
+                                        <td class="text-center"><?= $ts['test_name']; ?></td>
                                         <td class="text-center">
                                             <!-- <a href="<?= base_url() ?>view/staff/" class="btn btn-info">VIEW</a> -->
-                                            <a href="<?= base_url() ?>edit/category/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>
-                                            <a href="<?= base_url() ?>delete/category/<?= $pk['id'] ?>" class="btn btn-danger">DELETE</a>
+                                            <a href="<?= base_url() ?>edit/test/<?= $ts['id'] ?>" class="btn btn-primary">EDIT</a>
+                                            <a href="<?= base_url() ?>delete/test/<?= $ts['id'] ?>/<?= $id ?>" class="btn btn-danger">DELETE</a>
                                         </td>
                                     </tr>
                                     <?php $i++ ?>
                                 <?php endforeach; ?>
                             <?php else : ?>
                                 <tr>
-                                    <td colspan="7" class="text-center">No Packages found</td>
+                                    <td colspan="7" class="text-center">No Tests found</td>
                                 </tr>
                             <?php endif; ?>
                         </tbody>

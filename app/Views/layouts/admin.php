@@ -88,25 +88,29 @@
                                 <li class="">
                                     <a href="<?= base_url() ?>admin/dashboard" class="nav-link n"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                                 </li>
-                                <?php if (isset($branch)) :
-                                    foreach ($branch as $bn) : ?>
+                                <li class="menu-header">Packages</li>
+                                <?php if (isset($pack)) :
+                                    foreach ($pack as $pc) : ?>
                                         <li class="dropdown">
-                                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span><?= $bn['name']; ?></span></a>
+                                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-blank"></i> <span><?= $pc['package_name']; ?></span></a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="nav-link" href="<?= base_url() ?>staff/admin/<?= $bn['id'] ?>">Staff</a></li>
-                                                <li><a class="nav-link" href="<?= base_url() ?>stocks/admin/<?= $bn['id'] ?>">Stocks</a></li>
-                                                <li><a class="nav-link" href="<?= base_url() ?>Services/admin/<?= $bn['id'] ?>">Services</a></li>
-                                                <a href="#" class="nav-link has-dropdown"> Leaves</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="nav-link" href="<?= base_url() ?>approve_leave/admin/<?= $bn['id'] ?>">Approve Leave</a></li>
-                                                    <li><a class="nav-link" href="<?= base_url() ?>leave_history/admin/<?= $bn['id'] ?>">History</a></li>
-                                                </ul>
+                                                <?php
+                                                if (isset($cate)) :
+                                                    foreach ($cate as $ct) :
+                                                        if ($ct['package'] == $pc['id']) :  ?>
+                                                            <li><a class="nav-link" href="<?= base_url() ?>test/<?= $ct['id'] ?>"><?= $ct['name'] ?></a></li>
+                                                <?php
+                                                        endif;
+                                                    endforeach;
+                                                endif;
+                                                ?>
+
                                             </ul>
                                         </li>
                                 <?php endforeach;
                                 endif; ?>
                                 <li class="menu-header">Starter</li>
-                              
+
                                 <li class="dropdown">
                                     <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
                                         <span>Packages</span></a>
