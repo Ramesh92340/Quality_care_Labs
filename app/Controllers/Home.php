@@ -69,4 +69,9 @@ class Home extends BaseController
         return view('quality/cart');
     }
 
+    public function checkout()
+    {
+        return view('quality/checkout');
+    }
+
 }

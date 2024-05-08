@@ -330,13 +330,13 @@
                         <script>
                            function redirectToAnotherPage() {
                               // Redirect to another page
-                              window.location.href = "checkout.html";
+                              window.location.href = "checkout";
                            }
 
 
                            function addmore() {
                               // Redirect to another page
-                              window.location.href = "services.html";
+                              window.location.href = "services";
                            }
                         </script>
 

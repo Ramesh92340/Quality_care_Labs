@@ -18,6 +18,7 @@ $routes->get('service6', 'Home::service6');
 $routes->get('packages', 'Home::packages');
 $routes->get('contact', 'Home::contact');
 $routes->get('cart', 'Home::cart');
+$routes->get('checkout', 'Home::checkout');
 
 
 
