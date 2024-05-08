@@ -42,11 +42,12 @@
       <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
    </div>
    <!-- preloader end  -->
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
          <div class="header-logo-box">
-            <a href="index.html"><img src="assets/img/logo (1).png" alt="logo"></a>
+            <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo"></a>
          </div>
          <div class="header-menu-box     ">
             <div class="header-menu-top ">
@@ -54,13 +55,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+917658905111">&nbsp; 7658905111 </a>
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="tel:+917658905111">&nbsp; info@qualitycarelabs.com</a>
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -78,32 +79,32 @@
                      <div class="main-menu main-menu-second">
                         <nav id="mobile-menu">
                            <ul>
-                              <li><a class="active" href="./index.html">Home</a>
+                              <li><a class="active" href="<?= base_url() ?>">Home</a>
 
                               </li>
-                              <li><a href="about.html">About Us</a>
+                              <li><a href="<?= base_url() ?>about">About Us</a>
                               </li>
-                              <li><a href="lab.html">Lab</a></li>
-                              <li class="has-dropdown"><a href="services.html">Services</a>
+                              <li><a href="<?= base_url() ?>lab">Lab</a></li>
+                              <li class="has-dropdown"><a href="<?= base_url() ?>services">Services</a>
                                  <ul class="sub-menu">
-                                    <li><a href="services-details1.html">~ CLINICAL BIOCHEMISTRY</a></li>
-                                    <li><a href="services-details2.html">~ HEMATOLOGY</a></li>
-                                    <li><a href="services-details3.html">~ IMMUNOLOGY & SEROLOGY</a></li>
-                                    <li><a href="services-details4.html">~ MOLECULAR BIOLOGY</a></li>
-                                    <li><a href="services-details5.html">~ MICROBIOLOGY</a></li>
-                                    <li><a href="services-details6.html">~ HISTOPATHOLOGY & CYTOLOGY</a></li>
+                                    <li><a href="<?= base_url() ?>service1">~ CLINICAL BIOCHEMIATRY</a></li>
+                                    <li><a href="<?= base_url() ?>service2">~ HEMATOLOGY</a></li>
+                                    <li><a href="<?= base_url() ?>service3">~ IMMUNOLOGY & SEROLOGY</a></li>
+                                    <li><a href="<?= base_url() ?>service4">~ MOLECULAR BIOLOGY</a></li>
+                                    <li><a href="<?= base_url() ?>service5">~ MICROBIOLOGY</a></li>
+                                    <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a></li>
                                  </ul>
                               </li>
-                              <li class=" "><a href="packages.html">Packages</a>
+                              <li class=" "><a href="<?= base_url() ?>packages">Packages</a>
 
                               </li>
-                              <li><a href="contact.html">Contact</a></li>
+                              <li><a href="<?= base_url() ?>contact">Contact</a></li>
                               <!-- <li class="has-dropdown"><a href="services.html"> <i class="fa-solid fa-cart-plus cart-icon"></i></a>
-                              <ul class="sub-menu">
-                                 <li><a href="services-details1.html">~ CLINICAL BIOCHEMISTRY</a></li>
-                                 <li><a href="services-details2.html">~ HEMATOLOGY</a></li>
-                              </ul>
-                           </li> -->
+                                    <ul class="sub-menu">
+                                       <li><a href="services-details1.html">~ CLINICAL BIOCHEMIATRY</a></li>
+                                       <li><a href="services-details2.html">~ HEMATOLOGY</a></li>
+                                    </ul>
+                                 </li> -->
 
                            </ul>
                         </nav>
@@ -115,20 +116,20 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
-                              <ul>
-                                 <li>
-                                    <div class="tpcarticon__checkout-link">
-                                       <a href="cart.html">Shopping Cart</a>
-                                       <a class="sec-red-btn" href="checkout.html">Checkout</a>
-                                   </div>
-                                 </li>
-                              </ul>
-                           </div> -->
+                                    <ul>
+                                       <li>
+                                          <div class="tpcarticon__checkout-link">
+                                             <a href="cart.html">Shopping Cart</a>
+                                             <a class="sec-red-btn" href="checkout.html">Checkout</a>
+                                         </div>
+                                       </li>
+                                    </ul>
+                                 </div> -->
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="index.html#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -146,13 +147,13 @@
          <div class="row align-items-center">
             <div class="col-md-4 col-10">
                <div class="tp-mob-logo">
-                  <a href="index.html"><img src="assets/img/logo (1).png" alt="logo"></a>
+                  <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo"></a>
                </div>
             </div>
             <div class="col-md-8 col-2">
                <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
                   <div class="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                     <a class="tp-bt-btn" href="tel:123456">
+                     <a class="tp-bt-btn" href="<?= base_url() ?> ">
                         <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                            <circle cx="7" cy="2" r="2" fill="#0E63FF" />
@@ -179,7 +180,7 @@
    <div class="tpsideinfo tp-side-info-area">
       <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
       <div class="tpsideinfo__logo mb-40">
-         <a href="index.html"><img src="assets/img/footer logo.png" alt="logo"></a>
+         <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/footer logo.png" alt="logo"></a>
       </div>
 
       <div class="mobile-menu"></div>
@@ -192,21 +193,16 @@
          <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
-         <a href="./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
+         <a href="<?= base_url() ?>./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
          </a>
       </div>
 
-      <div class="footer-widget__social mb-30">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+      <div class="footer-widget__social mb-30 ">
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -221,26 +217,7 @@
             </form>
          </div>
       </div>
-      <!-- <div class="tpsideinfo__gallery mb-35 d-none d-xl-block">
-      <span>Cheack Gallery Post</span>
-      <div class="tpsideinfo__gallery-item">
-         <a href="assets/img/blog/blog-in-01.jpg" class="popup-image"><img src="assets/img/blog/blog-in-01.jpg" alt=""></a>
-         <a href="assets/img/blog/blog-in-02.jpg" class="popup-image"><img src="assets/img/blog/blog-in-02.jpg" alt=""></a>
-         <a href="assets/img/blog/blog-in-03.jpg" class="popup-image"><img src="assets/img/blog/blog-in-03.jpg" alt=""></a>
-      </div>
-   </div> -->
-      <!-- <div class="tpsideinfo__socialicon"  >
 
-      <a href=" https://www.facebook.com/profile.php?id=61553810283752 "  target="_blank"><i   style="font-size: 30px;"  class="fa-brands fa-facebook-f "></i></a>
-      <a href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "  target="_blank"><i  style="font-size: 30px;"  class="fa-brands fa-instagram"></i></a>
-      <a href="#" target="_blank"><i   style="font-size: 30px;"  class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i  style="font-size: 30px;" class="fab fa-linkedin"></i></a>
-      <a href="https://in.pinterest.com/labqualitycare6/ " target="_blank"><i   style="font-size: 30px;"  class="fab fa-pinterest"></i></a>
-      <a href="#" target="_blank"><i  style="font-size: 30px;"  class="fab fa-youtube"></i></a>
-   
-     
-            
-   </div> -->
 
 
    </div>
@@ -347,10 +324,8 @@
       <!-- services-details-area-end -->
       <div class="container table_cunt">
          <h2 class="fonttext_size_adjust">Quality Lab Information</h2>
-         <input type="text" id="testCodeFilter" class="search_tab_code mt-2" onkeyup="filterTable('testCodeFilter', 1)"
-            placeholder="Search by Test Code">
-         <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)"
-            placeholder="Search by Test Name">
+         <input type="text" id="testCodeFilter" class="search_tab_code mt-2" onkeyup="filterTable('testCodeFilter', 1)" placeholder="Search by Test Code">
+         <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)" placeholder="Search by Test Name">
 
 
 
@@ -389,13 +364,13 @@
                <tr>
                   <td class="text-center">2</td>
 
-                  <td  data-test-code> BIOPLEU
+                  <td data-test-code> BIOPLEU
                   </td>
 
 
-                  <td  data-test-name> BIOCHEMICAL ANALYSIS - PLEURAL FLUID </td>
+                  <td data-test-name> BIOCHEMICAL ANALYSIS - PLEURAL FLUID </td>
                   <td> DEPARTMENT OF CLINICAL BIOCHEMISTRY</td>
-                  <td class="text-center"  data-price> 300.00 </td>
+                  <td class="text-center" data-price> 300.00 </td>
 
                   <td class="text-center  add-to-cart-btn"> <i class="fa-solid fa-cart-arrow-down"></i></td>
                </tr>
@@ -5147,48 +5122,48 @@
 
          <script>
             document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-                button.addEventListener("click", function () {
-                    // Accessing data attributes using getAttribute method
-                    const testCode = this.parentElement.querySelector('[data-test-code]').innerText;
-                    const testName = this.parentElement.querySelector('[data-test-name]').innerText;
-                    const price = this.parentElement.querySelector('[data-price]').innerText;
-        
-                    // Create the product object
-                    const product = {
-                        testCode: testCode,
-                        testName: testName,
-                        price: price,
-                        quantity: 1 // Set initial quantity to 1
-                    };
-        
-                    // Retrieve existing cart items from local storage
-                    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-        
-                    // Check if the product already exists in the cart
-                    const productExists = cartItems.some(item => item.testCode === testCode);
-        
-                    // If the product does not exist in the cart, add it
-                    if (!productExists) {
-                        cartItems.push(product);
-                        // Save updated cart items back to local storage
-                        localStorage.setItem("cart", JSON.stringify(cartItems));
-        
-                        // Change the cart icon appearance
-                        const cartIcon = this.querySelector('i');
-                        cartIcon.classList.add('added-to-cart'); // Add class to change color
-                        cartIcon.classList.remove('fa-cart-arrow-down'); // Remove default class
-                        cartIcon.innerHTML = '&hearts;'; // Set inner HTML to heart symbol
-                        // Change the color of the cart icon to green
-                        this.querySelector('i').style.color = '#47ab04';
-                    } 
+               button.addEventListener("click", function() {
+                  // Accessing data attributes using getAttribute method
+                  const testCode = this.parentElement.querySelector('[data-test-code]').innerText;
+                  const testName = this.parentElement.querySelector('[data-test-name]').innerText;
+                  const price = this.parentElement.querySelector('[data-price]').innerText;
+
+                  // Create the product object
+                  const product = {
+                     testCode: testCode,
+                     testName: testName,
+                     price: price,
+                     quantity: 1 // Set initial quantity to 1
+                  };
+
+                  // Retrieve existing cart items from local storage
+                  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+                  // Check if the product already exists in the cart
+                  const productExists = cartItems.some(item => item.testCode === testCode);
+
+                  // If the product does not exist in the cart, add it
+                  if (!productExists) {
+                     cartItems.push(product);
+                     // Save updated cart items back to local storage
+                     localStorage.setItem("cart", JSON.stringify(cartItems));
+
+                     // Change the cart icon appearance
+                     const cartIcon = this.querySelector('i');
+                     cartIcon.classList.add('added-to-cart'); // Add class to change color
+                     cartIcon.classList.remove('fa-cart-arrow-down'); // Remove default class
+                     cartIcon.innerHTML = '&hearts;'; // Set inner HTML to heart symbol
+                     // Change the color of the cart icon to green
+                     this.querySelector('i').style.color = '#47ab04';
+                  }
                   //   else {
-                        
+
                   //       alert("This product is already in the cart.");
                   //   }
-                });
+               });
             });
-        </script>
-        
+         </script>
+
       </div>
 
       <script>
@@ -5219,30 +5194,24 @@
    </main>
    <!-- main-area-end -->
 
-   <!-- footer-area -->
-   <footer>
+    <!-- footer-area -->
+    <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="index.html"><img src="assets/img/footer logo.png" style="border-radius: 3px;"
-                              alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
-                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst"
-                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-                              class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-                              class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -5253,13 +5222,13 @@
                      <h4 class="footer-widget__title mb-20">Menu</h4>
                      <div class="footer-widget__links">
                         <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About us</a></li>
-                           <li><a href="lab.html">Lab</a></li>
+                           <li><a href="<?= base_url() ?> ">Home</a></li>
+                           <li><a href="<?= base_url() ?>about">About us</a></li>
+                           <li><a href="<?= base_url() ?>lab">Lab</a></li>
 
-                           <li><a href="services.html">Services</a></li>
-                           <li><a href="packages.html">Packages</a></li>
-                           <li><a href="contact.html">Contact us</a></li>
+                           <li><a href="<?= base_url() ?>services">Services</a></li>
+                           <li><a href="<?= base_url() ?>packages">Packages</a></li>
+                           <li><a href="<?= base_url() ?>contact">Contact us</a></li>
 
                         </ul>
                      </div>
@@ -5270,13 +5239,13 @@
                      <h4 class="footer-widget__title mb-20">Contact info</h4>
                      <div class="footer-widget__info">
                         <ul>
-                           <li> <i class="fa-solid fa-location-dot"></i> &nbsp;<a href="#">#2-34-8/1,Chintavari Street
-                                 <br> Bhanugudi Junction, <br>Kakinada-533003</a></li>
+                           <li> <i class="fa-solid fa-location-dot"></i> &nbsp; #2-34-8/1,Chintavari Street
+                              <br> Bhanugudi Junction, <br>Kakinada-533003
+                           </li>
 
-                           <li><i class="fa-solid fa-phone"></i> &nbsp;<a href="#">7658905111</a></li>
+                           <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
-                           <li><i class="fa-solid fa-envelope"></i> &nbsp;<a
-                                 href="info@qualitycarelabs.com">info@qualitycarelabs.com</a></li>
+                           <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
                            <!-- <li>Office Hours: 8AM - 11PM</li>
                               <li>Sunday - Wekend Day</li> -->
                         </ul>
@@ -5290,8 +5259,7 @@
                      <div class="footer-widget__newsletter p-relative">
                         <form action="onlyMail.php" method="post">
                            <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i
-                                 class="fa-solid fa-paper-plane"></i></button>
+                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
@@ -5306,16 +5274,14 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
-                              href="https://bhavicreations.com/" target="_blank"><strong
-                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright-info info-direction">
                      <ul class="d-flex align-items-center">
-                        <li><a href="trems.html">Terms and conditions</a></li>
-                        <li><a href="privacy.html">Privacy policy</a></li>
+                        <li><a href="<?= base_url() ?>trems.html">Terms and conditions</a></li>
+                        <li><a href="<?= base_url() ?>privacy.html">Privacy policy</a></li>
                      </ul>
                   </div>
                </div>
