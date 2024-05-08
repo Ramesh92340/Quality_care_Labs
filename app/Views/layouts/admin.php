@@ -112,8 +112,8 @@
                                         <span>Packages</span></a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a class="nav-link" href="<?= base_url() ?>package">Add Package</a></li>
-                                        <li><a class="nav-link" href="<?= base_url() ?>category">Add Category</a></li>
+                                        <li><a class="nav-link" href="<?= base_url() ?>package">Packages</a></li>
+                                        <li><a class="nav-link" href="<?= base_url() ?>category">Category</a></li>
                                         <!-- <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> -->
                                     </ul>
                                 </li>
