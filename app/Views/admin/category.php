@@ -58,13 +58,13 @@
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
-                            <?php if (isset($pack) && !empty($pack)) : ?>
+                            <?php if (isset($cate) && !empty($cate)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($pack as $pk) : ?>
+                                <?php foreach ($cate as $pk) : ?>
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
-                                        <td class="text-center"><?= $pk['package_name']; ?></td>
-                                        <td class="text-center"><?= $pk['package_price'] ?></td>
+                                        <td class="text-center"><?= $pk['name']; ?></td>
+                                        <td class="text-center"><?= $pk['package'] ?></td>
                                         <td class="text-center">
                                             <!-- <a href="<?= base_url() ?>view/staff/" class="btn btn-info">VIEW</a> -->
                                             <a href="<?= base_url() ?>edit/category/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>

@@ -16,7 +16,7 @@ class Category extends BaseController
     {
         $category = new CategoryModel();
         
-        $data['cate'] = $category->findAll();
+        $data['cate'] = $category->get_date_package();
         return view('admin/category', $data);
     }
 

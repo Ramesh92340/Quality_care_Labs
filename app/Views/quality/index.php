@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
    <!-- CSS here -->
@@ -61,7 +61,7 @@
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
          <div class="header-logo-box">
-            <a href="<?= base_url() ?>"><img src="assets/img/logo (1).png" alt="logo"></a>
+            <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo"></a>
          </div>
          <div class="header-menu-box     ">
             <div class="header-menu-top ">
@@ -69,13 +69,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+917658905111">&nbsp; 7658905111 </a>
+                        <a href="<?= base_url() ?>tel:+917658905111">&nbsp; 7658905111 </a>
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="tel:+917658905111">&nbsp; info@qualitycarelabs.com</a>
+                        <a href="<?= base_url() ?>tel:+917658905111">&nbsp; info@qualitycarelabs.com</a>
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -167,7 +167,7 @@
             <div class="col-md-8 col-2">
                <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
                   <div class="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                     <a class="tp-bt-btn" href="tel:123456">
+                     <a class="tp-bt-btn" href="<?= base_url() ?>tel:7658905111">
                         <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                            <circle cx="7" cy="2" r="2" fill="#0E63FF" />
@@ -207,7 +207,7 @@
          <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
-         <a href="./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
+         <a href="<?= base_url() ?>./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
          </a>
       </div>
 
@@ -253,13 +253,13 @@
             data-bs-interval="3000">
             <div class="carousel-inner">
                <div class="carousel-item active">
-                  <img src="assets/img/Slider-1.png" class="d-block w-100" alt="...">
+                  <img src="<?= base_url() ?>assets/img/Slider-1.png" class="d-block w-100" alt="...">
                </div>
                <div class="carousel-item">
-                  <img src="assets/img/Slider-2.png" class="d-block w-100" alt="...">
+                  <img src="<?= base_url() ?>assets/img/Slider-2.png" class="d-block w-100" alt="...">
                </div>
                <div class="carousel-item">
-                  <img src="assets/img/Slider-3.png" class="d-block w-100" alt="...">
+                  <img src="<?= base_url() ?>assets/img/Slider-3.png" class="d-block w-100" alt="...">
                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -284,10 +284,10 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-12 col-12">
                      <div class="about-thumb text-lg-center p-relative ml-85 mb-60 wow fadeInLeft" data-wow-delay=".3s">
-                        <img src="assets/img/About-us-1.png" alt="about-thumb">
+                        <img src="<?= base_url() ?>assets/img/About-us-1.png" alt="about-thumb">
 
                         <div class="about-thumb-shape d-none d-md-block">
-                           <img src="assets/img/About-us-2.png" alt="about-shape">
+                           <img src="<?= base_url() ?>assets/img/About-us-2.png" alt="about-shape">
                         </div>
                      </div>
                   </div>
@@ -305,7 +305,7 @@
                               achieved by providing innovative, timely, and Accurate
                               Clinical Referral Testing Services.</P>
                         </div>
-                        <div class="about-content__btn"><a href="about.html" class="tp-btn">KNOW MORE...</a></div>
+                        <div class="about-content__btn"><a href="<?= base_url() ?>about.html" class="tp-btn">KNOW MORE...</a></div>
                      </div>
                   </div>
                </div>
@@ -400,7 +400,7 @@
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center"
                               style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                              <img src="assets/img/heart (1).png" class="card-img-top img-fluid"
+                              <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid"
                                  style="height: 80px; width:80px" alt="...">
                            </div>
                            <div class="card-body">
@@ -412,7 +412,7 @@
                      <div class="col-md-2 col-sm-4 col-6  mt-4">
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center">
-                              <img src="assets/img/liver (1).png" style="height: 80px; width:80px" class="card-img-top"
+                              <img src="<?= base_url() ?>assets/img/liver (1).png" style="height: 80px; width:80px" class="card-img-top"
                                  alt="...">
                            </div>
                            <div class="card-body">
@@ -424,7 +424,7 @@
                      <div class="col-md-2 col-sm-4 col-6  mt-4">
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center">
-                              <img src="assets/img/Test icons/kidney.png" style="height: 80px; width:80px"
+                              <img src="<?= base_url() ?>assets/img/Test icons/kidney.png" style="height: 80px; width:80px"
                                  class="card-img-top" alt="...">
                            </div>
                            <div class="card-body">
@@ -436,7 +436,7 @@
                      <div class="col-md-2 col-sm-4 col-6  mt-4">
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center">
-                              <img src="assets/img/Test icons/thyroid.png" style="height: 80px; width:80px"
+                              <img src="<?= base_url() ?>assets/img/Test icons/thyroid.png" style="height: 80px; width:80px"
                                  class="card-img-top" alt="...">
                            </div>
                            <div class="card-body">
@@ -448,7 +448,7 @@
                      <div class="col-md-2 col-sm-4 col-6  mt-4   ">
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center">
-                              <img src="assets/img/Test icons/bone.png" style="height: 80px; width:80px"
+                              <img src="<?= base_url() ?>assets/img/Test icons/bone.png" style="height: 80px; width:80px"
                                  class="card-img-top" alt="...">
                            </div>
                            <div class="card-body">
@@ -499,9 +499,9 @@
                <div class="row">
                   <div class="col-lg-4 col-md-6">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="assets/img/Gallary-1.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/Gallary-1.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="services-details1.html">CLINICAL BIOCHEMIATRY</a>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details1.html">CLINICAL BIOCHEMIATRY</a>
                            </h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
@@ -509,18 +509,18 @@
                   </div>
                   <div class="col-lg-8 col-md-6 d-none d-lg-block">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="assets/img/Gallary-5.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/Gallary-5.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="services-details5.html">MICROBIOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details5.html">MICROBIOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="assets/img/Gallary-3.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/Gallary-3.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="services-details3.html">IMMUNOLOGY & SEROLOGY</a>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details3.html">IMMUNOLOGY & SEROLOGY</a>
                            </h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
@@ -528,20 +528,20 @@
                   </div>
                   <div class="col-lg-4 col-md-6">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="assets/img/Gallary-4.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/Gallary-4.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="services-details4.html">MOLECULAR BIOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details4.html">MOLECULAR BIOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="assets/img/Gallary-2.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/Gallary-2.png" alt="gallery-thumb">
                         <!-- <img src="assets/img/Gallary-2.png" alt="gallery-thumb"> -->
 
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="services-details2.html">HEMATOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details2.html">HEMATOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
@@ -564,7 +564,7 @@
             <div class="row align-items-end">
                <div class="col-xl-4 col-lg-12 col-md-12">
                   <div class="appoint-thumb">
-                     <img src="assets/img/Gallary-6.png" alt="appoinment-img">
+                     <img src="<?= base_url() ?>assets/img/Gallary-6.png" alt="appoinment-img">
                   </div>
                </div>
                <div class="col-xl-8 col-lg-12 col-md-12">
@@ -607,7 +607,7 @@
                               <div class="col-lg-8 col-md-8 col-12">
                                  <div class="visit-serial mt-45">
                                     <span><strong>24/7 EMERGENCY SERVICE </strong>: <a
-                                          href="tel:+88978897">+917658905111 &nbsp;<i
+                                          href="<?= base_url() ?>tel:+917658905111">+917658905111 &nbsp;<i
                                              class="fas fa-phone"></i></i></a></span>
                                  </div>
                               </div>
@@ -647,7 +647,7 @@
                         <p><strong>₹800.00</strong></p>
                         <span class="regular-price"><del>₹1950.00</del></span>
                         <hr />
-                        <p class="pull-left"><a href="packages.html" class="link_arrow">Read more</a></p>
+                        <p class="pull-left"><a href="<?= base_url() ?>packages.html" class="link_arrow">Read more</a></p>
                      </div>
                   </div>
                </div>
@@ -662,7 +662,7 @@
                         <p><strong>₹800.00</strong></p>
                         <span class="regular-price"><del>₹1300.00</del></span>
                         <hr />
-                        <p class="pull-left"><a href="packages.html" class="link_arrow">Read more</a></p>
+                        <p class="pull-left"><a href="<?= base_url() ?>packages.html" class="link_arrow">Read more</a></p>
                      </div>
                   </div>
                </div>
@@ -677,7 +677,7 @@
                         <p><strong>₹1800.00</strong></p>
                         <span class="regular-price"><del>₹5000.00</del></span>
                         <hr />
-                        <p class="pull-left"><a href="packages.html" class="link_arrow">Read more</a></p>
+                        <p class="pull-left"><a href="<?= base_url() ?>packages.html" class="link_arrow">Read more</a></p>
                      </div>
                   </div>
                </div>
@@ -3078,7 +3078,7 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="index.html"><img src="assets/img/footer logo.png" style="border-radius: 3px;"
+                        <a href="<?= base_url() ?>index.html"><img src="assets/img/footer logo.png" style="border-radius: 3px;"
                               alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
@@ -3104,13 +3104,13 @@
                      <h4 class="footer-widget__title mb-20">Menu</h4>
                      <div class="footer-widget__links">
                         <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About us</a></li>
-                           <li><a href="lab.html">Lab</a></li>
+                           <li><a href="<?= base_url() ?>index.html">Home</a></li>
+                           <li><a href="<?= base_url() ?>about.html">About us</a></li>
+                           <li><a href="<?= base_url() ?>lab.html">Lab</a></li>
 
-                           <li><a href="services.html">Services</a></li>
-                           <li><a href="packages.html">Packages</a></li>
-                           <li><a href="contact.html">Contact us</a></li>
+                           <li><a href="<?= base_url() ?>services.html">Services</a></li>
+                           <li><a href="<?= base_url() ?>packages.html">Packages</a></li>
+                           <li><a href="<?= base_url() ?>contact.html">Contact us</a></li>
 
                         </ul>
                      </div>
@@ -3165,8 +3165,8 @@
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright-info info-direction">
                      <ul class="d-flex align-items-center">
-                        <li><a href="trems.html">Terms and conditions</a></li>
-                        <li><a href="privacy.html">Privacy policy</a></li>
+                        <li><a href="<?= base_url() ?>trems.html">Terms and conditions</a></li>
+                        <li><a href="<?= base_url() ?>privacy.html">Privacy policy</a></li>
                      </ul>
                   </div>
                </div>
