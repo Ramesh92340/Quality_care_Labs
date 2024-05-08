@@ -84,13 +84,13 @@
                      <div class="main-menu main-menu-second">
                         <nav id="mobile-menu">
                            <ul>
-                              <li><a class="active" href="<?= base_url() ?>">Home</a>
+                              <li><a href="<?= base_url() ?>">Home</a>
 
                               </li>
                               <li><a href="<?= base_url() ?>about">About Us</a>
                               </li>
                               <li><a href="<?= base_url() ?>lab">Lab</a></li>
-                              <li class="has-dropdown"><a href="<?= base_url() ?>services">Services</a>
+                              <li class="has-dropdown"><a class="active" href="<?= base_url() ?>services">Services</a>
                                  <ul class="sub-menu">
                                     <li><a href="<?= base_url() ?>service1">~ CLINICAL BIOCHEMIATRY</a></li>
                                     <li><a href="<?= base_url() ?>service2">~ HEMATOLOGY</a></li>
