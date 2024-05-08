@@ -8,22 +8,24 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
+ <!-- Place favicon.ico in the root directory -->
+ <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/spacing.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 </head>
@@ -39,7 +41,7 @@
 
     <!-- preloader -->
     <div id="preloadertp">
-        <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
+        <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
     </div>
     <!-- preloader end  -->
 
@@ -326,7 +328,7 @@
                                     </div>
                                     <div class="col-md-12">                          
                                         <div class="checkout-form-list create-acc">                               
-                                            <label>Already an user? <a href="login.html" class="register_color"> Login </a></label>
+                                            <label>Already an user? <a href="<?= base_url() ?>login.html" class="register_color"> Login </a></label>
                                         </div>                                                         
                                   </div>
                                      
@@ -335,7 +337,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12   d-none d-lg-block ">
-                            <img src="assets/img/logo (1).png"   class="image_register_size   img-fluid"
+                            <img src="<?= base_url() ?>assets/img/logo (1).png"   class="image_register_size   img-fluid"
                                  alt="...">
                         </div>
                     </div>

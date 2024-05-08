@@ -8,21 +8,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-      <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.css">
-      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/aos.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/spacing.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/meanmenu.css">
-      <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -37,7 +39,7 @@
       
       <!-- preloader -->
       <div id="preloadertp">
-         <img src="assets/img/preloader.png" alt="">
+         <img src="<?= base_url() ?>assets/img/preloader.png" alt="">
       </div>
       <!-- preloader end  -->
 
@@ -243,7 +245,7 @@
                   </div>
                   <div class="col-lg-6 col-md-5 col-12">
                      <div class="tp-breadcrumb__link d-flex align-items-center">
-                        <span>Bioxlab : <a href="blog-details.html"> Blog Details</a></span>
+                        <span>Bioxlab : <a href="<?= base_url() ?>blog-details.html"> Blog Details</a></span>
                      </div>
                   </div>
                </div>
@@ -259,25 +261,25 @@
                      <div class="postbox pr-20 pb-50">
                         <article class="postbox__item format-image mb-60 transition-3">
                            <div class="postbox__thumb w-img mb-35">
-                              <a href="blog-details.html">
-                                 <img src="assets/img/blog/blog-in-01.jpg" alt="blog-thumg">
+                              <a href="<?= base_url() ?>blog-details.html">
+                                 <img src="<?= base_url() ?>assets/img/blog/blog-in-01.jpg" alt="blog-thumg">
                               </a>
                            </div>
                            <div class="postbox__content">
                               <div class="postbox__meta mb-40">
-                                 <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                 <span><a href="<?= base_url() ?>team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
                                  <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
-                                 <span><a href="about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
+                                 <span><a href="<?= base_url() ?>about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
                                  <span><i class="fa-light fa-eye"></i> 1,526 views</span>
                               </div>
                               <h3 class="postbox__title mb-40">
-                                 <a href="blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
                               </h3>
                               <div class="postbox__text mb-40">
                                  <p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory</p>
                               </div>
                               <div class="postbox__read-more">
-                                 <a href="blog-details.html" class="tp-btn">Reade more</a>                               
+                                 <a href="<?= base_url() ?>blog-details.html" class="tp-btn">Reade more</a>                               
                               </div>
                            </div>
                         </article>
@@ -285,13 +287,13 @@
                            <div class="postbox__thumb postbox-active swiper-container w-img p-relative mb-35">
                               <div class="swiper-wrapper">
                                  <div class="postbox__slider-item swiper-slide">
-                                    <img src="assets/img/blog/blog-in-02.jpg" alt="">
+                                    <img src="<?= base_url() ?>assets/img/blog/blog-in-02.jpg" alt="">
                                  </div>
                                  <div class="postbox__slider-item swiper-slide">
-                                    <img src="assets/img/blog/blog-in-01.jpg" alt="">
+                                    <img src="<?= base_url() ?>assets/img/blog/blog-in-01.jpg" alt="">
                                  </div>
                                  <div class="postbox__slider-item swiper-slide">
-                                    <img src="assets/img/blog/blog-in-03.jpg" alt="">
+                                    <img src="<?= base_url() ?>assets/img/blog/blog-in-03.jpg" alt="">
                                  </div>
                               </div>
                               <div class="postbox-nav">
@@ -301,26 +303,26 @@
                            </div>
                            <div class="postbox__content">
                               <div class="postbox__meta mb-40">
-                                 <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                 <span><a href="<?= base_url() ?>team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
                                  <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
-                                 <span><a href="about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
+                                 <span><a href="<?= base_url() ?>about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
                                  <span><i class="fa-light fa-eye"></i> 1,526 views</span>
                               </div>
                               <h3 class="postbox__title mb-40">
-                                 <a href="blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
                               </h3>
                               <div class="postbox__text mb-40">
                                  <p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory</p>
                               </div>
                               <div class="postbox__read-more">
-                                 <a href="blog-details.html" class="tp-btn">read more</a>
+                                 <a href="<?= base_url() ?>blog-details.html" class="tp-btn">read more</a>
                               </div>
                            </div>
                         </article>
                         <article class="postbox__item format-video mb-60 transition-3">
                            <div class="postbox__thumb postbox__video p-relative w-img mb-35">
-                              <a href="blog-details.html">
-                                 <img src="assets/img/blog/blog-in-03.jpg" alt="">
+                              <a href="<?= base_url() ?>blog-details.html">
+                                 <img src="<?= base_url() ?>assets/img/blog/blog-in-03.jpg" alt="">
                               </a>
                               <a href="https://www.youtube.com/watch?v=OMqWRlxo1oQ" class="play-btn popup-video"><i class="fas fa-play"></i></a>
                            </div>
@@ -332,13 +334,13 @@
                                  <span><i class="fa-light fa-eye"></i> 1,526 views</span>
                               </div>
                               <h3 class="postbox__title mb-40">
-                                 <a href="blog-details.html">Four Ways to Fullfill Your Task For Makes Parents Happy and Healthy</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Four Ways to Fullfill Your Task For Makes Parents Happy and Healthy</a>
                               </h3>
                               <div class="postbox__text mb-40">
                                  <p>Compellingly exploit B2B vortals with emerging total linkage. Appropriately pursue strategic leadership whe intermandated ideas. Proactively revolutionize interoperable "outside the box" thinking with fully researched innovation. Dramatically facilitate exceptional architectures and bricks-and-clicks data. Progressively genera extensible e-services for.</p>
                               </div>
                               <div class="postbox__read-more">
-                                 <a href="blog-details.html" class="tp-btn">read more</a>
+                                 <a href="<?= base_url() ?>blog-details.html" class="tp-btn">read more</a>
                               </div>
                            </div>
                         </article>
@@ -346,24 +348,24 @@
                            <nav>
                               <ul>
                                  <li>
-                                    <a href="blog.html">
+                                    <a href="<?= base_url() ?>blog.html">
                                        <i class="fa-light fa-arrow-left-long"></i>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="blog.html">1</a>
+                                    <a href="<?= base_url() ?>blog.html">1</a>
                                  </li>
                                  <li>
                                     <span class="current">2</span>
                                  </li>
                                  <li>
-                                    <a href="blog.html">3</a>
+                                    <a href="<?= base_url() ?>blog.html">3</a>
                                  </li>
                                  <li>
-                                    <a href="blog.html">...</a>
+                                    <a href="<?= base_url() ?>blog.html">...</a>
                                  </li>
                                  <li>
-                                    <a href="blog.html">
+                                    <a href="<?= base_url() ?>blog.html">
                                        <i class="fa-light fa-arrow-right-long"></i>
                                     </a>
                                  </li>
@@ -391,12 +393,12 @@
                            <h3 class="sidebar__widget-title mb-25">Category</h3>
                            <div class="sidebar__widget-content">
                               <ul>
-                                 <li><a href="blog-details.html">Chemistry<span>03</span></a></li>
-                                 <li><a href="blog-details.html">Forensic science <span>07</span></a></li>
-                                 <li><a href="blog-details.html">Gemological <span>09</span></a></li>
-                                 <li><a href="blog-details.html">COvid Analysis <span>01</span></a></li>
-                                 <li><a href="blog-details.html">Becteriology <span>00</span></a></li>
-                                 <li><a href="blog-details.html">Angiosperm <span>26</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">Chemistry<span>03</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">Forensic science <span>07</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">Gemological <span>09</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">COvid Analysis <span>01</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">Becteriology <span>00</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog-details.html">Angiosperm <span>26</span></a></li>
                               </ul>
                            </div>
                         </div>
@@ -406,53 +408,53 @@
                               <div class="sidebar__post rc__post">
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-1.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-1.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>4 March. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Don't Underestimate Tree for Medicine</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Don't Underestimate Tree for Medicine</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-2.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-2.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>12 February. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Equipping Researchers in the Developing World</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Equipping Researchers in the Developing World</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-3.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-3.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>14 January. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Role of Genetics in treating Heigh-grade glioma</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Role of Genetics in treating Heigh-grade glioma</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-4.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-4.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>18 March. 2021</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Research And Verify of a Covid-19 Virus</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Research And Verify of a Covid-19 Virus</a>
                                        </h3>
                                     </div>
                                  </div>
@@ -463,16 +465,16 @@
                            <h3 class="sidebar__widget-title mb-25">Popular Tag</h3>
                            <div class="sidebar__widget-content">
                               <div class="tagcloud">
-                                 <a href="blog-details.html">Covid-19</a>
-                                 <a href="blog-details.html">Gene</a>
-                                 <a href="blog-details.html">Test</a>
-                                 <a href="blog-details.html">Lab</a>
-                                 <a href="blog-details.html">data</a>
-                                 <a href="blog-details.html">Virus</a>
-                                 <a href="blog-details.html">Pandemic </a>
-                                 <a href="blog-details.html">Symptoms</a>
-                                 <a href="blog-details.html">Medicine</a>
-                                 <a href="blog-details.html">Bacteria</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Covid-19</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Gene</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Test</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Lab</a>
+                                 <a href="<?= base_url() ?>blog-details.html">data</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Virus</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Pandemic </a>
+                                 <a href="<?= base_url() ?>blog-details.html">Symptoms</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Medicine</a>
+                                 <a href="<?= base_url() ?>blog-details.html">Bacteria</a>
                               </div>
                            </div>
                         </div>

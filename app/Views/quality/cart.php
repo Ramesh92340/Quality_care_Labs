@@ -8,22 +8,24 @@
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
-
+ <!-- Place favicon.ico in the root directory -->
+ <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
    <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-   <link rel="stylesheet" href="assets/css/slick.css">
-   <link rel="stylesheet" href="assets/css/aos.css">
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-   <link rel="stylesheet" href="assets/css/flaticon.css">
-   <link rel="stylesheet" href="assets/css/spacing.css">
-   <link rel="stylesheet" href="assets/css/nice-select.css">
-   <link rel="stylesheet" href="assets/css/meanmenu.css">
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+
 
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 </head>
@@ -39,7 +41,7 @@
 
    <!-- preloader -->
    <div id="preloadertp">
-      <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
+      <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
    </div>
    <!-- preloader end  -->
 
@@ -56,13 +58,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -117,7 +119,7 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a   href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
@@ -130,7 +132,7 @@
                                  </div> -->
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?=base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -199,16 +201,11 @@
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -234,7 +231,6 @@
    <!-- main-area -->
    <main>
 
-      <!-- cart area -->
 
       <section class="cart-area pt-30 pb-50 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
          <div class="container">
@@ -243,6 +239,8 @@
 
                <div class="col-12">
                   <div class="table-content table-responsive">
+                     <h4>Services</h4>
+
                      <table class="table">
                         <thead>
                            <tr>
@@ -264,47 +262,94 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Amount <span id="totalAmount">₹0.00</span></li>
+                           <li>Total Services Amount <span id="totalAmount">₹0.00</span></li>
                         </ul>
                      </div>
                   </div>
 
+
+
+
+
+                  <div class="table-content table-responsive">
+                     <h4>packages</h4>
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th class="product-thumbnail text-center">S.No</th>
+                              <th class="cart-product-name text-center">Package Name</th>
+                              <th class="product-thumbnail text-center">No. of Tests</th>
+                              <th class="product-price text-center">Price of Package</th>
+                              <th class="product-quantity text-center">Quantity</th>
+                              <th class="product-subtotal text-center">Total</th>
+                              <th class="product-remove text-center">Remove</th>
+                           </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                           <!-- Cart items will be dynamically inserted here -->
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 ms-auto">
+                     <div class="cart-page-total">
+                        <ul class="mb-20">
+                           <li>Total Package Amount <span id="totalAmount">₹0.00</span></li>
+                        </ul>
+                     </div>
+                  </div>
+
+
+
+                  <div class="col-lg-6 col-md-12 ms-auto">
+                     <div class="cart-page-total">
+                        <ul class="mb-20">
+                           <li class="totalamount_last"><strong> Total Amount</strong> <span id="totalAmount"> <strong>₹0.00</strong></span></li>
+                        </ul>
+                     </div>
+                  </div>
+
+
                   <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                      <div class="container">
-                  
-                       <div class="row">
-                        <div class="col-md-6">
-                           <div class="d-flex justify-content-start">
-                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="addmore( )" >ADD MORE</button>
+
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="d-flex justify-content-start">
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="addmore( )">ADD MORE</button>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="d-flex justify-content-end">
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="redirectToAnotherPage()">Proceed to Buy</button>
+                              </div>
+
                            </div>
                         </div>
-                        <div class="col-md-6">
-                           <div class="d-flex justify-content-end">
-                              <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="redirectToAnotherPage()">Proceed to Buy</button>
-                          </div>
-                          
-                        </div>
-                     </div>
-                       
-                      <script>
-                        function redirectToAnotherPage() {
-                           // Redirect to another page
-                           window.location.href = "checkout.html";
-                        }
+
+                        <script>
+                           function redirectToAnotherPage() {
+                              // Redirect to another page
+                              window.location.href = "checkout.html";
+                           }
 
 
-                        function addmore() {
-                           // Redirect to another page
-                           window.location.href = "services-details1.html";
-                        }
+                           function addmore() {
+                              // Redirect to another page
+                              window.location.href = "services.html";
+                           }
+                        </script>
 
 
-                     </script>
-                    
-                       
                      </div>
                   </section>
                </div>
+
+
+
+
+
+
 
                <script>
                   // Retrieve cart items from local storage
@@ -339,7 +384,7 @@
                      input.type = "number";
                      input.min = "1";
                      input.value = "1";
-                     input.dataset.index = index;  
+                     input.dataset.index = index;
                      cell5.appendChild(input);
 
                      const cell6 = document.createElement("td");
@@ -368,7 +413,7 @@
 
                      cartContainer.appendChild(row);
 
-                     
+
                      totalAmount += parseFloat(item.price);
                   });
 
@@ -377,7 +422,7 @@
                   // Add event listeners for changing quantity
                   const quantityInputs = document.querySelectorAll(".cart-input");
                   quantityInputs.forEach(input => {
-                     input.addEventListener("change", function (event) {
+                     input.addEventListener("change", function(event) {
                         const index = event.target.dataset.index;
                         const quantity = parseInt(event.target.value);
                         const pricePerUnit = parseFloat(cartItems[index].price);
@@ -393,7 +438,7 @@
                   // Add event listeners for removing items
                   const removeButtons = document.querySelectorAll(".remove-item");
                   removeButtons.forEach(button => {
-                     button.addEventListener("click", function (event) {
+                     button.addEventListener("click", function(event) {
                         const index = event.target.closest("tr").querySelector(".cart-input").dataset.index;
                         cartItems.splice(index, 1);
                         event.target.closest("tr").remove();
@@ -406,6 +451,7 @@
                      totalAmount = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
                      document.getElementById("totalAmount").innerText = "₹" + totalAmount.toFixed(2);
                   }
+
                   function addItemToCart(item) {
                      // Add item to cart logic
                      cartItems.push(item);
@@ -422,7 +468,7 @@
                      localStorage.setItem("cart", JSON.stringify(cartItems));
                   }
 
-  
+
                   function updateCart() {
                      // Update cart logic
 
@@ -443,7 +489,6 @@
                   function clearCart() {
                      localStorage.removeItem("cart");
                   }
-
                </script>
 
 
@@ -451,7 +496,7 @@
 
 
 
-<!-- 
+               <!-- 
                <div class="col-6  d-flex flex-row justify-content-start">
                   <a class="header-bottom-btn" style="border-radius: 8px;" href="./services.html">ADD MORE</a>
 
@@ -465,9 +510,9 @@
 
 
 
-            
 
-               <!-- <div class="col-12">
+
+            <!-- <div class="col-12">
                   <form action="cartMail.php" method="post">
                      <div class="table-content table-responsive">
                         <table class="table">
@@ -619,10 +664,13 @@
                </div> -->
 
 
-               
+
 
          </div>
       </section>
+
+
+
 
 
 
@@ -631,8 +679,8 @@
    </main>
    <!-- main-area-end -->
 
-  <!-- footer-area -->
-  <footer>
+   <!-- footer-area -->
+   <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">

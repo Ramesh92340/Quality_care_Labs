@@ -8,22 +8,24 @@
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
-
+ <!-- Place favicon.ico in the root directory -->
+ <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
    <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-   <link rel="stylesheet" href="assets/css/slick.css">
-   <link rel="stylesheet" href="assets/css/aos.css">
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-   <link rel="stylesheet" href="assets/css/flaticon.css">
-   <link rel="stylesheet" href="assets/css/spacing.css">
-   <link rel="stylesheet" href="assets/css/nice-select.css">
-   <link rel="stylesheet" href="assets/css/meanmenu.css">
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+
 
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 </head>
@@ -231,7 +233,7 @@
       <!-- breadcrumb-area -->
       <section>
          <div class="img_body">
-            <img class="title-image" src="assets/img/About-us.png" alt="Title Image">
+            <img class="title-image" src="<?= base_url() ?>assets/img/About-us.png" alt="Title Image">
 
          </div>
       </section>
@@ -245,15 +247,15 @@
                   <div class="tp-about-thumb mb-60 wow fadeInLeft" data-wow-delay=".3s">
                      <div class="tp-ab-img d-flex">
                         <div class="tp-ab-main-img p-relative">
-                           <img src="assets/img/About-us-image-1.png" alt="about-thumb">
+                           <img src="<?= base_url() ?>assets/img/About-us-image-1.png" alt="about-thumb">
                            <div class="about__exprience tp-ab-counter">
                               <h3 class="counter">15</h3>
                               <i>Years of <br>Experience</i>
                            </div>
                         </div>
                         <div class="tp-ab-shape d-none d-md-block d-lg-none d-xl-block">
-                           <img class="ab-shape-one" src="assets/img/About-us-image-2.png" alt="about-shape">
-                           <img class="ab-shape-two" src="assets/img/About-us-image-3.png" alt="">
+                           <img class="ab-shape-one" src="<?= base_url() ?>assets/img/About-us-image-2.png" alt="about-shape">
+                           <img class="ab-shape-two" src="<?= base_url() ?>assets/img/About-us-image-3.png" alt="">
                         </div>
                      </div>
                   </div>
@@ -263,7 +265,7 @@
                   <div class="about-content about-align mb-60 wow fadeInRight" data-wow-delay=".3s">
                      <div class="tp-section">
                         <h3 class="tp-section__title ab-title mb-25">We'll Ensure You Alwasy Get Best Results.</h3>
-                        <a class="tp-section__link" href="#">Read our MIssion & Vission </a>
+                        <a class="tp-section__link" >Read our MIssion & Vission </a>
                         <p class=" mr-20 mb-40">Quality Care Lab is committed to provide patient
                            focused, high quality, affordable and sustainable medical
                            laboratory services with state-of-the art technology to
@@ -443,7 +445,7 @@
                               <!-- <p>Testing Begins many varios <br> suffered alten in some</p> -->
                            </div>
                            <div class="navtabs__shape d-none d-lg-block">
-                              <img src="assets/img/shape/navtabs-01.png" alt="shape">
+                              <img src="<?= base_url() ?>assets/img/shape/navtabs-01.png" alt="shape">
                            </div>
                         </div>
                      </div>
@@ -457,7 +459,7 @@
                               <!-- <p>There are many varios passages <br>suffered alten in some</p> -->
                            </div>
                            <div class="navtabs__shape d-none d-lg-block">
-                              <img src="assets/img/shape/navtabs-01.png" alt="shape">
+                              <img src="<?= base_url() ?>assets/img/shape/navtabs-01.png" alt="shape">
                            </div>
                         </div>
                      </div>
@@ -492,13 +494,13 @@
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 order-lg-1">
                         <div class="nabthumb mb-30">
-                           <img src="assets/img/Our-mission-2.png" alt="tab-thumb">
+                           <img src="<?= base_url() ?>assets/img/Our-mission-2.png" alt="tab-thumb">
 
                         </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 order-lg-3">
                         <div class="nabthumb mb-30">
-                           <img src="assets/img/Our-mission-1.png" alt="tab-thumb">
+                           <img src="<?= base_url() ?>assets/img/Our-mission-1.png" alt="tab-thumb">
 
                         </div>
                      </div>
@@ -522,13 +524,13 @@
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 order-lg-1">
                         <div class="nabthumb mb-30">
-                           <img src="assets/img/Our-value-2.png" alt="tab-thumb">
+                           <img src="<?= base_url() ?>assets/img/Our-value-2.png" alt="tab-thumb">
 
                         </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 order-lg-3">
                         <div class="nabthumb mb-30">
-                           <img src="assets/img/Our-value-1.png" alt="tab-thumb">
+                           <img src="<?= base_url() ?>assets/img/Our-value-1.png" alt="tab-thumb">
 
                         </div>
                      </div>
@@ -563,10 +565,10 @@
                   <div class="swiper-slide">
                      <div class="tp-team mb-50">
                         <div class="tp-team__thumb fix">
-                           <a href="team-details.html"><img src="assets/img/team/team-thumb-01.jpg" alt="team-thumb"></a>
+                           <a href="<?= base_url() ?>team-details.html"><img src="<?= base_url() ?>assets/img/team/team-thumb-01.jpg" alt="team-thumb"></a>
                         </div>
                         <div class="tp-team__content">
-                           <h4 class="tp-team__title mb-15"><a href="team-details.html">Cameron Williamson</a></h4>
+                           <h4 class="tp-team__title mb-15"><a href="<?= base_url() ?>team-details.html">Cameron Williamson</a></h4>
                            <span class="tp-team__position mb-30">Genetic Specialist</span>
                            <p>Providing insight-driven transformation to investment banks, wealth and asset mana, exchanges, Finance </p>
                            <div class="tp-team__social">
@@ -581,10 +583,10 @@
                   <div class="swiper-slide">
                      <div class="tp-team mb-50">
                         <div class="tp-team__thumb fix">
-                           <a href="team-details.html"><img src="assets/img/team/team-thumb-02.jpg" alt="team-thumb"></a>
+                           <a href="<?= base_url() ?>team-details.html"><img src="<?= base_url() ?>assets/img/team/team-thumb-02.jpg" alt="team-thumb"></a>
                         </div>
                         <div class="tp-team__content">
-                           <h4 class="tp-team__title mb-15"><a href="team-details.html">Savannah Nguyen</a></h4>
+                           <h4 class="tp-team__title mb-15"><a href="<?= base_url() ?>team-details.html">Savannah Nguyen</a></h4>
                            <span class="tp-team__position mb-30">Neuro Specialist</span>
                            <p>Providing insight-driven transformation to investment banks, wealth and asset mana, exchanges, Finance </p>
                            <div class="tp-team__social">
@@ -599,10 +601,10 @@
                   <div class="swiper-slide">
                      <div class="tp-team mb-50">
                         <div class="tp-team__thumb fix">
-                           <a href="team-details.html"><img src="assets/img/team/team-thumb-03.jpg" alt="team-thumb"></a>
+                           <a href="<?= base_url() ?>team-details.html"><img src="<?= base_url() ?>assets/img/team/team-thumb-03.jpg" alt="team-thumb"></a>
                         </div>
                         <div class="tp-team__content">
-                           <h4 class="tp-team__title mb-15"><a href="team-details.html">Darlene Robertson</a></h4>
+                           <h4 class="tp-team__title mb-15"><a href="<?= base_url() ?>team-details.html">Darlene Robertson</a></h4>
                            <span class="tp-team__position mb-30">gynecology Specialist</span>
                            <p>Providing insight-driven transformation to investment banks, wealth and asset mana, exchanges, Finance </p>
                            <div class="tp-team__social">
@@ -617,10 +619,10 @@
                   <div class="swiper-slide">
                      <div class="tp-team mb-50">
                         <div class="tp-team__thumb fix">
-                           <a href="team-details.html"><img src="assets/img/team/team-thumb-04.jpg" alt="team-thumb"></a>
+                           <a href="<?= base_url() ?>team-details.html"><img src="<?= base_url() ?>assets/img/team/team-thumb-04.jpg" alt="team-thumb"></a>
                         </div>
                         <div class="tp-team__content">
-                           <h4 class="tp-team__title mb-15"><a href="team-details.html">Jhon Methweu</a></h4>
+                           <h4 class="tp-team__title mb-15"><a href="<?= base_url() ?>team-details.html">Jhon Methweu</a></h4>
                            <span class="tp-team__position mb-30">Pediatric Specialist</span>
                            <p>Providing insight-driven transformation to investment banks, wealth and asset mana, exchanges, Finance </p>
                            <div class="tp-team__social">

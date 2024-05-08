@@ -7,22 +7,24 @@
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-      <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.css">
-      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/aos.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/spacing.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/meanmenu.css">
-      <link rel="stylesheet" href="assets/css/style.css">
 
       <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    </head>
@@ -36,7 +38,7 @@
       
       <!-- preloader -->
       <div id="preloadertp">
-         <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
+         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
       </div>
       <!-- preloader end  -->      
 
@@ -232,7 +234,7 @@
          <!-- breadcrumb-area -->
          <section>
             <div class="img_body">
-               <img class="title-image" src="assets/img/Contact-us.png" alt="Title Image">
+               <img class="title-image" src="<?= base_url() ?>assets/img/Contact-us.png" alt="Title Image">
 
             </div>
          </section>
@@ -246,24 +248,30 @@
                      <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".2s">
                         <div class="tpcontact__item text-center">
                            <div class="tpcontact__icon mb-20">
-                              <img src="assets/img/icon/contact-01.svg" alt="">
+                              <img src="<?= base_url() ?>assets/img/icon/contact-01.svg" alt="">
                            </div>
                            <div class="tpcontact__address">
                               <h4 class="tpcontact__title mb-15">Address line</h4>
-                              <span><a href="contact.html">SANJIVI HOSPITALS <br>
-                                 D.NO : 11-11-1 Near II Town Police Station, Kakinada <br>
-                                 </a></span>
+                              <span>    #2-34-8/1,<br>Chintavari Street
+                                  <br>Bhanugudi Junction,Kakinada-533003
+                                  </span>
+
+                              
+                              
+
+
+
                            </div>
                         </div>
                      </div>
                      <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".4s">
                         <div class="tpcontact__item text-center">
                            <div class="tpcontact__icon mb-20">
-                              <img src="assets/img/icon/contact-02.svg" alt="">
+                              <img src="<?= base_url() ?>assets/img/icon/contact-02.svg" alt="">
                            </div>
                            <div class="tpcontact__address">
                               <h4 class="tpcontact__title mb-15">Phone Number</h4>
-                              <span><a href="tel:2556523"> +91 7658905666 </a></span>
+                              <span><a  > +91 7658905666 </a></span>
                               <!-- <span><a href="tel:2556523">+1255 - 568 - 6523</a></span> -->
                            </div>
                         </div>
@@ -271,7 +279,7 @@
                      <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".6s">
                         <div class="tpcontact__item text-center">
                            <div class="tpcontact__icon mb-20">
-                              <img src="assets/img/icon/contact-03.svg" alt="">
+                              <img src="<?= base_url() ?>assets/img/icon/contact-03.svg" alt="">
                            </div>
                            <div class="tpcontact__address">
                               <h4 class="tpcontact__title mb-15">Opening Hours</h4>

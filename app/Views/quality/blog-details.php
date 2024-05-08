@@ -7,22 +7,24 @@
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+     <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-      <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.css">
-      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/aos.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/spacing.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/meanmenu.css">
-      <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -37,7 +39,7 @@
       
       <!-- preloader -->
       <div id="preloadertp">
-         <img src="assets/img/preloader.png" alt="">
+         <img src="<?= base_url() ?>assets/img/preloader.png" alt="">
       </div>
       <!-- preloader end  -->
 
@@ -244,7 +246,7 @@
                   </div>
                   <div class="col-xl-6 col-lg-5 col-md-5 col-12">
                      <div class="tp-breadcrumb__link d-flex align-items-center">
-                        <span>Bioxlab : <a href="blog-details.html"> Blog Detaails</a></span>
+                        <span>Bioxlab : <a href="<?= base_url() ?>blog-details.html"> Blog Detaails</a></span>
                      </div>
                   </div>
                </div>
@@ -260,8 +262,8 @@
                      <div class="postbox__wrapper pr-20">
                         <article class="postbox__item format-image mb-50 transition-3">
                            <div class="postbox__thumb w-img mb-30">
-                              <a href="blog-details.html">
-                                 <img src="assets/img/blog/blog-in-01.jpg" alt="">
+                              <a href="<?= base_url() ?>blog-details.html">
+                                 <img src="<?= base_url() ?>assets/img/blog/blog-in-01.jpg" alt="">
                               </a>
                            </div>
                            <div class="postbox__content">
@@ -269,13 +271,13 @@
                                  <div class="col-lg-12">
                                     <div class="postbox__content-area pb-20">
                                        <div class="postbox__meta mb-40">
-                                          <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                          <span><a href="<?= base_url() ?>team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
                                           <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
                                           <span><a href="#"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
                                           <span><i class="fa-light fa-eye"></i> 1,526 views</span>
                                        </div>
                                        <h3 class="postbox__title mb-35">
-                                          <a href="blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
                                        </h3>
                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsquae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim voluptatem voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsquae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
@@ -299,13 +301,13 @@
                                     </div>
                                  </div>
                                  <div class="col-lg-6 col-md-6">
-                                    <div class="postbox__meta-img w-img mb-60"><img src="assets/img/blog/blog-details-meta-03.jpg" alt=""></div>
+                                    <div class="postbox__meta-img w-img mb-60"><img src="<?= base_url() ?>assets/img/blog/blog-details-meta-03.jpg" alt=""></div>
                                  </div>
                               </div>
                               <div class="row">
                                  <div class="col-lg-12">
                                     <div class="postbox__content-area mb-40">
-                                       <h4 class="mb-25"><a href="blog-details.html">What Is A Business Technology Roadmap?</a></h4>
+                                       <h4 class="mb-25"><a href="<?= base_url() ?>blog-details.html">What Is A Business Technology Roadmap?</a></h4>
                                        <p>Unlike detailed blueprints that lay out all tasks, deadlines, bug reports, and more along the way, technology roadmaps are high-level visual summaries highlighting a company’s vision or plans.
                                        </p>
                                        <p>In an Agile approach, a technology roadmap feeds the sprint and grooming processes, providing insight into how the product will travel from start to finish. It makes it easier for development teams to:</p>
@@ -313,12 +315,12 @@
                                  </div>
                                  <div class="col-lg-6 col-md-6">
                                     <div class="postbox__meta-img mb-60">
-                                       <img src="assets/img/blog/blog-details-meta-01.jpg" alt="">
+                                       <img src="<?= base_url() ?>assets/img/blog/blog-details-meta-01.jpg" alt="">
                                     </div>
                                  </div>
                                  <div class="col-lg-6 col-md-6">
                                     <div class="postbox__meta-img mb-60">
-                                       <img src="assets/img/blog/blog-details-meta-02.jpg" alt="">
+                                       <img src="<?= base_url() ?>assets/img/blog/blog-details-meta-02.jpg" alt="">
                                     </div>
                                  </div>
                               </div>
@@ -328,9 +330,9 @@
                                        <div class="postbox__tag">
                                           <div class="postbox__tag-list tagcloud">
                                              <span>Tag</span>
-                                             <a href="blog.html">Covid-19</a>
-                                             <a href="blog.html">Bacteria</a>
-                                             <a href="blog.html">Medicine</a>
+                                             <a href="<?= base_url() ?>blog.html">Covid-19</a>
+                                             <a href="<?= base_url() ?>blog.html">Bacteria</a>
+                                             <a href="<?= base_url() ?>blog.html">Medicine</a>
                                           </div>
                                        </div>
                                     </div>
@@ -354,7 +356,7 @@
                                  <div class="postbox__comment-box d-flex">
                                     <div class="postbox__comment-info">
                                        <div class="postbox__comment-avater mr-25">
-                                          <img src="assets/img/blog/comments/comment-1.jpg" alt="">
+                                          <img src="<?= base_url() ?>assets/img/blog/comments/comment-1.jpg" alt="">
                                        </div>
                                     </div>
                                     <div class="postbox__comment-text">
@@ -364,7 +366,7 @@
                                        </div>
                                        <p>Patient Comments are a collection of comments submitted by viewers in response to <br> a question posed by a MedicineNet doctor.</p>
                                        <div class="postbox__comment-reply">
-                                          <a href="#"><i class="fas fa-reply-all"></i></a>
+                                          <a href="<?= base_url() ?>#"><i class="fas fa-reply-all"></i></a>
                                        </div>
                                     </div>
                                  </div>
@@ -373,7 +375,7 @@
                                  <div class="postbox__comment-box d-flex">
                                     <div class="postbox__comment-info">
                                        <div class="postbox__comment-avater mr-25">
-                                          <img src="assets/img/blog/comments/comment-2.jpg" alt="">
+                                          <img src="<?= base_url() ?>assets/img/blog/comments/comment-2.jpg" alt="">
                                        </div>
                                     </div>
                                     <div class="postbox__comment-text">
@@ -383,7 +385,7 @@
                                        </div>
                                        <p>Include anecdotal examples of your experience, or things you took notice of that you <br> feel others would find useful.</p>
                                        <div class="postbox__comment-reply">
-                                          <a href="#"><i class="fas fa-reply-all"></i></a>
+                                          <a href="<?= base_url() ?>#"><i class="fas fa-reply-all"></i></a>
                                        </div>
                                     </div>
                                  </div>
@@ -447,12 +449,12 @@
                            <h3 class="sidebar__widget-title mb-25">Category</h3>
                            <div class="sidebar__widget-content">
                               <ul>
-                                 <li><a href="blog.html">Chemistry<span>03</span></a></li>
-                                 <li><a href="blog.html">Forensic science <span>07</span></a></li>
-                                 <li><a href="blog.html">Gemological <span>09</span></a></li>
-                                 <li><a href="blog.html">COvid Analysis <span>01</span></a></li>
-                                 <li><a href="blog.html">Becteriology <span>00</span></a></li>
-                                 <li><a href="blog.html">Angiosperm <span>26</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">Chemistry<span>03</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">Forensic science <span>07</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">Gemological <span>09</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">COvid Analysis <span>01</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">Becteriology <span>00</span></a></li>
+                                 <li><a href="<?= base_url() ?>blog.html">Angiosperm <span>26</span></a></li>
                               </ul>
                            </div>
                         </div>
@@ -462,53 +464,53 @@
                               <div class="sidebar__post rc__post">
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-1.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-1.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>4 March. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Don't Underestimate Tree for Medicine</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Don't Underestimate Tree for Medicine</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-2.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-2.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>12 February. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Equipping Researchers in the Developing World</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Equipping Researchers in the Developing World</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post mb-20 d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-3.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-3.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>14 January. 2022</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Role of Genetics in treating Heigh-grade glioma</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Role of Genetics in treating Heigh-grade glioma</a>
                                        </h3>
                                     </div>
                                  </div>
                                  <div class="rc__post d-flex align-items-center">
                                     <div class="rc__post-thumb">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-4.jpg" alt="blog-sidebar"></a>
+                                       <a href="<?= base_url() ?>blog-details.html"><img src="<?= base_url() ?>assets/img/blog/sidebar/blog-sm-4.jpg" alt="blog-sidebar"></a>
                                     </div>
                                     <div class="rc__post-content">
                                        <div class="rc__meta">
                                           <span>18 March. 2021</span>
                                        </div>
                                        <h3 class="rc__post-title">
-                                          <a href="blog-details.html">Research And Verify of a Covid-19 Virus</a>
+                                          <a href="<?= base_url() ?>blog-details.html">Research And Verify of a Covid-19 Virus</a>
                                        </h3>
                                     </div>
                                  </div>

@@ -7,22 +7,24 @@
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
+ <!-- Place favicon.ico in the root directory -->
+ <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="frontend.js"></script>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/aos.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/spacing.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/nice-select.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
+   <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-      <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.css">
-      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/aos.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/spacing.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/meanmenu.css">
-      <link rel="stylesheet" href="assets/css/style.css">
 
       <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    </head>
@@ -37,7 +39,7 @@
       
       <!-- preloader -->
       <div id="preloadertp">
-         <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
+         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
       </div>
       <!-- preloader end  -->      
 
@@ -234,7 +236,7 @@
          <!-- breadcrumb-area -->
          <section>
             <div class="img_body">
-               <img class="title-image" src="assets/img/services-home-page.png" alt="Title Image">
+               <img class="title-image" src="<?= base_url() ?>assets/img/services-home-page.png" alt="Title Image">
 
             </div>
          </section>
@@ -259,10 +261,10 @@
                            <i class="fas fa-flask"></i>
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details1.html">CLINICAL BIOCHEMISTRY</a></h4>
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service1">CLINICAL BIOCHEMISTRY</a></h4>
                            <p>Accurate analysis of biochemical markers plays a vital role in disease diagnosis and monitoring. Our clinical biochemistry services utilize the latest technology to  ....</p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa" href="services-details1.html"><i></i>Read More</a>
+                              <a class="btn-hexa" href="<?= base_url() ?>service1"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
@@ -273,10 +275,10 @@
                            <i class="fas fa-tint"></i>
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details2.html">HEMATOLOGY  </a></h4>
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service2">HEMATOLOGY  </a></h4>
                            <p>Accurate analysis of blood components is essential for diagnosing and monitoring various diseases. Our hematology services provide  ....</p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa pink-hexa" href="services-details2.html"><i></i>Read More</a>
+                              <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service2"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
@@ -290,10 +292,10 @@
 
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details3.html">IMMUNOLOGY & SEROLOGY</a></h4>
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service3">IMMUNOLOGY & SEROLOGY</a></h4>
                            <p>Effective diagnosis and monitoring of infectious and autoimmune diseases require reliable immunology and serology tests.... </p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa green-hexa" href="services-details3.html"><i></i>Read More</a>
+                              <a class="btn-hexa green-hexa" href="<?= base_url() ?>service3"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
@@ -304,10 +306,10 @@
                            <i class="flaticon-dna-1"></i>
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details4.html">MOLECULAR BIOLOGY</a></h4>
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a></h4>
                            <p>Advancements in molecular biology have revolutionized diagnosis, aiding in the identification of genetic disorders, infectious agents, and more. Our molecular....</p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa sky-hexa" href="services-details4.html"><i></i>Read More</a>
+                              <a class="btn-hexa sky-hexa" href="<?= base_url() ?>service4"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
@@ -318,11 +320,11 @@
                            <i class="flaticon-bacteria"></i>
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details5.html">MICROBIOLOGY
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service5">MICROBIOLOGY
                            </a></h4>
                            <p>Timely and accurate identification of pathogens is crucial in managing infections. Our microbiology services encompass a broad range of ....</p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa" href="services-details5.html"><i></i>Read More</a>
+                              <a class="btn-hexa" href="<?= base_url() ?>service5"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
@@ -335,10 +337,10 @@
                            <i class="fas fa-flask"></i> 
                         </div>
                         <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="services-details6.html">HISTOPATHOLOGY & CYTOLOGY</a></h4>
+                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service6">HISTOPATHOLOGY & CYTOLOGY</a></h4>
                            <p>Accurate interpretation of tissue and cell samples is vital in diagnosing various diseases, especially cancer.... </p>
                            <div class="services-item__btn">
-                              <a class="btn-hexa pink-hexa" href="services-details6.html"><i></i>Read More</a>
+                              <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service6"><i></i>Read More</a>
                            </div>
                         </div>
                      </div>
