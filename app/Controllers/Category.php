@@ -21,6 +21,7 @@ class Category extends BaseController
         $category = new CategoryModel();
         $data['cate'] = $category->findAll();
         $data['category'] = $category->get_date_package();
+        $data['service'] = $this->service->findAll();
         return view('admin/category', $data);
     }
 
@@ -30,6 +31,8 @@ class Category extends BaseController
         $data['pack'] = $pack->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+
         return view('admin/add_category', $data);
     }
 
@@ -58,6 +61,8 @@ class Category extends BaseController
         $category = new CategoryModel();
         $data['cate'] = $category->findAll();
         $data['cate2'] = $category->get_by_id_2($id);
+        $data['service'] = $this->service->findAll();
+
         return view('admin/edit_category', $data);
     }
 

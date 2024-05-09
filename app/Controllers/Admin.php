@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
+use App\Models\ServiceModel;
 use App\Models\TestModel;
 
 class Admin extends BaseController
@@ -13,6 +14,7 @@ class Admin extends BaseController
     public function __construct()
     {
         helper('form');
+        $this->service = new ServiceModel();
     }
 
     public function index()
@@ -60,6 +62,7 @@ class Admin extends BaseController
         $data['pack'] = $pack->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
         return view('admin/dashboard', $data);
     }
 
@@ -69,6 +72,7 @@ class Admin extends BaseController
         $data['pack'] = $package->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
         return view('admin/packages',  $data);
     }
 
@@ -78,6 +82,7 @@ class Admin extends BaseController
         $data['pack'] = $package->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
         return view('admin/add_package', $data);
     }
 
@@ -111,6 +116,7 @@ class Admin extends BaseController
         $data['pack1'] = $package->get_by_id($id);
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
         return view('admin/edit_package', $data);
     }
 

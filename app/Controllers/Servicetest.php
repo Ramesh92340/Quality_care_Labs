@@ -4,31 +4,34 @@ namespace App\Controllers;
 
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
-use App\Models\ServiceModel;
+use App\Models\ServicetestModel;
 use App\Models\TestModel;
 
-class Tests extends BaseController
+class Servicetest extends BaseController
 {
     public function __construct()
     {
         helper('form');
-        $this->service = new ServiceModel();
+        $this->pack = new PackageModel();
+        $this->category = new CategoryModel();
+        $this->sertest = new ServicetestModel();
     }
 
     public function index($id)
     {
 
-        $pack = new PackageModel();
-        $data['pack'] = $pack->findAll();
-        $category = new CategoryModel();
-        $data['cate'] = $category->findAll();
+       
+        $data['pack'] = $this->pack->findAll();
+        
+        $data['cate'] = $this->category->findAll();
 
         $test = new TestModel();
+        
         $data['test'] = $test->get_by_cat($id);
-        $data['service'] = $this->service->findAll();
+        $data['sertest'] = $this->sertest->findAll();
 
         $data['id'] = $id;
-        return view('admin/test', $data);
+        return view('admin/servicetest', $data);
     }
 
     public function add_test($id)

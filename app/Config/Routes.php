@@ -53,3 +53,28 @@ $routes->post('insert/test', 'Tests::insert');
 $routes->get('edit/test/(:num)' , 'Tests::edit/$1');
 $routes->post('update/test', 'Tests::update');
 $routes->get('delete/test/(:num)/(:num)','Tests::delete/$1/$2');
+
+
+// Depaartment Routes 
+
+$routes->get('department', 'Department');
+$routes->get('add_department', 'Department::add');
+$routes->post('insert/department','Department::insert');
+$routes->get('edit/department/(:num)','Department::edit/$1');
+$routes->post('update/department','Department::update');
+$routes->get('delete/department/(:num)','Department::delete/$1');
+
+
+//Services Routes
+
+$routes->get('servicess','Service');
+$routes->get('add_service','Service::add');
+$routes->post('insert/service','Service::insert');
+$routes->get('edit/service/(:num)','Service::edit/$1');
+$routes->post('update/service','Service::update');
+$routes->get('delete/service/(:num)','Service::delete/$1');
+
+
+// Service-test Routes
+
+$routes->get('test-service/(:num)', 'Servicetest::index/$1');

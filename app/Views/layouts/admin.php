@@ -109,6 +109,22 @@
                                         </li>
                                 <?php endforeach;
                                 endif; ?>
+
+                                <li class="menu-header">Services</li>
+                                <?php if (isset($service)) :
+                                    foreach ($service as $sv) : ?>
+                                        <li class="dropdown">
+                                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-blank"></i> <span style="font-size: 12px;"><?= $sv['name']; ?></span></a>
+                                            <ul class="dropdown-menu">
+                                                
+                                                            <li><a class="nav-link" href="<?= base_url() ?>test-service/<?= $sv['id'] ?>">Test</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                <?php endforeach;
+                                endif; ?>
+
+
                                 <li class="menu-header">Starter</li>
 
                                 <li class="dropdown">
@@ -121,26 +137,16 @@
                                         <!-- <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> -->
                                     </ul>
                                 </li>
-                                <!-- <li class="dropdown">
-                                    <a href="#" class="nav-link has-dropdown"><i class="far fa-square"></i>
-                                        <span>Holidays</span></a>
 
-                                    <ul class="dropdown-menu">
-                                        <li><a class="nav-link" href="<?= base_url() ?>add_holiday">Add Holiday</a></li>
-                                        <li><a class="nav-link" href="<?= base_url() ?>manage_holiday">Manage Holidays</a></li>
-                                        <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> 
-                                    </ul>
-                                </li>
                                 <li class="dropdown">
                                     <a href="#" class="nav-link has-dropdown"><i class="far fa-square"></i>
-                                        <span>Expenses</span></a>
+                                        <span>Services</span></a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a class="nav-link" href="<?= base_url() ?>add_expense/admin">Add Expenses</a></li>
-                                        <li><a class="nav-link" href="<?= base_url() ?>manage_expense/admin">Manage Expenses</a></li>
-                                        <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> 
+                                        <li><a class="nav-link" href="<?= base_url() ?>department">Department</a></li>
+                                        <li><a class="nav-link" href="<?= base_url() ?>servicess">Services</a></li>
                                     </ul>
-                                </li> -->
+                                </li>
                         </aside>
                     </div>
                     <div class="main-content">
