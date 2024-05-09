@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
+use App\Models\DepartmentModel;
+use App\Models\ServiceModel;
 use App\Models\ServicetestModel;
 use App\Models\TestModel;
 
@@ -15,6 +17,8 @@ class Servicetest extends BaseController
         $this->pack = new PackageModel();
         $this->category = new CategoryModel();
         $this->sertest = new ServicetestModel();
+        $this->service = new ServiceModel();
+        $this->department = new DepartmentModel();
     }
 
     public function index($id)
@@ -22,28 +26,22 @@ class Servicetest extends BaseController
 
        
         $data['pack'] = $this->pack->findAll();
-        
         $data['cate'] = $this->category->findAll();
-
-        $test = new TestModel();
-        
-        $data['test'] = $test->get_by_cat($id);
-        $data['sertest'] = $this->sertest->findAll();
+        $data['service'] = $this->service->findAll();
 
         $data['id'] = $id;
         return view('admin/servicetest', $data);
     }
 
-    public function add_test($id)
+    public function add($id)
     {
-        $pack = new PackageModel();
-        $data['pack'] = $pack->findAll();
-        $cate = new CategoryModel();
-        $data['cate'] = $cate->findAll();
-        $data['cate2'] = $cate->get_by_id($id);
+        $data['id'] = $id;
+        $data['pack'] = $this->pack->findAll();
+        $data['cate'] = $this->category->findAll();
         $data['service'] = $this->service->findAll();
-
-        return view('admin/add_test', $data);
+        $data['service'] = $this->service->findAll();
+        $data['dept'] = $this->department->findAll();
+        return view('admin/add_servicetest', $data);
     }
 
     public function insert()

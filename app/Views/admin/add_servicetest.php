@@ -5,10 +5,10 @@
 <div class="container">
     <section class="section">
         <div class="section-header">
-            <h1>Test</h1>
+            <h1>Service Test</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item">Tests</div>
-                <div class="breadcrumb-item active"><a href="<?= base_url(); ?>add/stocks">Add Test</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url(); ?>add/stocks">Add Service Test</a></div>
                 <!-- <div class="breadcrumb-item">Add new Supplier</div> -->
             </div>
         </div>
@@ -45,26 +45,46 @@
 
                                 <?= form_open_multipart('insert/servicetest'); ?>
                                 <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Test Code</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" class="form-control" name="test_code" value="<?= set_value('test_code') ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Test Name</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" class="form-control" name="test_name" value="<?= set_value('test_name') ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select Department</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <select name="dep_id" id="" class="form-control">
+                                            <?php
+                                            if (isset($dept)) :
+                                                foreach ($dept as $pk) :
+                                            ?>
+
+                                                    <option value="<?= $pk['id'] ?>"><?= $pk['name'] ?></option>
+
+                                            <?php
+                                                endforeach;
+                                            endif;
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Test Price</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" class="form-control" name="test_name" value="<?= set_value('test_name') ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-4">
                                     <!-- <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select Package</label> -->
                                     <div class="col-sm-12 col-md-7">
-                                        <?php
-                                        if (isset($cate2)) :
-                                            foreach ($cate2 as $ct2) :
-                                        ?>
-
-                                                <input type="hidden" class="form-control" name="cat_id" value="<?= $ct2['id'] ?>">
-                                                <input type="hidden" class="form-control" name="pack_id" value="<?= $ct2['package'] ?>">
-
-                                        <?php
-                                            endforeach;
-                                        endif;
-                                        ?>
+                                        <input type="hidden" class="form-control" name="ser_id" value="<?= $id ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

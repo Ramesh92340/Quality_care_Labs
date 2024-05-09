@@ -78,3 +78,4 @@ $routes->get('delete/service/(:num)','Service::delete/$1');
 // Service-test Routes
 
 $routes->get('test-service/(:num)', 'Servicetest::index/$1');
+$routes->get('add-servicetest/(:num)', 'Servicetest::add/$1');

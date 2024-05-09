@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
+use App\Models\ServiceModel;
 use App\Models\TestModel;
 
 class Category extends BaseController
@@ -11,6 +12,7 @@ class Category extends BaseController
     public function __construct()
     {
         helper('form');
+        $this->service = new ServiceModel();
     }
 
     public function index()
