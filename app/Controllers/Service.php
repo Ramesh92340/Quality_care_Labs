@@ -12,9 +12,9 @@ class Service extends BaseController
     public function __construct()
     {
         helper('form');
-       $this->service = new ServiceModel();
-       $this->pack = new PackageModel();
-       $this->category = new CategoryModel();
+        $this->service = new ServiceModel();
+        $this->pack = new PackageModel();
+        $this->category = new CategoryModel();
     }
 
 
@@ -23,13 +23,13 @@ class Service extends BaseController
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
         $data['service'] = $this->service->findAll();
-    
-    return view('admin/service', $data);
+
+        return view('admin/service', $data);
     }
 
     public function add()
     {
-       
+
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
 
@@ -54,10 +54,11 @@ class Service extends BaseController
 
     public function edit($id)
     {
-      
+
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
-        $data['service'] = $this->service->get_by_id($id);
+        $data['service2'] = $this->service->get_by_id($id);
+        $data['service'] = $this->service->findAll();
 
 
         return view('admin/edit_service', $data);
@@ -83,7 +84,7 @@ class Service extends BaseController
 
     public function delete($id)
     {
-       
+
         $data2 = $this->service->where('id', $id)->delete();
         if ($data2 == true) {
             return redirect()->to('servicess')->with('success', "Service Deleted Successfully");
