@@ -10,7 +10,7 @@ class Home extends BaseController
 {
 
     public function __construct()
-    {   
+    {
         $this->package = new PackageModel();
         $this->category = new CategoryModel();
         $this->test = new TestModel();
@@ -18,7 +18,7 @@ class Home extends BaseController
 
     public function index(): string
     {
-       
+
         $data['pack'] = $this->package->findAll();
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
@@ -72,7 +72,10 @@ class Home extends BaseController
 
     public function packages()
     {
-        return view('quality/packages');
+        $data['pack'] = $this->package->findAll();
+        $data['cat'] = $this->category->findAll();
+        $data['test'] = $this->test->findAll();
+        return view('quality/packages', $data);
     }
 
     public function contact()
@@ -89,5 +92,4 @@ class Home extends BaseController
     {
         return view('quality/checkout');
     }
-
 }
