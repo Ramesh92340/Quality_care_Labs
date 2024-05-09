@@ -303,14 +303,7 @@
 
       </section>
       <!-- about-area-end -->
-
-
-
-
-
-
-
-
+ 
       <section class="choose-area grey-bg pt-40 pb-10 tp-box-space ml-30 mr-30 mt-10 mb-20" data-background="assets/img/shape/shape-bg-07.png">
          <div class="container">
             <div class="row">
@@ -489,7 +482,7 @@
                   </div>
                   <div class="col-lg-4 col-md-6">
                      <div class="gallery-item p-relative mb-30">
-                        <img src="<?= base_url() ?>assets/img/Gallary-3.png" alt="gallery-thumb">
+                        <img src="<?= base_url() ?>assets/img/new-machine.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
                            <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details3.html">IMMUNOLOGY & SEROLOGY</a>
                            </h4>
