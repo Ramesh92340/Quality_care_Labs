@@ -8,8 +8,8 @@
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
    <!-- CSS here -->
@@ -34,7 +34,7 @@
 
 
    <!-- Scroll-top -->
-   
+
    <button class="scroll-top scroll-to-target" data-target="html">
       <i class="fas fa-angle-up"></i>
    </button>
@@ -47,7 +47,7 @@
    </div>
    <!-- preloader end  -->
 
- 
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
@@ -60,13 +60,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -134,7 +134,7 @@
                                  </div> -->
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?=base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -203,16 +203,11 @@
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -306,7 +301,7 @@
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
-                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)"   />
+                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
                               </div>
                            </div>
                            <div class="col-md-12">
@@ -339,10 +334,10 @@
                                  <input type="text" placeholder=" " required />
                               </div>
                            </div>
-                           <div class="col-md-12">                          
-                                 <div class="checkout-form-list create-acc">                               
-                                     <label>Don't have an account? <a href="<?= base_url() ?>register" class="register_color"> Register  </a></label>
-                                 </div>                                                         
+                           <div class="col-md-12">
+                              <div class="checkout-form-list create-acc">
+                                 <label>Don't have an account? <a href="<?= base_url() ?>register" class="register_color"> Register </a></label>
+                              </div>
                            </div>
                         </div>
                         <div class="different-address">
@@ -354,7 +349,7 @@
                            </div>
                            <div id="ship-box-info">
                               <div class="row">
-                                 
+
                                  <div class="col-md-6">
                                     <div class="checkout-form-list">
                                        <label>First Name <span class="required">*</span></label>
@@ -419,8 +414,7 @@
                            <div class="order-notes">
                               <div class="checkout-form-list">
                                  <label>Order Notes</label>
-                                 <textarea id="checkout-mess" cols="30" rows="10"
-                                    placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                 <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                               </div>
                            </div>
                         </div>
@@ -487,23 +481,28 @@
                            <table id="checkout-items">
                               <thead>
                                  <tr>
-                                    <th class="ps-2"> Product Code</th>
+                                    <th class="ps-2"> Item Type</th>
+                                    <th class="ps-2">Quantity</th>
+
                                     <th class="ps-2">Price</th>
+
                                  </tr>
+
                               </thead>
                               <tbody>
-                                 <!-- Cart items will be dynamically inserted here -->
+
+
                               </tbody>
                               <tfoot>
                                  <tr class="order-total">
                                     <th class="ps-2"> Total Amount</th>
-                                    <td><strong><span class="amount ps-2"
-                                             id="checkout-totalAmount">₹00.00</span></strong>
+                                    <td><strong><span class="amount ps-2" id="checkout-totalAmount">₹00.00</span></strong>
                                     </td>
                                  </tr>
                               </tfoot>
 
-                           </table>
+                           </table>
+
                         </div>
                         <div class="payment-method">
                            <!-- <div class="accordion" id="checkoutAccordion">
@@ -553,67 +552,44 @@
                         </div>
 
 
-                        
+
 
                      </div>
                   </div>
 
 
-
                   <script>
-                     document.addEventListener("DOMContentLoaded", function () {
-                         // Retrieve cart items from local storage
-                         let cartItems = [];
-                         try {
-                             cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-                         } catch (error) {
-                             console.error("Error parsing cart items from local storage:", error);
-                             // Handle the error, like resetting the cart items
-                             cartItems = [];
-                         }
-                 
-                         // Assuming you have a table with ID "checkout-items" to display the cart items
-                         const checkoutContainer = document.getElementById("checkout-items");
-                         let totalAmount = 0;
-                         cartItems.forEach((item, index) => {
-                             const row = document.createElement("tr");
-                 
-                             // Create table cells for each item property
-                             const cellCode = document.createElement("td");
-                             // Concatenate text code and quantity with *
-                             cellCode.classList.add("test_code");
-                             cellCode.textContent = item.testCode + "   *   " + item.quantity;
-                 
-                             //   const cellPrice = document.createElement("td");
-                             //   cellPrice.textContent = item.price;
-                 
-                 
-                             const cellSubtotal = document.createElement("td");
-                             const subtotal = item.quantity * parseFloat(item.price)  ;
-                             cellSubtotal.classList.add("test_price");
+                     document.addEventListener("DOMContentLoaded", function() {
+                        // Retrieve cart items from local storage
+                        let cartItems = [];
+                        try {
+                           cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+                        } catch (error) {
+                           console.error("Error parsing cart items from local storage:", error);
+                           // Handle the error, like resetting the cart items
+                           cartItems = [];
+                        }
 
-                             cellSubtotal.textContent = "₹"+ subtotal.toFixed(2);
-                 
-                             const cellQuantity = document.createElement("td");
-                             cellQuantity.textContent = item.quantity; // Assuming you have "quantity" property in cart items
-                 
-                             // Append cells to the row
-                             row.appendChild(cellCode);
-                             //   row.appendChild(cellPrice);
-                             row.appendChild(cellSubtotal);
-                           //   row.appendChild(cellQuantity);
-                 
-                             // Append the row to the checkout container
-                             checkoutContainer.appendChild(row);
-                 
-                             // Calculate total amount
-                             totalAmount += subtotal;
-                         });
-                 
-                         // Display total amount
-                         document.getElementById("checkout-totalAmount").innerText = "₹" + totalAmount.toFixed(2);
+                        // Initialize variables to hold total quantity for services and packages
+                        let totalServiceQuantity = 0;
+                        let totalPackageQuantity = 0;
+
+                        // Aggregate quantities based on item type
+                        cartItems.forEach((item, index) => {
+                           if (item.type === "service") {
+                              totalServiceQuantity += parseInt(item.quantity);
+                           } else if (item.type === "package") {
+                              totalPackageQuantity += parseInt(item.quantity);
+                           }
+                        });
+
+                        // Display total quantities in the appropriate place on the checkout page
+                        document.getElementById("total-service-quantity").innerText = totalServiceQuantity;
+                        document.getElementById("total-package-quantity").innerText = totalPackageQuantity;
                      });
                   </script>
+
+
 
                </div>
             </form>
@@ -624,8 +600,8 @@
    </main>
    <!-- main-area-end -->
 
-    <!-- footer-area -->
-    <footer>
+   <!-- footer-area -->
+   <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
