@@ -2,11 +2,27 @@
 
 namespace App\Controllers;
 
+use App\Models\CategoryModel;
+use App\Models\PackageModel;
+use App\Models\TestModel;
+
 class Home extends BaseController
 {
+
+    public function __construct()
+    {   
+        $this->package = new PackageModel();
+        $this->category = new CategoryModel();
+        $this->test = new TestModel();
+    }
+
     public function index(): string
     {
-        return view('quality/index');
+       
+        $data['pack'] = $this->package->findAll();
+        $data['cat'] = $this->category->findAll();
+        $data['test'] = $this->test->findAll();
+        return view('quality/index', $data);
     }
 
     public function about()
