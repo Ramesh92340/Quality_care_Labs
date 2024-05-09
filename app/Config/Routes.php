@@ -79,3 +79,7 @@ $routes->get('delete/service/(:num)','Service::delete/$1');
 
 $routes->get('test-service/(:num)', 'Servicetest::index/$1');
 $routes->get('add-servicetest/(:num)', 'Servicetest::add/$1');
+$routes->post('insert/servicetest', 'Servicetest::insert');
+$routes->get('edit/sertest/(:num)', 'Servicetest::edit/$1');
+$routes->post('update/servicetest', 'Servicetest::update');
+$routes->get('delete/sertest/(:num)/(:num)', 'Servicetest::delete/$1/$2');

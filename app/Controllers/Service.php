@@ -32,6 +32,7 @@ class Service extends BaseController
 
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
+        $data['service'] = $this->service->findAll();
 
         return view('admin/add_service', $data);
     }

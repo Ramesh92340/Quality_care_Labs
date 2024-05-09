@@ -34,7 +34,7 @@ class Category extends BaseController
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
-
+        
         return view('admin/add_category', $data);
     }
 

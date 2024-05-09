@@ -117,7 +117,7 @@
                                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-blank"></i> <span style="font-size: 12px;"><?= $sv['name']; ?></span></a>
                                             <ul class="dropdown-menu">
                                                 
-                                                            <li><a class="nav-link" href="<?= base_url() ?>test-service/">Test</a></li>
+                                                            <li><a class="nav-link" href="<?= base_url() ?>test-service/<?= $sv['id'] ?>">Test</a></li>
                                                 
                                             </ul>
                                         </li>

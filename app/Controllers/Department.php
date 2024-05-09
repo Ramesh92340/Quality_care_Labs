@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
 use App\Models\DepartmentModel;
+use App\Models\ServiceModel;
 
 class Department extends BaseController
 {
@@ -14,6 +15,7 @@ class Department extends BaseController
        $this->department = new DepartmentModel();
        $this->pack = new PackageModel();
        $this->category = new CategoryModel();
+       $this->service = new ServiceModel();
     }
 
 
@@ -22,7 +24,8 @@ class Department extends BaseController
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
         $data['dept'] = $this->department->findAll();
-    
+        $data['service'] = $this->service->findAll();
+
     return view('admin/department', $data);
     }
 
@@ -31,7 +34,8 @@ class Department extends BaseController
        
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
-
+        $data['service'] = $this->service->findAll();
+        
         return view('admin/add_department', $data);
     }
 
@@ -57,6 +61,7 @@ class Department extends BaseController
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
         $data['dept'] = $this->department->get_by_id($id);
+        $data['service'] = $this->service->findAll();
 
 
         return view('admin/edit_department', $data);

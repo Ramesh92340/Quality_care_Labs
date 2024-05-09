@@ -30,6 +30,7 @@ class Servicetest extends BaseController
         $data['service'] = $this->service->findAll();
 
         $data['id'] = $id;
+        $data['sertest'] = $this->sertest->find_by_serv($id);
         return view('admin/servicetest', $data);
     }
 
@@ -39,73 +40,80 @@ class Servicetest extends BaseController
         $data['pack'] = $this->pack->findAll();
         $data['cate'] = $this->category->findAll();
         $data['service'] = $this->service->findAll();
-        $data['service'] = $this->service->findAll();
         $data['dept'] = $this->department->findAll();
         return view('admin/add_servicetest', $data);
     }
 
     public function insert()
     {
-        $test = new TestModel();
-        $category_id = $this->request->getPost('cat_id');
+    
+        $id = $this->request->getPost('ser_id');
 
         $data = [
+            'test_code' => $this->request->getPost('test_code'),
             'test_name' => $this->request->getPost('test_name'),
-            'package_id' => $this->request->getPost('pack_id'),
-            'category_id' => $category_id
+            'department' => $this->request->getPost('dep_id'),
+            'price' => $this->request->getPost('test_price'),
+            'service' => $id
         ];
 
-        $data2 = $test->insert($data);
+        // print_r($data);
+
+        $data2 = $this->sertest->insert($data);
         if ($data2 == true) {
-            return redirect()->to('test/' . $category_id)->with('success', "Test added Successfully");
+            return redirect()->to('test-service/' . $id)->with('success', "Test added Successfully");
         } else {
-            return redirect()->to('test/' . $category_id)->with('blog-error', "Test added failed");
+            return redirect()->to('test-service/' . $id)->with('blog-error', "Test added failed");
         }
     }
 
     public function edit($id)
     {
 
-        $pack = new PackageModel();
-        $data['pack'] = $pack->findAll();
-        $cate = new CategoryModel();
-        $data['cate'] = $cate->findAll();
-        $test = new TestModel();
-        $data['test'] = $test->get_by_id($id);
+        
+        $data['pack'] = $this->pack->findAll();
+        $data['cate'] = $this->category->findAll();
         $data['service'] = $this->service->findAll();
-
-        return view('admin/edit_test', $data);
+        $data['dept'] = $this->department->findAll();
+        $data['sertest'] = $this->sertest->get_by_id2($id);
+        return view('admin/edit_sertest', $data);
     }
 
     public function update()
     {
-        $test = new  TestModel();
-
+        $sertest = new ServicetestModel();
         $id = $this->request->getPost('id');
-        $category_id = $this->request->getPost('cat_id');
-
-
+        $service_id = $this->request->getPost('service_id');
+     
+    
         $data = [
+            'test_code' => $this->request->getPost('test_code'),
             'test_name' => $this->request->getPost('test_name'),
+            'department' => $this->request->getPost('dep_id'), 
+            'price' => $this->request->getPost('test_price')
         ];
+    
 
-        $data2 = $test->update($id, $data);
-        if ($data2 == true) {
-            return redirect()->to('test/' . $category_id)->with('success', "Test Updated Successfully");
+        // print_r($id);
+     
+        $data2 = $sertest->update($id,$data);
+        if ($data2) {
+            return redirect()->to('test-service/' . $service_id)->with('success', "Test Updated Successfully");
         } else {
-            return redirect()->to('test/' . $category_id)->with('blog-error', "Test Updated failed");
+            return redirect()->to('test-service/' . $service_id)->with('blog-error', "Test Updated failed");
         }
     }
+    
 
-    public function delete($id, $category_id)
+    public function delete($id, $service_id)
     {
 
-        $test = new  TestModel();
-        $data2 = $test->where('id', $id)->delete();
+       
+        $data2 = $this->sertest->where('id', $id)->delete();
         if ($data2 == true) {
-            return redirect()->to('test/' . $category_id)->with('success', "Test Deleted Successfully");
+            return redirect()->to('test-service/' . $service_id)->with('success', "Test Deleted Successfully");
         } else {
-            return redirect()->to('test/' . $category_id)->with('blog-error', "Test Deleted failed");
+            return redirect()->to('test-service/' . $service_id)->with('blog-error', "Test Deleted failed");
         } 
     }
 }

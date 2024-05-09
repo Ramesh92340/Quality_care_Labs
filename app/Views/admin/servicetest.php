@@ -57,16 +57,19 @@
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
-                            <?php if (isset($test) && !empty($test)) : ?>
+                            <?php if (isset($sertest) && !empty($sertest)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($test as $ts) : ?>
+                                <?php foreach ($sertest as $st) : ?>
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
-                                        <td class="text-center"><?= $ts['test_name']; ?></td>
+                                        <td class="text-center"><?= $st['test_code']; ?></td>
+                                        <td class="text-center"><?= $st['test_name']; ?></td>
+                                        <td class="text-center"><?= $st['name']; ?></td>
+                                        <td class="text-center"><?= $st['price']; ?></td>
                                         <td class="text-center">
                                             <!-- <a href="<?= base_url() ?>view/staff/" class="btn btn-info">VIEW</a> -->
-                                            <a href="<?= base_url() ?>edit/test/<?= $ts['id'] ?>" class="btn btn-primary">EDIT</a>
-                                            <a href="<?= base_url() ?>delete/test/<?= $ts['id'] ?>/<?= $id ?>" class="btn btn-danger">DELETE</a>
+                                            <a href="<?= base_url() ?>edit/sertest/<?= $st['id'] ?>" class="btn btn-primary">EDIT</a>
+                                            <a href="<?= base_url() ?>delete/sertest/<?= $st['id'] ?>/<?= $id ?>" class="btn btn-danger">DELETE</a>
                                         </td>
                                     </tr>
                                     <?php $i++ ?>
