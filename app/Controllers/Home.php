@@ -14,6 +14,7 @@ class Home extends BaseController
         $this->package = new PackageModel();
         $this->category = new CategoryModel();
         $this->test = new TestModel();
+        helper('form');
     }
 
     public function index(): string
@@ -23,6 +24,88 @@ class Home extends BaseController
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
         return view('quality/index', $data);
+    }
+
+    public function sendappointment()
+    {
+        $to = 'srimadhuraju@gmail.com';
+        $subject = 'this message from appointment form';
+
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $test = $this->request->getPost('test');
+        $date = $this->request->getPost('date');
+        $message = $this->request->getPost('message');
+
+        // Compose the message
+        $messageContent = "
+        <h1>New Message</h1>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Test Name:</strong> $test</p>
+        <p><strong>Date:</strong><br>$date</p>
+        <p><strong>Message:</strong><br>$message</p>
+        ";
+
+        // Load email service
+        $email = \Config\Services::email();
+
+        // Set email parameters
+        $email->setTo($to);
+        $email->setFrom(config('Email')->fromEmail, config('Email')->fromName);
+        $email->setSubject($subject);
+        $email->setMessage($messageContent);
+
+        // Set email format to HTML
+        $email->setMailType('html');
+
+        // Send email
+        if ($email->send()) {
+            echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . '";</script>';
+        } else {
+            echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . '";</script>';
+        }
+    }
+
+    public function sendcontact()
+    {
+        $to = 'srimadhuraju@gmail.com';
+        $subject = 'this message from Contact form';
+
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $number = $this->request->getPost('number');
+        $requirements = $this->request->getPost('requirements');
+        $message = $this->request->getPost('message');
+
+        // Compose the message
+        $messageContent = "
+        <h1>New Message</h1>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Number:</strong> $number</p>
+        <p><strong>Requirements:</strong><br>$requirements</p>
+        <p><strong>Message:</strong><br>$message</p>
+        ";
+
+        // Load email service
+        $email = \Config\Services::email();
+
+        // Set email parameters
+        $email->setTo($to);
+        $email->setFrom(config('Email')->fromEmail, config('Email')->fromName);
+        $email->setSubject($subject);
+        $email->setMessage($messageContent);
+
+        // Set email format to HTML
+        $email->setMailType('html');
+
+        // Send email
+        if ($email->send()) {
+            echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+        } else {
+            echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+        }
     }
 
     public function about()

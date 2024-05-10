@@ -535,44 +535,56 @@
                      <h4 class="appoinment-title mb-25"><i class="fa-light fa-file-signature"></i>Book your appointment
                      </h4>
                      <div class="visitor-form">
-                        <form action="appotimentMail.php" method="post">
-                           <div class="row">
-                              <div class="col-lg-6">
-                                 <div class="visitor-form__input">
-                                    <input name="name" type="text" placeholder="Your name" required>
-                                 </div>
-                              </div>
-                              <div class="col-lg-6">
-                                 <div class="visitor-form__input">
-                                    <input name="email" type="email" placeholder="Your mail" required>
-                                 </div>
-                              </div>
-                              <div class="col-lg-6">
-                                 <div class="visitor-form__input">
-                                    <input name="test" type="text" placeholder="Test Name" required>
-                                 </div>
-                              </div>
-                              <div class="col-lg-6">
-                                 <div class="visitor-form__input">
-                                    <input name="date" type="date" required>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12">
-                                 <div class="visitor-form__input">
-                                    <textarea placeholder="Type your massage" name="message"></textarea>
-                                 </div>
-                              </div>
-                              <div class="col-lg-4 col-md-4 col-12">
-                                 <div class="visit-btn mt-20">
-                                    <button name="submit" type="submit" class="tp-btn">Book Now</button>
-                                 </div>
-                              </div>
-                              <div class="col-lg-8 col-md-8 col-12">
-                                 <div class="visit-serial mt-45">
-                                    <span><strong>24/7 EMERGENCY SERVICE </strong>: <a href="<?= base_url() ?>tel:+917658905111">+917658905111 &nbsp;<i class="fas fa-phone"></i></i></a></span>
-                                 </div>
+                        <?php if (isset($_GET['success_message'])) : ?>
+                           <div class="alert alert-success" role="alert">
+                              <?= $_GET['success_message'] ?>
+                           </div>
+                        <?php endif; ?>
+
+                        <?php if (isset($_GET['error_message'])) : ?>
+                           <div class="alert alert-danger" role="alert">
+                              <?= $_GET['error_message'] ?>
+                           </div>
+                  
+                        <?php endif; ?>
+                        <?= form_open_multipart('sendappointment'); ?>
+                        <div class="row">
+                           <div class="col-lg-6">
+                              <div class="visitor-form__input">
+                                 <input name="name" type="text" placeholder="Your name" required>
                               </div>
                            </div>
+                           <div class="col-lg-6">
+                              <div class="visitor-form__input">
+                                 <input name="email" type="email" placeholder="Your mail" required>
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="visitor-form__input">
+                                 <input name="test" type="text" placeholder="Test Name" required>
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="visitor-form__input">
+                                 <input name="date" type="date" required>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="visitor-form__input">
+                                 <textarea placeholder="Type your massage" name="message"></textarea>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-12">
+                              <div class="visit-btn mt-20">
+                                 <button name="submit" type="submit" class="tp-btn">Book Now</button>
+                              </div>
+                           </div>
+                           <div class="col-lg-8 col-md-8 col-12">
+                              <div class="visit-serial mt-45">
+                                 <span><strong>24/7 EMERGENCY SERVICE </strong>: <a href="<?= base_url() ?>tel:+917658905111">+917658905111 &nbsp;<i class="fas fa-phone"></i></i></a></span>
+                              </div>
+                           </div>
+                        </div>
                         </form>
                      </div>
                   </div>

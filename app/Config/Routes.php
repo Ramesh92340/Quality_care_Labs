@@ -20,7 +20,8 @@ $routes->get('contact', 'Home::contact');
 $routes->get('cart', 'Home::cart');
 $routes->get('checkout', 'Home::checkout');
 
-
+$routes->post('sendappointment', 'Home::sendappointment');
+$routes->post('sendcontact', 'Home::sendcontact');
 
 
 //admin routes

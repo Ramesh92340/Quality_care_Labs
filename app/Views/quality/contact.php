@@ -292,7 +292,7 @@
                      <div class="contactform wow fadeInRight" data-wow-delay=".4s">
                         <h4 class="contactform__title mb-35">Send us a Message :</h4>
                         <div class="contactform__list mb-20">
-                           <form   action="contactMail.php" method="post">
+                           <?= form_open_multipart('sendcontact'); ?>
                               <div class="row">
                                  <div class="col-lg-6">
                                     <div class="contactform__input mb-30">

@@ -7,6 +7,7 @@ use App\Models\CategoryModel;
 use App\Models\DepartmentModel;
 use App\Models\ServiceModel;
 
+
 class Service extends BaseController
 {
     public function __construct()
@@ -26,6 +27,8 @@ class Service extends BaseController
 
         return view('admin/service', $data);
     }
+
+ 
 
     public function add()
     {
