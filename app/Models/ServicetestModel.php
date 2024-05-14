@@ -66,4 +66,49 @@ class ServicetestModel extends Model
         $this->distinct();
         return $this->findAll();
     }
+    public function select_test2()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service', 2);
+        $this->distinct();
+        return $this->findAll();
+    }
+    public function select_test3()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service', 3);
+        $this->distinct();
+        return $this->findAll();
+    }
+    public function select_test4()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service', 4);
+        $this->distinct();
+        return $this->findAll();
+    }
+    public function select_test5()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service',5);
+        $this->distinct();
+        return $this->findAll();
+    }
+    public function select_test6()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service', 6);
+        $this->distinct();
+        return $this->findAll();
+    }
 }

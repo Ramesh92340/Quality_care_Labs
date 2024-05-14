@@ -48,7 +48,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th class="text-center">Si No</th>
+                                <th class="text-center">S.No</th>
                                 <th class="text-center">Test Code</th>
                                 <th class="text-center">Test Name</th>
                                 <th class="text-center">Department</th>
@@ -69,7 +69,17 @@
                                         <td class="text-center">
                                             <!-- <a href="<?= base_url() ?>view/staff/" class="btn btn-info">VIEW</a> -->
                                             <a href="<?= base_url() ?>edit/sertest/<?= $st['id'] ?>" class="btn btn-primary">EDIT</a>
-                                            <a href="<?= base_url() ?>delete/sertest/<?= $st['id'] ?>/<?= $id ?>" class="btn btn-danger">DELETE</a>
+                                            <!-- <a href="<?= base_url() ?>delete/sertest/<?= $st['id'] ?>/<?= $id ?>" class="btn btn-danger">DELETE</a> -->
+
+                                            <a href="<?= base_url() ?>delete/sertest/<?= $st['id'] ?>/<?= $id ?>" class="btn btn-danger" onclick="return confirmDeletion()">DELETE</a>
+
+                                            <script>
+                                                function confirmDeletion() {
+                                                    return confirm("Are you sure you want to delete this service?");
+                                                }
+                                            </script>
+
+
                                         </td>
                                     </tr>
                                     <?php $i++ ?>

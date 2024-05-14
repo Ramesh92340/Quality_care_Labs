@@ -56,6 +56,14 @@
                                         <input type="text" class="form-control" name="test_name" value="<?= set_value('test_name') ?>">
                                     </div>
                                 </div>
+                                
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Test Price</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" class="form-control" name="test_price" value="<?= set_value('test_price') ?>">
+                                    </div>
+                                </div>
+
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select Department</label>
                                     <div class="col-sm-12 col-md-7">
@@ -74,12 +82,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Test Price</label>
-                                    <div class="col-sm-12 col-md-7">
-                                        <input type="text" class="form-control" name="test_price" value="<?= set_value('test_price') ?>">
-                                    </div>
-                                </div>
+
 
                                 <div class="form-group row mb-4">
                                     <!-- <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select Package</label> -->

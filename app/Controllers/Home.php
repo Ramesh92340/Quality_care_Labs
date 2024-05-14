@@ -139,29 +139,37 @@ class Home extends BaseController
 
     public function service2()
     {
+        $data['data2'] = $this->sertest->select_test2();
 
-        return view('quality/service2');
+        return view('quality/service2', $data);
     }
 
     public function service3()
     {
-        return view('quality/service3');
+        $data['data3'] = $this->sertest->select_test3();
+
+        return view('quality/service3', $data);
     }
 
     public function service4()
     {
-        return view('quality/service4');
+        $data['data4'] = $this->sertest->select_test4();
+
+        return view('quality/service4', $data);
     }
 
     public function service5()
     {
-        return view('quality/service5');
+        $data['data5'] = $this->sertest->select_test5();
+
+        return view('quality/service5', $data);
     }
 
     public function service6()
     {
-        return view('quality/service6');
-    }
+        $data['data6'] = $this->sertest->select_test6();
+
+        return view('quality/service6', $data);    }
 
     public function packages()
     {
