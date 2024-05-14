@@ -545,7 +545,7 @@
                            <div class="alert alert-danger" role="alert">
                               <?= $_GET['error_message'] ?>
                            </div>
-                  
+
                         <?php endif; ?>
                         <?= form_open_multipart('sendappointment'); ?>
                         <div class="row">
@@ -694,11 +694,11 @@
                               <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
                                  <div class="accordion-item shadow">
                                     <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
-                                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="true" aria-controls="collapse<?= $ct['id'] ?>">
+                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
                                           <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
                                        </button>
                                     </h2>
-                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                        <div class="accordion-body">
                                           <ul class="ms-2">
                                              <?php foreach ($test as $ts) : ?>
@@ -709,6 +709,7 @@
                                           </ul>
                                        </div>
                                     </div>
+
                                  </div>
                               </div>
                            <?php endif; ?>

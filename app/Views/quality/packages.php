@@ -1,13 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Quality Care Labs</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico in the root directory -->
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Quality Care Labs</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
@@ -25,27 +26,28 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
-<script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-   </head>
-   <body>
-      
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+</head>
 
-      <!-- Scroll-top -->
-      <button class="scroll-top scroll-to-target" data-target="html">
-         <i class="fas fa-angle-up"></i>
-      </button>
-      <!-- Scroll-top-end-->   
-      
-      <!-- preloader -->
-      <div id="preloadertp">
-         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
-      </div>
-      <!-- preloader end  -->      
+<body>
 
-   
+
+   <!-- Scroll-top -->
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="fas fa-angle-up"></i>
+   </button>
+   <!-- Scroll-top-end-->
+
+   <!-- preloader -->
+   <div id="preloadertp">
+      <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
+   </div>
+   <!-- preloader end  -->
+
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
@@ -58,13 +60,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -132,7 +134,7 @@
                                  </div> -->
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?=base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -201,16 +203,11 @@
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -230,10 +227,10 @@
 
    </div>
    <!-- sidebar-info-end -->
- 
-      
-      <!-- main-area -->
-      <main>
+
+
+   <!-- main-area -->
+   <main>
 
       <section class="blog-area pt-40 pb-30">
          <div class="container  wow fadeInUp" data-wow-delay=".3s">
@@ -488,7 +485,7 @@
 
                </div>
             </div> -->
-        
+
          </div>
       </section>
 
@@ -529,11 +526,11 @@
                               <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
                                  <div class="accordion-item shadow">
                                     <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
-                                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="true" aria-controls="collapse<?= $ct['id'] ?>">
+                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
                                           <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
                                        </button>
                                     </h2>
-                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                        <div class="accordion-body">
                                           <ul class="ms-2">
                                              <?php foreach ($test as $ts) : ?>
@@ -544,6 +541,7 @@
                                           </ul>
                                        </div>
                                     </div>
+
                                  </div>
                               </div>
                            <?php endif; ?>
@@ -653,8 +651,8 @@
 
    </main>
    <!-- main-area-end -->
-      <!-- footer-area -->
-      <footer class="need_margin_down">
+   <!-- footer-area -->
+   <footer class="need_margin_down">
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
@@ -818,4 +816,5 @@
    </script>
 
 </body>
+
 </html>
