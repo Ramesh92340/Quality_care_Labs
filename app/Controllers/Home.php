@@ -26,6 +26,9 @@ class Home extends BaseController
         return view('quality/index', $data);
     }
 
+
+    // mails controller function
+
     public function sendappointment()
     {
         $to = 'srimadhuraju@gmail.com';
@@ -107,6 +110,7 @@ class Home extends BaseController
             echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
         }
     }
+    //end mail controller
 
     public function about()
     {
