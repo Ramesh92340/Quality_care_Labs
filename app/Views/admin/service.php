@@ -64,7 +64,9 @@
                                         <td class="text-center">
                                             <!-- <a href="<?= base_url() ?>view/staff/" class="btn btn-info">VIEW</a> -->
                                             <a href="<?= base_url() ?>edit/service/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>
+                                            <?php if($pk['id']>=7): ?>
                                             <a href="<?= base_url() ?>delete/service/<?= $pk['id'] ?>" class="btn btn-danger">DELETE</a>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                     <?php $i++ ?>

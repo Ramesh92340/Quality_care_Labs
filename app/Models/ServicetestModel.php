@@ -56,4 +56,14 @@ class ServicetestModel extends Model
         $builder->where('id', $id);
         return $builder->update($data);
     }
+
+    public function select_test1()
+    {
+        $this->from('service-tests as st');
+        $this->join('department as d', 'st.department = d.id');
+        $this->select('st.*, d.name');
+        $this->where('st.service', 1);
+        $this->distinct();
+        return $this->findAll();
+    }
 }

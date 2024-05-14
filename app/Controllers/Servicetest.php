@@ -116,4 +116,10 @@ class Servicetest extends BaseController
             return redirect()->to('test-service/' . $service_id)->with('blog-error', "Test Deleted failed");
         } 
     }
+
+    public function select_by_test1()
+    {
+       
+
+    }
 }

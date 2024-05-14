@@ -157,4 +157,5 @@ class Admin extends BaseController
             return redirect()->to('package')->with('blog-error', "Package Deleted failed");
         }
     }
+
 }

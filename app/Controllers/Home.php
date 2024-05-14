@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\PackageModel;
+use App\Models\ServiceModel;
+use App\Models\ServicetestModel;
 use App\Models\TestModel;
 
 class Home extends BaseController
@@ -14,6 +16,8 @@ class Home extends BaseController
         $this->package = new PackageModel();
         $this->category = new CategoryModel();
         $this->test = new TestModel();
+        $this->service = new ServiceModel();
+        $this->sertest = new ServicetestModel();
         helper('form');
     }
 
@@ -129,11 +133,13 @@ class Home extends BaseController
 
     public function service1()
     {
-        return view('quality/service1');
+        $data['data1'] = $this->sertest->select_test1();
+        return view('quality/service1' , $data);
     }
 
     public function service2()
     {
+
         return view('quality/service2');
     }
 

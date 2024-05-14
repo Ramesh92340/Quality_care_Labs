@@ -36,6 +36,7 @@ $routes->post('insert/package', 'Admin::insert');
 $routes->get('edit/package/(:num)','Admin::edit/$1');
 $routes->post('update/package' ,'Admin::update_data');
 $routes->get('delete/package/(:num)', 'Admin::delete/$1');
+$routes->get('logout', 'Admin::logout');
 
 //category routes
 $routes->get('category', 'Category');
