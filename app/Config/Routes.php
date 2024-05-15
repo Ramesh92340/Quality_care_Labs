@@ -22,6 +22,7 @@ $routes->get('checkout', 'Home::checkout');
 
 $routes->post('sendappointment', 'Home::sendappointment');
 $routes->post('sendcontact', 'Home::sendcontact');
+$routes->post('sendonlymail', 'Home::sendmail');
 
 
 //admin routes

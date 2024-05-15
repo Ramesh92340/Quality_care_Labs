@@ -217,7 +217,8 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-            <form action="onlyMail.php" method="post">
+           <?= form_open_multipart('sendonlymail'); ?>
+
                <input name="mail" type="email" placeholder="Enter Mail" required>
                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
@@ -551,7 +552,8 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                        <form action="onlyMail.php" method="post">
+                       <?= form_open_multipart('sendonlymail'); ?>
+
                            <input name="mail" type="email" placeholder="Enter Mail" required>
                            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>

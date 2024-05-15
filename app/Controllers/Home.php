@@ -114,6 +114,39 @@ class Home extends BaseController
             echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
         }
     }
+
+    public function sendmail()
+    {
+        $to = 'srimadhuraju@gmail.com';
+        $subject = 'this message from Contact form';
+
+        $email = $this->request->getPost('mail');
+
+        $messageContent = "
+        <h1>New Message</h1>
+        
+        <p><strong>Email:</strong> $email</p>
+          ";
+          $email = \Config\Services::email();
+
+          // Set email parameters
+          $email->setTo($to);
+          $email->setFrom(config('Email')->fromEmail, config('Email')->fromName);
+          $email->setSubject($subject);
+          $email->setMessage($messageContent);
+  
+          // Set email format to HTML
+          $email->setMailType('html');
+  
+          // Send email
+          if ($email->send()) {
+              echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+          } else {
+              echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+          }
+     
+       
+    }
     //end mail controller
 
     public function about()
