@@ -27,10 +27,25 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+   <style>
+         .accordion-body ul .list_text {
+            font-size: 14px !important; /* Example font size */
+            color: #333 !important; /* Example text color */
+            font-weight: 600 !important; /* Example font weight */
+            list-style-type: disc !important; 
+
+        }
+      .card {
+         width: 100%;
+         /* Ensure full width within the column */
+      }
+   </style>
+
 </head>
+
 
 <body>
 
@@ -491,12 +506,76 @@
 
 
 
+      <div class="container mt-5">
+         <div class="d-none d-md-block">
+            <div class="row">
+               <?php if (isset($pack)) : ?>
+                  <?php foreach ($pack as $pk) : ?>
+                     <?php
+                     // Initialize total tests count for the package
+                     $total_tests_count = 0;
+                     ?>
+                     <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                           <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;" data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
+                           <div class="text-center" style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
+                              <h3 class="mt-3" data-package-price="<?= $pk['package_price'] ?>"><?= $pk['package_price'] ?>/-</h3>
+                              <?php foreach ($cat as $ct) : ?>
+                                 <?php if ($pk['id'] == $ct['package']) : ?>
+                                    <?php
+                                    // Increment total tests count for the package
+                                    $total_tests_count += count(array_filter($test, function ($ts) use ($ct, $pk) {
+                                       return $ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id'];
+                                    }));
+                                    ?>
+                                 <?php endif; ?>
+                              <?php endforeach; ?>
+                              <p style="color:white">(<?= $total_tests_count ?> Tests)</p>
+                           </div>
+                           <?php if (isset($cat)) : ?>
+                              <?php foreach ($cat as $ct) : ?>
+                                 <?php if ($pk['id'] == $ct['package']) : ?>
+                                    <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
+                                       <div class="accordion-item shadow">
+                                          <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
+                                                <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
+                                             </button>
+                                          </h2>
+                                          <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                             <div class="accordion-body ">
+                                                <ul class="ms-2 list_type" >
+                                                   <?php foreach ($test as $ts) : ?>
+                                                      <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
+                                                         <li class="list_text"><?= $ts['test_name'] ?></li>
+                                                      <?php endif; ?>
+                                                   <?php endforeach; ?>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 <?php endif; ?>
+                              <?php endforeach; ?>
+                           <?php endif; ?>
+                           <div class="d-flex flex-row justify-content-center">
+                              <a href="<?= $pk['id'] ?>"><button class="m-3 p-3 text-center book-now-btn" style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book Now</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  <?php endforeach; ?>
+               <?php endif; ?>
+            </div>
+         </div>
+      </div>
+
+
       <!-- Bootstrap JS (optional if you already have it included) -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 
 
 
-      <div class="card-slider container only_forr_slider">
+      <div class="card-slider container only_forr_slider  d-md-none">
          <div class="cards cards_paddaing">
             <?php if (isset($pack)) : ?>
                <?php foreach ($pack as $pk) : ?>
@@ -535,7 +614,7 @@
                                           <ul class="ms-2">
                                              <?php foreach ($test as $ts) : ?>
                                                 <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
-                                                   <li><?= $ts['test_name'] ?></li>
+                                                   <li class="list_text"><?= $ts['test_name'] ?></li>
                                                 <?php endif; ?>
                                              <?php endforeach; ?>
                                           </ul>
@@ -557,6 +636,10 @@
          <button class="custom-prev"></button>
          <button class="custom-next"></button>
       </div>
+
+
+
+
 
       <?php
       function countTestsInCategory($categoryId, $packageId, $tests)
@@ -766,6 +849,9 @@
    <script src="assets/js/nice-select.js"></script>
    <script src="assets/js/jquery.knob.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
