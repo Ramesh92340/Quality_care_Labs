@@ -216,7 +216,10 @@ class Home extends BaseController
     {
         return view('quality/contact');
     }
-
+    public function healthrisks()
+    {
+        return view('quality/health_risks');
+    }
     public function cart()
     {
         return view('quality/cart');

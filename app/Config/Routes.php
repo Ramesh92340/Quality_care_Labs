@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\Home;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -17,6 +18,7 @@ $routes->get('service5', 'Home::service5');
 $routes->get('service6', 'Home::service6');
 $routes->get('packages', 'Home::packages');
 $routes->get('contact', 'Home::contact');
+$routes->get('healthrisks','Home::healthrisks');
 $routes->get('cart', 'Home::cart');
 $routes->get('checkout', 'Home::checkout');
 

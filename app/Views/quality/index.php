@@ -223,10 +223,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -355,93 +355,6 @@
          </div>
       </section>
 
-      <div class="container" style="margin-bottom: 30px;">
-         <div class="row">
-            <div class="col-12">
-               <h2>Test by Health Risks</h2>
-            </div>
-         </div>
-      </div>
-
-      <!-- small cards  -->
-
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <div class="container">
-                  <div class="row d-flex flex-row justify-content-center">
-                     <div class="col-md-2 col-sm-4 col-6 mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                              <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Heart</h5>
-
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/liver (1).png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Liver</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/kidney.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Kidney</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/thyroid.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Thyroid</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4   ">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/bone.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Bone & Joint</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Add more card items as needed -->
-
-                  </div>
-               </div>
-            </div>
-            <!-- Additional carousel items can be added similarly -->
-
-         </div>
-         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-         </button>
-         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-         </button>
-      </div>
 
 
       <!-- gallery-area -->
@@ -466,7 +379,7 @@
                      <div class="gallery-item p-relative mb-30">
                         <img src="<?= base_url() ?>assets/img/Gallary-1.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details1.html">CLINICAL BIOCHEMIATRY</a>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service1">CLINICAL BIOCHEMIATRY</a>
                            </h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
@@ -476,7 +389,7 @@
                      <div class="gallery-item p-relative mb-30">
                         <img src="<?= base_url() ?>assets/img/Gallary-5.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details5.html">MICROBIOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service5">MICROBIOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
@@ -485,7 +398,7 @@
                      <div class="gallery-item p-relative mb-30">
                         <img src="<?= base_url() ?>assets/img/new-machine.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details3.html">IMMUNOLOGY & SEROLOGY</a>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service3">IMMUNOLOGY & SEROLOGY</a>
                            </h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
@@ -495,7 +408,7 @@
                      <div class="gallery-item p-relative mb-30">
                         <img src="<?= base_url() ?>assets/img/Gallary-4.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details4.html">MOLECULAR BIOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
@@ -506,7 +419,7 @@
                         <!-- <img src="assets/img/Gallary-2.png" alt="gallery-thumb"> -->
 
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>services-details2.html">HEMATOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service2">HEMATOLOGY</a></h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
@@ -597,6 +510,98 @@
 
 
 
+      <div class="container mt-150" style="margin-bottom: 30px; ">
+         <div class="row">
+            <div class="col-12">
+               <h2 class="">Test by Health Risks</h2>
+            </div>
+         </div>
+      </div>
+
+      <!-- small cards  -->
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <div class="row d-flex flex-row justify-content-center">
+                     <div class="col-md-2 col-sm-4 col-6 mt-4">
+
+<a href="<?= base_url() ?>healthrisks">
+
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                              <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card">Heart</h5>
+                           </div>
+                        </div>
+
+                        </a>
+
+                     </div>
+                     <div class="col-md-2 col-sm-4 col-6  mt-4">
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center">
+                              <img src="<?= base_url() ?>assets/img/liver (1).png" style="height: 80px; width:80px" class="card-img-top" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card">Liver</h5>
+                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2 col-sm-4 col-6  mt-4">
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center">
+                              <img src="<?= base_url() ?>assets/img/Test icons/kidney.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card">Kidney</h5>
+                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2 col-sm-4 col-6  mt-4">
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center">
+                              <img src="<?= base_url() ?>assets/img/Test icons/thyroid.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card">Thyroid</h5>
+                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2 col-sm-4 col-6  mt-4   ">
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center">
+                              <img src="<?= base_url() ?>assets/img/Test icons/bone.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card">Bone & Joint</h5>
+                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Add more card items as needed -->
+
+                  </div>
+               </div>
+            </div>
+            <!-- Additional carousel items can be added similarly -->
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
 
 
       <section class="blog-area pt-85 pb-20">
@@ -903,10 +908,10 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                       <?= form_open_multipart('sendonlymail'); ?>
+                        <?= form_open_multipart('sendonlymail'); ?>
 
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
