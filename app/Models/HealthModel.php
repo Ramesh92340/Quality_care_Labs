@@ -1,31 +1,30 @@
-<?php namespace App\Models;
+<?php
+
+namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ItemModel extends Model
+class HealthModel extends Model
 {
     protected $table = 'healthrisks';  // The table name
     protected $primaryKey = 'id';  // The primary key of the table
-    protected $allowedFields = ['name' ];  // Fields that can be inserted/updated
+    protected $allowedFields = [
+        'name',
+        'image'
+    ];  // Fields that can be inserted/updated
 
-
-  
-
-
-
+    // Method to insert data
     public function insert_data($data)
     {
         return $this->save($data);
     }
 
+    // Method to get an item by ID
     public function get_by_id($id)
     {
-        $this->where('id', $id);
-        return $this->first();
+        return $this->where('id', $id)
+                    ->first();
     }
-    
-
-
 
     // Method to insert a new item
     public function insertItem($data)

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\ItemModel;
+use App\Models\HealthModel ;
 use App\Models\CategoryModel;
 use App\Models\PackageModel;
 use App\Models\ServiceModel;
@@ -20,7 +20,7 @@ class Home extends BaseController
         $this->test = new TestModel();
         $this->service = new ServiceModel();
         $this->sertest = new ServicetestModel();
-        $this->itemModel = new ItemModel(); // Add ItemModel
+        $this->healthModel  = new HealthModel (); // Add ItemModel
         helper('form');
     }
 
@@ -30,7 +30,7 @@ class Home extends BaseController
         $data['pack'] = $this->package->findAll();
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
-        $data['items'] = $this->itemModel->getItems(); // Load items data
+        $data['items'] = $this->healthModel ->getItems(); // Load items data
         return view('quality/index', $data);
     }
 
@@ -219,14 +219,17 @@ class Home extends BaseController
     {
         return view('quality/contact');
     }
-    public function healthrisks()
-    {
-        return view('quality/health_risks');
-    }
+
     public function cart()
     {
         return view('quality/cart');
     }
+
+    public function health()
+    {
+        return view('quality/health');
+    }
+
 
     public function checkout()
     {
@@ -234,49 +237,14 @@ class Home extends BaseController
     }
 
 
-
-    public function create()
+ 
+    public function healthrisks()
     {
-        return view('quality/create_item');
+        return view('quality/health_risks');
     }
 
-    public function store()
-    {
-        $data = [
-            'name' => $this->request->getPost('name'),
-             
-        ];
+  
+    
 
-        $this->itemModel->insertItem($data);
-
-        return redirect()->to('/items');
-    }
-
-    public function show($id)
-    {
-        $data['item'] = $this->itemModel->getItemById($id);
-
-        return view('admin/items_list', $data);
-    }
-
-    public function insertData()
-    {
-        // Create an instance of the ItemModel
-        $itemModel = new ItemModel();
-
-        // Prepare the data to be inserted
-        $data = [
-            'name' => 'Some Name',
-            // Add other fields here if needed
-        ];
-
-        // Call the insert_data method of the ItemModel
-        if ($itemModel->insert_data($data)) {
-            // Data inserted successfully
-            echo 'Data inserted successfully.';
-        } else {
-            // Failed to insert data
-            echo 'Failed to insert data.';
-        }
-    }
+     
 }

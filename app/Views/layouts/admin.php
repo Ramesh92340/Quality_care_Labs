@@ -137,8 +137,10 @@
 
                                     <ul class="dropdown-menu">
                                        
-                                        <li><a class="nav-link" href="<?= base_url() ?>category_health">Category</a></li> 
-                                        <li><a class="nav-link" href="<?= base_url() ?>package">Names</a></li>
+                                        <li><a class="nav-link" href="<?= base_url() ?>health">Types of Health Risks</a></li> 
+                                        <li><a class="nav-link" href="<?= base_url() ?>health_disc">Discription of Health Risks</a></li> 
+
+                                        <li><a class="nav-link" href="<?= base_url() ?>package">Packages in Health Risks</a></li>
                                         <!-- <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> -->
                                     </ul>
                                 </li>

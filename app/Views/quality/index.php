@@ -527,16 +527,16 @@
                   <div class="row d-flex flex-row justify-content-center">
                      <div class="col-md-2 col-sm-4 col-6 mt-4">
 
-<a href="<?= base_url() ?>healthrisks">
+                        <a href="<?= base_url() ?>healthrisks">
 
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                              <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                           <div class="card" style="border-top:solid">
+                              <div class="d-flex flex-row justify-content-center" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                                 <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                              </div>
+                              <div class="card-body">
+                                 <h5 class="card-title little_card">Heart</h5>
+                              </div>
                            </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Heart</h5>
-                           </div>
-                        </div>
 
                         </a>
 
