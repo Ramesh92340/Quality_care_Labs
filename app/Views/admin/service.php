@@ -48,7 +48,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th class="text-center">Si No</th>
+                                <th class="text-center">S.No</th>
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Action</th>
                             </tr>
