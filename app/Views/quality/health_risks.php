@@ -36,13 +36,27 @@
             margin-top: 50px !important;
             padding: 50px;
             margin-bottom: 50px;
-            background-color: lightblue;
+            background-color: #f8fafc;
+            box-shadow: 0 0 10px #0F3661;
+            border-radius: 5px;
+
         }
 
-        .img_border{
-            border: 1px solid ;
+        .img_border {
+            border: 1px solid;
             padding: 40px;
-            box-shadow: 0 0 10px #0F3661;             
+            box-shadow: 0 0 10px #0F3661;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+      
+        .mini_card_cart_button {
+            border: #63A238 1px solid;
+            border-radius: 4px;
+            padding: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -117,7 +131,7 @@
                                         <li class=" "><a href="<?= base_url() ?>packages">Packages</a>
 
                                         </li>
-                                        <li><a class="active" href="<?= base_url() ?>contact">Contact</a></li>
+                                        <li><a href="<?= base_url() ?>contact">Contact</a></li>
                                         <!-- <li class="has-dropdown"><a href="services.html"> <i class="fa-solid fa-cart-plus cart-icon"></i></a>
                                     <ul class="sub-menu">
                                        <li><a href="services-details1.html">~ CLINICAL BIOCHEMIATRY</a></li>
@@ -274,23 +288,23 @@
                         </p>
 
                         <p>
-                        Bilirubin: A waste product produced by the liver
-                        <br>
-                     
-                        Total protein: The total amount of protein in the blood
-                        <br>
-                        Albumin: A protein produced in the liver
-                        <br>
-                        Globulin: Proteins made by liver
-                        <br>
+                            Bilirubin: A waste product produced by the liver
+                            <br>
 
-                        ALT (alanine transaminase), ALP (alkaline phosphatase), gamma-glutamyl transferase (GGT), LDH (lactate dehydrogenase) and AST (aspartate aminotransferase): Different enzymes produced by the liver and indicates liver injuries, damage or dysfunctions
+                            Total protein: The total amount of protein in the blood
+                            <br>
+                            Albumin: A protein produced in the liver
+                            <br>
+                            Globulin: Proteins made by liver
+                            <br>
 
-                        <br>
-                        Prothrombin time (PT): A protein that helps blood clotting appropriately
-                        <br>
-                        Apart from these, tests that detect autoimmune liver disorders, fibrosis, steatosis, cirrhosis, and genetic involvement in liver diseases are also tested at Metropolis Labs.
-                        <br>You can book liver tests online to ascertain that these substances are in the normal range. Not all abnormal liver test results indicate liver disease. Your doctor can explain your liver test results and what it says about your overall health.
+                            ALT (alanine transaminase), ALP (alkaline phosphatase), gamma-glutamyl transferase (GGT), LDH (lactate dehydrogenase) and AST (aspartate aminotransferase): Different enzymes produced by the liver and indicates liver injuries, damage or dysfunctions
+
+                            <br>
+                            Prothrombin time (PT): A protein that helps blood clotting appropriately
+                            <br>
+                            Apart from these, tests that detect autoimmune liver disorders, fibrosis, steatosis, cirrhosis, and genetic involvement in liver diseases are also tested at Metropolis Labs.
+                            <br>You can book liver tests online to ascertain that these substances are in the normal range. Not all abnormal liver test results indicate liver disease. Your doctor can explain your liver test results and what it says about your overall health.
 
 
 
@@ -301,6 +315,64 @@
                 </div>
             </div>
         </section>
+
+
+
+
+        <div class="container mt-5">
+            <div class="d-none d-md-block">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div><div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div><div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card mini_main_card p-3 shadow">
+                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                            <p>₹ 650</p>
+                            <p>Includes: 1 parameters</p>
+                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
     </main>
     <!-- main-area-end -->
