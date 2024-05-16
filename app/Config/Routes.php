@@ -88,3 +88,9 @@ $routes->post('insert/servicetest', 'Servicetest::insert');
 $routes->get('edit/sertest/(:num)', 'Servicetest::edit/$1');
 $routes->post('update/servicetest', 'Servicetest::update');
 $routes->get('delete/sertest/(:num)/(:num)', 'Servicetest::delete/$1/$2');
+
+
+
+// healt - risks Routes 
+
+$routes->get('category_health', 'Health');

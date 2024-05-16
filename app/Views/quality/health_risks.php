@@ -51,7 +51,7 @@
 
         }
 
-      
+
         .mini_card_cart_button {
             border: #63A238 1px solid;
             border-radius: 4px;
@@ -318,61 +318,113 @@
 
 
 
+        <section>
+            <div class="container mt-5">
+                <div class="d-none d-md-block">
+                    <div class="row">
 
-        <div class="container mt-5">
-            <div class="d-none d-md-block">
-                <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
 
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
-                    </div><div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
-                    </div><div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card mini_main_card p-3 shadow">
-                            <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                            <p>₹ 650</p>
-                            <p>Includes: 1 parameters</p>
-                            <button class="mini_card_cart_button shadow">Add to Cart</button>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card mini_main_card p-3 shadow">
+                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
+                                <p>₹ 650</p>
+                                <p>Includes: 1 parameters</p>
+                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+
+
+                                <button class="mini_card_cart_button shadow">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+        </section>
 
+        <section>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">More Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <p>This is more detailed information about the Liver Function Test.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- main-area-end -->
@@ -494,6 +546,12 @@
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/jquery.knob.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

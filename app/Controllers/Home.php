@@ -2,11 +2,13 @@
 
 namespace App\Controllers;
 
+use App\Models\ItemModel;
 use App\Models\CategoryModel;
 use App\Models\PackageModel;
 use App\Models\ServiceModel;
 use App\Models\ServicetestModel;
 use App\Models\TestModel;
+
 
 class Home extends BaseController
 {
@@ -18,18 +20,19 @@ class Home extends BaseController
         $this->test = new TestModel();
         $this->service = new ServiceModel();
         $this->sertest = new ServicetestModel();
+        $this->itemModel = new ItemModel(); // Add ItemModel
         helper('form');
     }
 
+
     public function index(): string
     {
-
         $data['pack'] = $this->package->findAll();
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
+        $data['items'] = $this->itemModel->getItems(); // Load items data
         return view('quality/index', $data);
     }
-
 
     // mails controller function
 
@@ -228,5 +231,52 @@ class Home extends BaseController
     public function checkout()
     {
         return view('quality/checkout');
+    }
+
+
+
+    public function create()
+    {
+        return view('quality/create_item');
+    }
+
+    public function store()
+    {
+        $data = [
+            'name' => $this->request->getPost('name'),
+             
+        ];
+
+        $this->itemModel->insertItem($data);
+
+        return redirect()->to('/items');
+    }
+
+    public function show($id)
+    {
+        $data['item'] = $this->itemModel->getItemById($id);
+
+        return view('admin/items_list', $data);
+    }
+
+    public function insertData()
+    {
+        // Create an instance of the ItemModel
+        $itemModel = new ItemModel();
+
+        // Prepare the data to be inserted
+        $data = [
+            'name' => 'Some Name',
+            // Add other fields here if needed
+        ];
+
+        // Call the insert_data method of the ItemModel
+        if ($itemModel->insert_data($data)) {
+            // Data inserted successfully
+            echo 'Data inserted successfully.';
+        } else {
+            // Failed to insert data
+            echo 'Failed to insert data.';
+        }
     }
 }
