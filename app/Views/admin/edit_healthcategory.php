@@ -8,15 +8,18 @@
     <div class="section-body">
         <div class="card">
             <div class="card-body">
-                <?= form_open_multipart('iupdate_healthcategory') ?>
+                <?= form_open_multipart('update_healthcategory') ?>
 
                      <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" required>
+                        <input type="text" name="name"  class="form-control" value="<?= $health['name'] ?>">
+                        <input type="hidden" name="id" class="form-control" value="<?= $health['id'] ?>">
                     </div>  
                     <div class="grom-group">
-                        <label for="Image">Image:</label>
-                        <input type="file"  name="image" class="form-control mb-4">
+                        <label for="Image">Select New Image:</label>
+                         <img src="<?= base_url('uploads/' . $health['image']) ?>" alt="" height="50%" width="20%">
+                        <input type="file"  name="newimage" class="form-control mb-4">
+                        <input type="hidden"  name="oldimage" class="form-control mb-4" value="<?= $health['image'] ?>">
                     </div>
 
                     

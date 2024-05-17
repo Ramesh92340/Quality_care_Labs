@@ -6,7 +6,6 @@ use App\Models\PackageModel;
 use App\Models\CategoryModel;
 use App\Models\HealthModel;
 use App\Models\ServiceModel;
-use App\Models\TestModel;
 
 class Health extends BaseController
 {
@@ -68,20 +67,12 @@ class Health extends BaseController
         }
     }
 
-
-
-
-
-
     public function edit($id)
     {
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
-        $category = new CategoryModel();
-        $data['cate'] = $category->findAll();
-        $data['cate2'] = $category->get_by_id_2($id);
         $data['service'] = $this->service->findAll();
-
+        $data['health'] = $this->healthcate->getItemById($id);
         return view('admin/edit_healthcategory', $data);
     }
 
@@ -89,27 +80,53 @@ class Health extends BaseController
 
     public function update()
     {
-        $category = new CategoryModel();
-        $id = $this->request->getPost('id');
 
+        $id = $this->request->getPost('id');
+        // $branch_id = $this->request->getPost('branch_id');
+
+        $new_image = $this->request->getFile('newimage');
+        $old_image = $this->request->getPost('oldimage');
+        $newImage = "";
+
+        // Check if a new image is provided
+        if ($new_image !== null && $new_image->isValid() && !$new_image->hasMoved()) {
+            // Delete the old image
+            if (!empty($old_image)) {
+                $path = "uploads/" . $old_image;
+                if (file_exists($path)) {
+                    unlink($path);
+                }
+            }
+
+            // Move the new image to the "uploads/" directory
+            $newImage = $new_image->getRandomName();
+            $new_image->move("uploads/", $newImage);
+        } else {
+            // No new image selected, keep the old image path if it exists
+            if (!empty($old_image) && file_exists("uploads/" . $old_image)) {
+                $newImage = $old_image;
+            } else {
+                $newImage = null; // No old image or old image not found, set picture name to null
+            }
+        }
+
+        // Prepare data for update
         $data = [
-            'name' => $this->request->getPost('cat_name'),
-            'package' => $this->request->getPost('package')
+            'name' => $this->request->getPost('name'),
+            'image' => $newImage,
         ];
 
-        // print_r($id);
-
-        $data2 = $category->update($id, $data);
-        if ($data2 == true) {
-            return redirect()->to('health')->with('success', "Category Updated Successfully");
+        $datast = $this->healthcate->update($id, $data);
+        if ($datast == true) {
+            return redirect()->to('health')->with('success', "Healthcategory Updated successfully");
         } else {
-            return redirect()->to('health')->with('blog-error', "Category Updated failed");
+            return redirect()->to('health')->with('blog-error', "Healthcategory Updated Failed");
         }
     }
 
     public function delete($id)
     {
-        
+
         // Fetch staff data
         $healthata = $this->healthcate->find($id);
 
@@ -127,7 +144,7 @@ class Health extends BaseController
             }
         }
         // Delete the staff record with a where clause
-       $health = $this->healthcate->where('id', $id)->delete();
+        $health = $this->healthcate->where('id', $id)->delete();
         if ($health == true) {
             return redirect()->to('health')->with('success', "Health Category Deleted successfully");
         } else {

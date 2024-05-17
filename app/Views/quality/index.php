@@ -525,68 +525,28 @@
             <div class="carousel-item active">
                <div class="container">
                   <div class="row d-flex flex-row justify-content-center">
-                     <div class="col-md-2 col-sm-4 col-6 mt-4">
+                     <?php if (isset($health) && !empty($health)) : ?>
+                        <?php foreach ($health as $ht) : ?>
+                           <div class="col-md-2 col-sm-4 col-6 mt-4">
 
-                        <a href="<?= base_url() ?>healthrisks">
+                              <a href="<?= base_url() ?>healthrisks/<?= $ht['id'] ?>">
 
-                           <div class="card" style="border-top:solid">
-                              <div class="d-flex flex-row justify-content-center" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                                 <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
-                              </div>
-                              <div class="card-body">
-                                 <h5 class="card-title little_card">Heart</h5>
-                              </div>
-                           </div>
+                                 <div class="card" style="border-top:solid">
+                                    <div class="d-flex flex-row justify-content-center" style="overflow: hidden; margin: 0 auto;">
+                                       <img src="<?= base_url() ?>uploads/<?= $ht['image'] ?>" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                       <h5 class="card-title little_card"><?= $ht['name'] ?></h5>
+                                    </div>
+                                 </div>
 
-                        </a>
+                              </a>
 
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/liver (1).png" style="height: 80px; width:80px" class="card-img-top" alt="...">
                            </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Liver</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/kidney.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Kidney</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/thyroid.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Thyroid</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-2 col-sm-4 col-6  mt-4   ">
-                        <div class="card" style="border-top:solid">
-                           <div class="d-flex flex-row justify-content-center">
-                              <img src="<?= base_url() ?>assets/img/Test icons/bone.png" style="height: 80px; width:80px" class="card-img-top" alt="...">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title little_card">Bone & Joint</h5>
-                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Add more card items as needed -->
-
+                        <?php endforeach; ?>
+                     <?php else : ?>
+                        <th>No categories found</th>
+                     <?php endif; ?>
                   </div>
                </div>
             </div>

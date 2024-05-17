@@ -94,23 +94,8 @@ $routes->get('delete/sertest/(:num)/(:num)', 'Servicetest::delete/$1/$2');
 // healt - risks Routes 
 $routes->get('health', 'Health::index');
 $routes->get('add_health', 'Health::add_health');
+$routes->post('insert_healthcategory','Health::insert');
+$routes->get('edit/health/(:num)', 'Health::edit/$1');
+$routes->post('update_healthcategory','Health::update');
 $routes->get('delete/health/(:num)', 'Health::delete/$1');
 
-$routes->post('insert_healthcategory','Health::insert');
-$routes->get('health', 'Admin::health');
-// $routes->get('add_health', 'Admin::add_health');
-
- 
-// $routes->get('health', 'health');
-// $routes->get('add_health', 'Health::add_health');
-// $routes->post('insert/health', 'Health::insert');
-// $routes->get('edit/health/(:num)','Health::edit/$1');
-// $routes->post('update/health','Health::update');
-// $routes->get('delete/health/(:num)' , 'Health::delete/$1');
-
- 
-// $routes->get('add_category', 'Category::add_category');
-// $routes->post('insert/category', 'Category::insert');
-// $routes->get('edit/category/(:num)','Category::edit/$1');
-// $routes->post('update/category','Category::update');
-// $routes->get('delete/category/(:num)' , 'Category::delete/$1');

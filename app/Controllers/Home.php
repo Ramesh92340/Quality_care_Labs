@@ -20,7 +20,7 @@ class Home extends BaseController
         $this->test = new TestModel();
         $this->service = new ServiceModel();
         $this->sertest = new ServicetestModel();
-        $this->healthModel  = new HealthModel (); // Add ItemModel
+        $this->healthcate  = new HealthModel (); 
         helper('form');
     }
 
@@ -30,7 +30,7 @@ class Home extends BaseController
         $data['pack'] = $this->package->findAll();
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
-        $data['items'] = $this->healthModel ->getItems(); // Load items data
+        $data['health'] = $this->healthcate->getItems();
         return view('quality/index', $data);
     }
 
