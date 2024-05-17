@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\HealthModel ;
 use App\Models\CategoryModel;
+use App\Models\HealthdescModel;
+use App\Models\HealthriskpacksModel;
 use App\Models\PackageModel;
 use App\Models\ServiceModel;
 use App\Models\ServicetestModel;
@@ -21,6 +23,8 @@ class Home extends BaseController
         $this->service = new ServiceModel();
         $this->sertest = new ServicetestModel();
         $this->healthcate  = new HealthModel (); 
+        $this->healthdesc = new HealthdescModel();
+        $this->healthpack = new HealthriskpacksModel();
         helper('form');
     }
 
@@ -238,9 +242,11 @@ class Home extends BaseController
 
 
  
-    public function healthrisks()
+    public function healthrisks($id)
     {
-        return view('quality/health_risks');
+        $data['healthdesc'] = $this->healthdesc->find_by_healthid($id);
+        $data['healthpack'] = $this->healthpack->find_by_healthid($id);
+        return view('quality/health_risks', $data);
     }
 
   

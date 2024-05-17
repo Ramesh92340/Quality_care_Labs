@@ -265,141 +265,64 @@
         <section class="">
             <div class="container first_border ">
                 <div class="row">
-                    <div class="col-md-4 col-lg-3 col-xl-2 col-12">
-                        <div class="d-block d-md-none">
-
-                            <h3>Heart</h3>
+                    <div class="col-12">
+                        <div class="">
+                            <?php if (isset($healthdesc)) :
+                                foreach ($healthdesc as $hd) :
+                            ?>
+                                    <?= $hd['description'] ?>
+                                    
+                            <?php
+                                endforeach;
+                            endif;
+                            ?>
                         </div>
-                        <div class="img_border d-flex flex-row justify-content-center">
-
-                            <img src="<?= base_url() ?>assets/img/heart (1).png" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
-                        </div>
-
-                    </div>
-                    <div class="col-md-8 col-lg-9 col-xl-10 col-12">
-                        <div class="d-none d-md-block">
-
-                            <h3>Heart</h3>
-                        </div>
-                        <p>
-
-                            Liver
-                            Liver tests, also known as liver function tests or liver chemistries, are carried out to diagnose liver damage and associated diseases. The tests typically involve drawing blood samples to measure specific proteins, enzymes, and other substances produced by the liver. A single blood sample can help determine the level of the following components:
-                        </p>
-
-                        <p>
-                            Bilirubin: A waste product produced by the liver
-                            <br>
-
-                            Total protein: The total amount of protein in the blood
-                            <br>
-                            Albumin: A protein produced in the liver
-                            <br>
-                            Globulin: Proteins made by liver
-                            <br>
-
-                            ALT (alanine transaminase), ALP (alkaline phosphatase), gamma-glutamyl transferase (GGT), LDH (lactate dehydrogenase) and AST (aspartate aminotransferase): Different enzymes produced by the liver and indicates liver injuries, damage or dysfunctions
-
-                            <br>
-                            Prothrombin time (PT): A protein that helps blood clotting appropriately
-                            <br>
-                            Apart from these, tests that detect autoimmune liver disorders, fibrosis, steatosis, cirrhosis, and genetic involvement in liver diseases are also tested at Metropolis Labs.
-                            <br>You can book liver tests online to ascertain that these substances are in the normal range. Not all abnormal liver test results indicate liver disease. Your doctor can explain your liver test results and what it says about your overall health.
-
-
-
-
-
-                        </p>
                     </div>
                 </div>
-            </div>
         </section>
 
 
 
         <section>
             <div class="container mt-5">
-                <div class="d-none d-md-block">
+                <div class="">
                     <div class="row">
-
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+                        <?php
+                        if (isset($healthpack)) :
+                            foreach ($healthpack as $hp) :
+                        ?>
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <div class="card mini_main_card p-3 shadow">
+                                        <h5><?= $hp['name'] ?></h5>
+                                        <p>₹ <?= $hp['price'] ?></p>
+                                        <p>Includes:<?= $hp['parameters'] ?> parameters</p>
+                                        <p><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
 
 
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
+                                        <button class="mini_card_cart_button shadow"><a href="<?= $hp['id'] ?>" style="text-decoration: none; color:#000;">Add to Cart</a></button>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">More Information</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
 
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card mini_main_card p-3 shadow">
-                                <h5>Liver Functio Test-3 (LIVER SCREEN)</h5>
-                                <p>₹ 650</p>
-                                <p>Includes: 1 parameters</p>
-                                <p ><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                <button class="mini_card_cart_button shadow">Add to Cart</button>
-                            </div>
-                        </div>
+                                                <p><?= $hp['about'] ?></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php
+                            endforeach;
+                        endif;
+                        ?>
                     </div>
 
                 </div>
@@ -407,23 +330,7 @@
         </section>
 
         <section>
-            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">More Information</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
 
-                            <p>This is more detailed information about the Liver Function Test.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
     </main>
@@ -529,23 +436,23 @@
     <!-- footer-area-end -->
 
     <!-- JS here -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/waypoints.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swiper-bundle.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/magnific-popup.js"></script>
-    <script src="assets/js/counterup.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/isotope-pkgd.js"></script>
-    <script src="assets/js/imagesloaded-pkgd.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/meanmenu.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/jquery.knob.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery.js"></script>
+    <script src="<?= base_url() ?>assets/js/waypoints.js"></script>
+    <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/swiper-bundle.js"></script>
+    <script src="<?= base_url() ?>assets/js/slick.js"></script>
+    <script src="<?= base_url() ?>assets/js/magnific-popup.js"></script>
+    <script src="<?= base_url() ?>assets/js/counterup.js"></script>
+    <script src="<?= base_url() ?>assets/js/wow.js"></script>
+    <script src="<?= base_url() ?>assets/js/isotope-pkgd.js"></script>
+    <script src="<?= base_url() ?>assets/js/imagesloaded-pkgd.js"></script>
+    <script src="<?= base_url() ?>assets/js/ajax-form.js"></script>
+    <script src="<?= base_url() ?>assets/js/aos.js"></script>
+    <script src="<?= base_url() ?>assets/js/meanmenu.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery.appear.js"></script>
+    <script src="<?= base_url() ?>assets/js/nice-select.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery.knob.js"></script>
+    <script src="<?= base_url() ?>assets/js/main.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
