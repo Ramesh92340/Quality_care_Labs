@@ -99,3 +99,6 @@ $routes->get('edit/health/(:num)', 'Health::edit/$1');
 $routes->post('update_healthcategory','Health::update');
 $routes->get('delete/health/(:num)', 'Health::delete/$1');
 
+// Health Risks Desc routes
+
+// $routes->get('health-desc/(:num)' , 'Heal');

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
+use App\Models\HealthModel;
 use App\Models\ServiceModel;
 use App\Models\TestModel;
 
@@ -15,6 +16,7 @@ class Admin extends BaseController
     {
         helper('form');
         $this->service = new ServiceModel();
+        $this->healthcate = new HealthModel();
     }
 
     public function index()
@@ -63,6 +65,7 @@ class Admin extends BaseController
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
         return view('admin/dashboard', $data);
     }
 

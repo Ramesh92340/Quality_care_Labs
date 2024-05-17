@@ -12,14 +12,14 @@
 
                      <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name"  class="form-control" value="<?= $health['name'] ?>">
-                        <input type="hidden" name="id" class="form-control" value="<?= $health['id'] ?>">
+                        <input type="text" name="name"  class="form-control" value="<?= $health2['name'] ?>">
+                        <input type="hidden" name="id" class="form-control" value="<?= $health2['id'] ?>">
                     </div>  
                     <div class="grom-group">
                         <label for="Image">Select New Image:</label>
-                         <img src="<?= base_url('uploads/' . $health['image']) ?>" alt="" height="50%" width="20%">
+                         <img src="<?= base_url('uploads/' . $health2['image']) ?>" alt="" height="50%" width="20%">
                         <input type="file"  name="newimage" class="form-control mb-4">
-                        <input type="hidden"  name="oldimage" class="form-control mb-4" value="<?= $health['image'] ?>">
+                        <input type="hidden"  name="oldimage" class="form-control mb-4" value="<?= $health2['image'] ?>">
                     </div>
 
                     

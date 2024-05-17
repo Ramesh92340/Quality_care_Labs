@@ -539,7 +539,6 @@
                                        <h5 class="card-title little_card"><?= $ht['name'] ?></h5>
                                     </div>
                                  </div>
-
                               </a>
 
                            </div>

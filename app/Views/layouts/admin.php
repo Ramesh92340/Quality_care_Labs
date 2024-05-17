@@ -116,9 +116,24 @@
                                         <li class="dropdown">
                                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-blank"></i> <span style="font-size: 12px;"><?= $sv['name']; ?></span></a>
                                             <ul class="dropdown-menu">
-                                                
-                                                            <li><a class="nav-link" href="<?= base_url() ?>test-service/<?= $sv['id'] ?>">Test</a></li>
-                                                
+
+                                                <li><a class="nav-link" href="<?= base_url() ?>test-service/<?= $sv['id'] ?>">Test</a></li>
+
+                                            </ul>
+                                        </li>
+                                <?php endforeach;
+                                endif; ?>
+
+                                <li class="menu-header">Health Risks</li>
+                                <?php if (isset($health)) :
+                                    foreach ($health as $sv) : ?>
+                                        <li class="dropdown">
+                                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-blank"></i> <span style="font-size: 12px;"><?= $sv['name']; ?></span></a>
+                                            <ul class="dropdown-menu">
+
+                                                <li><a class="nav-link" href="<?= base_url() ?>health-desc/<?= $sv['id'] ?>">Healthrisk Description</a></li>
+                                                <li><a class="nav-link" href="<?= base_url() ?>health-packages/<?= $sv['id'] ?>">Health Tesk Packages</a></li>
+
                                             </ul>
                                         </li>
                                 <?php endforeach;
@@ -126,7 +141,9 @@
 
 
 
- 
+
+
+
 
 
                                 <li class="menu-header">Starter</li>
@@ -136,11 +153,11 @@
                                         <span>Health Risks</span></a>
 
                                     <ul class="dropdown-menu">
-                                       
-                                        <li><a class="nav-link" href="<?= base_url() ?>health">Types of Health Risks</a></li> 
-                                        <li><a class="nav-link" href="<?= base_url() ?>health_disc">Discription of Health Risks</a></li> 
 
-                                        <li><a class="nav-link" href="<?= base_url() ?>package">Packages in Health Risks</a></li>
+                                        <li><a class="nav-link" href="<?= base_url() ?>health">Types of Health Risks</a></li>
+                                        <!-- <li><a class="nav-link" href="<?= base_url() ?>health_disc">Discription of Health Risks</a></li>
+
+                                        <li><a class="nav-link" href="<?= base_url() ?>package">Packages in Health Risks</a></li> -->
                                         <!-- <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li> -->
                                     </ul>
                                 </li>

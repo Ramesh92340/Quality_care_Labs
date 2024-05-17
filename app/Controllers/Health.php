@@ -32,6 +32,8 @@ class Health extends BaseController
     {
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
         return view('admin/add_health', $data); // Adjust the path to the view file
     }
 
@@ -72,7 +74,8 @@ class Health extends BaseController
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
         $data['service'] = $this->service->findAll();
-        $data['health'] = $this->healthcate->getItemById($id);
+        $data['health'] = $this->healthcate->getItems();
+        $data['health2'] = $this->healthcate->getItemById($id);
         return view('admin/edit_healthcategory', $data);
     }
 

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
 use App\Models\DepartmentModel;
+use App\Models\HealthModel;
 use App\Models\ServiceModel;
 use App\Models\ServicetestModel;
 use App\Models\TestModel;
@@ -19,6 +20,7 @@ class Servicetest extends BaseController
         $this->sertest = new ServicetestModel();
         $this->service = new ServiceModel();
         $this->department = new DepartmentModel();
+        $this->healthcate = new HealthModel();
     }
 
     public function index($id)
@@ -31,6 +33,7 @@ class Servicetest extends BaseController
 
         $data['id'] = $id;
         $data['sertest'] = $this->sertest->find_by_serv($id);
+        $data['health'] = $this->healthcate->getItems();
         return view('admin/servicetest', $data);
     }
 
