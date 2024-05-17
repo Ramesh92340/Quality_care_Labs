@@ -94,6 +94,7 @@ $routes->get('delete/sertest/(:num)/(:num)', 'Servicetest::delete/$1/$2');
 // healt - risks Routes 
 $routes->get('health', 'Health::index');
 $routes->get('add_health', 'Health::add_health');
+$routes->get('delete/health/(:num)', 'Health::delete/$1');
 
 $routes->post('insert_healthcategory','Health::insert');
 $routes->get('health', 'Admin::health');

@@ -40,7 +40,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>Health Risks
-                     <a href="<?= base_url('add_health') ?>" class="btn btn-primary float-end">Add</a>
+                    <a href="<?= base_url('add_health') ?>" class="btn btn-primary float-end">Add</a>
 
                 </h4>
             </div>
@@ -51,22 +51,23 @@
                             <tr>
                                 <th class="text-center">S.No</th>
                                 <th class="text-center">Name</th>
-                                <th class="text-center">Package</th>  
-                            
-                       
-
+                                <th class="text-center">image</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
-                            <?php if (isset($category) && !empty($category)) : ?>
+                            <?php if (isset($health) && !empty($health)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($category as $pk) : ?>
+                                <?php foreach ($health as $pk) : ?>
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
                                         <td class="text-center"><?= $pk['name']; ?></td>
-                                        <td class="text-center"><?= $pk['package_name'] ?></td>
                                         <td class="text-center">
-                                          
+                                            <img src="<?= base_url('uploads/' . $pk['image']) ?>" alt="" height="50%" width="30%">
+                                        </td>
+
+                                        <td class="text-center">
+
                                             <a href="<?= base_url() ?>edit/health/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>
                                             <a href="<?= base_url() ?>delete/health/<?= $pk['id'] ?>" class="btn btn-danger">DELETE</a>
                                         </td>

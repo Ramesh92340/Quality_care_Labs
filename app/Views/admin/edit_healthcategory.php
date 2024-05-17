@@ -3,12 +3,12 @@
 <?= $this->section('content') ?>
 <section class="section">
     <div class="section-header">
-        <h1>Add Health Risks Name</h1>
+        <h1>Edit Health Risks Name</h1>
     </div>
     <div class="section-body">
         <div class="card">
             <div class="card-body">
-                <?= form_open_multipart('insert_healthcategory') ?>
+                <?= form_open_multipart('iupdate_healthcategory') ?>
 
                      <div class="form-group">
                         <label for="name">Name:</label>

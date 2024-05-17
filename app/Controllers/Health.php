@@ -15,6 +15,7 @@ class Health extends BaseController
         helper('form');
         $this->service = new ServiceModel();
         $this->healthcate = new HealthModel();
+        $this->category = new CategoryModel();
     }
 
     public function index()
@@ -22,58 +23,53 @@ class Health extends BaseController
 
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
+        $data['service'] = $this->service->findAll();
 
+        $data['health'] = $this->healthcate->getItems();
         return view('admin/health', $data);
     }
 
-    public function add_category()
+    public function add_health()
     {
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
-        $cate = new CategoryModel();
-        $data['cate'] = $cate->findAll();
-        $data['service'] = $this->service->findAll();
-
-        return view('admin/add_category', $data);
+        return view('admin/add_health', $data); // Adjust the path to the view file
     }
 
     public function insert()
     {
         $file = $this->request->getFile('image');
 
-        // Check if an image file was uploaded
+
         if ($file && $file->isValid() && !$file->hasMoved()) {
-            // Generate a random name for the uploaded file
+
             $newName = $file->getRandomName();
 
-            // Move the file to the desired path
+
             $file->move('uploads/', $newName);
 
-            // Get other form data
             $name = $this->request->getPost('name');
 
-            // Prepare data to insert into the database
             $data = [
                 'name' => $name,
                 'image' => $newName
             ];
 
-            // Insert data into the database
-            $result = $this->healthcate->insert($data);
-
-            // Check if the insertion was successful
-            if ($result === true) {
-                // Redirect with success message
-                return redirect()->to('health')->with('success', "Category added successfully");
+            if ($this->healthcate->insert($data)) {
+                return redirect()->to('health')->with('success', "Health added successfully");
             } else {
-                // Redirect with error message
-                return redirect()->to('health')->with('blog-error', "Category addition failed");
+                $errors = $this->healthcate->errors();
+                log_message('error', 'Database insert failed: ' . json_encode($errors));
+                return redirect()->to('health')->with('blog-error', "Health addition failed");
             }
         } else {
-            // Handle invalid file upload
+            log_message('error', 'Invalid file upload: ' . ($file ? $file->getErrorString() : 'No file uploaded'));
             return redirect()->to('health')->with('blog-error', "Invalid image file uploaded");
         }
     }
+
+
+
 
 
 
@@ -86,8 +82,10 @@ class Health extends BaseController
         $data['cate2'] = $category->get_by_id_2($id);
         $data['service'] = $this->service->findAll();
 
-        return view('admin/edit_category', $data);
+        return view('admin/edit_healthcategory', $data);
     }
+
+
 
     public function update()
     {
@@ -111,20 +109,29 @@ class Health extends BaseController
 
     public function delete($id)
     {
-        $category = new CategoryModel();
-        $data2 = $category->where('id', $id)->delete();
+        
+        // Fetch staff data
+        $healthata = $this->healthcate->find($id);
 
-        $test = new TestModel();
-        $data3 = $test->where('category_id', $id)->delete();
-        if ($data2 && $data3 == true) {
-            return redirect()->to('health')->with('success', "Category Deleted Successfully");
-        } else {
-            return redirect()->to('health')->with('blog-error', "Category Deleted failed");
+        if ($healthata && array_key_exists('image', $healthata)) {
+            // Get the path from the staff data
+            $path = "uploads/" . $healthata['image'];
+
+            // Check if the file exists and is a file
+            if (file_exists($path) && is_file($path)) {
+                // Unlink the file
+                unlink($path);
+            } else {
+                // Handle the case where the path points to a directory or doesn't exist
+                echo "File not found or is a directory: " . $path;
+            }
         }
-    }
-    public function add_health()
-    {
-        // Your logic for the add_health page
-        return view('admin/add_health'); // Adjust the path to the view file
+        // Delete the staff record with a where clause
+       $health = $this->healthcate->where('id', $id)->delete();
+        if ($health == true) {
+            return redirect()->to('health')->with('success', "Health Category Deleted successfully");
+        } else {
+            return redirect()->to('health')->with('blog-error', "Health Category Deleted Failed");
+        }
     }
 }

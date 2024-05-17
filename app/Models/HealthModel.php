@@ -11,7 +11,8 @@ class HealthModel extends Model
     protected $allowedFields = [
         'name',
         'image'
-    ];  // Fields that can be inserted/updated
+    ];  
+
 
     // Method to insert data
     public function insert_data($data)
@@ -32,7 +33,7 @@ class HealthModel extends Model
         return $this->insert($data);
     }
 
-    // Method to retrieve all items
+   
     public function getItems()
     {
         return $this->findAll();
