@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
+use App\Models\HealthdescModel;
+use App\Models\HealthModel;
 use App\Models\ServiceModel;
 use App\Models\TestModel;
 
@@ -13,45 +15,46 @@ class Healthdesc extends BaseController
     {
         helper('form');
         $this->service = new ServiceModel();
+        $this->healthcate = new HealthModel();
+        $this->healthdesc = new HealthdescModel();
     }
 
-    public function index()
+    public function index($id)
     {
-
-        $pack = new PackageModel();
-        $data['pack'] = $pack->findAll();
-        $category = new CategoryModel();
-        $data['cate'] = $category->findAll();
-        $data['category'] = $category->get_date_package();
-        $data['service'] = $this->service->findAll();
-        return view('admin/category', $data);
-    }
-
-    public function add_category()
-    {
-        $pack = new PackageModel();
-        $data['pack'] = $pack->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
         $data['service'] = $this->service->findAll();
-        
-        return view('admin/add_category', $data);
+        $data['health'] = $this->healthcate->getItems();
+        $data['helath_id'] = $id;
+        $data['healthdesc'] = $this->healthdesc->find_by_healthid($id);
+        return view('admin/health_desc', $data);
+    }
+
+    public function add($id)
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        $data['helath_id'] = $id;
+        return view('admin/add_health_desc', $data);
     }
 
     public function insert()
     {
-        $category = new CategoryModel();
-
+        $healthid = $this->request->getPost('health_id');
         $data = [
-            'name' => $this->request->getPost('cat_name'),
-            'package' => $this->request->getPost('package')
+            'description' => $this->request->getPost('description'),
+            'health_id' => $healthid
         ];
 
-        $data2 = $category->insert($data);
+        $data2 = $this->healthdesc->insert($data);
         if ($data2 == true) {
-            return redirect()->to('category')->with('success', "Category added Successfully");
+            return redirect()->to('health-desc/' . $healthid)->with('success', "Healthrisk Description added Successfully");
         } else {
-            return redirect()->to('category')->with('blog-error', "Category added failed");
+            return redirect()->to('health-desc/' . $healthid)->with('blog-error', "Healthrisk Description added failed");
         }
     }
 
@@ -64,41 +67,39 @@ class Healthdesc extends BaseController
         $data['cate'] = $category->findAll();
         $data['cate2'] = $category->get_by_id_2($id);
         $data['service'] = $this->service->findAll();
-
-        return view('admin/edit_category', $data);
+        $data['healthdesc'] = $this->healthdesc->find_by_id($id);
+        return view('admin/edit_healthdesc', $data);
     }
 
     public function update()
     {
-        $category = new CategoryModel();
+
         $id = $this->request->getPost('id');
+        $healthid = $this->request->getPost('health_id');
+        $description = $this->request->getPost('description');
 
         $data = [
-            'name' => $this->request->getPost('cat_name'),
-            'package' => $this->request->getPost('package')
+            'description' => $description,
         ];
 
         // print_r($id);
 
-        $data2 = $category->update($id, $data);
+        $data2 = $this->healthdesc->update($id, $data);
         if ($data2 == true) {
-            return redirect()->to('category')->with('success', "Category Updated Successfully");
+            return redirect()->to('health-desc/' . $healthid)->with('success', "Healthrisk Description Updated Successfully");
         } else {
-            return redirect()->to('category')->with('blog-error', "Category Updated failed");
+            return redirect()->to('health-desc/' . $healthid)->with('blog-error', "Healthrisk Description Updated failed");
         }
     }
 
-    public function delete($id)
+    public function delete($id, $healthid)
     {
-        $category = new CategoryModel();
-        $data2 = $category->where('id', $id)->delete();
 
-        $test = new TestModel();
-        $data3 = $test->where('category_id', $id)->delete();
-        if ($data2 && $data3 == true) {
-            return redirect()->to('category')->with('success', "Category Deleted Successfully");
+        $data2 = $this->healthdesc->where('id', $id)->delete();
+        if ($data2 == true) {
+            return redirect()->to('health-desc/' . $healthid)->with('success', "Healthrisk Description Deleted Successfully");
         } else {
-            return redirect()->to('category')->with('blog-error', "Category Deleted failed");
+            return redirect()->to('health-desc/' . $healthid)->with('blog-error', "Healthrisk Description Deleted failed");
         }
     }
 }

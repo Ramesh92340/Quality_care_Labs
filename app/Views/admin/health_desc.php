@@ -10,7 +10,7 @@
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="<?= base_url(); ?>">Dashboard</a></div>
             <!-- <div class="breadcrumb-item"><a href="<?= base_url(); ?>">Sliders</a></div> -->
-            <div class="breadcrumb-item"> Health Risks</div>
+            <div class="breadcrumb-item"> Health Risks Description</div>
         </div>
     </div>
     <?php
@@ -40,7 +40,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>Health Risks
-                     <a href="<?= base_url('add_health') ?>" class="btn btn-primary float-end">Add</a>
+                     <a href="<?= base_url() ?>add_desc/<?= $helath_id ?>" class="btn btn-primary float-end">Add</a>
 
                 </h4>
             </div>
@@ -50,26 +50,23 @@
                         <thead>
                             <tr>
                                 <th class="text-center">S.No</th>
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Image</th>
                                 <th class="text-center">Description</th>
-                                <th class="text-center">Keypoints</th>
+                                <th class="text-center">Actions</th>
 
                             
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
-                            <?php if (isset($category) && !empty($category)) : ?>
+                            <?php if (isset($healthdesc) && !empty($healthdesc)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($category as $pk) : ?>
+                                <?php foreach ($healthdesc as $pk) : ?>
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
-                                        <td class="text-center"><?= $pk['name']; ?></td>
-                                        <td class="text-center"><?= $pk['package_name'] ?></td>
+                                        <td class="text-center"><?= $pk['description']; ?></td>
                                         <td class="text-center">
                                           
-                                            <a href="<?= base_url() ?>edit/health/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>
-                                            <a href="<?= base_url() ?>delete/health/<?= $pk['id'] ?>" class="btn btn-danger">DELETE</a>
+                                            <a href="<?= base_url() ?>edit/healthdesc/<?= $pk['id'] ?>" class="btn btn-primary">EDIT</a>
+                                            <a href="<?= base_url() ?>delete/healthdesc/<?= $pk['id'] ?>/<?= $pk['health_id'] ?>" class="btn btn-danger">DELETE</a>
                                         </td>
                                     </tr>
                                     <?php $i++ ?>

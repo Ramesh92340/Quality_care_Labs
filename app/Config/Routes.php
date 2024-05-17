@@ -101,4 +101,19 @@ $routes->get('delete/health/(:num)', 'Health::delete/$1');
 
 // Health Risks Desc routes
 
-// $routes->get('health-desc/(:num)' , 'Heal');
+$routes->get('health-desc/(:num)' , 'Healthdesc::index/$1');
+$routes->get('add_desc/(:num)','Healthdesc::add/$1');
+$routes->post('insert_healthdesc','Healthdesc::insert');
+$routes->get('edit/healthdesc/(:num)','Healthdesc::edit/$1');
+$routes->post('update_healthdesc','Healthdesc::update');
+$routes->get('delete/healthdesc/(:num)/(:num)', 'Healthdesc::delete/$1/$2');
+
+
+//Health Packs Routes
+
+$routes->get('health-packages/(:num)','Healthriskspack::index/$1');
+$routes->get('add_healthpack/(:num)','Healthriskspack::add/$1');
+$routes->post('insert_healthpacks','Healthriskspack::insert');
+$routes->get('edit/healthpack/(:num)','Healthriskspack::edit/$1');
+$routes->post('update_healthpacks','Healthriskspack::update');
+$routes->get('delete/healthpack/(:num)/(:num)','Healthriskspack::delete/$1/$2');

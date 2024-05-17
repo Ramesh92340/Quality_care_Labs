@@ -7,25 +7,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quality Care</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Bundle JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-        <!-- Corrected Alertify library URL -->
+        <!-- Full version of jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+
+
+        <!-- Alertify -->
         <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css">
 
-        <!-- General CSS Files -->
-        <link rel="stylesheet" href="<?= base_url() ?>assets2/modules/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="<?= base_url() ?>assets2/modules/fontawesome/css/all.min.css">
 
+        <!-- Summernote -->
+        <!-- include libraries(jQuery, bootstrap) -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
         <!-- Template CSS -->
         <link rel="stylesheet" href="<?= base_url() ?>assets2/css/style.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets2/css/components.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets2/css/style.min.css">
 
-        <!-- Start GA -->
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -34,16 +47,15 @@
                 dataLayer.push(arguments);
             }
             gtag('js', new Date());
-
             gtag('config', 'UA-94034622-3');
         </script>
-        <!-- /END GA -->
+
+        <!-- Custom CSS -->
         <style>
             .navbar {
                 background-color: #6777ef;
             }
         </style>
-
     </head>
 
     <body>
