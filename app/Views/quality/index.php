@@ -295,7 +295,7 @@
                               achieved by providing innovative, timely, and Accurate
                               Clinical Referral Testing Services.</P>
                         </div>
-                        <div class="about-content__btn"><a href="<?= base_url() ?>about.html" class="tp-btn">KNOW MORE...</a></div>
+                        <div class="about-content__btn"><a href="<?= base_url() ?>about" class="tp-btn">KNOW MORE...</a></div>
                      </div>
                   </div>
                </div>
