@@ -520,7 +520,7 @@
 
       <!-- small cards  -->
 
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="container">
@@ -549,7 +549,7 @@
                   </div>
                </div>
             </div>
-            <!-- Additional carousel items can be added similarly -->
+            
 
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -560,7 +560,36 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
          </button>
+      </div> -->
+
+
+      <div class="container">
+         <div class="row d-flex flex-row justify-content-center">
+            <?php if (isset($health) && !empty($health)) : ?>
+               <?php foreach ($health as $ht) : ?>
+                  <div class="col-md-2 col-sm-4 col-6 mt-4">
+                     <a href="<?= base_url() ?>healthrisks/<?= $ht['id'] ?>">
+                        <div class="card" style="border-top:solid">
+                           <div class="d-flex flex-row justify-content-center" style="overflow: hidden; margin: 0 auto;">
+                              <img src="<?= base_url() ?>uploads/<?= $ht['image'] ?>" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                           </div>
+                           <div class="card-body">
+                              <h5 class="card-title little_card"><?= $ht['name'] ?></h5>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               <?php endforeach; ?>
+            <?php else : ?>
+               <div class="col-12 mt-4">
+                  <div class="alert alert-warning" role="alert">
+                     No categories found
+                  </div>
+               </div>
+            <?php endif; ?>
+         </div>
       </div>
+
 
 
       <section class="blog-area pt-85 pb-20">

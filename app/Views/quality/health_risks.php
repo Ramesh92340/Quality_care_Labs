@@ -271,7 +271,7 @@
                                 foreach ($healthdesc as $hd) :
                             ?>
                                     <?= $hd['description'] ?>
-                                    
+
                             <?php
                                 endforeach;
                             endif;
@@ -282,35 +282,34 @@
         </section>
 
 
-
         <section>
             <div class="container mt-5">
                 <div class="">
                     <div class="row">
-                        <?php
-                        if (isset($healthpack)) :
-                            foreach ($healthpack as $hp) :
-                        ?>
+                        <?php if (isset($healthpack)) : ?>
+                            <?php foreach ($healthpack as $index => $hp) : ?>
                                 <div class="col-md-6 col-lg-3 mb-4">
                                     <div class="card mini_main_card p-3 shadow">
                                         <h5><?= $hp['name'] ?></h5>
                                         <p>₹ <?= $hp['price'] ?></p>
-                                        <p>Includes:<?= $hp['parameters'] ?> parameters</p>
-                                        <p><a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Know More...</strong></a></p>
-
-
-                                        <button class="mini_card_cart_button shadow"><a href="<?= $hp['id'] ?>" style="text-decoration: none; color:#000;">Add to Cart</a></button>
+                                        <p>Includes: <?= $hp['parameters'] ?> parameters</p>
+                                        <p>
+                                            <a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modal-<?= $index ?>"><strong>Know More...</strong></a>
+                                        </p>
+                                        <button class="mini_card_cart_button shadow">
+                                            <a href="<?= $hp['id'] ?>" style="text-decoration: none; color:#000;">Add to Cart</a>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal-<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel-<?= $index ?>" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">More Information</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More Information</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-
                                                 <p><?= $hp['about'] ?></p>
                                             </div>
                                             <div class="modal-footer">
@@ -319,19 +318,13 @@
                                         </div>
                                     </div>
                                 </div>
-                        <?php
-                            endforeach;
-                        endif;
-                        ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
-
                 </div>
             </div>
         </section>
-
-        <section>
-
-        </section>
+ 
 
     </main>
     <!-- main-area-end -->
