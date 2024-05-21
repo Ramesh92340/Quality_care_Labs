@@ -264,5 +264,16 @@ class Home extends BaseController
     public function userprofile()
     {
         return view('quality/userprofile');
+ 
+    }
+    public function terms()
+    {
+        return view('quality/terms');
+ 
+    }
+    public function privacy()
+    {
+        return view('quality/privacy');
+ 
     }
 }

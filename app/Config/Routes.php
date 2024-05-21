@@ -22,6 +22,9 @@ $routes->get('cart', 'Home::cart');
 $routes->get('userlogin', 'Home::userlogin');
 $routes->get('useregister', 'Home::useregister');
 $routes->get('userprofile', 'Home::userprofile');
+$routes->get('terms', 'Home::terms');
+$routes->get('privacy', 'Home::privacy');
+
 
 $routes->get('checkout', 'Home::checkout');
 

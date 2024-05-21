@@ -51,26 +51,41 @@
         /* Adjust to your preference */
     }
 
-
-    .login_btn {
-        width: 100%;
-        max-width: 400px;
-        margin: 10px 0;
+    @media (max-width:992px) {
+        .login_btn {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+ 
     }
 
 
 
+    @media (min-width:992px) {
+
+        .login_btn {
+            width: 150%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+        .margin_text{
+        margin-left: 100px ;
+    }
+    }
+
 
     .field-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-        .login_btn {
-            position: relative;
-        }
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .login_btn {
+        position: relative;
+    }
 </style>
 
 <body>
@@ -158,12 +173,12 @@
                         </div>
 
                         <div class="col-lg-5">
-                     <div class="header-cart-order d-flex align-items-center justify-content-end">
-                        <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                           <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
-                           <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
-                              <!-- <div class="tpcarticon">
+                            <div class="header-cart-order d-flex align-items-center justify-content-end">
+                                <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
+                                    <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
+                                    <div class="tp-cart-icon-area">
+                                        <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                                        <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
                                           <div class="tpcarticon__checkout-link">
@@ -173,16 +188,16 @@
                                        </li>
                                     </ul>
                                  </div> -->
-                           </div>
-                           <div class="tp-cart-icon-area ms-4">
-                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
-                           </div>
+                                    </div>
+                                    <div class="tp-cart-icon-area ms-4">
+                                        <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+
+                                    </div>
+                                </div>
+                                <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                                    Appointment</a>
+                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
-                           Appointment</a>
-                     </div>
-                  </div>
 
                     </div>
                 </div>
@@ -236,19 +251,19 @@
         <div class="mobile-menu"></div>
 
         <div class="tpsideinfo__content mb-60">
-         <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
-         <span>Contact Us</span>
-         <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
-            Bhanugudi Junction,Kakinada-533003</a>
-         <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
-         <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
-         <br>
-         <br>
-        <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
+            <span>Contact Us</span>
+            <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
+                Bhanugudi Junction,Kakinada-533003</a>
+            <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
+            <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
+            <br>
+            <br>
+            <div class="  d-flex" style="gap:25px">
+                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            </div>
         </div>
-      </div>
 
         <div class="footer-widget__social mb-30 ">
             <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -287,37 +302,39 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <form>
+
                     <div class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="text-center">Signup</h1>
-                        <div class="login_btn">
+                        <form>
+                            <h1 class="text-center margin_text">Signup</h1>
+                            <div class="login_btn">
 
-                            <input name="name" type="name" placeholder="Name" class="form-control my-2">
-                        </div>
-                        <div class="login_btn">
+                                <input name="name" type="name" placeholder="Name" class="form-control my-2">
+                            </div>
+                            <div class="login_btn">
 
-                            <input name="phone" type="phone" placeholder="Phone" class="form-control my-2">
-                        </div>
-                        <div class="login_btn">
+                                <input name="phone" type="phone" placeholder="Phone" class="form-control my-2">
+                            </div>
+                            <div class="login_btn">
 
-                            <input name="email" type="email" placeholder="Email" class="form-control my-2">
-                        </div>
-
-
-                        <div class="login_btn">
-                            <input name="createpassword" type="password" placeholder=" Create Password" class="form-control my-2">
-                        </div>
+                                <input name="email" type="email" placeholder="Email" class="form-control my-2">
+                            </div>
 
 
-                        <div class="login_btn position-relative">
-                            <input id="confirmPassword" name="conformpassword" type="password" placeholder="Confirm password" class="form-control my-2">
-                            <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                        </div>
+                            <div class="login_btn">
+                                <input name="createpassword" type="password" placeholder=" Create Password" class="form-control my-2">
+                            </div>
 
-                        <button class="tp-btn tp-btn-primary my-2 login_btn">Signup</button>
-                        <p>Already have an account? <a href="<?= base_url() ?>userlogin"> <strong>Login </strong></a></p>
+
+                            <div class="login_btn position-relative">
+                                <input id="confirmPassword" name="conformpassword" type="password" placeholder="Confirm password" class="form-control my-2">
+                                <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+
+                            <button class="tp-btn tp-btn-primary my-2 login_btn">Signup</button>
+                            <p class="margin_text" >Already have an account? <a href="<?= base_url() ?>userlogin"> <strong>Login </strong></a></p>
+                        </form>
                     </div>
-                    </form>
+
                     <div class="col-6 semi_half d-flex flex-column justify-content-center align-items-center d-none d-md-flex">
                         <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo" class="img-fluid"></a>
                     </div>
@@ -331,20 +348,20 @@
 
 
 
-<script>
-        document.querySelectorAll('.toggle-password').forEach(item => {
-            item.addEventListener('click', function() {
-                const input = document.querySelector(this.getAttribute('toggle'));
-                if (input.getAttribute('type') === 'password') {
-                    input.setAttribute('type', 'text');
-                    this.classList.toggle('fa-eye-slash');
-                } else {
-                    input.setAttribute('type', 'password');
-                    this.classList.toggle('fa-eye-slash');
-                }
+        <script>
+            document.querySelectorAll('.toggle-password').forEach(item => {
+                item.addEventListener('click', function() {
+                    const input = document.querySelector(this.getAttribute('toggle'));
+                    if (input.getAttribute('type') === 'password') {
+                        input.setAttribute('type', 'text');
+                        this.classList.toggle('fa-eye-slash');
+                    } else {
+                        input.setAttribute('type', 'password');
+                        this.classList.toggle('fa-eye-slash');
+                    }
+                });
             });
-        });
-    </script>
+        </script>
     </main>
     <!-- main-area-end -->
 
@@ -435,8 +452,8 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright-info info-direction">
                             <ul class="d-flex align-items-center">
-                                <li><a href="<?= base_url() ?>trems.html">Terms and conditions</a></li>
-                                <li><a href="<?= base_url() ?>privacy.html">Privacy policy</a></li>
+                                <li><a href="<?= base_url() ?>terms">Terms and conditions</a></li>
+                                <li><a href="<?= base_url() ?>privacy">Privacy policy</a></li>
                             </ul>
                         </div>
                     </div>

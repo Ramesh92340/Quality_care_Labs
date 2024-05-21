@@ -828,8 +828,8 @@
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright-info info-direction">
                      <ul class="d-flex align-items-center">
-                        <li><a href="<?= base_url() ?>trems.html">Terms and conditions</a></li>
-                        <li><a href="<?= base_url() ?>privacy.html">Privacy policy</a></li>
+                        <li><a href="<?= base_url() ?>terms">Terms and conditions</a></li>
+                        <li><a href="<?= base_url() ?>privacy">Privacy policy</a></li>
                      </ul>
                   </div>
                </div>

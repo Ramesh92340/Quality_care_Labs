@@ -52,11 +52,7 @@
     }
 
 
-    .login_btn {
-        width: 100%;
-        max-width: 400px;
-        margin: 10px 0;
-    }
+
 
     .field-icon {
         position: absolute;
@@ -68,6 +64,28 @@
 
     .login_btn {
         position: relative;
+    }
+
+
+    @media (min-width:992px) {
+        .login_btn {
+            width: 150%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        .margin_text {
+            margin-left: 90px;
+        }
+
+    }
+
+    @media (max-width:992px) {
+        .login_btn {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
     }
 </style>
 
@@ -285,9 +303,9 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <form>
-                        <div class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
-                            <h1 class="text-center">Login</h1>
+                    <div class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
+                        <form>
+                            <h1 class="text-center margin_text">Login</h1>
                             <div class="login_btn">
 
                                 <input name="email" type="email" placeholder="Email" class="form-control my-2">
@@ -297,11 +315,11 @@
                                 <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 
                             </div>
-                            <p><a href="#">Forgot password?</a></p>
+                            <p class=" margin_text"><a href="#">Forgot password?</a></p>
                             <button class="tp-btn tp-btn-primary my-2 login_btn">Login</button>
-                            <p>Don’t have an account? <a href="<?= base_url() ?>useregister"><strong> Sign Up</strong></a></p>
-                        </div>
-                    </form>
+                            <p class="margin_text">Don’t have an account? <a href="<?= base_url() ?>useregister"><strong> Sign Up</strong></a></p>
+                        </form>
+                    </div>
                     <div class="col-6 semi_half d-flex flex-column justify-content-center align-items-center d-none d-md-flex">
                         <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo" class="img-fluid"></a>
                     </div>
@@ -419,8 +437,8 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright-info info-direction">
                             <ul class="d-flex align-items-center">
-                                <li><a href="<?= base_url() ?>trems.html">Terms and conditions</a></li>
-                                <li><a href="<?= base_url() ?>privacy.html">Privacy policy</a></li>
+                                <li><a href="<?= base_url() ?>terms">Terms and conditions</a></li>
+                                <li><a href="<?= base_url() ?>privacy">Privacy policy</a></li>
                             </ul>
                         </div>
                     </div>
