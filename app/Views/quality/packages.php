@@ -27,20 +27,23 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <style>
-         .accordion-body ul .list_text {
-            font-size: 14px !important; /* Example font size */
-            color: #333 !important; /* Example text color */
-            font-weight: 600 !important; /* Example font weight */
-            list-style-type: disc !important; 
+      .accordion-body ul .list_text {
+         font-size: 14px !important;
+         /* Example font size */
+         color: #333 !important;
+         /* Example text color */
+         font-weight: 600 !important;
+         /* Example font weight */
+         list-style-type: disc !important;
 
-        }
+      }
+
       .card {
          width: 100%;
-         /* Ensure full width within the column */
+         
       }
    </style>
 
@@ -136,7 +139,7 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a style="color:inherit;" href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
@@ -149,8 +152,8 @@
                                  </div> -->
                            </div>
                            <div class="tp-cart-icon-area ms-4">
-                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
+                              <a style="color:inherit;" href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+
                            </div>
                         </div>
                         <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
@@ -217,10 +220,10 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <br>
-        <div class="  d-flex" style="gap:25px">
+         <div class="  d-flex" style="gap:25px">
             <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
             <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
-        </div>
+         </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
@@ -237,10 +240,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -551,7 +554,7 @@
                                           </h2>
                                           <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                              <div class="accordion-body ">
-                                                <ul class="ms-2 list_type" >
+                                                <ul class="ms-2 list_type">
                                                    <?php foreach ($test as $ts) : ?>
                                                       <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
                                                          <li class="list_text"><?= $ts['test_name'] ?></li>
@@ -804,10 +807,10 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                       <?= form_open_multipart('sendonlymail'); ?>
+                        <?= form_open_multipart('sendonlymail'); ?>
 
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>

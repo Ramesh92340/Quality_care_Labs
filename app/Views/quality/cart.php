@@ -119,7 +119,7 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a href="<?= base_url() ?>cart" ><i class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
@@ -306,6 +306,38 @@
                         </ul>
                      </div>
                   </div>
+
+
+
+                  
+                  <div class="table-content table-responsive">
+                     <h4> Health Risks</h4>
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th class="product-thumbnail text-center">S.No</th>
+                              <th class="cart-product-name text-center">Health Risks Name</th>
+                              <th class="product-thumbnail text-center">No. of parameters</th>
+                              <th class="product-price text-center">Price of Package</th>
+                              <th class="product-quantity text-center">Quantity</th>
+                              <th class="product-subtotal text-center">Total</th>
+                              <th class="product-remove text-center">Remove</th>
+                           </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                           <!-- Cart items will be dynamically inserted here -->
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 ms-auto">
+                     <div class="cart-page-total">
+                        <ul class="mb-20">
+                           <li>Total Health Risks Package Amount <span id="totalAmount">₹0.00</span></li>
+                        </ul>
+                     </div>
+                  </div>
+
 
 
 
