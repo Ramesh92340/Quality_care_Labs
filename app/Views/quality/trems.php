@@ -116,12 +116,12 @@
                    </div>
 
                    <div class="col-lg-5">
-                      <div class="header-cart-order d-flex align-items-center justify-content-end">
-                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
-                            <div class="tp-cart-icon-area">
-                               <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
-                               <!-- <div class="tpcarticon">
+                     <div class="header-cart-order d-flex align-items-center justify-content-end">
+                        <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
+                           <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
+                           <div class="tp-cart-icon-area">
+                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
                                           <div class="tpcarticon__checkout-link">
@@ -131,12 +131,16 @@
                                        </li>
                                     </ul>
                                  </div> -->
-                            </div>
-                         </div>
-                         <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
-                            Appointment</a>
-                      </div>
-                   </div>
+                           </div>
+                           <div class="tp-cart-icon-area ms-4">
+                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+                           
+                           </div>
+                        </div>
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                           Appointment</a>
+                     </div>
+                  </div>
 
                 </div>
              </div>
@@ -190,16 +194,19 @@
        <div class="mobile-menu"></div>
 
        <div class="tpsideinfo__content mb-60">
-          <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
-          <span>Contact Us</span>
-          <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
-             Bhanugudi Junction,Kakinada-533003</a>
-          <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
-          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
-          <br>
-          <a href="<?= base_url() ?>./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
-          </a>
-       </div>
+         <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
+         <span>Contact Us</span>
+         <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
+            Bhanugudi Junction,Kakinada-533003</a>
+         <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
+         <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
+         <br>
+         <br>
+        <div class="  d-flex" style="gap:25px">
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+        </div>
+      </div>
 
        <div class="footer-widget__social mb-30 ">
           <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>

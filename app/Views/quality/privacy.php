@@ -129,8 +129,12 @@
                                     </ul>
                                  </div> -->
                            </div>
+                           <div class="tp-cart-icon-area ms-4">
+                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+                           
+                           </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?=base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -194,8 +198,11 @@
          <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
-         <a href="<?= base_url() ?>./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
-         </a>
+         <br>
+        <div class="  d-flex" style="gap:25px">
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+        </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">

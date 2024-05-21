@@ -250,7 +250,19 @@ class Home extends BaseController
     }
 
   
-    
+    public function userlogin()
+    {
+        return view('quality/userlogin');
+    }
 
-     
+
+    public function useregister()
+    {
+        return view('quality/useregister');
+    }
+
+    public function userprofile()
+    {
+        return view('quality/userprofile');
+    }
 }

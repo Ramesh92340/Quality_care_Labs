@@ -30,38 +30,79 @@
     <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 
 
-    <style>
-        .first_border {
-            border: #000 1px solid;
-            margin-top: 50px !important;
-            padding: 50px;
-            margin-bottom: 50px;
-            background-color: #f8fafc;
-            box-shadow: 0 0 10px #0F3661;
-            border-radius: 5px;
-
-        }
-
-        .img_border {
-            border: 1px solid;
-            padding: 40px;
-            box-shadow: 0 0 10px #0F3661;
-            background-color: white;
-            border-radius: 5px;
-
-        }
-
-
-        .mini_card_cart_button {
-            border: #63A238 1px solid;
-            border-radius: 4px;
-            padding: 5px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
+<style>
+    @media (max-width:768px) {
+
+        .profile_image {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+
+        }
+
+        .margin_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .edit_btn {
+            height: 35px;
+            background-color: #63A238;
+            width: 75px;
+            color: white;
+            border-radius: 5px;
+        }
+
+
+        .update_btn{
+            height: 35px;
+            background-color: blue;
+            width: 75px;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+
+    @media (min-width:768px) {
+
+        .profile_image {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .margin_top {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        .edit_btn {
+            height: 50px;
+            background-color: #63A238;
+            width: 90px;
+            color: white;
+            border-radius: 5px;
+        }
+        .update_btn{
+            height: 35px;
+            background-color: blue;
+            width: 75px;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+
+    .only_for_name {
+        margin-bottom: 50px;
+    }
+</style>
+
 <body>
+
 
     <!-- Scroll-top -->
     <button class="scroll-top scroll-to-target" data-target="html">
@@ -145,12 +186,12 @@
                         </div>
 
                         <div class="col-lg-5">
-                     <div class="header-cart-order d-flex align-items-center justify-content-end">
-                        <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                           <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
-                           <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
-                              <!-- <div class="tpcarticon">
+                            <div class="header-cart-order d-flex align-items-center justify-content-end">
+                                <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
+                                    <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
+                                    <div class="tp-cart-icon-area">
+                                        <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                                        <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
                                           <div class="tpcarticon__checkout-link">
@@ -160,16 +201,16 @@
                                        </li>
                                     </ul>
                                  </div> -->
-                           </div>
-                           <div class="tp-cart-icon-area ms-4">
-                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
-                           </div>
+                                    </div>
+                                    <div class="tp-cart-icon-area ms-4">
+                                        <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+
+                                    </div>
+                                </div>
+                                <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                                    Appointment</a>
+                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
-                           Appointment</a>
-                     </div>
-                  </div>
 
                     </div>
                 </div>
@@ -223,19 +264,19 @@
         <div class="mobile-menu"></div>
 
         <div class="tpsideinfo__content mb-60">
-         <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
-         <span>Contact Us</span>
-         <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
-            Bhanugudi Junction,Kakinada-533003</a>
-         <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
-         <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
-         <br>
-         <br>
-        <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
+            <span>Contact Us</span>
+            <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
+                Bhanugudi Junction,Kakinada-533003</a>
+            <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
+            <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
+            <br>
+            <br>
+            <div class="  d-flex" style="gap:25px">
+                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            </div>
         </div>
-      </div>
 
         <div class="footer-widget__social mb-30 ">
             <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -264,74 +305,85 @@
     </div>
     <!-- sidebar-info-end -->
 
+    <div class="body-overlay"></div>
+
     <!-- main-area -->
     <main>
 
 
 
-        <section class="">
-            <div class="container first_border ">
+        <section>
+            <div class="container  margin_top">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="">
-                            <?php if (isset($healthdesc)) :
-                                foreach ($healthdesc as $hd) :
-                            ?>
-                                    <?= $hd['description'] ?>
 
-                            <?php
-                                endforeach;
-                            endif;
-                            ?>
+
+                    <div class=" col-6 only_for_name">
+                        <div class="row">
+                            <div class="col-5 col-md-5 col-lg-4">
+                                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
+
+                            </div>
+                            <div class="col-7 col-md-7 col-lg-8">
+                                <p>Rahul</p>
+                                <p>ExamExampleple@gmail.com</p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-        </section>
-
-
-        <section>
-            <div class="container mt-5">
-                <div class="">
-                    <div class="row">
-                        <?php if (isset($healthpack)) : ?>
-                            <?php foreach ($healthpack as $index => $hp) : ?>
-                                <div class="col-md-6 col-lg-3 mb-4">
-                                    <div class="card mini_main_card p-3 shadow">
-                                        <h5><?= $hp['name'] ?></h5>
-                                        <p>₹ <?= $hp['price'] ?></p>
-                                        <p>Includes: <?= $hp['parameters'] ?> parameters</p>
-                                        <p>
-                                            <a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modal-<?= $index ?>"><strong>Know More...</strong></a>
-                                        </p>
-                                        <button class="mini_card_cart_button shadow">
-                                            <a href="<?= $hp['id'] ?>" style="text-decoration: none; color:#000;">Add to Cart</a>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="modal-<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel-<?= $index ?>" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More Information</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p><?= $hp['about'] ?></p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                    <div class=" col-6 only_for_name d-flex flex-row justify-content-end ">
+                        <div class="row">
+                            <button class=" text-center  edit_btn">Edit</button>
+                        </div>
                     </div>
+                    <div class=" col-12 col-md-6  ">
+
+                        <label>First Name</label>
+                        <input name="name" type="name" placeholder="First Name" class="form-control my-2">
+
+                    </div>
+                    <div class=" col-12 col-md-6">
+
+                        <label>Last Name</label>
+                        <input name="name" type="name" placeholder="Last Name" class="form-control my-2">
+
+                    </div>
+                    <div class=" col-12 col-md-6">
+
+                        <label>Phone Number</label>
+                        <input name="phone" type="phone" placeholder="Phone" class="form-control my-2">
+                    </div>
+                    <div class=" col-12 col-md-6">
+                        <label>Email</label>
+
+                        <input name="email" type="email" placeholder="Email" class="form-control my-2">
+                    </div>
+                    <div class=" col-12 col-md-6">
+
+                        <label>Password</label>
+
+                        <input name="password" type="password" placeholder="Password" class="form-control my-2">
+                    </div>
+                    <div class=" col-12 col-md-6">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="4" class="form-control my-2"></textarea>
+                    </div>
+
                 </div>
+
+
+
+
             </div>
+
+            <div class="text-center mb-55" >
+                <button class="update_btn">
+                    update
+                </button>
+            </div>
+
         </section>
- 
+
+
 
     </main>
     <!-- main-area-end -->
@@ -399,12 +451,11 @@
                             <h4 class="footer-widget__title mb-20">Mailing</h4>
                             <p>Sign up for our mailing list to get</p>
                             <div class="footer-widget__newsletter p-relative">
-
                                 <?= form_open_multipart('sendonlymail'); ?>
+
                                 <input name="mail" type="email" placeholder="Enter Mail" required>
                                 <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -436,29 +487,23 @@
     <!-- footer-area-end -->
 
     <!-- JS here -->
-    <script src="<?= base_url() ?>assets/js/jquery.js"></script>
-    <script src="<?= base_url() ?>assets/js/waypoints.js"></script>
-    <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/swiper-bundle.js"></script>
-    <script src="<?= base_url() ?>assets/js/slick.js"></script>
-    <script src="<?= base_url() ?>assets/js/magnific-popup.js"></script>
-    <script src="<?= base_url() ?>assets/js/counterup.js"></script>
-    <script src="<?= base_url() ?>assets/js/wow.js"></script>
-    <script src="<?= base_url() ?>assets/js/isotope-pkgd.js"></script>
-    <script src="<?= base_url() ?>assets/js/imagesloaded-pkgd.js"></script>
-    <script src="<?= base_url() ?>assets/js/ajax-form.js"></script>
-    <script src="<?= base_url() ?>assets/js/aos.js"></script>
-    <script src="<?= base_url() ?>assets/js/meanmenu.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.appear.js"></script>
-    <script src="<?= base_url() ?>assets/js/nice-select.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.knob.js"></script>
-    <script src="<?= base_url() ?>assets/js/main.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.knob.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

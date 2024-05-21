@@ -19,6 +19,10 @@ $routes->get('service6', 'Home::service6');
 $routes->get('packages', 'Home::packages');
 $routes->get('contact', 'Home::contact');
 $routes->get('cart', 'Home::cart');
+$routes->get('userlogin', 'Home::userlogin');
+$routes->get('useregister', 'Home::useregister');
+$routes->get('userprofile', 'Home::userprofile');
+
 $routes->get('checkout', 'Home::checkout');
 
 $routes->post('sendappointment', 'Home::sendappointment');
