@@ -3,43 +3,20 @@
 
 <section class="section">
     <div class="section-header">
- 
-        <h1>Tests</h1>
-        <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href=" ">Dashboard</a></div>
         
-            <div class="breadcrumb-item"> Tests</div>
+        <h1>Coustmers</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active" >Coustmers Services </div>
+            
         </div>
     </div>
-    <?php
-    $error = session('blog-error');
-    $success = session('success');
-    ?>
-    <?php if (!empty($error)) : ?>
-        <div class="alert alert-danger">
-            <?php
-            // Check if $error is an array
-            if (is_array($error)) {
-                foreach ($error as $value) {
-                    echo $value . '<br>';
-                }
-            } else {
-                echo $error;
-            }
-            ?>
-        </div>
-    <?php endif; ?>
-    <?php if (!empty($success)) : ?>
-        <div class="alert alert-success">
-            <?= $success ?>
-        </div>
-    <?php endif; ?>
+    
+
+
     <div class="section-body">
         <div class="card">
             <div class="card-header">
-                <h4>Test
-                    <a href="<?= base_url() ?>add-test/<?= $id ?>" class="btn btn-primary float-end">Add</a>
-                </h4>
+               
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -47,9 +24,12 @@
                         <thead>
                             <tr>
                                 <th class="text-center">S.No</th>
-                                <th class="text-center">Name</th>
-                            
-                                <th class="text-center">Action</th>
+                                <th class="text-center">Test Code</th>
+                                <th class="text-center">Test Name</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Quantity</th>
+                                <th class="text-center">Total Price</th>
+                               
                             </tr>
                         </thead>
                         <tbody class="Staffdata">
@@ -78,7 +58,13 @@
             </div>
         </div>
     </div>
+    
 </section>
 
 
+
 <?= $this->endSection() ?>
+
+ 
+
+

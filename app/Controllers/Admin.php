@@ -69,6 +69,56 @@ class Admin extends BaseController
         return view('admin/dashboard', $data);
     }
 
+    public function coustmers()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/coustmers', $data);
+    }
+    public function info()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/info', $data);
+    }
+    public function cust_services()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/cust_services', $data);
+    }
+    public function cust_packages()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/cust_packages', $data);
+    }
+    public function cust_healthrisks()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/cust_healthrisks', $data);
+    }
     public function packages()
     {
         $package = new PackageModel();

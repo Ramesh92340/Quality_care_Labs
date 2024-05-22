@@ -40,6 +40,13 @@ $routes->get('healthrisks/(:num)','Home::healthrisks/$1');
 $routes->get('login' , 'Admin');
 $routes->post('login_dashboard','Admin::login');
 $routes->get('admin/dashboard', 'Admin::dashboard');
+$routes->get('admin/coustmers', 'Admin::coustmers');
+$routes->get('admin/info', 'Admin::info');
+$routes->get('admin/cust_services', 'Admin::cust_services');
+$routes->get('admin/cust_packages', 'Admin::cust_packages');
+$routes->get('admin/cust_healthrisks', 'Admin::cust_healthrisks');
+
+
 $routes->get('package', 'Admin::packages');
 $routes->get('add_package','Admin::add_package');
 $routes->post('insert/package', 'Admin::insert');

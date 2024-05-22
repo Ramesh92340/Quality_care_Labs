@@ -90,16 +90,21 @@
                     <div class="main-sidebar sidebar-style-2">
                         <aside id="sidebar-wrapper">
                             <div class="sidebar-brand">
-                                <a href="<?= base_url() ?>admin/dashboard">Bhavi creations</a>
+                                <a href="<?= base_url() ?>admin/dashboard">Quality Care</a>
                             </div>
                             <div class="sidebar-brand sidebar-brand-sm">
-                                <a href="index.html">BC</a>
+                                <a href="<?= base_url() ?>admin/dashboard">QC</a>
                             </div>
                             <ul class="sidebar-menu">
                                 <li class="menu-header">Dashboard</li>
                                 <li class="">
                                     <a href="<?= base_url() ?>admin/dashboard" class="nav-link n"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                                 </li>
+
+                                <li class="">
+                                    <a href="<?= base_url() ?>admin/coustmers" class="nav-link n"><i class="fas fa-users"></i><span>Customers</span></a>
+                                </li>
+
                                 <li class="menu-header">Packages</li>
                                 <?php if (isset($pack)) :
                                     foreach ($pack as $pc) : ?>
