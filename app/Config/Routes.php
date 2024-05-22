@@ -36,6 +36,7 @@ $routes->get('healthrisks/(:num)','Home::healthrisks/$1');
 
 //admin routes
 
+$routes->get('admin/admin_profile', 'Admin::admin_profile');
 
 $routes->get('login' , 'Admin');
 $routes->post('login_dashboard','Admin::login');
