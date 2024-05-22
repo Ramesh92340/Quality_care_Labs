@@ -454,7 +454,7 @@
     <script src="<?= base_url() ?>assets/js/jquery.knob.js"></script>
     <script src="<?= base_url() ?>assets/js/main.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

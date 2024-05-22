@@ -56,6 +56,8 @@ $routes->post('update/package' ,'Admin::update_data');
 $routes->get('delete/package/(:num)', 'Admin::delete/$1');
 $routes->get('logout', 'Admin::logout');
 
+$routes->get('userlogout','User::userlogout');
+
 //category routes
 $routes->get('category', 'Category');
 $routes->get('add_category', 'Category::add_category');
@@ -64,6 +66,7 @@ $routes->get('edit/category/(:num)','Category::edit/$1');
 $routes->post('update/category','Category::update');
 $routes->get('delete/category/(:num)' , 'Category::delete/$1');
 
+ 
 
 //test Routes
 

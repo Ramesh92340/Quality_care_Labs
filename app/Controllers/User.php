@@ -64,7 +64,13 @@ class User extends BaseController
         }
     }
     
-    
+    public function userlogout()
+    {
+        $session = \Config\Services::session();
+        $session->destroy();
+        return redirect()->to('userlogin');
+    }
+
 
     public function login()
     {
