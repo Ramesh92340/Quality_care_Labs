@@ -17,6 +17,8 @@ class Admin extends BaseController
         helper('form');
         $this->service = new ServiceModel();
         $this->healthcate = new HealthModel();
+        $session = \Config\Services::session();
+
     }
 
     public function index()

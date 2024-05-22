@@ -26,6 +26,8 @@ class Home extends BaseController
         $this->healthdesc = new HealthdescModel();
         $this->healthpack = new HealthriskpacksModel();
         helper('form');
+        $session = \Config\Services::session();
+
     }
 
 
@@ -252,7 +254,13 @@ class Home extends BaseController
   
     public function userlogin()
     {
-        return view('quality/userlogin');
+        $session = \Config\Services::session();
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
+        }else
+        {
+            return view('quality/userprofile');   
+        }
     }
 
 

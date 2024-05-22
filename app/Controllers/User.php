@@ -42,7 +42,7 @@ class User extends BaseController
         ];
     
         $lgData = [
-            'username' => $name,
+            'username' => $email,
             'password' => $hashedPassword, // Store hashed password
             'user_type' => 2,
         ];
@@ -70,29 +70,33 @@ class User extends BaseController
     {
         $session = \Config\Services::session();
         $loginmodel = new Loginmodel();
-
-        $username = $this->request->getPost('username');
+    
+        $username = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $hashedpassword = md5($password);
-
+    
+        // Fetch the user based on the username
         $user = $loginmodel->where('username', $username)->first();
-
-        if ($user && $user['password'] === $hashedpassword) {
-            $session = session();
+    
+        // Verify user exists and password is correct
+        if ($user && password_verify($password, $user['password'])) {
+            // Set session data
             $session->set([
                 'user_id' => $user['id'],
                 'username' => $user['username'],
                 'usertype' => $user['user_type'],
                 'isLoggedIn' => true,
             ]);
-
-            if ($user['user_type'] == 1) {
-                return redirect()->to('admin/dashboard')->with('success', "welcome {$username}");
+    
+            // Redirect based on user type
+            if ($user['user_type'] == 2) {
+                return redirect()->to('userprofile')->with('success', "Welcome {$username}");
             }
         } else {
-            return redirect()->to('login')->with('blog-error', 'invalid username or password');
+            // Redirect to login page with error
+            return redirect()->to('userlogin')->with('blog-error', 'Invalid username or password');
         }
     }
+    
 
     public function logout()
     {

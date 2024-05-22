@@ -139,3 +139,4 @@ $routes->get('delete/healthpack/(:num)/(:num)','Healthriskspack::delete/$1/$2');
 // User routes
 
 $routes->post('user-rigister', 'User::signup');
+$routes->post('user-login', 'User::login');

@@ -327,7 +327,7 @@
                             <?= $success ?>
                         </div>
                     <?php endif; ?>
-                        <form>
+                        <?= form_open_multipart('user-login') ?>
                             <h1 class="text-center margin_text">Login</h1>
                             <div class="login_btn">
 

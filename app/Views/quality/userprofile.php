@@ -57,7 +57,7 @@
         }
 
 
-        .update_btn{
+        .update_btn {
             height: 35px;
             background-color: blue;
             width: 75px;
@@ -87,7 +87,8 @@
             color: white;
             border-radius: 5px;
         }
-        .update_btn{
+
+        .update_btn {
             height: 35px;
             background-color: blue;
             width: 75px;
@@ -310,7 +311,29 @@
     <!-- main-area -->
     <main>
 
-
+        <?php
+        $error = session('blog-error');
+        $success = session('success');
+        ?>
+        <?php if (!empty($error)) : ?>
+            <div class="alert alert-danger">
+                <?php
+                // Check if $error is an array
+                if (is_array($error)) {
+                    foreach ($error as $value) {
+                        echo $value . '<br>';
+                    }
+                } else {
+                    echo $error;
+                }
+                ?>
+            </div>
+        <?php endif; ?>
+        <?php if (!empty($success)) : ?>
+            <div class="alert alert-success">
+                <?= $success ?>
+            </div>
+        <?php endif; ?>
 
         <section>
             <div class="container  margin_top">
@@ -375,7 +398,7 @@
 
             </div>
 
-            <div class="text-center mb-55" >
+            <div class="text-center mb-55">
                 <button class="update_btn">
                     update
                 </button>
