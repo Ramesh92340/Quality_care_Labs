@@ -70,6 +70,17 @@ class Admin extends BaseController
         return view('admin/dashboard', $data);
     }
 
+    public function admin_profile()
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        return view('admin/admin_profile', $data);
+    }
+
     public function coustmers()
     {
         $pack = new PackageModel();

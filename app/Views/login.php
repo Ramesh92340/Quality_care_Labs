@@ -44,7 +44,7 @@
                 </div>
               <?php endif; ?>
 
-              <form action="<?= base_url() ?>login_dashboard" method="post">
+              <form action="<?= base_url() ?> " method="post">
 
                 <h2 class=" mb-2 text-uppercase "><strong>Quality care </strong></h2>
                 <!-- <p class=" mb-5">we're Here to Help You Shine</p> -->
