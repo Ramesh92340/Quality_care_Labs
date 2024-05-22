@@ -3,26 +3,68 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
-use App\Models\PackageModel;
-use App\Models\CategoryModel;
-use App\Models\HealthModel;
-use App\Models\ServiceModel;
-use App\Models\TestModel;
+use App\Models\UserModel;
 
-class Admin extends BaseController
+class User extends BaseController
 {
 
     public function __construct()
     {
         helper('form');
-        $this->service = new ServiceModel();
-        $this->healthcate = new HealthModel();
+        $this->user = new UserModel();
+        $this->lgtable = new LoginModel();
     }
 
-    public function index()
+
+    public function signup()
     {
-        return view('login');
+        // Retrieve POST data
+        $cpassword = $this->request->getPost('createpassword');
+        $confirmPass = $this->request->getPost('conformpassword');
+        $name = $this->request->getPost('name');
+        $phone = $this->request->getPost('phone');
+        $email = $this->request->getPost('email');
+    
+        // Check if passwords match
+        if ($cpassword !== $confirmPass) {
+            return redirect()->to('useregister')->with('blog-error', "Create password and confirm password do not match");
+        }
+    
+        // Hash the password securely
+        $hashedPassword = md5($confirmPass);
+    
+        // Prepare data for insertion
+        $userData = [
+            'name' => $name,
+            'phone' => $phone,
+            'email' => $email,
+            'password' => $hashedPassword, // Store hashed password
+        ];
+    
+        $lgData = [
+            'username' => $name,
+            'password' => $hashedPassword, // Store hashed password
+            'user_type' => 2,
+        ];
+    
+        // Insert user data
+        $userInsertResult = $this->user->insert($userData);
+        
+        if ($userInsertResult) {
+            // Insert login data
+            $lgInsertResult = $this->lgtable->insert($lgData);
+            
+            if ($lgInsertResult) {
+                return redirect()->to('userlogin')->with('success', "Registration successfully completed");
+            } else {
+                return redirect()->to('useregister')->with('blog-error', "Registration Failed during login data insertion");
+            }
+        } else {
+            return redirect()->to('useregister')->with('blog-error', "Registration Failed during user data insertion");
+        }
     }
+    
+    
 
     public function login()
     {

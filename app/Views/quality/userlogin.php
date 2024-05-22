@@ -304,6 +304,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
+                    <?php
+                    $error = session('blog-error');
+                    $success = session('success');
+                    ?>
+                    <?php if (!empty($error)) : ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            // Check if $error is an array
+                            if (is_array($error)) {
+                                foreach ($error as $value) {
+                                    echo $value . '<br>';
+                                }
+                            } else {
+                                echo $error;
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($success)) : ?>
+                        <div class="alert alert-success">
+                            <?= $success ?>
+                        </div>
+                    <?php endif; ?>
                         <form>
                             <h1 class="text-center margin_text">Login</h1>
                             <div class="login_btn">

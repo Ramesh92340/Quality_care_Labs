@@ -131,3 +131,10 @@ $routes->post('insert_healthpacks','Healthriskspack::insert');
 $routes->get('edit/healthpack/(:num)','Healthriskspack::edit/$1');
 $routes->post('update_healthpacks','Healthriskspack::update');
 $routes->get('delete/healthpack/(:num)/(:num)','Healthriskspack::delete/$1/$2');
+
+
+
+
+// User routes
+
+$routes->post('user-rigister', 'User::signup');

@@ -4,14 +4,14 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class LoginModel extends Model
+class UserModel extends Model
 {
-    protected $table = 'lgtable';
+    protected $table = 'user_details';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'username',
+        'name',
+        'phone',
+        'email',
         'password',
-        'user_type'
-        
     ];
 }

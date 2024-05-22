@@ -57,7 +57,7 @@
             max-width: 400px;
             margin: 10px 0;
         }
- 
+
     }
 
 
@@ -69,9 +69,10 @@
             max-width: 400px;
             margin: 10px 0;
         }
-        .margin_text{
-        margin-left: 100px ;
-    }
+
+        .margin_text {
+            margin-left: 100px;
+        }
     }
 
 
@@ -302,36 +303,59 @@
         <section>
             <div class="container">
                 <div class="row">
+                    <?php
+                    $error = session('blog-error');
+                    $success = session('success');
+                    ?>
+                    <?php if (!empty($error)) : ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            // Check if $error is an array
+                            if (is_array($error)) {
+                                foreach ($error as $value) {
+                                    echo $value . '<br>';
+                                }
+                            } else {
+                                echo $error;
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($success)) : ?>
+                        <div class="alert alert-success">
+                            <?= $success ?>
+                        </div>
+                    <?php endif; ?>
 
                     <div class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
-                        <form>
-                            <h1 class="text-center margin_text">Signup</h1>
-                            <div class="login_btn">
+                        <?= form_open_multipart('user-rigister') ?>
+                        <h1 class="text-center margin_text">Signup</h1>
+                        <div class="login_btn">
 
-                                <input name="name" type="name" placeholder="Name" class="form-control my-2">
-                            </div>
-                            <div class="login_btn">
+                            <input name="name" type="name" placeholder="Name" class="form-control my-2">
+                        </div>
+                        <div class="login_btn">
 
-                                <input name="phone" type="phone" placeholder="Phone" class="form-control my-2">
-                            </div>
-                            <div class="login_btn">
+                            <input name="phone" type="phone" placeholder="Phone" class="form-control my-2">
+                        </div>
+                        <div class="login_btn">
 
-                                <input name="email" type="email" placeholder="Email" class="form-control my-2">
-                            </div>
-
-
-                            <div class="login_btn">
-                                <input name="createpassword" type="password" placeholder=" Create Password" class="form-control my-2">
-                            </div>
+                            <input name="email" type="email" placeholder="Email" class="form-control my-2">
+                        </div>
 
 
-                            <div class="login_btn position-relative">
-                                <input id="confirmPassword" name="conformpassword" type="password" placeholder="Confirm password" class="form-control my-2">
-                                <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                            </div>
+                        <div class="login_btn">
+                            <input name="createpassword" type="password" placeholder=" Create Password" class="form-control my-2">
+                        </div>
 
-                            <button class="tp-btn tp-btn-primary my-2 login_btn">Signup</button>
-                            <p class="margin_text" >Already have an account? <a href="<?= base_url() ?>userlogin"> <strong>Login </strong></a></p>
+
+                        <div class="login_btn position-relative">
+                            <input id="confirmPassword" name="conformpassword" type="password" placeholder="Confirm password" class="form-control my-2">
+                            <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <button class="tp-btn tp-btn-primary my-2 login_btn">Signup</button>
+                        <p class="margin_text">Already have an account? <a href="<?= base_url() ?>userlogin"> <strong>Login </strong></a></p>
                         </form>
                     </div>
 
