@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\HealthModel ;
+use App\Models\HealthModel;
 use App\Models\CategoryModel;
 use App\Models\HealthdescModel;
 use App\Models\HealthriskpacksModel;
@@ -22,7 +22,7 @@ class Home extends BaseController
         $this->test = new TestModel();
         $this->service = new ServiceModel();
         $this->sertest = new ServicetestModel();
-        $this->healthcate  = new HealthModel (); 
+        $this->healthcate = new HealthModel();
         $this->healthdesc = new HealthdescModel();
         $this->healthpack = new HealthriskpacksModel();
         helper('form');
@@ -136,25 +136,25 @@ class Home extends BaseController
         
         <p><strong>Email:</strong> $email</p>
           ";
-          $email = \Config\Services::email();
+        $email = \Config\Services::email();
 
-          // Set email parameters
-          $email->setTo($to);
-          $email->setFrom(config('Email')->fromEmail, config('Email')->fromName);
-          $email->setSubject($subject);
-          $email->setMessage($messageContent);
-  
-          // Set email format to HTML
-          $email->setMailType('html');
-  
-          // Send email
-          if ($email->send()) {
-              echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
-          } else {
-              echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
-          }
-     
-       
+        // Set email parameters
+        $email->setTo($to);
+        $email->setFrom(config('Email')->fromEmail, config('Email')->fromName);
+        $email->setSubject($subject);
+        $email->setMessage($messageContent);
+
+        // Set email format to HTML
+        $email->setMailType('html');
+
+        // Send email
+        if ($email->send()) {
+            echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+        } else {
+            echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . 'contact";</script>';
+        }
+
+
     }
     //end mail controller
 
@@ -176,7 +176,7 @@ class Home extends BaseController
     public function service1()
     {
         $data['data1'] = $this->sertest->select_test1();
-        return view('quality/service1' , $data);
+        return view('quality/service1', $data);
     }
 
     public function service2()
@@ -211,7 +211,8 @@ class Home extends BaseController
     {
         $data['data6'] = $this->sertest->select_test6();
 
-        return view('quality/service6', $data);    }
+        return view('quality/service6', $data);
+    }
 
     public function packages()
     {
@@ -243,7 +244,7 @@ class Home extends BaseController
     }
 
 
- 
+
     public function healthrisks($id)
     {
         $data['healthdesc'] = $this->healthdesc->find_by_healthid($id);
@@ -251,16 +252,15 @@ class Home extends BaseController
         return view('quality/health_risks', $data);
     }
 
-  
+
     public function userlogin()
     {
         $session = \Config\Services::session();
         if (!$session->get('isLoggedIn')) {
             // return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
-            return view('quality/userlogin');   
-        }else
-        {
-            return view('quality/userprofile');   
+            return view('quality/userlogin');
+        } else {
+            return view('quality/userprofile');
         }
     }
 
@@ -272,17 +272,20 @@ class Home extends BaseController
 
     public function userprofile()
     {
+        $session = \Config\Services::session();
+        if (!$session->get('isLoggedIn')) {
+            return view('quality/userlogin');
+        }
         return view('quality/userprofile');
- 
     }
     public function terms()
     {
         return view('quality/terms');
- 
+
     }
     public function privacy()
     {
         return view('quality/privacy');
- 
+
     }
 }
