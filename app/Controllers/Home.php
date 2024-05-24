@@ -85,6 +85,54 @@ class Home extends BaseController
         }
     }
 
+    public function removeFromCart($id, $quantity, $type)
+    {
+        $session = \Config\Services::session();
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('userlogin')->with('success', "You must be logged in to access this page.");
+        } else {
+            $isDelete = false;
+            $data = [
+                'user' => $session->get('user_id'),
+                'status' => 1
+            ];
+            $userData = $this->cart->checkIfExists($session->get('user_id'), $type, $id);
+            if ($type == 1) {
+                if ($userData) {
+                    if ($userData['servicesqty'] >= $quantity) {
+                        $data['servicesqty'] = $userData['servicesqty'] - $quantity;
+                    } else {
+                        $isDelete = true;
+                    }
+                } else {
+                    $data['servicesqty'] = $quantity;
+                }
+                $data['services'] = $id;
+            } else if ($type == 2) {
+                if ($userData) {
+                    if ($userData['healthriskqty'] >= $quantity) {
+                        $data['healthriskqty'] = $userData['healthriskqty'] - $quantity;
+                    } else {
+                        $isDelete = true;
+                    }
+                } else {
+                    $data['healthriskqty'] = $quantity;
+                }
+                $data['healthrisk'] = $id;
+            }
+            if ($isDelete) {
+                $data2 = $this->cart->delete($userData['id']);
+            } else {
+                $data2 = $this->cart->update($userData['id'], $data);
+            }
+            if ($data2 == true) {
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product removed from cart success.");
+            } else {
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product removed failed");
+            }
+        }
+    }
+
     public function addToCart($id, $quantity, $type)
     {
         $session = \Config\Services::session();
@@ -95,15 +143,27 @@ class Home extends BaseController
                 'user' => $session->get('user_id'),
                 'status' => 1
             ];
+            $userData = $this->cart->checkIfExists($session->get('user_id'), $type, $id);
             if ($type == 1) {
-                $data['servicesqty'] = $quantity;
+                if ($userData) {
+                    $data['servicesqty'] = $userData['servicesqty'] + $quantity;
+                } else {
+                    $data['servicesqty'] = $quantity;
+                }
                 $data['services'] = $id;
-            }
-            if ($type == 2) {
-                $data['healthriskqty'] = $quantity;
+            } else if ($type == 2) {
+                if ($userData) {
+                    $data['healthriskqty'] = $userData['healthriskqty'] + $quantity;
+                } else {
+                    $data['healthriskqty'] = $quantity;
+                }
                 $data['healthrisk'] = $id;
             }
-            $data2 = $this->cart->insert($data);
+            if (!$userData) {
+                $data2 = $this->cart->insert($data);
+            } else {
+                $data2 = $this->cart->update($userData['id'], $data);
+            }
             if ($data2 == true) {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
             } else {
@@ -258,7 +318,14 @@ class Home extends BaseController
 
     public function cart()
     {
-        return view('quality/cart');
+        $session = \Config\Services::session();
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('userlogin')->with('success', "You must be logged in to access this page.");
+        } else {
+            $data['services'] = $this->cart->getServicesCart($session->get('user_id'));
+            $data['healthrisk'] = $this->cart->getHealthRiskCart($session->get('user_id'));
+            return view('quality/cart', $data);
+        }
     }
 
     public function health()

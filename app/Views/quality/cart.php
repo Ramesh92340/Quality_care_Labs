@@ -8,8 +8,8 @@
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!-- Place favicon.ico in the root directory -->
- <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
    <!-- CSS here -->
@@ -119,7 +119,7 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart" ><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
@@ -133,10 +133,11 @@
                            </div>
                            <div class="tp-cart-icon-area ms-4">
                               <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
+
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;"
+                           href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -201,18 +202,25 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <br>
-        <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
-        </div>
+         <div class="  d-flex" style="gap:25px">
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-user"></i></a>
+         </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
+               class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst"
+            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+               class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+               class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -221,10 +229,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -262,6 +270,19 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
+                           <?php if (isset($services)): ?>
+                              <?php foreach ($services as $index => $sr): ?>
+                                 <tr>
+                                    <td><?= $sr['id'] ?></td>
+                                    <td><?= $sr['test_code'] ?></td>
+                                    <td><?= $sr['test_name'] ?></td>
+                                    <td><?= $sr['price'] ?></td>
+                                    <td><?= $sr['servicesqty'] ?></td>
+                                    <td><?= $sr['servicesqty'] * $sr['price'] ?></td>
+                                    <td>x</td>
+                                 </tr>
+                              <?php endforeach; ?>
+                           <?php endif; ?>
                            <!-- Cart items will be dynamically inserted here -->
                         </tbody>
                      </table>
@@ -294,6 +315,19 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
+                           <?php if (isset($packages)): ?>
+                              <?php foreach ($packages as $index => $pkg): ?>
+                                 <tr>
+                                    <td><?= $pkg['id'] ?></td>
+                                    <!-- <td><?= $pkg['test_code'] ?></td>
+                                    <td><?= $pkg['test_name'] ?></td>
+                                    <td><?= $pkg['price'] ?></td>
+                                    <td><?= $pkg['servicesqty'] ?></td>
+                                    <td><?= $pkg['servicesqty'] * $pkg['price'] ?></td> -->
+                                    <td>x</td>
+                                 </tr>
+                              <?php endforeach; ?>
+                           <?php endif; ?>
                            <!-- Cart items will be dynamically inserted here -->
                         </tbody>
                      </table>
@@ -309,7 +343,7 @@
 
 
 
-                  
+
                   <div class="table-content table-responsive">
                      <h4> Health Risks</h4>
                      <table class="table">
@@ -325,6 +359,19 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
+                           <?php if (isset($healthrisk)): ?>
+                              <?php foreach ($healthrisk as $index => $hr): ?>
+                                 <tr>
+                                    <td><?= $hr['id'] ?></td>
+                                    <td><?= $hr['name'] ?></td>
+                                    <td><?= $hr['parameters'] ?></td>
+                                    <td><?= $hr['price'] ?></td>
+                                    <td><?= $hr['healthriskqty'] ?></td>
+                                    <td><?= $hr['healthriskqty'] * $hr['price'] ?></td>
+                                    <td>x</td>
+                                 </tr>
+                              <?php endforeach; ?>
+                           <?php endif; ?>
                            <!-- Cart items will be dynamically inserted here -->
                         </tbody>
                      </table>
@@ -344,7 +391,8 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li class="totalamount_last"><strong> Total Amount</strong> <span id="totalAmount"> <strong>₹0.00</strong></span></li>
+                           <li class="totalamount_last"><strong> Total Amount</strong> <span id="totalAmount">
+                                 <strong>₹0.00</strong></span></li>
                         </ul>
                      </div>
                   </div>
@@ -356,12 +404,14 @@
                         <div class="row">
                            <div class="col-md-6">
                               <div class="d-flex justify-content-start">
-                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="addmore( )">ADD MORE</button>
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button"
+                                    onclick="addmore( )">ADD MORE</button>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="d-flex justify-content-end">
-                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="redirectToAnotherPage()">Proceed to Buy</button>
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button"
+                                    onclick="redirectToAnotherPage()">Proceed to Buy</button>
                               </div>
 
                            </div>
@@ -462,7 +512,7 @@
                   // Add event listeners for changing quantity
                   const quantityInputs = document.querySelectorAll(".cart-input");
                   quantityInputs.forEach(input => {
-                     input.addEventListener("change", function(event) {
+                     input.addEventListener("change", function (event) {
                         const index = event.target.dataset.index;
                         const quantity = parseInt(event.target.value);
                         const pricePerUnit = parseFloat(cartItems[index].price);
@@ -478,7 +528,7 @@
                   // Add event listeners for removing items
                   const removeButtons = document.querySelectorAll(".remove-item");
                   removeButtons.forEach(button => {
-                     button.addEventListener("click", function(event) {
+                     button.addEventListener("click", function (event) {
                         const index = event.target.closest("tr").querySelector(".cart-input").dataset.index;
                         cartItems.splice(index, 1);
                         event.target.closest("tr").remove();
@@ -727,16 +777,22 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                              style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst"
+                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                              class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                              class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -782,10 +838,11 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                       <?= form_open_multipart('sendonlymail'); ?>
+                        <?= form_open_multipart('sendonlymail'); ?>
 
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i
+                              class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
@@ -800,7 +857,9 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                              href="https://bhavicreations.com/" target="_blank"><strong
+                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">

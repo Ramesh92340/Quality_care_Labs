@@ -35,6 +35,8 @@ CREATE TABLE `cart` (
   `packagesqty` int(11) DEFAULT NULL,
   `minipackages` int(11) DEFAULT NULL,
   `minipackagesqty` int(11) DEFAULT NULL,
+  `healthrisk` int(11) DEFAULT NULL,
+  `healthriskqty` int(11) DEFAULT NULL,
   `user` int(11) NOT NULL,
   `createdat` timestamp NOT NULL DEFAULT current_timestamp(),
   `status` int(11) NOT NULL

@@ -317,7 +317,7 @@
                                                     More...</strong></a>
                                         </p>
                                         <button class="mini_card_cart_button shadow">
-                                            <a href="<?= base_url() ?><?= $hp['id'] ?>/1/2"
+                                            <a href="<?= base_url() ?>addtocart/<?= $hp['id'] ?>/1/2"
                                                 style="text-decoration: none; color:#000;">Add to
                                                 Cart</a>
                                         </button>
