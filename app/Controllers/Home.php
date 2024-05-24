@@ -256,7 +256,8 @@ class Home extends BaseController
     {
         $session = \Config\Services::session();
         if (!$session->get('isLoggedIn')) {
-            return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
+            // return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
+            return view('quality/userlogin');   
         }else
         {
             return view('quality/userprofile');   

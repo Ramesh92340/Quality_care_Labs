@@ -77,14 +77,15 @@ class User extends BaseController
         $session = \Config\Services::session();
         $loginmodel = new Loginmodel();
     
-        $username = $this->request->getPost('email');
+        $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
+        $hashedPassword = md5($password);  // Hash the incoming password with MD5
     
-        // Fetch the user based on the username
-        $user = $loginmodel->where('username', $username)->first();
+        // Fetch the user based on the email
+        $user = $loginmodel->where('username', $email)->first();
     
         // Verify user exists and password is correct
-        if ($user && password_verify($password, $user['password'])) {
+        if ($user && $hashedPassword === $user['password']) {
             // Set session data
             $session->set([
                 'user_id' => $user['id'],
@@ -95,13 +96,16 @@ class User extends BaseController
     
             // Redirect based on user type
             if ($user['user_type'] == 2) {
-                return redirect()->to('userprofile')->with('success', "Welcome {$username}");
+                return redirect()->to('userprofile')->with('success', "Welcome {$user['username']}");
+            } else {
+                // You can add additional user type checks and redirects here if needed
             }
         } else {
             // Redirect to login page with error
-            return redirect()->to('userlogin')->with('blog-error', 'Invalid username or password');
+            return redirect()->to('userlogin')->with('blog-error', 'Invalid email or password');
         }
     }
+    
     
 
     public function logout()
