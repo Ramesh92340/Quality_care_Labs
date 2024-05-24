@@ -8,8 +8,8 @@
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!-- Place favicon.ico in the root directory -->
- <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
    <!-- CSS here -->
@@ -46,7 +46,7 @@
    <!-- preloader end  -->
 
 
-    
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
@@ -59,13 +59,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -134,10 +134,11 @@
                            </div>
                            <div class="tp-cart-icon-area ms-4">
                               <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
+
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;"
+                           href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -201,10 +202,12 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <br>
-        <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
-        </div>
+         <div class="  d-flex" style="gap:25px">
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-user"></i></a>
+         </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
@@ -226,10 +229,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -238,8 +241,8 @@
 
    </div>
    <!-- sidebar-info-end -->
- 
-      
+
+
 
    <!-- main-area -->
    <main>
@@ -259,12 +262,14 @@
             <div class="row">
                <div class="col-lg-6 col-md-12">
                   <div class="services-thumb-img mb-30 wow fadeInLeft" data-wow-delay=".4s">
-                     <img src="<?= base_url() ?>assets/img/Micro-biology-image-1.png" alt="services-thumb"  class="img-fluid">
+                     <img src="<?= base_url() ?>assets/img/Micro-biology-image-1.png" alt="services-thumb"
+                        class="img-fluid">
                   </div>
                </div>
                <div class="col-lg-6 col-md-12">
                   <div class="services-thumb-img mb-30 wow fadeInRight" data-wow-delay=".4s">
-                     <img src="<?= base_url() ?>assets/img/Micro-biology-image-2.png" alt="services-thumb"  class="img-fluid">
+                     <img src="<?= base_url() ?>assets/img/Micro-biology-image-2.png" alt="services-thumb"
+                        class="img-fluid">
                   </div>
                </div>
             </div>
@@ -383,14 +388,14 @@
       <div class="container table_cunt">
          <h2 class="fonttext_size_adjust">Quality Lab Information</h2>
          <input type="text" id="testCodeFilter" class="search_tab_code mt-2" onkeyup="filterTable('testCodeFilter', 1)"
-         placeholder="Search by Test Code">
-      <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)"
-         placeholder="Search by Test Name">
+            placeholder="Search by Test Code">
+         <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)"
+            placeholder="Search by Test Name">
 
          <div class="table-responsive" style="max-height:500px; overflow-y: auto;">
-              
-                   
-         <table>
+
+
+            <table>
                <tr>
                   <th class="text-center">S.No</th>
                   <th class="text-center">Test Code</th>
@@ -401,70 +406,77 @@
                </tr>
                <!-- Your table rows here -->
 
-               <?php if (isset($data5)) : 
+               <?php if (isset($data5)):
                   $i = 1;
-               foreach ($data5 as $dt1) :
-               ?>
+                  foreach ($data5 as $dt1):
+                     ?>
                      <tr>
                         <td class="text-center"><?= $i; ?></td>
                         <td class="text-center"><?= $dt1['test_code'] ?></td>
                         <td class="text-center"><?= $dt1['test_name'] ?></td>
                         <td class="text-center"><?= $dt1['name'] ?></td>
                         <td class="text-center"><?= $dt1['price'] ?></td>
-                        <td class="text-center"><a href="/<?= $dt1['id'] ?>"><i class="fa-solid fa-cart-arrow-down"></i></a></td>
+                        <td class="text-center"><a href="<?= base_url() ?>addtocart/<?= $dt1['id'] ?>/1/1"><i
+                                 class="fa-solid fa-cart-arrow-down"></i></a></td>
                      </tr>
                      <?php $i++ ?>
                   <?php endforeach; ?>
                <?php endif; ?>
             </table>
-        
+
          </div>
-     </div>
-     
-     <script>
+      </div>
+
+      <script>
          function filterTable(inputId, columnIndex) {
-             var input, filter, table, tr, td, i, txtValue;
-             input = document.getElementById(inputId);
-             filter = input.value.toUpperCase();
-             table = document.querySelector(".table-responsive table");
-             tr = table.getElementsByTagName("tr");
-             for (i = 0; i < tr.length; i++) {
-                 td = tr[i].getElementsByTagName("td")[columnIndex];
-                 if (td) {
-                     txtValue = td.textContent || td.innerText;
-                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                         tr[i].style.display = "";
-                     } else {
-                         tr[i].style.display = "none";
-                     }
-                 }
-             }
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById(inputId);
+            filter = input.value.toUpperCase();
+            table = document.querySelector(".table-responsive table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+               td = tr[i].getElementsByTagName("td")[columnIndex];
+               if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                     tr[i].style.display = "";
+                  } else {
+                     tr[i].style.display = "none";
+                  }
+               }
+            }
          }
-     </script>
+      </script>
 
 
 
    </main>
    <!-- main-area-end -->
 
-    <!-- footer-area -->
-    <footer>
+   <!-- footer-area -->
+   <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                              style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst"
+                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                              class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                              class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -510,10 +522,11 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                       <?= form_open_multipart('sendonlymail'); ?>
+                        <?= form_open_multipart('sendonlymail'); ?>
 
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i
+                              class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
@@ -528,7 +541,9 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                              href="https://bhavicreations.com/" target="_blank"><strong
+                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
