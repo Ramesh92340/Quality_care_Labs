@@ -246,6 +246,9 @@
 
    <!-- main-area -->
    <main>
+      <?php
+      $finalPrice = 0;
+      ?>
 
 
       <section class="cart-area pt-30 pb-50 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
@@ -270,7 +273,9 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($services)): ?>
+                           <?php if (isset($services)):
+                              $totalServicesPrice = 0;
+                              ?>
                               <?php foreach ($services as $index => $sr): ?>
                                  <tr>
                                     <td><?= $sr['id'] ?></td>
@@ -278,8 +283,17 @@
                                     <td><?= $sr['test_name'] ?></td>
                                     <td><?= $sr['price'] ?></td>
                                     <td><?= $sr['servicesqty'] ?></td>
-                                    <td><?= $sr['servicesqty'] * $sr['price'] ?></td>
-                                    <td>x</td>
+                                    <td>
+                                       <?php
+                                       $calculatedservicesPrice = $sr['servicesqty'] * $sr['price'];
+                                       $totalServicesPrice += $calculatedservicesPrice;
+                                       $finalPrice += $calculatedservicesPrice;
+                                       echo $calculatedservicesPrice;
+                                       ?>
+                                    </td>
+                                    <td><a
+                                          href="<?= base_url() ?>removefromcart/<?= $sr['id'] ?>/<?= $sr['servicesqty'] ?>/1">x</a>
+                                    </td>
                                  </tr>
                               <?php endforeach; ?>
                            <?php endif; ?>
@@ -291,7 +305,7 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Services Amount <span id="totalAmount">₹0.00</span></li>
+                           <li>Total Services Amount <span>₹<?= $totalServicesPrice ?></span></li>
                         </ul>
                      </div>
                   </div>
@@ -315,16 +329,27 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($packages)): ?>
+                           <?php if (isset($packages)):
+                              $totalPackagesPrice = 0;
+                              ?>
                               <?php foreach ($packages as $index => $pkg): ?>
                                  <tr>
                                     <td><?= $pkg['id'] ?></td>
-                                    <!-- <td><?= $pkg['test_code'] ?></td>
-                                    <td><?= $pkg['test_name'] ?></td>
-                                    <td><?= $pkg['price'] ?></td>
-                                    <td><?= $pkg['servicesqty'] ?></td>
-                                    <td><?= $pkg['servicesqty'] * $pkg['price'] ?></td> -->
-                                    <td>x</td>
+                                    <td><?= $pkg['package_name'] ?></td>
+                                    <td><?= $pkg['package_name'] ?></td>
+                                    <td><?= $pkg['package_price'] ?></td>
+                                    <td><?= $pkg['packagesqty'] ?></td>
+                                    <td>
+                                       <?php
+                                       $calculatedHealthRiskPrice = $pkg['packagesqty'] * $pkg['package_price'];
+                                       $totalPackagesPrice += $calculatedHealthRiskPrice;
+                                       $finalPrice += $calculatedHealthRiskPrice;
+                                       echo $calculatedHealthRiskPrice;
+                                       ?>
+                                    </td>
+                                    <td><a
+                                          href="<?= base_url() ?>removefromcart/<?= $pkg['id'] ?>/<?= $pkg['packagesqty'] ?>/3">x</a>
+                                    </td>
                                  </tr>
                               <?php endforeach; ?>
                            <?php endif; ?>
@@ -336,7 +361,7 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Package Amount <span id="totalAmount">₹0.00</span></li>
+                           <li>Total Package Amount <span>₹<?= $totalPackagesPrice ?></span></li>
                         </ul>
                      </div>
                   </div>
@@ -359,7 +384,9 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($healthrisk)): ?>
+                           <?php if (isset($healthrisk)):
+                              $totalHealthRiskPrice = 0;
+                              ?>
                               <?php foreach ($healthrisk as $index => $hr): ?>
                                  <tr>
                                     <td><?= $hr['id'] ?></td>
@@ -367,8 +394,17 @@
                                     <td><?= $hr['parameters'] ?></td>
                                     <td><?= $hr['price'] ?></td>
                                     <td><?= $hr['healthriskqty'] ?></td>
-                                    <td><?= $hr['healthriskqty'] * $hr['price'] ?></td>
-                                    <td>x</td>
+                                    <td>
+                                       <?php
+                                       $calculatedHealthRiskPrice = $hr['healthriskqty'] * $hr['price'];
+                                       $totalHealthRiskPrice += $calculatedHealthRiskPrice;
+                                       $finalPrice += $calculatedHealthRiskPrice;
+                                       echo $calculatedHealthRiskPrice;
+                                       ?>
+                                    </td>
+                                    <td><a
+                                          href="<?= base_url() ?>removefromcart/<?= $hr['id'] ?>/<?= $hr['healthriskqty'] ?>/2">x</a>
+                                    </td>
                                  </tr>
                               <?php endforeach; ?>
                            <?php endif; ?>
@@ -380,7 +416,7 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Health Risks Package Amount <span id="totalAmount">₹0.00</span></li>
+                           <li>Total Health Risks Package Amount <span>₹<?= $totalHealthRiskPrice ?></span></li>
                         </ul>
                      </div>
                   </div>
@@ -391,8 +427,8 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li class="totalamount_last"><strong> Total Amount</strong> <span id="totalAmount">
-                                 <strong>₹0.00</strong></span></li>
+                           <li class="totalamount_last"><strong> Total Amount</strong> <span>
+                                 <strong>₹<?= $finalPrice ?></strong></span></li>
                         </ul>
                      </div>
                   </div>

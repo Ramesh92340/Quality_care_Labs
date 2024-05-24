@@ -26,7 +26,8 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/meanmenu.css">
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+   <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <style>
@@ -43,7 +44,7 @@
 
       .card {
          width: 100%;
-         
+
       }
    </style>
 
@@ -139,7 +140,8 @@
                         <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                            <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
                            <div class="tp-cart-icon-area">
-                              <a style="color:inherit;" href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                              <a style="color:inherit;" href="<?= base_url() ?>cart"><i
+                                    class="fa-solid fa-basket-shopping"></i></a>
                               <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
@@ -152,11 +154,13 @@
                                  </div> -->
                            </div>
                            <div class="tp-cart-icon-area ms-4">
-                              <a style="color:inherit;" href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+                              <a style="color:inherit;" href="<?= base_url() ?>userlogin"><i
+                                    class="fa-solid fa-user"></i></a>
 
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;"
+                           href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -221,17 +225,24 @@
          <br>
          <br>
          <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-user"></i></a>
          </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
+               class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst"
+            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+               class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+               class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -519,19 +530,22 @@
       <div class="container mt-5">
          <div class="d-none d-md-block">
             <div class="row">
-               <?php if (isset($pack)) : ?>
-                  <?php foreach ($pack as $pk) : ?>
+               <?php if (isset($pack)): ?>
+                  <?php foreach ($pack as $pk): ?>
                      <?php
                      // Initialize total tests count for the package
                      $total_tests_count = 0;
                      ?>
                      <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card">
-                           <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;" data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
-                           <div class="text-center" style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
-                              <h3 class="mt-3" data-package-price="<?= $pk['package_price'] ?>"><?= $pk['package_price'] ?>/-</h3>
-                              <?php foreach ($cat as $ct) : ?>
-                                 <?php if ($pk['id'] == $ct['package']) : ?>
+                           <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;"
+                              data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
+                           <div class="text-center"
+                              style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
+                              <h3 class="mt-3" data-package-price="<?= $pk['package_price'] ?>"><?= $pk['package_price'] ?>/-
+                              </h3>
+                              <?php foreach ($cat as $ct): ?>
+                                 <?php if ($pk['id'] == $ct['package']): ?>
                                     <?php
                                     // Increment total tests count for the package
                                     $total_tests_count += count(array_filter($test, function ($ts) use ($ct, $pk) {
@@ -542,21 +556,24 @@
                               <?php endforeach; ?>
                               <p style="color:white">(<?= $total_tests_count ?> Tests)</p>
                            </div>
-                           <?php if (isset($cat)) : ?>
-                              <?php foreach ($cat as $ct) : ?>
-                                 <?php if ($pk['id'] == $ct['package']) : ?>
+                           <?php if (isset($cat)): ?>
+                              <?php foreach ($cat as $ct): ?>
+                                 <?php if ($pk['id'] == $ct['package']): ?>
                                     <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
                                        <div class="accordion-item shadow">
                                           <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
-                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false"
+                                                aria-controls="collapse<?= $ct['id'] ?>">
                                                 <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
                                              </button>
                                           </h2>
-                                          <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                          <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse"
+                                             aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                              <div class="accordion-body ">
                                                 <ul class="ms-2 list_type">
-                                                   <?php foreach ($test as $ts) : ?>
-                                                      <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
+                                                   <?php foreach ($test as $ts): ?>
+                                                      <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']): ?>
                                                          <li class="list_text"><?= $ts['test_name'] ?></li>
                                                       <?php endif; ?>
                                                    <?php endforeach; ?>
@@ -569,7 +586,12 @@
                               <?php endforeach; ?>
                            <?php endif; ?>
                            <div class="d-flex flex-row justify-content-center">
-                              <a href="<?= $pk['id'] ?>"><button class="m-3 p-3 text-center book-now-btn" style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book Now</button></a>
+                              <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3">
+                                 <button class="m-3 p-3 text-center book-now-btn"
+                                    style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
+                                    Add to Cart
+                                 </button>
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -587,18 +609,20 @@
 
       <div class="card-slider container only_forr_slider  d-md-none">
          <div class="cards cards_paddaing">
-            <?php if (isset($pack)) : ?>
-               <?php foreach ($pack as $pk) : ?>
+            <?php if (isset($pack)): ?>
+               <?php foreach ($pack as $pk): ?>
                   <?php
                   // Initialize total tests count for the package
                   $total_tests_count = 0;
                   ?>
                   <div class="card need_margin_side ">
-                     <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;" data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
-                     <div class="text-center" style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
+                     <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;"
+                        data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
+                     <div class="text-center"
+                        style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
                         <h3 class="mt-3" data-package-price="<?= $pk['package_price'] ?>"><?= $pk['package_price'] ?>/-</h3>
-                        <?php foreach ($cat as $ct) : ?>
-                           <?php if ($pk['id'] == $ct['package']) : ?>
+                        <?php foreach ($cat as $ct): ?>
+                           <?php if ($pk['id'] == $ct['package']): ?>
                               <?php
                               // Increment total tests count for the package
                               $total_tests_count += count(array_filter($test, function ($ts) use ($ct, $pk) {
@@ -609,21 +633,24 @@
                         <?php endforeach; ?>
                         <p style="color:white">(<?= $total_tests_count ?> Tests)</p>
                      </div>
-                     <?php if (isset($cat)) : ?>
-                        <?php foreach ($cat as $ct) : ?>
-                           <?php if ($pk['id'] == $ct['package']) : ?>
+                     <?php if (isset($cat)): ?>
+                        <?php foreach ($cat as $ct): ?>
+                           <?php if ($pk['id'] == $ct['package']): ?>
                               <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
                                  <div class="accordion-item shadow">
                                     <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
-                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
+                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                          data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false"
+                                          aria-controls="collapse<?= $ct['id'] ?>">
                                           <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
                                        </button>
                                     </h2>
-                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse"
+                                       aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                        <div class="accordion-body">
                                           <ul class="ms-2">
-                                             <?php foreach ($test as $ts) : ?>
-                                                <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
+                                             <?php foreach ($test as $ts): ?>
+                                                <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']): ?>
                                                    <li class="list_text"><?= $ts['test_name'] ?></li>
                                                 <?php endif; ?>
                                              <?php endforeach; ?>
@@ -637,7 +664,12 @@
                         <?php endforeach; ?>
                      <?php endif; ?>
                      <div class="d-flex flex-row justify-content-center">
-                        <a href="<?= $pk['id'] ?>"><button class="m-3 p-3 text-center book-now-btn" style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book Now</button></a>
+                        <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3">
+                           <button class="m-3 p-3 text-center book-now-btn"
+                              style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
+                              Add to Cart
+                           </button>
+                        </a>
                      </div>
                   </div>
                <?php endforeach; ?>
@@ -669,7 +701,7 @@
       </div> -->
 
       <script>
-         document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function () {
             // Function to update the cart UI
             function updateCartUI() {
                // Retrieve existing cart items from localStorage
@@ -696,7 +728,7 @@
             // Add event listener to all "Book Now" buttons
             const bookNowButtons = document.querySelectorAll('.book-now-btn');
             bookNowButtons.forEach(button => {
-               button.addEventListener('click', function() {
+               button.addEventListener('click', function () {
                   // Traverse the DOM to find the package name and price
                   const packageName = button.parentElement.parentElement.querySelector('h6[data-package-name]').innerText;
                   const packagePrice = button.parentElement.parentElement.querySelector('h3[data-package-price]').innerText;
@@ -752,16 +784,22 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                              style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst"
+                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                              class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                              class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -810,7 +848,8 @@
                         <?= form_open_multipart('sendonlymail'); ?>
 
                         <input name="mail" type="email" placeholder="Enter Mail" required>
-                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i
+                              class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
@@ -825,7 +864,9 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                              href="https://bhavicreations.com/" target="_blank"><strong
+                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
@@ -867,9 +908,10 @@
 
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <!-- Include slick.js -->
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
    <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
          $('.cards').slick({
             dots: true,
             infinite: false,
@@ -879,34 +921,34 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [{
-                  breakpoint: 1200,
-                  settings: {
-                     slidesToShow: 3,
-                     slidesToScroll: 1,
-                     height: '100%',
-                     infinite: true,
-                     dots: true
-                  }
-               },
-               {
-                  breakpoint: 992,
-                  settings: {
-                     height: '100%',
-                     slidesToShow: 2,
-                     slidesToScroll: 1,
-                     infinite: true,
-                     dots: true
-                  }
-               },
-               {
-                  breakpoint: 768,
-                  settings: {
-                     slidesToShow: 1,
-                     slidesToScroll: 1,
-                     height: '100%',
-                     initialSlide: 1
-                  }
+               breakpoint: 1200,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  height: '100%',
+                  infinite: true,
+                  dots: true
                }
+            },
+            {
+               breakpoint: 992,
+               settings: {
+                  height: '100%',
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  height: '100%',
+                  initialSlide: 1
+               }
+            }
             ]
          });
       });

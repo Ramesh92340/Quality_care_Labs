@@ -28,6 +28,8 @@ class CartModel extends Model
             $this->where('crt.services', $typeid);
         } else if ($type == 2) {
             $this->where('crt.healthrisk', $typeid);
+        } else if ($type == 3) {
+            $this->where('crt.packages', $typeid);
         }
         $this->where('crt.status', 1);
         $this->where('crt.user', $userId);
@@ -50,6 +52,17 @@ class CartModel extends Model
         $this->from('cart as crt');
         $this->join('healthrisk_packs as hrp', 'crt.healthrisk = hrp.id');
         $this->select('crt.*, hrp.id as hrpid, hrp.*');
+        $this->where('crt.status', 1);
+        $this->where('crt.user', $id);
+        $this->distinct();
+        return $this->findAll();
+    }
+
+    public function getPackagesCart($id)
+    {
+        $this->from('cart as crt');
+        $this->join('packages as pkgs', 'crt.packages = pkgs.id');
+        $this->select('crt.*, pkgs.id as pkgsid, pkgs.*');
         $this->where('crt.status', 1);
         $this->where('crt.user', $id);
         $this->distinct();

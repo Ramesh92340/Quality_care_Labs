@@ -99,7 +99,7 @@ class Home extends BaseController
             $userData = $this->cart->checkIfExists($session->get('user_id'), $type, $id);
             if ($type == 1) {
                 if ($userData) {
-                    if ($userData['servicesqty'] >= $quantity) {
+                    if ($userData['servicesqty'] > $quantity) {
                         $data['servicesqty'] = $userData['servicesqty'] - $quantity;
                     } else {
                         $isDelete = true;
@@ -110,7 +110,7 @@ class Home extends BaseController
                 $data['services'] = $id;
             } else if ($type == 2) {
                 if ($userData) {
-                    if ($userData['healthriskqty'] >= $quantity) {
+                    if ($userData['healthriskqty'] > $quantity) {
                         $data['healthriskqty'] = $userData['healthriskqty'] - $quantity;
                     } else {
                         $isDelete = true;
@@ -119,6 +119,17 @@ class Home extends BaseController
                     $data['healthriskqty'] = $quantity;
                 }
                 $data['healthrisk'] = $id;
+            } else if ($type == 3) {
+                if ($userData) {
+                    if ($userData['packagesqty'] > $quantity) {
+                        $data['packagesqty'] = $userData['packagesqty'] - $quantity;
+                    } else {
+                        $isDelete = true;
+                    }
+                } else {
+                    $data['packagesqty'] = $quantity;
+                }
+                $data['packages'] = $id;
             }
             if ($isDelete) {
                 $data2 = $this->cart->delete($userData['id']);
@@ -126,7 +137,7 @@ class Home extends BaseController
                 $data2 = $this->cart->update($userData['id'], $data);
             }
             if ($data2 == true) {
-                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product removed from cart success.");
+                return redirect()->to('cart')->with('success', "Product removed from cart success.");
             } else {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product removed failed");
             }
@@ -158,6 +169,13 @@ class Home extends BaseController
                     $data['healthriskqty'] = $quantity;
                 }
                 $data['healthrisk'] = $id;
+            } else if ($type == 3) {
+                if ($userData) {
+                    $data['packagesqty'] = $userData['packagesqty'] + $quantity;
+                } else {
+                    $data['packagesqty'] = $quantity;
+                }
+                $data['packages'] = $id;
             }
             if (!$userData) {
                 $data2 = $this->cart->insert($data);
@@ -165,7 +183,7 @@ class Home extends BaseController
                 $data2 = $this->cart->update($userData['id'], $data);
             }
             if ($data2 == true) {
-                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
+                return redirect()->to('cart')->with('success', "Product added to cart success.");
             } else {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
             }
@@ -324,6 +342,7 @@ class Home extends BaseController
         } else {
             $data['services'] = $this->cart->getServicesCart($session->get('user_id'));
             $data['healthrisk'] = $this->cart->getHealthRiskCart($session->get('user_id'));
+            $data['packages'] = $this->cart->getPackagesCart($session->get('user_id'));
             return view('quality/cart', $data);
         }
     }
