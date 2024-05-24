@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CartModel;
 use App\Models\HealthModel;
 use App\Models\CategoryModel;
 use App\Models\HealthdescModel;
@@ -25,6 +26,7 @@ class Home extends BaseController
         $this->healthcate = new HealthModel();
         $this->healthdesc = new HealthdescModel();
         $this->healthpack = new HealthriskpacksModel();
+        $this->cart = new CartModel();
         helper('form');
         $session = \Config\Services::session();
 
@@ -80,6 +82,29 @@ class Home extends BaseController
             echo '<script>alert("Message has been sent.\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . '";</script>';
         } else {
             echo '<script>alert("Message could not be sent .\n\nPLEASE CLICK OK."); window.location.href="' . base_url() . '";</script>';
+        }
+    }
+
+    public function addToCart($id, $quantity)
+    {
+        $session = \Config\Services::session();
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('userlogin')->with('success', "You must be logged in to access this page.");
+        } else {
+            $data = [
+                'services' => $id,
+                'servicesqty' => $quantity,
+                'user' => $session->get('user_id'),
+                'status' => 1
+            ];
+            $data2 = $this->cart->insert($data);
+            if ($data2 == true) {
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
+            } else {
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
+                ;
+                // return redirect()->to('servicess')->with('blog-error', "Service added failed");
+            }
         }
     }
 
@@ -274,7 +299,7 @@ class Home extends BaseController
     {
         $session = \Config\Services::session();
         if (!$session->get('isLoggedIn')) {
-            return view('quality/userlogin');
+            return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
         }
         return view('quality/userprofile');
     }
