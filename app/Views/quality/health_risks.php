@@ -125,7 +125,8 @@
                                                 <li><a href="<?= base_url() ?>service3">~ IMMUNOLOGY & SEROLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service4">~ MOLECULAR BIOLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service5">~ MICROBIOLOGY</a></li>
-                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a></li>
+                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class=" "><a href="<?= base_url() ?>packages">Packages</a>
@@ -145,12 +146,12 @@
                         </div>
 
                         <div class="col-lg-5">
-                     <div class="header-cart-order d-flex align-items-center justify-content-end">
-                        <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                           <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
-                           <div class="tp-cart-icon-area">
-                              <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
-                              <!-- <div class="tpcarticon">
+                            <div class="header-cart-order d-flex align-items-center justify-content-end">
+                                <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
+                                    <button class="tp-menu-toggle mr-40"><i class="fa-solid fa-list"></i></button>
+                                    <div class="tp-cart-icon-area">
+                                        <a href="<?= base_url() ?>cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                                        <!-- <div class="tpcarticon">
                                     <ul>
                                        <li>
                                           <div class="tpcarticon__checkout-link">
@@ -160,16 +161,17 @@
                                        </li>
                                     </ul>
                                  </div> -->
-                           </div>
-                           <div class="tp-cart-icon-area ms-4">
-                              <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
-                           </div>
+                                    </div>
+                                    <div class="tp-cart-icon-area ms-4">
+                                        <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
+
+                                    </div>
+                                </div>
+                                <a class="header-bottom-btn" style="border-radius: 8px;"
+                                    href="<?= base_url() ?>#appointment ">Book
+                                    Appointment</a>
+                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
-                           Appointment</a>
-                     </div>
-                  </div>
 
                     </div>
                 </div>
@@ -191,7 +193,8 @@
                     <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
                         <div class="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
                             <a class="tp-bt-btn" href="<?= base_url() ?> ">
-                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="7" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="12" cy="2" r="2" fill="#0E63FF" />
@@ -223,26 +226,33 @@
         <div class="mobile-menu"></div>
 
         <div class="tpsideinfo__content mb-60">
-         <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
-         <span>Contact Us</span>
-         <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
-            Bhanugudi Junction,Kakinada-533003</a>
-         <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
-         <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
-         <br>
-         <br>
-        <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
+            <span>Contact Us</span>
+            <a href="#"><i class="fa-solid fa-star"></i> #2-34-8/1,Chintavari Street,
+                Bhanugudi Junction,Kakinada-533003</a>
+            <a href="#"><i class="fa-solid fa-star"></i>7658905111</a>
+            <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
+            <br>
+            <br>
+            <div class="  d-flex" style="gap:25px">
+                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                        class="fa-solid fa-cart-plus cart-icon"></i></a>
+                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                        class="fa-solid fa-user"></i></a>
+            </div>
         </div>
-      </div>
 
         <div class="footer-widget__social mb-30 ">
-            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a class="tp-f-inst"
+                href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                    class="fab fa-youtube"></i></i></a>
             <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                    class="fab fa-pinterest"></i></a>
             <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
         </div>
@@ -254,7 +264,8 @@
                 <?= form_open_multipart('sendonlymail'); ?>
 
                 <input name="mail" type="email" placeholder="Enter Mail" required>
-                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                <button type="submit" class="footer-widget__fw-news-btn"><i
+                        class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -274,12 +285,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="">
-                            <?php if (isset($healthdesc)) :
-                                foreach ($healthdesc as $hd) :
-                            ?>
+                            <?php if (isset($healthdesc)):
+                                foreach ($healthdesc as $hd):
+                                    ?>
                                     <?= $hd['description'] ?>
 
-                            <?php
+                                    <?php
                                 endforeach;
                             endif;
                             ?>
@@ -293,34 +304,42 @@
             <div class="container mt-5">
                 <div class="">
                     <div class="row">
-                        <?php if (isset($healthpack)) : ?>
-                            <?php foreach ($healthpack as $index => $hp) : ?>
+                        <?php if (isset($healthpack)): ?>
+                            <?php foreach ($healthpack as $index => $hp): ?>
                                 <div class="col-md-6 col-lg-3 mb-4">
                                     <div class="card mini_main_card p-3 shadow">
                                         <h5><?= $hp['name'] ?></h5>
                                         <p>₹ <?= $hp['price'] ?></p>
                                         <p>Includes: <?= $hp['parameters'] ?> parameters</p>
                                         <p>
-                                            <a href="#" class="know-more-link" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modal-<?= $index ?>"><strong>Know More...</strong></a>
+                                            <a href="#" class="know-more-link" style="text-decoration: none;"
+                                                data-bs-toggle="modal" data-bs-target="#modal-<?= $index ?>"><strong>Know
+                                                    More...</strong></a>
                                         </p>
                                         <button class="mini_card_cart_button shadow">
-                                            <a href="<?= $hp['id'] ?>" style="text-decoration: none; color:#000;">Add to Cart</a>
+                                            <a href="<?= base_url() ?><?= $hp['id'] ?>/1/2"
+                                                style="text-decoration: none; color:#000;">Add to
+                                                Cart</a>
                                         </button>
                                     </div>
                                 </div>
                                 <!-- Modal -->
-                                <div class="modal fade" id="modal-<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel-<?= $index ?>" aria-hidden="true">
+                                <div class="modal fade" id="modal-<?= $index ?>" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel-<?= $index ?>" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More Information</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More Information
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p><?= $hp['about'] ?></p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
                                             </div>
                                         </div>
                                     </div>
@@ -331,7 +350,7 @@
                 </div>
             </div>
         </section>
- 
+
 
     </main>
     <!-- main-area-end -->
@@ -344,16 +363,23 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                             <h4 class="footer-widget__title mb-30">
-                                <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                                <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                                        style="border-radius: 3px;" alt="logo"></a>
                             </h4>
                             <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
-                                sustainable health laboratory services with state-of-the art technology to our customers</p>
+                                sustainable health laboratory services with state-of-the art technology to our customers
+                            </p>
                             <div class="footer-widget__social">
-                                <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                                <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                                    target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="tp-f-inst"
+                                    href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                                    target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab"
+                                    target="_blank"><i class="fab fa-youtube"></i></i></a>
                                 <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                                <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/"
+                                    target="_blank"><i class="fab fa-pinterest"></i></a>
                                 <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                             </div>
@@ -402,7 +428,8 @@
 
                                 <?= form_open_multipart('sendonlymail'); ?>
                                 <input name="mail" type="email" placeholder="Enter Mail" required>
-                                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                <button type="submit" class="footer-widget__fw-news-btn"><i
+                                        class="fa-solid fa-paper-plane"></i></button>
                                 </form>
 
                             </div>
@@ -418,7 +445,10 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright">
-                            <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                            <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                                        href="https://bhavicreations.com/" target="_blank"><strong
+                                            style="font-weight: bold; font-style: italic;">Bhavi Creations</strong>
+                                    </a></i></span>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">

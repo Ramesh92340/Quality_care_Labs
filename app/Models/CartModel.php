@@ -15,6 +15,8 @@ class CartModel extends Model
         'packagesqty',
         'minipackages',
         'minipackagesqty',
+        'healthrisk',
+        'healthriskqty',
         'user',
         'status'
     ];

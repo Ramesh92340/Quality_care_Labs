@@ -85,25 +85,29 @@ class Home extends BaseController
         }
     }
 
-    public function addToCart($id, $quantity)
+    public function addToCart($id, $quantity, $type)
     {
         $session = \Config\Services::session();
         if (!$session->get('isLoggedIn')) {
             return redirect()->to('userlogin')->with('success', "You must be logged in to access this page.");
         } else {
             $data = [
-                'services' => $id,
-                'servicesqty' => $quantity,
                 'user' => $session->get('user_id'),
                 'status' => 1
             ];
+            if ($type == 1) {
+                $data['servicesqty'] = $quantity;
+                $data['services'] = $id;
+            }
+            if ($type == 2) {
+                $data['healthriskqty'] = $quantity;
+                $data['healthrisk'] = $id;
+            }
             $data2 = $this->cart->insert($data);
             if ($data2 == true) {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
             } else {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
-                ;
-                // return redirect()->to('servicess')->with('blog-error', "Service added failed");
             }
         }
     }
