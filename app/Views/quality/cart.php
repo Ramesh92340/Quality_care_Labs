@@ -336,7 +336,7 @@
                                  <tr>
                                     <td><?= $pkg['id'] ?></td>
                                     <td><?= $pkg['package_name'] ?></td>
-                                    <td><?= $pkg['package_name'] ?></td>
+                                    <td><?= $pkg['test_count'] ?></td>
                                     <td><?= $pkg['package_price'] ?></td>
                                     <td><?= $pkg['packagesqty'] ?></td>
                                     <td>
