@@ -522,7 +522,7 @@
                                  <tr class="order-total">
                                     <th class="ps-2"> Total Amount</th>
                                     <td><strong><span class="amount ps-2"
-                                             id="checkout-totalAmount">₹00.00</span></strong>
+                                             id="checkout-totalAmount">₹<?= $grand_total ?? '' ?>.00</span></strong>
                                     </td>
                                  </tr>
                               </tfoot>

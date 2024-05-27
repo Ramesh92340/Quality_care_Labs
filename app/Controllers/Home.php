@@ -360,7 +360,29 @@ class Home extends BaseController
             // return redirect()->to('userlogin')->with('blog-error', 'You must be logged in to access this page.');
             return view('quality/userlogin');
         } else {
-            return view('quality/checkout');
+            $services = $this->cart->getServicesCart($session->get('user_id'));
+            $healthrisk = $this->cart->getHealthRiskCart($session->get('user_id'));
+            $packages = $this->cart->getPackagesCart($session->get('user_id'));
+
+            $finalAmount = 0;
+
+            // Sum the total price for packages
+            foreach ($packages as $pkg):
+                $finalAmount += $pkg['packagesqty'] * $pkg['package_price'];
+            endforeach;
+
+            // Sum the total price for services
+            foreach ($services as $sr):
+                $finalAmount += $sr['servicesqty'] * $sr['price'];
+            endforeach;
+
+            // Sum the total price for health risks
+            foreach ($healthrisk as $hr):
+                $finalAmount += $hr['healthriskqty'] * $hr['healthrisk_price'];
+            endforeach;
+
+            $data['grand_total'] = $finalAmount;
+            return view('quality/checkout', $data);
         }
     }
 
