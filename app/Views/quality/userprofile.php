@@ -357,13 +357,12 @@
                 <div class="row">
                     <div class="col-6 only_for_name">
                         <div class="row">
-                            <div class="col-5 col-md-5 col-lg-4">
-                                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo"
-                                        class="profile_image"></a>
-                            </div>
+                            <!-- <div class="col-5 col-md-5 col-lg-4">
+                                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
+                            </div> -->
                             <div class="col-7 col-md-7 col-lg-8">
-                                <p><?= session('username') ?></p>
-                                <p>ExamExampleple@gmail.com</p>
+                                <p>Hello  ""NAME""</p>
+                             
                             </div>
                         </div>
                     </div>

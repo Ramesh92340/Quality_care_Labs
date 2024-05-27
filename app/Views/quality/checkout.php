@@ -328,19 +328,19 @@
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Town / City <span class="required">*</span></label>
-                                 <input type="text" placeholder="Town / City" / required>
+                                 <input type="text" placeholder=" " / required>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
-                                 <label>State / County <span class="required">*</span></label>
+                                 <label>State  <span class="required">*</span></label>
                                  <input type="text" placeholder="" required />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Postcode / Zip <span class="required">*</span></label>
-                                 <input type="text" placeholder="Postcode / Zip" required />
+                                 <input type="text" placeholder=" " required />
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -355,14 +355,14 @@
                                  <input type="text" placeholder=" " required value="<?= $userData['phone'] ?>" />
                               </div>
                            </div>
-                           <div class="col-md-12">
+                           <!-- <div class="col-md-12">
                               <div class="checkout-form-list create-acc">
                                  <label>Don't have an account? <a href="<?= base_url() ?>register"
                                        class="register_color"> Register </a></label>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
-                        <div class="different-address">
+                        <!-- <div class="different-address">
                            <div class="ship-different-title">
                               <h3>
                                  <label>Ship to a different address?</label>
@@ -442,7 +442,7 @@
                                     placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                               </div>
                            </div>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                   <div class="col-lg-6 col-md-12">
@@ -754,3 +754,5 @@
 </body>
 
 </html>
+
+
