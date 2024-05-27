@@ -298,7 +298,7 @@
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Company Name</label>
-                                 <input type="text" placeholder="" required />
+                                 <input type="text" placeholder=" (optional)" required />
                               </div>
                            </div>
                            <div class="col-md-12">
@@ -315,25 +315,25 @@
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Town / City <span class="required">*</span></label>
-                                 <input type="text" placeholder="Town / City" / required>
+                                 <input type="text" placeholder=" " / required>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
-                                 <label>State / County <span class="required">*</span></label>
+                                 <label>State  <span class="required">*</span></label>
                                  <input type="text" placeholder="" required />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Postcode / Zip <span class="required">*</span></label>
-                                 <input type="text" placeholder="Postcode / Zip" required />
+                                 <input type="text" placeholder=" " required />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Email Address <span class="required">*</span></label>
-                                 <input type="email" placeholder="" required />
+                                 <input type="email" placeholder=""  value="<?= session('username') ?>" required />
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -342,13 +342,13 @@
                                  <input type="text" placeholder=" " required />
                               </div>
                            </div>
-                           <div class="col-md-12">
+                           <!-- <div class="col-md-12">
                               <div class="checkout-form-list create-acc">
                                  <label>Don't have an account? <a href="<?= base_url() ?>register" class="register_color"> Register </a></label>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
-                        <div class="different-address">
+                        <!-- <div class="different-address">
                            <div class="ship-different-title">
                               <h3>
                                  <label>Ship to a different address?</label>
@@ -425,7 +425,7 @@
                                  <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                               </div>
                            </div>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                   <div class="col-lg-6 col-md-12">
@@ -505,6 +505,7 @@
                                  <tr class="order-total">
                                     <th class="ps-2"> Total Amount</th>
                                     <td><strong><span class="amount ps-2" id="checkout-totalAmount">₹00.00</span></strong>
+                                    
                                     </td>
                                  </tr>
                               </tfoot>
@@ -727,3 +728,5 @@
 </body>
 
 </html>
+
+

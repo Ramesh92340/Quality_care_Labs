@@ -340,12 +340,12 @@
                 <div class="row">
                     <div class="col-6 only_for_name">
                         <div class="row">
-                            <div class="col-5 col-md-5 col-lg-4">
+                            <!-- <div class="col-5 col-md-5 col-lg-4">
                                 <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
-                            </div>
+                            </div> -->
                             <div class="col-7 col-md-7 col-lg-8">
-                                <p><?= session('username') ?></p>
-                                <p>ExamExampleple@gmail.com</p>
+                                <p>Hello  ""NAME""</p>
+                             
                             </div>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <label>First Name</label>
-                        <input name="name" type="text" placeholder="First Name" class="form-control my-2" value="<?= session('username') ?>" disabled>
+                        <input name="name" type="text" placeholder="First Name" class="form-control my-2"   disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Last Name</label>
@@ -368,7 +368,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Email</label>
-                        <input name="email" type="email" placeholder="Email" class="form-control my-2" disabled>
+                        <input name="email" type="email" placeholder="Email" class="form-control my-2"  value="<?= session('username') ?>" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Password</label>
