@@ -167,7 +167,8 @@
                                                 <li><a href="<?= base_url() ?>service3">~ IMMUNOLOGY & SEROLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service4">~ MOLECULAR BIOLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service5">~ MICROBIOLOGY</a></li>
-                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a></li>
+                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class=" "><a href="<?= base_url() ?>packages">Packages</a>
@@ -208,7 +209,8 @@
 
                                     </div>
                                 </div>
-                                <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                                <a class="header-bottom-btn" style="border-radius: 8px;"
+                                    href="<?= base_url() ?>#appointment ">Book
                                     Appointment</a>
                             </div>
                         </div>
@@ -233,7 +235,8 @@
                     <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
                         <div class="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
                             <a class="tp-bt-btn" href="<?= base_url() ?> ">
-                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="7" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="12" cy="2" r="2" fill="#0E63FF" />
@@ -274,17 +277,24 @@
             <br>
             <br>
             <div class="  d-flex" style="gap:25px">
-                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                        class="fa-solid fa-cart-plus cart-icon"></i></a>
+                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                        class="fa-solid fa-user"></i></a>
             </div>
         </div>
 
         <div class="footer-widget__social mb-30 ">
-            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a class="tp-f-inst"
+                href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                    class="fab fa-youtube"></i></i></a>
             <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                    class="fab fa-pinterest"></i></a>
             <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
         </div>
@@ -296,7 +306,8 @@
                 <?= form_open_multipart('sendonlymail'); ?>
 
                 <input name="mail" type="email" placeholder="Enter Mail" required>
-                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                <button type="submit" class="footer-widget__fw-news-btn"><i
+                        class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -315,7 +326,7 @@
         $error = session('blog-error');
         $success = session('success');
         ?>
-        <?php if (!empty($error)) : ?>
+        <?php if (!empty($error)): ?>
             <div class="alert alert-danger">
                 <?php
                 // Check if $error is an array
@@ -329,19 +340,26 @@
                 ?>
             </div>
         <?php endif; ?>
-        <?php if (!empty($success)) : ?>
+        <?php if (!empty($success)): ?>
             <div class="alert alert-success">
                 <?= $success ?>
             </div>
         <?php endif; ?>
 
         <section>
+            <?php
+            $session = \Config\Services::session();
+            $userData = $session->get('userData');
+            ?>
+
+
             <div class="container margin_top">
                 <div class="row">
                     <div class="col-6 only_for_name">
                         <div class="row">
                             <div class="col-5 col-md-5 col-lg-4">
-                                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
+                                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo"
+                                        class="profile_image"></a>
                             </div>
                             <div class="col-7 col-md-7 col-lg-8">
                                 <p><?= session('username') ?></p>
@@ -354,36 +372,46 @@
                             <button class="text-center edit_btn" onclick="enableFields()">Edit</button>
                         </div>
                     </div>
+                    <?= form_open_multipart('user-update') ?>
                     <div class="col-12 col-md-6">
                         <label>First Name</label>
-                        <input name="name" type="text" placeholder="First Name" class="form-control my-2" value="<?= session('username') ?>" disabled>
+                        <input name="first_name" type="text" placeholder="First Name" class="form-control my-2"
+                            value="<?= $userData['first_name'] ?>" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Last Name</label>
-                        <input name="name" type="text" placeholder="Last Name" class="form-control my-2" disabled>
+                        <input name="last_name" type="text" value="<?= $userData['last_name'] ?>"
+                            placeholder="Last Name" class="form-control my-2" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Phone Number</label>
-                        <input name="phone" type="text" placeholder="Phone" class="form-control my-2" disabled>
+                        <input name="phone" type="number" value="<?= $userData['phone'] ?>" placeholder="Phone"
+                            class="form-control my-2" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Email</label>
-                        <input name="email" type="email" placeholder="Email" class="form-control my-2" disabled>
+                        <input name="email" type="email" value="<?= $userData['email'] ?>" placeholder="Email"
+                            class="form-control my-2" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label>Password</label>
-                        <input name="password" type="password" placeholder="Password" class="form-control my-2" disabled>
+                        <input name="password" type="password" value="<?= $userData['password'] ?>"
+                            placeholder="Password" class="form-control my-2" disabled>
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="address">Address</label>
-                        <textarea id="address" name="address" rows="4" class="form-control my-2" disabled></textarea>
+                        <textarea id="address" name="address" rows="4" class="form-control my-2"
+                            disabled><?= $userData['address'] ?></textarea>
                     </div>
 
                     <div class="col-6">
-                        <button class="update_btn">Update</button>
+                        <button type="submit" class="update_btn">Update</button>
                     </div>
+                    </form>
+
                     <div class="col-6  d-flex flex-row justify-content-end">
-                        <button class="update_btn btn-danger" style="background:#df4040">   <a href="<?= base_url() ?>userlogout" >Log Out</a></button>
+                        <button class="update_btn btn-danger" style="background:#df4040"> <a
+                                href="<?= base_url() ?>userlogout">Log Out</a></button>
                     </div>
                 </div>
             </div>
@@ -392,7 +420,7 @@
         <script>
             function enableFields() {
                 var inputs = document.querySelectorAll('input, textarea');
-                inputs.forEach(function(input) {
+                inputs.forEach(function (input) {
                     input.removeAttribute('disabled');
                 });
             }
@@ -411,16 +439,23 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                             <h4 class="footer-widget__title mb-30">
-                                <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                                <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                                        style="border-radius: 3px;" alt="logo"></a>
                             </h4>
                             <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
-                                sustainable health laboratory services with state-of-the art technology to our customers</p>
+                                sustainable health laboratory services with state-of-the art technology to our customers
+                            </p>
                             <div class="footer-widget__social">
-                                <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                                <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                                    target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="tp-f-inst"
+                                    href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                                    target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab"
+                                    target="_blank"><i class="fab fa-youtube"></i></i></a>
                                 <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                                <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/"
+                                    target="_blank"><i class="fab fa-pinterest"></i></a>
                                 <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                             </div>
@@ -469,7 +504,8 @@
                                 <?= form_open_multipart('sendonlymail'); ?>
 
                                 <input name="mail" type="email" placeholder="Enter Mail" required>
-                                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                <button type="submit" class="footer-widget__fw-news-btn"><i
+                                        class="fa-solid fa-paper-plane"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -484,7 +520,10 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright">
-                            <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                            <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                                        href="https://bhavicreations.com/" target="_blank"><strong
+                                            style="font-weight: bold; font-style: italic;">Bhavi Creations</strong>
+                                    </a></i></span>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-12">

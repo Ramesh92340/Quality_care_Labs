@@ -278,7 +278,7 @@
                               ?>
                               <?php foreach ($services as $index => $sr): ?>
                                  <tr>
-                                    <td><?= $sr['id'] ?></td>
+                                    <td><?= $index + 1 ?></td>
                                     <td><?= $sr['test_code'] ?></td>
                                     <td><?= $sr['test_name'] ?></td>
                                     <td><?= $sr['price'] ?></td>
@@ -334,7 +334,7 @@
                               ?>
                               <?php foreach ($packages as $index => $pkg): ?>
                                  <tr>
-                                    <td><?= $pkg['id'] ?></td>
+                                    <td><?= $index + 1 ?></td>
                                     <td><?= $pkg['package_name'] ?></td>
                                     <td><?= $pkg['test_count'] ?></td>
                                     <td><?= $pkg['package_price'] ?></td>
@@ -389,7 +389,7 @@
                               ?>
                               <?php foreach ($healthrisk as $index => $hr): ?>
                                  <tr>
-                                    <td><?= $hr['id'] ?></td>
+                                    <td><?= $index + 1 ?></td>
                                     <td><?= $hr['name'] ?></td>
                                     <td><?= $hr['parameters'] ?></td>
                                     <td><?= $hr['price'] ?></td>

@@ -1536,7 +1536,9 @@ INSERT INTO `tests` (`id`, `test_name`, `package_id`, `category_id`, `created_at
 
 CREATE TABLE `user_details` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `address` text DEFAULT NULL,
   `phone` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -1547,9 +1549,9 @@ CREATE TABLE `user_details` (
 -- Dumping data for table `user_details`
 --
 
-INSERT INTO `user_details` (`id`, `name`, `phone`, `email`, `password`, `created_at`) VALUES
-(1, 'raj', 2147483647, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 07:49:33'),
-(2, 'raj', 2147483647, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24');
+NSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`, `email`, `password`, `created_at`) VALUES
+(1, 'raj', '', 2147483647, NULL, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-24 17:09:15'),
+(2, 'raj', '', 2147483647, NULL, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24'),
 
 --
 -- Indexes for dumped tables

@@ -21,39 +21,41 @@ class User extends BaseController
         // Retrieve POST data
         $cpassword = $this->request->getPost('createpassword');
         $confirmPass = $this->request->getPost('conformpassword');
-        $name = $this->request->getPost('name');
+        $firstName = $this->request->getPost('first_name');
+        $lastName = $this->request->getPost('last_name');
         $phone = $this->request->getPost('phone');
         $email = $this->request->getPost('email');
-    
+
         // Check if passwords match
         if ($cpassword !== $confirmPass) {
             return redirect()->to('useregister')->with('blog-error', "Create password and confirm password do not match");
         }
-    
+
         // Hash the password securely
         $hashedPassword = md5($confirmPass);
-    
+
         // Prepare data for insertion
         $userData = [
-            'name' => $name,
+            'first_name' => $firstName,
+            'last_name' => $lastName,
             'phone' => $phone,
             'email' => $email,
             'password' => $hashedPassword, // Store hashed password
         ];
-    
+
         $lgData = [
             'username' => $email,
             'password' => $hashedPassword, // Store hashed password
             'user_type' => 2,
         ];
-    
+
         // Insert user data
         $userInsertResult = $this->user->insert($userData);
-        
+
         if ($userInsertResult) {
             // Insert login data
             $lgInsertResult = $this->lgtable->insert($lgData);
-            
+
             if ($lgInsertResult) {
                 return redirect()->to('userlogin')->with('success', "Registration successfully completed");
             } else {
@@ -63,7 +65,55 @@ class User extends BaseController
             return redirect()->to('useregister')->with('blog-error', "Registration Failed during user data insertion");
         }
     }
-    
+
+    public function updateuser()
+    {
+        // Retrieve POST data
+        $password = $this->request->getPost('password');
+        $firstName = $this->request->getPost('first_name');
+        $lastName = $this->request->getPost('last_name');
+        $phone = $this->request->getPost('phone');
+        $email = $this->request->getPost('email');
+        $address = $this->request->getPost('address');
+
+        $session = \Config\Services::session();
+        $userData = $session->get('userData');
+        // Check if passwords match
+        if ($password != $userData['password']) {
+            $hashedPassword = md5($password);
+        } else {
+            $hashedPassword = $password;
+        }
+
+        // Prepare data for insertion
+        $userData = [
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'phone' => $phone,
+            'address' => $address,
+            'email' => $email,
+            'password' => $hashedPassword, // Store hashed password
+        ];
+
+        $lgData = [
+            'username' => $email,
+            'password' => $hashedPassword, // Store hashed password
+            'user_type' => 2,
+        ];
+
+        // Insert user data
+        $userInsertResult = $this->user->update(session('user_id'), $userData);
+        $userData['id'] = session('user_id');
+
+        $lgInsertResult = $this->lgtable->update(session('login_id'), $lgData);
+        $session->set(['userData' => $userData]);
+        if ($lgInsertResult) {
+            return redirect()->to('userprofile')->with('success', "Update successfully completed");
+        } else {
+            return redirect()->to('userprofile')->with('blog-error', "Updating user Failed during login data insertion");
+        }
+    }
+
     public function userlogout()
     {
         $session = \Config\Services::session();
@@ -76,24 +126,28 @@ class User extends BaseController
     {
         $session = \Config\Services::session();
         $loginmodel = new Loginmodel();
-    
+        $usermodel = new UserModel();
+
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $hashedPassword = md5($password);  // Hash the incoming password with MD5
-    
+
         // Fetch the user based on the email
         $user = $loginmodel->where('username', $email)->first();
-    
+        $userData = $usermodel->where('email', $email)->first();
+
         // Verify user exists and password is correct
         if ($user && $hashedPassword === $user['password']) {
             // Set session data
             $session->set([
                 'user_id' => $user['id'],
+                'login_id' => $user['id'],
                 'username' => $user['username'],
                 'usertype' => $user['user_type'],
                 'isLoggedIn' => true,
+                'userData' => $userData
             ]);
-    
+
             // Redirect based on user type
             if ($user['user_type'] == 2) {
                 return redirect()->to('userprofile')->with('success', "Welcome {$user['username']}");
@@ -105,8 +159,8 @@ class User extends BaseController
             return redirect()->to('userlogin')->with('blog-error', 'Invalid email or password');
         }
     }
-    
-    
+
+
 
     public function logout()
     {
@@ -183,7 +237,7 @@ class User extends BaseController
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
-        return view('admin/packages',  $data);
+        return view('admin/packages', $data);
     }
 
     public function add_package()
@@ -232,7 +286,7 @@ class User extends BaseController
 
     public function update_data()
     {
-        $package = new  PackageModel();
+        $package = new PackageModel();
 
         $id = $this->request->getPost('pack_id');
 
@@ -253,11 +307,11 @@ class User extends BaseController
 
     public function delete($id)
     {
-        $package = new  PackageModel();
+        $package = new PackageModel();
         $cate = new CategoryModel();
         $test = new TestModel();
 
-        $data2 = $package->where('id',$id)->delete();
+        $data2 = $package->where('id', $id)->delete();
         $date3 = $cate->where('Package', $id)->delete();
         $data4 = $test->where('package_id', $id)->delete();
 

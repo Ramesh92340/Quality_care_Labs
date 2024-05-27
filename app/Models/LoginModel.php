@@ -12,6 +12,6 @@ class LoginModel extends Model
         'username',
         'password',
         'user_type'
-        
+
     ];
 }
