@@ -347,10 +347,26 @@
         <button type="button" class="btn btn-close  " data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+
+<script>
+function EmailValidate(){
+    console.log('test');
+    const element = document.getElementById("forgetmail");
+    const error = document.getElementById("Emailvalids");
+    if(element.value === ""){
+        error.style.display='block';
+    }else{
+        error.style.display='none';
+    }
+}
+
+</script>
       <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter Email Id" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-primary" type="button" id="button-addon2">Send Otp</button>
+  <input type="email" id='forgetmail' class="form-control" placeholder="Enter Email Id" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+  <button class="btn btn-outline-primary" onClick='EmailValidate()' type="button" id="button-addon2">Send Otp</button>
 </div>
+<p class="badge text-bg-danger" id='Emailvalids'>Danger</p>
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Enter Otp" aria-label="Recipient's username" aria-describedby="button-addon2">
   <button class="btn btn-outline-info" type="button" id="button-addon2">Submit Otp</button>
