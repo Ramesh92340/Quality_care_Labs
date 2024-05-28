@@ -361,7 +361,7 @@
                                 <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
                             </div> -->
                             <div class="col-7 col-md-7 col-lg-8">
-                                <p>Hello  ""NAME""</p>
+                                <p style='font-size:30px;'>Hello  "<?= $userData['first_name'] ?>"</p>
                              
                             </div>
                         </div>
@@ -402,16 +402,17 @@
                         <textarea id="address" name="address" rows="4" class="form-control my-2"
                             disabled><?= $userData['address'] ?></textarea>
                     </div>
-
-                    <div class="col-6">
+<div class='row'>
+                    <div class="col-5">
                         <button type="submit" class="update_btn">Update</button>
                     </div>
                     </form>
 
-                    <div class="col-6  d-flex flex-row justify-content-end">
+                    <div class="col-6  ">
                         <button class="update_btn btn-danger" style="background:#df4040"> <a
                                 href="<?= base_url() ?>userlogout">Log Out</a></button>
                     </div>
+        </div>
                 </div>
             </div>
         </section>

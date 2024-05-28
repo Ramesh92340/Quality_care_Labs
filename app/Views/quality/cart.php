@@ -291,8 +291,10 @@
                                        echo $calculatedservicesPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $sr['id'] ?>/<?= $sr['servicesqty'] ?>/1">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $sr['id'] ?>/<?= $sr['servicesqty'] ?>/1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
@@ -347,8 +349,10 @@
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $pkg['id'] ?>/<?= $pkg['packagesqty'] ?>/3">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $pkg['id'] ?>/<?= $pkg['packagesqty'] ?>/3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
@@ -402,8 +406,10 @@
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $hr['id'] ?>/<?= $hr['healthriskqty'] ?>/2">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $hr['id'] ?>/<?= $hr['healthriskqty'] ?>/2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
