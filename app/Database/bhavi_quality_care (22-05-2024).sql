@@ -1549,9 +1549,9 @@ CREATE TABLE `user_details` (
 -- Dumping data for table `user_details`
 --
 
-NSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`, `email`, `password`, `created_at`) VALUES
+INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`, `email`, `password`, `created_at`) VALUES
 (1, 'raj', '', 2147483647, NULL, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-24 17:09:15'),
-(2, 'raj', '', 2147483647, NULL, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24'),
+(2, 'raj', '', 2147483647, NULL, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24');
 
 --
 -- Indexes for dumped tables
