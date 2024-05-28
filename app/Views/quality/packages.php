@@ -586,12 +586,20 @@
                               <?php endforeach; ?>
                            <?php endif; ?>
                            <div class="d-flex flex-row justify-content-center">
-                              <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1">
+                              <?php if ($pk['in_cart']): ?>
                                  <button class="m-3 p-3 text-center book-now-btn"
-                                    style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
-                                    Add to Cart
+                                    style="height:50px; width:150px; background-color: grey; color:white; border-radius: 5px;"
+                                    disabled>
+                                    Added to Cart
                                  </button>
-                              </a>
+                              <?php else: ?>
+                                 <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1">
+                                    <button class="m-3 p-3 text-center book-now-btn"
+                                       style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
+                                       Add to Cart
+                                    </button>
+                                 </a>
+                              <?php endif; ?>
                            </div>
                         </div>
                      </div>
@@ -664,12 +672,20 @@
                         <?php endforeach; ?>
                      <?php endif; ?>
                      <div class="d-flex flex-row justify-content-center">
-                        <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1">
+                        <?php if ($pk['in_cart']): ?>
                            <button class="m-3 p-3 text-center book-now-btn"
-                              style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
-                              Add to Cart
+                              style="height:50px; width:150px; background-color: grey; color:white; border-radius: 5px;"
+                              disabled>
+                              Added to Cart
                            </button>
-                        </a>
+                        <?php else: ?>
+                           <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1">
+                              <button class="m-3 p-3 text-center book-now-btn"
+                                 style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">
+                                 Add to Cart
+                              </button>
+                           </a>
+                        <?php endif; ?>
                      </div>
                   </div>
                <?php endforeach; ?>

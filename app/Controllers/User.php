@@ -102,16 +102,18 @@ class User extends BaseController
         ];
 
         // Insert user data
-        $userInsertResult = $this->user->update(session('user_id'), $userData);
-        $userData['id'] = session('user_id');
-
-        $lgInsertResult = $this->lgtable->update(session('login_id'), $lgData);
-        $session->set(['userData' => $userData]);
-        if ($lgInsertResult) {
-            return redirect()->to('userprofile')->with('success', "Update successfully completed");
-        } else {
-            return redirect()->to('userprofile')->with('blog-error', "Updating user Failed during login data insertion");
+        $userInsertResult = $this->user->update(session('userData')['id'], $userData);
+        if ($userInsertResult) {
+            $userData['id'] = session('user_id');
+            $lgInsertResult = $this->lgtable->update(session('login_id'), $lgData);
+            $session->set(['userData' => $userData]);
+            if ($lgInsertResult) {
+                return redirect()->to('userprofile')->with('success', "Update successfully completed");
+            } else {
+                return redirect()->to('userprofile')->with('blog-error', "Updating user Failed during login data insertion");
+            }
         }
+        return redirect()->to('userprofile')->with('blog-error', "Updating user Failed during login data insertion");
     }
 
     public function userlogout()

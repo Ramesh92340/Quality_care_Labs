@@ -277,6 +277,11 @@
                               $totalServicesPrice = 0;
                               ?>
                               <?php foreach ($services as $index => $sr): ?>
+                                 <?php
+                                 $calculatedservicesPrice = $sr['servicesqty'] * $sr['price'];
+                                 $totalServicesPrice += $calculatedservicesPrice;
+                                 $finalPrice += $calculatedservicesPrice;
+                                 ?>
                                  <tr>
                                     <td><?= $index + 1 ?></td>
                                     <td><?= $sr['test_code'] ?></td>
@@ -285,13 +290,10 @@
                                     <td>
                                        <input type="number" data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>'
                                           min="1"
-                                          onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, this)">
+                                          onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>, this)">
                                     </td>
-                                    <td>
+                                    <td class="total-price">
                                        <?php
-                                       $calculatedservicesPrice = $sr['servicesqty'] * $sr['price'];
-                                       $totalServicesPrice += $calculatedservicesPrice;
-                                       $finalPrice += $calculatedservicesPrice;
                                        echo $calculatedservicesPrice;
                                        ?>
                                     </td>
@@ -337,6 +339,11 @@
                               $totalPackagesPrice = 0;
                               ?>
                               <?php foreach ($packages as $index => $pkg): ?>
+                                 <?php
+                                 $calculatedHealthRiskPrice = $pkg['packagesqty'] * $pkg['package_price'];
+                                 $totalPackagesPrice += $calculatedHealthRiskPrice;
+                                 $finalPrice += $calculatedHealthRiskPrice;
+                                 ?>
                                  <tr>
                                     <td><?= $index + 1 ?></td>
                                     <td><?= $pkg['package_name'] ?></td>
@@ -345,13 +352,10 @@
                                     <td>
                                        <input type="number" data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>'
                                           min="1"
-                                          onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, this)">
+                                          onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>, this)">
                                     </td>
-                                    <td>
+                                    <td class="total-price">
                                        <?php
-                                       $calculatedHealthRiskPrice = $pkg['packagesqty'] * $pkg['package_price'];
-                                       $totalPackagesPrice += $calculatedHealthRiskPrice;
-                                       $finalPrice += $calculatedHealthRiskPrice;
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
@@ -397,6 +401,11 @@
                               ?>
                               <?php foreach ($healthrisk as $index => $hr): ?>
                                  <tr>
+                                    <?php
+                                    $calculatedHealthRiskPrice = $hr['healthriskqty'] * $hr['price'];
+                                    $totalHealthRiskPrice += $calculatedHealthRiskPrice;
+                                    $finalPrice += $calculatedHealthRiskPrice;
+                                    ?>
                                     <td><?= $index + 1 ?></td>
                                     <td><?= $hr['name'] ?></td>
                                     <td><?= $hr['parameters'] ?></td>
@@ -404,13 +413,10 @@
                                     <td>
                                        <input type="number" data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>'
                                           min="1"
-                                          onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, this)">
+                                          onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>, this)">
                                     </td>
-                                    <td>
+                                    <td class="total-price">
                                        <?php
-                                       $calculatedHealthRiskPrice = $hr['healthriskqty'] * $hr['price'];
-                                       $totalHealthRiskPrice += $calculatedHealthRiskPrice;
-                                       $finalPrice += $calculatedHealthRiskPrice;
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
@@ -440,7 +446,7 @@
                      <div class="cart-page-total">
                         <ul class="mb-20">
                            <li class="totalamount_last"><strong> Total Amount</strong> <span>
-                                 <strong>₹<?= $finalPrice ?></strong></span></li>
+                                 <strong id="final_amount">₹<?= $finalPrice ?></strong></span></li>
                         </ul>
                      </div>
                   </div>
@@ -943,12 +949,12 @@
    <script src="assets/js/jquery.knob.js"></script>
    <script src="assets/js/main.js"></script>
    <script>
-      function updateQuantity(serviceId, newQuantity, price, type, element) {
+      function updateQuantity(serviceId, newQuantity, price, type, totalPrice, quantity, element) {
          var newTotalPrice = newQuantity * price;
          console.log(serviceId, newQuantity, price, type)
 
          // Update the total price for the service
-         $(element).closest('tr').find('.service-total-price').text(newTotalPrice);
+         $(element).closest('tr').find('.total-price').text(newTotalPrice);
 
          // Send AJAX request to update the server
          $.ajax({
@@ -956,7 +962,23 @@
             type: 'GET',
             success: function (response) {
                // Handle response if needed
-               window.location.reload()
+               // window.location.reload()
+               let totalAmount = totalPrice;
+               if (newQuantity > quantity) {
+                  count = newQuantity - quantity;
+                  totalAmount += (count * price);
+                  let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
+                  finalAmount += (count * price);
+                  document.getElementById('final_amount').innerText = '₹' + finalAmount;
+                  //    console.log(totalAmount)
+               }
+               else {
+                  count = quantity - newQuantity;
+                  totalAmount -= (count * price);
+                  let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
+                  finalAmount -= (count * price);
+                  document.getElementById('final_amount').innerText = '₹' + finalAmount;
+               }
             },
             error: function (xhr, status, error) {
                console.error('Error updating cart:', error);

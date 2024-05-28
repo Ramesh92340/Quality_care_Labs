@@ -27,8 +27,10 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
    <!-- Include slick-theme.css -->
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+   <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+   <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 
    <style>
@@ -147,7 +149,8 @@
 
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;"
+                           href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -213,17 +216,24 @@
          <br>
          <br>
          <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
+                  class="fa-solid fa-user"></i></a>
          </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
+               class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst"
+            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+               class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+               class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -252,7 +262,8 @@
 
       <!-- slider-arae -->
       <section class="slider-area p-relative">
-         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="3000">
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <img src="<?= base_url() ?>assets/img/Slider-1.png" class="d-block w-100" alt="...">
@@ -264,11 +275,13 @@
                   <img src="<?= base_url() ?>assets/img/Slider-3.png" class="d-block w-100" alt="...">
                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+               data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+               data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
             </button>
@@ -277,7 +290,8 @@
       <!-- slider-arae-end -->
 
       <!-- about-area -->
-      <section class="about-area grey-bg pt-50 tp-box-space pb- 30 ml-30 mr-30" data-background="assets/img/shape/shape-bg-05.png">
+      <section class="about-area grey-bg pt-50 tp-box-space pb- 30 ml-30 mr-30"
+         data-background="assets/img/shape/shape-bg-05.png">
          <div class="about-wrapper">
             <div class="container">
                <div class="row">
@@ -304,7 +318,8 @@
                               achieved by providing innovative, timely, and Accurate
                               Clinical Referral Testing Services.</P>
                         </div>
-                        <div class="about-content__btn"><a href="<?= base_url() ?>about" class="tp-btn">KNOW MORE...</a></div>
+                        <div class="about-content__btn"><a href="<?= base_url() ?>about" class="tp-btn">KNOW MORE...</a>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -314,7 +329,8 @@
       </section>
       <!-- about-area-end -->
 
-      <section class="choose-area grey-bg pt-40 pb-10 tp-box-space ml-30 mr-30 mt-10 mb-20" data-background="assets/img/shape/shape-bg-07.png">
+      <section class="choose-area grey-bg pt-40 pb-10 tp-box-space ml-30 mr-30 mt-10 mb-20"
+         data-background="assets/img/shape/shape-bg-07.png">
          <div class="container">
             <div class="row">
                <div class="col-lg-12">
@@ -331,7 +347,9 @@
                <div class="col-xl-3 col-lg-6 col-md-6">
                   <div class="experience-item text-center mb-30 wow fadeInUp" data-wow-delay=".2s">
                      <div class="progress-circular tl-progress">
-                        <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="165" data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#0E63FF" data-thickness=".07" data-readonly="true" disabled />
+                        <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="165"
+                           data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#0E63FF" data-thickness=".07"
+                           data-readonly="true" disabled />
                      </div>
                      <span class="skill-item-title">SERVICES</span>
                   </div>
@@ -339,7 +357,9 @@
                <div class="col-xl-3 col-lg-6 col-md-6">
                   <div class="experience-item text-center mb-30 wow fadeInUp" data-wow-delay=".4s">
                      <div class="progress-circular tl-progress">
-                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="165" data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#F72A75" data-thickness=".07" data-readonly="true" disabled />
+                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="165"
+                           data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#F72A75" data-thickness=".07"
+                           data-readonly="true" disabled />
                      </div>
                      <span class="skill-item-title">TECHNOLOGY</span>
                   </div>
@@ -347,7 +367,9 @@
                <div class="col-xl-3 col-lg-6 col-md-6">
                   <div class="experience-item text-center mb-30 wow fadeInUp" data-wow-delay=".6s">
                      <div class="progress-circular tl-progress">
-                        <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="165" data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#42BFFF" data-thickness=".07" data-readonly="true" disabled />
+                        <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="165"
+                           data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#42BFFF" data-thickness=".07"
+                           data-readonly="true" disabled />
                      </div>
                      <span class="skill-item-title">OUR BEST STAFF</span>
                   </div>
@@ -355,7 +377,9 @@
                <div class="col-xl-3 col-lg-6 col-md-6">
                   <div class="experience-item text-center mb-30 wow fadeInUp" data-wow-delay=".8s">
                      <div class="progress-circular tl-progress">
-                        <input type="text" class="knob" value="0" data-rel="90" data-linecap="round" data-width="165" data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#10D0A1" data-thickness=".07" data-readonly="true" disabled />
+                        <input type="text" class="knob" value="0" data-rel="90" data-linecap="round" data-width="165"
+                           data-height="165" data-bgcolor="#ECEEF3" data-fgcolor="#10D0A1" data-thickness=".07"
+                           data-readonly="true" disabled />
                      </div>
                      <span class="skill-item-title">AUTOMATION</span>
                   </div>
@@ -368,7 +392,8 @@
 
       <!-- gallery-area -->
       <section class="gallery-area pb-10" style="margin-top: 50px;">
-         <div class="gallery-bg-title theme-light-bg tp-box-space pt-30 pb-200 mr-30 ml-30" data-background="assets/img/shape/shape-bg-06.png">
+         <div class="gallery-bg-title theme-light-bg tp-box-space pt-30 pb-200 mr-30 ml-30"
+            data-background="assets/img/shape/shape-bg-06.png">
             <div class="container">
                <div class="row">
                   <div class="col-lg-12">
@@ -417,7 +442,8 @@
                      <div class="gallery-item p-relative mb-30">
                         <img src="<?= base_url() ?>assets/img/Gallary-4.png" alt="gallery-thumb">
                         <div class="gallery-item__content">
-                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a></h4>
+                           <h4 class="gallery-item__title"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a>
+                           </h4>
                            <!-- <span><i class="fa-solid fa-tag"></i><a href="services-details.html">Genetics</a></span> -->
                         </div>
                      </div>
@@ -445,7 +471,8 @@
 
 
       <!-- appoinment-area -->
-      <section id="appointment" class="appoinment-area grey-bg mb-50 tp-box-space ml-30 mr-30 " data-background="assets/img/shape/shape-bg-08.png">
+      <section id="appointment" class="appoinment-area grey-bg mb-50 tp-box-space ml-30 mr-30 "
+         data-background="assets/img/shape/shape-bg-08.png">
          <div class="container">
             <div class="row align-items-end">
                <div class="col-xl-4 col-lg-12 col-md-12">
@@ -458,13 +485,13 @@
                      <h4 class="appoinment-title mb-25"><i class="fa-light fa-file-signature"></i>Book your appointment
                      </h4>
                      <div class="visitor-form">
-                        <?php if (isset($_GET['success_message'])) : ?>
+                        <?php if (isset($_GET['success_message'])): ?>
                            <div class="alert alert-success" role="alert">
                               <?= $_GET['success_message'] ?>
                            </div>
                         <?php endif; ?>
 
-                        <?php if (isset($_GET['error_message'])) : ?>
+                        <?php if (isset($_GET['error_message'])): ?>
                            <div class="alert alert-danger" role="alert">
                               <?= $_GET['error_message'] ?>
                            </div>
@@ -504,7 +531,9 @@
                            </div>
                            <div class="col-lg-8 col-md-8 col-12">
                               <div class="visit-serial mt-45">
-                                 <span><strong>24/7 EMERGENCY SERVICE </strong>: <a href="<?= base_url() ?>tel:+917658905111">+917658905111 &nbsp;<i class="fas fa-phone"></i></i></a></span>
+                                 <span><strong>24/7 EMERGENCY SERVICE </strong>: <a
+                                       href="<?= base_url() ?>tel:+917658905111">+917658905111 &nbsp;<i
+                                          class="fas fa-phone"></i></i></a></span>
                               </div>
                            </div>
                         </div>
@@ -534,8 +563,8 @@
             <div class="carousel-item active">
                <div class="container">
                   <div class="row d-flex flex-row justify-content-center">
-                     <?php if (isset($health) && !empty($health)) : ?>
-                        <?php foreach ($health as $ht) : ?>
+                     <?php if (isset($health) && !empty($health)): ?>
+                        <?php foreach ($health as $ht): ?>
                            <div class="col-md-2 col-sm-4 col-6 mt-4">
 
                               <a href="<?= base_url() ?>healthrisks/<?= $ht['id'] ?>">
@@ -552,7 +581,7 @@
 
                            </div>
                         <?php endforeach; ?>
-                     <?php else : ?>
+                     <?php else: ?>
                         <th>No categories found</th>
                      <?php endif; ?>
                   </div>
@@ -574,13 +603,14 @@
 
       <div class="container">
          <div class="row d-flex flex-row justify-content-center">
-            <?php if (isset($health) && !empty($health)) : ?>
-               <?php foreach ($health as $ht) : ?>
+            <?php if (isset($health) && !empty($health)): ?>
+               <?php foreach ($health as $ht): ?>
                   <div class="col-md-2 col-sm-4 col-6 mt-4">
                      <a href="<?= base_url() ?>healthrisks/<?= $ht['id'] ?>">
                         <div class="card" style="border-top:solid">
                            <div class="d-flex flex-row justify-content-center" style="overflow: hidden; margin: 0 auto;">
-                              <img src="<?= base_url() ?>uploads/<?= $ht['image'] ?>" class="card-img-top img-fluid" style="height: 80px; width:80px" alt="...">
+                              <img src="<?= base_url() ?>uploads/<?= $ht['image'] ?>" class="card-img-top img-fluid"
+                                 style="height: 80px; width:80px" alt="...">
                            </div>
                            <div class="card-body">
                               <h5 class="card-title little_card"><?= $ht['name'] ?></h5>
@@ -589,7 +619,7 @@
                      </a>
                   </div>
                <?php endforeach; ?>
-            <?php else : ?>
+            <?php else: ?>
                <div class="col-12 mt-4">
                   <div class="alert alert-warning" role="alert">
                      No categories found
@@ -669,18 +699,20 @@
 
       <div class="card-slider container only_forr_slider">
          <div class="cards cards_paddaing">
-            <?php if (isset($pack)) : ?>
-               <?php foreach ($pack as $pk) : ?>
+            <?php if (isset($pack)): ?>
+               <?php foreach ($pack as $pk): ?>
                   <?php
                   // Initialize total tests count for the package
                   $total_tests_count = 0;
                   ?>
                   <div class="card need_margin_side">
-                     <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;" data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
-                     <div class="text-center" style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
+                     <h6 class="text-center" style="padding-top: 30px; padding-bottom: 30px;"
+                        data-package-name="<?= $pk['package_name'] ?>"><?= $pk['package_name'] ?></h6>
+                     <div class="text-center"
+                        style="background: linear-gradient(to right, #020b86cb, #666cc2cb); color:white;">
                         <h3 class="mt-3" data-package-price="<?= $pk['package_price'] ?>"><?= $pk['package_price'] ?>/-</h3>
-                        <?php foreach ($cat as $ct) : ?>
-                           <?php if ($pk['id'] == $ct['package']) : ?>
+                        <?php foreach ($cat as $ct): ?>
+                           <?php if ($pk['id'] == $ct['package']): ?>
                               <?php
                               // Increment total tests count for the package
                               $total_tests_count += count(array_filter($test, function ($ts) use ($ct, $pk) {
@@ -691,21 +723,24 @@
                         <?php endforeach; ?>
                         <p style="color:white">(<?= $total_tests_count ?> Tests)</p>
                      </div>
-                     <?php if (isset($cat)) : ?>
-                        <?php foreach ($cat as $ct) : ?>
-                           <?php if ($pk['id'] == $ct['package']) : ?>
+                     <?php if (isset($cat)): ?>
+                        <?php foreach ($cat as $ct): ?>
+                           <?php if ($pk['id'] == $ct['package']): ?>
                               <div class="accordion mt-3 ms-2 mb-3" style="margin-right: 10px;">
                                  <div class="accordion-item shadow">
                                     <h2 class="accordion-header" id="heading<?= $ct['id'] ?>">
-                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $ct['id'] ?>">
+                                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                          data-bs-target="#collapse<?= $ct['id'] ?>" aria-expanded="false"
+                                          aria-controls="collapse<?= $ct['id'] ?>">
                                           <?= $ct['name'] ?> (<?= countTestsInCategory($ct['id'], $pk['id'], $test) ?> Tests)
                                        </button>
                                     </h2>
-                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
+                                    <div id="collapse<?= $ct['id'] ?>" class="accordion-collapse collapse"
+                                       aria-labelledby="heading<?= $ct['id'] ?>" data-bs-parent="#faqAccordion">
                                        <div class="accordion-body">
                                           <ul class="ms-2">
-                                             <?php foreach ($test as $ts) : ?>
-                                                <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']) : ?>
+                                             <?php foreach ($test as $ts): ?>
+                                                <?php if ($ct['id'] == $ts['category_id'] && $pk['id'] == $ts['package_id']): ?>
                                                    <li><?= $ts['test_name'] ?></li>
                                                 <?php endif; ?>
                                              <?php endforeach; ?>
@@ -719,7 +754,10 @@
                         <?php endforeach; ?>
                      <?php endif; ?>
                      <div class="d-flex flex-row justify-content-center">
-                        <a href="<?= $pk['id'] ?>"><button class="m-3 p-3 text-center book-now-btn" style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book Now</button></a>
+                        <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1"><button
+                              class="m-3 p-3 text-center book-now-btn"
+                              style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book
+                              Now</button></a>
                      </div>
                   </div>
                <?php endforeach; ?>
@@ -750,7 +788,7 @@
       </div> -->
 
       <script>
-         document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function () {
             // Function to update the cart UI
             function updateCartUI() {
                // Retrieve existing cart items from localStorage
@@ -777,7 +815,7 @@
             // Add event listener to all "Book Now" buttons
             const bookNowButtons = document.querySelectorAll('.book-now-btn');
             bookNowButtons.forEach(button => {
-               button.addEventListener('click', function() {
+               button.addEventListener('click', function () {
                   // Traverse the DOM to find the package name and price
                   const packageName = button.parentElement.parentElement.querySelector('h6[data-package-name]').innerText;
                   const packagePrice = button.parentElement.parentElement.querySelector('h3[data-package-price]').innerText;
@@ -850,16 +888,22 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                              style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst"
+                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                              class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                              class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -908,7 +952,8 @@
                         <?= form_open_multipart('sendonlymail'); ?>
 
                         <input name="mail" type="email" placeholder="Enter Mail" required>
-                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i
+                              class="fa-solid fa-paper-plane"></i></button>
                         </form>
                      </div>
                   </div>
@@ -923,7 +968,9 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                              href="https://bhavicreations.com/" target="_blank"><strong
+                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
@@ -962,9 +1009,10 @@
 
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <!-- Include slick.js -->
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
    <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
          $('.cards').slick({
             dots: true,
             infinite: false,
@@ -974,34 +1022,34 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [{
-                  breakpoint: 1200,
-                  settings: {
-                     slidesToShow: 3,
-                     slidesToScroll: 1,
-                     height: '100%',
-                     infinite: true,
-                     dots: true
-                  }
-               },
-               {
-                  breakpoint: 992,
-                  settings: {
-                     height: '100%',
-                     slidesToShow: 2,
-                     slidesToScroll: 1,
-                     infinite: true,
-                     dots: true
-                  }
-               },
-               {
-                  breakpoint: 768,
-                  settings: {
-                     slidesToShow: 1,
-                     slidesToScroll: 1,
-                     height: '100%',
-                     initialSlide: 1
-                  }
+               breakpoint: 1200,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  height: '100%',
+                  infinite: true,
+                  dots: true
                }
+            },
+            {
+               breakpoint: 992,
+               settings: {
+                  height: '100%',
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  height: '100%',
+                  initialSlide: 1
+               }
+            }
             ]
          });
       });

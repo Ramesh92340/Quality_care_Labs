@@ -183,7 +183,7 @@ class Home extends BaseController
                 $data2 = $this->cart->update($userData['id'], $data);
             }
             if ($data2 == true) {
-                return redirect()->to('cart')->with('success', "Product added to cart success.");
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
             } else {
                 return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
             }
@@ -283,49 +283,131 @@ class Home extends BaseController
     public function service1()
     {
         $data['data1'] = $this->sertest->select_test1();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
+
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data1'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service1', $data);
     }
 
     public function service2()
     {
         $data['data2'] = $this->sertest->select_test2();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
 
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data2'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service2', $data);
     }
 
     public function service3()
     {
         $data['data3'] = $this->sertest->select_test3();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
 
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data3'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service3', $data);
     }
 
     public function service4()
     {
         $data['data4'] = $this->sertest->select_test4();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
 
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data4'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service4', $data);
     }
 
     public function service5()
     {
         $data['data5'] = $this->sertest->select_test5();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
 
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data5'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service5', $data);
     }
 
     public function service6()
     {
         $data['data6'] = $this->sertest->select_test6();
+        $session = \Config\Services::session();
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getServicesCart($session->get('user_id'));
 
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'services');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['data6'] as &$service) {
+                $service['in_cart'] = in_array($service['id'], $cartPackageIds);
+            }
+        }
         return view('quality/service6', $data);
     }
 
     public function packages()
     {
+        $session = \Config\Services::session();
         $data['pack'] = $this->package->findAll();
+
+        if ($session->get('isLoggedIn')) {
+            $cartPackages = $this->cart->getPackagesCart($session->get('user_id'));
+
+            // Create an array of package IDs in the cart for quick lookup
+            $cartPackageIds = array_column($cartPackages, 'packages');
+
+            // Add a flag to indicate if a package is in the cart
+            foreach ($data['pack'] as &$package) {
+                $package['in_cart'] = in_array($package['id'], $cartPackageIds);
+            }
+        }
+
         $data['cat'] = $this->category->findAll();
         $data['test'] = $this->test->findAll();
+
         return view('quality/packages', $data);
     }
 
