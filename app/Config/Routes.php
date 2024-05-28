@@ -19,7 +19,7 @@ $routes->get('service6', 'Home::service6');
 $routes->get('packages', 'Home::packages');
 $routes->get('contact', 'Home::contact');
 $routes->get('cart', 'Home::cart');
-$routes->get('addtocart/(:num)/(:num)/(:num)', 'Home::addToCart/$1/$2/$3');
+$routes->get('addtocart/(:num)/(:num)/(:num)/(:num)', 'Home::addToCart/$1/$2/$3/$4');
 $routes->get('removefromcart/(:num)/(:num)/(:num)', 'Home::removeFromCart/$1/$2/$3');
 $routes->get('userlogin', 'Home::userlogin');
 $routes->get('useregister', 'Home::useregister');

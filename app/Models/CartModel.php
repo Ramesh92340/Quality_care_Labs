@@ -40,7 +40,7 @@ class CartModel extends Model
     {
         $this->from('cart as crt');
         $this->join('service-tests as st', 'crt.services = st.id');
-        $this->select('crt.*, st.id as stid, st.*');
+        $this->select('crt.*, st.id as stid, st.*, crt.id as cartid');
         $this->where('crt.status', 1);
         $this->where('crt.user', $id);
         $this->distinct();
@@ -51,7 +51,7 @@ class CartModel extends Model
     {
         $this->from('cart as crt');
         $this->join('healthrisk_packs as hrp', 'crt.healthrisk = hrp.id');
-        $this->select('crt.*, hrp.id as hrpid, hrp.*');
+        $this->select('crt.*, hrp.id as hrpid, hrp.*, crt.id as cartid');
         $this->where('crt.status', 1);
         $this->where('crt.user', $id);
         $this->distinct();
@@ -62,7 +62,7 @@ class CartModel extends Model
     {
         $this->from('cart as crt');
         $this->join('packages as pkgs', 'crt.packages = pkgs.id');
-        $this->select('crt.*, pkgs.id as pkgsid, pkgs.*,  (SELECT COUNT(*) FROM tests WHERE tests.package_id = pkgs.id) as test_count');
+        $this->select('crt.*, pkgs.id as pkgsid, pkgs.*,  (SELECT COUNT(*) FROM tests WHERE tests.package_id = pkgs.id) as test_count, crt.id as cartid');
         $this->where('crt.status', 1);
         $this->where('crt.user', $id);
         $this->distinct();
