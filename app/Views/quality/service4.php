@@ -348,7 +348,7 @@
                         <td class="text-center"><?= $dt1['test_name'] ?></td>
                         <td class="text-center"><?= $dt1['name'] ?></td>
                         <td class="text-center"><?= $dt1['price'] ?></td>
-                        <td class="text-center"><a href="<?= base_url() ?>addtocart/<?= $dt1['id'] ?>/1/1"><i class="fa-solid fa-cart-arrow-down"></i></a></td>
+                        <td class="text-center"><a href="<?= base_url() ?>addtocart/<?= $dt1['id'] ?>/1/1/1"><i class="fa-solid fa-cart-arrow-down"></i></a></td>
                      </tr>
                      <?php $i++ ?>
                   <?php endforeach; ?>

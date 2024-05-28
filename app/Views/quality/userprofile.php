@@ -361,8 +361,8 @@
                                 <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/images.png" alt="logo" class="profile_image"></a>
                             </div> -->
                             <div class="col-7 col-md-7 col-lg-8">
-                                <p style='font-size:30px;'>Hello  "<?= $userData['first_name'] ?>"</p>
-                             
+                                <p>Hello <?= $userData['first_name'] ?></p>
+
                             </div>
                         </div>
                     </div>

@@ -144,7 +144,7 @@ class Home extends BaseController
         }
     }
 
-    public function addToCart($id, $quantity, $type)
+    public function addToCart($id, $quantity, $type, $insertionType)
     {
         $session = \Config\Services::session();
         if (!$session->get('isLoggedIn')) {
@@ -156,21 +156,21 @@ class Home extends BaseController
             ];
             $userData = $this->cart->checkIfExists($session->get('user_id'), $type, $id);
             if ($type == 1) {
-                if ($userData) {
+                if ($userData && $insertionType == 1) {
                     $data['servicesqty'] = $userData['servicesqty'] + $quantity;
                 } else {
                     $data['servicesqty'] = $quantity;
                 }
                 $data['services'] = $id;
             } else if ($type == 2) {
-                if ($userData) {
+                if ($userData && $insertionType == 1) {
                     $data['healthriskqty'] = $userData['healthriskqty'] + $quantity;
                 } else {
                     $data['healthriskqty'] = $quantity;
                 }
                 $data['healthrisk'] = $id;
             } else if ($type == 3) {
-                if ($userData) {
+                if ($userData && $insertionType == 1) {
                     $data['packagesqty'] = $userData['packagesqty'] + $quantity;
                 } else {
                     $data['packagesqty'] = $quantity;
