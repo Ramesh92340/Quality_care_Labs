@@ -338,7 +338,36 @@
                                 <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 
                             </div>
-                            <p class=" margin_text"><a href="#">Forgot password?</a></p>
+                            <p class=" margin_text"><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Forgot password?</a></p>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Reset Password</h1>
+        <button type="button" class="btn btn-close  " data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter Email Id" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-primary" type="button" id="button-addon2">Send Otp</button>
+</div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter Otp" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-info" type="button" id="button-addon2">Submit Otp</button>
+</div>
+<div class="input-group mb-3">
+  <input disabled type="text" class="form-control" placeholder="Enter Password   " aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-success" type="button" id="button-addon2">Reset Password</button>
+</div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button> 
+      </div> -->
+    </div>
+  </div>
+</div>
+                            
                             <button class="tp-btn tp-btn-primary my-2 login_btn">Login</button>
                             <p class="margin_text">Don’t have an account? <a href="<?= base_url() ?>useregister"><strong> Sign Up</strong></a></p>
                         </form>
