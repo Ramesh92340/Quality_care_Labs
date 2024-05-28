@@ -26,7 +26,7 @@ $routes->get('useregister', 'Home::useregister');
 $routes->get('userprofile', 'Home::userprofile');
 $routes->get('terms', 'Home::terms');
 $routes->get('privacy', 'Home::privacy');
-
+$routes->post('send-otp', 'OtpController::sendOtp');
 
 $routes->get('checkout', 'Home::checkout');
 

@@ -445,21 +445,40 @@ class Home extends BaseController
             $services = $this->cart->getServicesCart($session->get('user_id'));
             $healthrisk = $this->cart->getHealthRiskCart($session->get('user_id'));
             $packages = $this->cart->getPackagesCart($session->get('user_id'));
+            $data = [];
 
             $finalAmount = 0;
 
             // Sum the total price for packages
             foreach ($packages as $pkg):
+                $data['cart_items'][] = [
+                    'name' => $pkg['package_name'],
+                    'type' => 'Package',
+                    'price' => $pkg['package_price'],
+                    'quantity' => $pkg['packagesqty']
+                ];
                 $finalAmount += $pkg['packagesqty'] * $pkg['package_price'];
             endforeach;
 
             // Sum the total price for services
             foreach ($services as $sr):
+                $data['cart_items'][] = [
+                    'name' => $sr['test_name'],
+                    'type' => 'Service',
+                    'price' => $sr['price'],
+                    'quantity' => $sr['servicesqty']
+                ];
                 $finalAmount += $sr['servicesqty'] * $sr['price'];
             endforeach;
 
             // Sum the total price for health risks
             foreach ($healthrisk as $hr):
+                $data['cart_items'][] = [
+                    'name' => $hr['name'],
+                    'type' => 'Health Risk',
+                    'price' => $hr['healthrisk_price'],
+                    'quantity' => $hr['healthriskqty']
+                ];
                 $finalAmount += $hr['healthriskqty'] * $hr['healthrisk_price'];
             endforeach;
 
