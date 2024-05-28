@@ -282,11 +282,11 @@
                                     <td><?= $sr['test_code'] ?></td>
                                     <td><?= $sr['test_name'] ?></td>
                                     <td><?= $sr['price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>'
+                                    <td><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, this)">
-                                    </td>
+                              </center>    </td>
                                     <td>
                                        <?php
                                        $calculatedservicesPrice = $sr['servicesqty'] * $sr['price'];
@@ -344,11 +344,11 @@
                                     <td><?= $pkg['package_name'] ?></td>
                                     <td><?= $pkg['test_count'] ?></td>
                                     <td><?= $pkg['package_price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>'
+                                    <td class='text-center justify-content-center'><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, this)">
-                                    </td>
+                              </center></td>
                                     <td>
                                        <?php
                                        $calculatedHealthRiskPrice = $pkg['packagesqty'] * $pkg['package_price'];
@@ -405,11 +405,11 @@
                                     <td><?= $hr['name'] ?></td>
                                     <td><?= $hr['parameters'] ?></td>
                                     <td><?= $hr['price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>'
+                                    <td><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, this)">
-                                    </td>
+                              </center>  </td>
                                     <td>
                                        <?php
                                        $calculatedHealthRiskPrice = $hr['healthriskqty'] * $hr['price'];
