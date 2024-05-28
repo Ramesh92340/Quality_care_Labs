@@ -27,6 +27,8 @@ $routes->get('userprofile', 'Home::userprofile');
 $routes->get('terms', 'Home::terms');
 $routes->get('privacy', 'Home::privacy');
 $routes->post('send-otp', 'OtpController::sendOtp');
+$routes->post('resetpassword', 'User::resetpassword');
+$routes->post('validate-otp', 'OtpController::validateOtp');
 
 $routes->get('checkout', 'Home::checkout');
 

@@ -20,6 +20,17 @@ class OtpController extends BaseController
         }
     }
 
+    public function validateOtp()
+    {
+        $otp = $this->request->getPost('otp');
+
+        if ($otp == session('otp')) {
+            echo "Correct OTP.";
+        } else {
+            echo "Incorrect OTP.";
+        }
+    }
+
     private function generateOTP($length = 6)
     {
         $digits = '0123456789';
@@ -43,6 +54,11 @@ class OtpController extends BaseController
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
+            $session = \Config\Services::session();
+            $session->set([
+                'otp' => $otp
+            ]);
+
             // Disable SSL certificate verification for troubleshooting
             $mail->SMTPOptions = [
                 'ssl' => [
@@ -53,7 +69,7 @@ class OtpController extends BaseController
             ];
 
             // Recipients
-            $mail->setFrom('koyiladavignesh@gmail.com', 'Vignesh');
+            $mail->setFrom('your_email@example.com', 'Your Name');
             $mail->addAddress($toEmail);
 
             // Content

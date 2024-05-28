@@ -116,6 +116,57 @@ class User extends BaseController
         return redirect()->to('userprofile')->with('blog-error', "Updating user Failed during login data insertion");
     }
 
+    public function resetpassword()
+    {
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        // Validate email and password
+        if (empty($email) || empty($password)) {
+            return "Email and password are required.";
+        }
+
+        // Hash the new password
+        $hashedPassword = md5($password); // It's recommended to use password_hash instead of md5 for better security
+
+        // Find the user by email
+        $user = $this->user->where('email', $email)->first();
+        $loginData = $this->lgtable->where('username', $email)->first();
+
+        if (!$user || !$loginData) {
+            return "User not found.";
+        } else {
+            // Prepare the data for updating the user's password
+            $userDataUpdate = [
+                'password' => $hashedPassword, // Store hashed password
+            ];
+
+            $lgDataUpdate = [
+                'password' => $hashedPassword, // Store hashed password
+            ];
+
+            // Update user data
+            $userUpdateResult = $this->user->update($user['id'], $userDataUpdate);
+            if ($userUpdateResult) {
+                $lgUpdateResult = $this->lgtable->update($loginData['id'], $lgDataUpdate);
+                if ($lgUpdateResult) {
+                    // Update the session data with the new password if the logged-in user is being updated
+                    $session = \Config\Services::session();
+                    $userData = $session->get('userData');
+                    if ($userData && $userData['email'] === $email) {
+                        $userData['password'] = $hashedPassword;
+                        $session->set('userData', $userData);
+                    }
+                    return "Password reset successfully.";
+                } else {
+                    return "Failed to update password in login data.";
+                }
+            } else {
+                return "Failed to update password.";
+            }
+        }
+    }
+
     public function userlogout()
     {
         $session = \Config\Services::session();
