@@ -333,7 +333,7 @@
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
-                                 <label>State  <span class="required">*</span></label>
+                                 <label>State <span class="required">*</span></label>
                                  <input type="text" placeholder="" required />
                               </div>
                            </div>
@@ -515,7 +515,15 @@
 
                               </thead>
                               <tbody>
+                                 <?php foreach ($cart_items as $ci): ?>
+                                    <tr>
+                                       <td class="ps-2"><?= $ci['type'] ?></td>
+                                       <td class="ps-2"><?= $ci['quantity'] ?></td>
 
+                                       <td class="ps-2"><?= $ci['price'] ?></td>
+
+                                    </tr>
+                                 <?php endforeach ?>
 
                               </tbody>
                               <tfoot>
@@ -754,5 +762,3 @@
 </body>
 
 </html>
-
-

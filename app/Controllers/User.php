@@ -142,7 +142,7 @@ class User extends BaseController
         if ($user && $hashedPassword === $user['password']) {
             // Set session data
             $session->set([
-                'user_id' => $user['id'],
+                'user_id' => $userData['id'],
                 'login_id' => $user['id'],
                 'username' => $user['username'],
                 'usertype' => $user['user_type'],
