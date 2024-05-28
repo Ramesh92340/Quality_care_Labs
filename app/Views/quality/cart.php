@@ -287,8 +287,8 @@
                                     <td><?= $sr['test_code'] ?></td>
                                     <td><?= $sr['test_name'] ?></td>
                                     <td><?= $sr['price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>'
+                                    <td><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>, this)">
                                     </td>
@@ -297,8 +297,10 @@
                                        echo $calculatedservicesPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $sr['id'] ?>/<?= $sr['servicesqty'] ?>/1">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $sr['id'] ?>/<?= $sr['servicesqty'] ?>/1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
@@ -349,8 +351,8 @@
                                     <td><?= $pkg['package_name'] ?></td>
                                     <td><?= $pkg['test_count'] ?></td>
                                     <td><?= $pkg['package_price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>'
+                                    <td class='text-center justify-content-center'><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>, this)">
                                     </td>
@@ -359,8 +361,10 @@
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $pkg['id'] ?>/<?= $pkg['packagesqty'] ?>/3">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $pkg['id'] ?>/<?= $pkg['packagesqty'] ?>/3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
@@ -410,8 +414,8 @@
                                     <td><?= $hr['name'] ?></td>
                                     <td><?= $hr['parameters'] ?></td>
                                     <td><?= $hr['price'] ?></td>
-                                    <td>
-                                       <input type="number" data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>'
+                                    <td><center>
+                                       <input type="number" class='form-control' style='width:150px;' data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>'
                                           min="1"
                                           onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>, this)">
                                     </td>
@@ -420,8 +424,10 @@
                                        echo $calculatedHealthRiskPrice;
                                        ?>
                                     </td>
-                                    <td><a
-                                          href="<?= base_url() ?>removefromcart/<?= $hr['id'] ?>/<?= $hr['healthriskqty'] ?>/2">x</a>
+                                    <td class='text-center'> <a class='btn btn-danger justify-content-center'
+                                          href="<?= base_url() ?>removefromcart/<?= $hr['id'] ?>/<?= $hr['healthriskqty'] ?>/2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+</svg></a>
                                     </td>
                                  </tr>
                               <?php endforeach; ?>
