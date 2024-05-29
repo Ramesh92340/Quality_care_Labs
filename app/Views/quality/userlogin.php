@@ -27,9 +27,8 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
 
-    < src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous">
-        </script>
-
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    
 
 </head>
 <style>
