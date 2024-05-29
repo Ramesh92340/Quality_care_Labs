@@ -754,10 +754,9 @@
                         <?php endforeach; ?>
                      <?php endif; ?>
                      <div class="d-flex flex-row justify-content-center">
-                        <a href="<?= base_url() ?>addtocart/<?= $pk['id'] ?>/1/3/1"><button
-                              class="m-3 p-3 text-center book-now-btn"
-                              style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book
-                              Now</button></a>
+                        <button class="m-3 p-3 text-center book-now-btn" onclick="addToCart(<?= $pk['id'] ?>, this)"
+                           style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book
+                           Now</button>
                      </div>
                   </div>
                <?php endforeach; ?>
@@ -766,6 +765,24 @@
          <button class="custom-prev"></button>
          <button class="custom-next"></button>
       </div>
+
+      <script>
+         function addToCart(packageId, element) {
+            $.ajax({
+               url: `<?= base_url() ?>addtocart/${packageId}/1/3/1`,
+               type: 'GET',
+               success: function (response) {
+                  if (response == 'Added to Cart.') {
+                     element.innerHTML = 'Added to Cart';
+                     element.removeAttribute('onclick');
+                  }
+               },
+               error: function (xhr, status, error) {
+                  console.error('Error updating cart:', error);
+               }
+            });
+         }
+      </script>
 
       <?php
       function countTestsInCategory($categoryId, $packageId, $tests)

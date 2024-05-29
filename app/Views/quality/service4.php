@@ -380,8 +380,7 @@
                            <?php if ($dt1['in_cart']): ?>
                               <i class="fa-solid fa-cart-arrow-down" style="color: #63a238"></i>
                            <?php else: ?>
-                              <a href="<?= base_url() ?>addtocart/<?= $dt1['id'] ?>/1/1/1"><i
-                                    class="fa-solid fa-cart-arrow-down"></i></a>
+                              <i onclick="addToCart(<?= $dt1['id'] ?>, this)" class="fa-solid fa-cart-arrow-down"></i>
                            <?php endif; ?>
                         </td>
                      </tr>
@@ -391,6 +390,22 @@
             </table>
          </div>
       </div>
+      <script>
+         function addToCart(serviceId, element) {
+            $.ajax({
+               url: `<?= base_url() ?>addtocart/${serviceId}/1/1/1`,
+               type: 'GET',
+               success: function (response) {
+                  if (response == 'Added to Cart.') {
+                     element.style.color = '#63a238';
+                  }
+               },
+               error: function (xhr, status, error) {
+                  console.error('Error updating cart:', error);
+               }
+            });
+         }
+      </script>
 
       <script>
          function filterTable(inputId, columnIndex) {

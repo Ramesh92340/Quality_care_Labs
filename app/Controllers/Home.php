@@ -137,9 +137,9 @@ class Home extends BaseController
                 $data2 = $this->cart->update($userData['id'], $data);
             }
             if ($data2 == true) {
-                return redirect()->to('cart')->with('success', "Product removed from cart success.");
+                return 'Removed from cart.';
             } else {
-                return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product removed failed");
+                return 'Error while removing from cart';
             }
         }
     }
@@ -183,9 +183,11 @@ class Home extends BaseController
                 $data2 = $this->cart->update($userData['id'], $data);
             }
             if ($data2 == true) {
-                return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
+                return 'Added to Cart.';
+                // return redirect()->to($_SERVER['HTTP_REFERER'])->with('success', "Product added to cart success.");
             } else {
-                return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
+                return 'Error while uploading to Cart.';
+                // return redirect()->to($_SERVER['HTTP_REFERER'])->with('blog-error', "Product added failed");
             }
         }
     }

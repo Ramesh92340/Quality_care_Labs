@@ -316,10 +316,9 @@
                                                 data-bs-toggle="modal" data-bs-target="#modal-<?= $index ?>"><strong>Know
                                                     More...</strong></a>
                                         </p>
-                                        <button class="mini_card_cart_button shadow">
-                                            <a href="<?= base_url() ?>addtocart/<?= $hp['id'] ?>/1/2/1"
-                                                style="text-decoration: none; color:#000;">Add to
-                                                Cart</a>
+                                        <button class="mini_card_cart_button shadow"
+                                            onclick="addToCart(<?= $hp['id'] ?>, this)">
+                                            Add to Cart
                                         </button>
                                     </div>
                                 </div>
@@ -329,7 +328,8 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More Information
+                                                <h5 class="modal-title" id="exampleModalLabel-<?= $index ?>">More
+                                                    Information
                                                 </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
@@ -483,6 +483,23 @@
     <script src="<?= base_url() ?>assets/js/nice-select.js"></script>
     <script src="<?= base_url() ?>assets/js/jquery.knob.js"></script>
     <script src="<?= base_url() ?>assets/js/main.js"></script>
+    <script>
+        function addToCart(serviceId, element) {
+            $.ajax({
+                url: `<?= base_url() ?>addtocart/${serviceId}/1/2/1`,
+                type: 'GET',
+                success: function (response) {
+                    if (response == 'Added to Cart.') {
+                        element.innerHTML = 'Added to Cart';
+                        element.removeAttribute('onclick');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error updating cart:', error);
+                }
+            });
+        }
+    </script>
     <!-- Bootstrap CSS -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
 
