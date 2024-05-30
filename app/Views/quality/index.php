@@ -755,8 +755,7 @@
                      <?php endif; ?>
                      <div class="d-flex flex-row justify-content-center">
                         <button class="m-3 p-3 text-center book-now-btn" onclick="addToCart(<?= $pk['id'] ?>, this)"
-                           style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;">Book
-                           Now</button>
+                           style="height:50px; width:150px; background-color: rgb(44, 109, 206); color:white; border-radius: 5px;"> Add to Cart</button>
                      </div>
                   </div>
                <?php endforeach; ?>
