@@ -478,10 +478,10 @@ class Home extends BaseController
                 $data['cart_items'][] = [
                     'name' => $hr['name'],
                     'type' => 'Health Risk',
-                    'price' => $hr['healthrisk_price'],
+                    'price' => $hr['price'],
                     'quantity' => $hr['healthriskqty']
                 ];
-                $finalAmount += $hr['healthriskqty'] * $hr['healthrisk_price'];
+                $finalAmount += $hr['healthriskqty'] * $hr['price'];
             endforeach;
 
             $data['grand_total'] = $finalAmount;

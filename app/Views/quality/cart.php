@@ -291,7 +291,7 @@
                                        <center>
                                           <input type="number" class='form-control' style='width:150px;'
                                              data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>, this)">
+                                             onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>,'total_amount_services', this)">
                                        </center>
                                     </td>
                                     <td class="total-price">
@@ -301,7 +301,7 @@
                                     </td>
                                     <td class='text-center'>
                                        <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $sr['id'] ?>,<?= $sr['servicesqty'] ?>,1, this)">
+                                          onclick="removeFromCart(<?= $sr['id'] ?>,<?= $sr['servicesqty'] ?>,1,'total_amount_services', this)">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                                              class="bi bi-trash-fill" viewBox="0 0 16 16">
                                              <path
@@ -320,7 +320,8 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Services Amount <span>₹<?= $totalServicesPrice ?></span></li>
+                           <li>Total Services Amount <span id="total_amount_services">₹<?= $totalServicesPrice ?></span>
+                           </li>
                         </ul>
                      </div>
                   </div>
@@ -362,7 +363,7 @@
                                        <center>
                                           <input type="number" class='form-control' style='width:150px;'
                                              data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>, this)">
+                                             onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>,'total_amount_packages', this)">
                                     </td>
                                     <td class="total-price">
                                        <?php
@@ -371,7 +372,7 @@
                                     </td>
                                     <td class='text-center'>
                                        <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $pkg['id'] ?>,<?= $pkg['packagesqty'] ?>,3, this)">
+                                          onclick="removeFromCart(<?= $pkg['id'] ?>,<?= $pkg['packagesqty'] ?>,3,'total_amount_packages', this)">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                                              class="bi bi-trash-fill" viewBox="0 0 16 16">
                                              <path
@@ -390,7 +391,8 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Package Amount <span>₹<?= $totalPackagesPrice ?></span></li>
+                           <li>Total Package Amount <span id="total_amount_packages">₹<?= $totalPackagesPrice ?></span>
+                           </li>
                         </ul>
                      </div>
                   </div>
@@ -431,7 +433,7 @@
                                        <center>
                                           <input type="number" class='form-control' style='width:150px;'
                                              data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>, this)">
+                                             onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>,'total_amount_heealthcare', this)">
                                        </center>
                                     </td>
                                     <td class="total-price">
@@ -441,7 +443,7 @@
                                     </td>
                                     <td class='text-center'>
                                        <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $hr['id'] ?>,<?= $hr['healthriskqty'] ?>,2, this)">
+                                          onclick="removeFromCart(<?= $hr['id'] ?>,<?= $hr['healthriskqty'] ?>,2, 'total_amount_heealthcare', this)">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                                              class="bi bi-trash-fill" viewBox="0 0 16 16">
                                              <path
@@ -460,7 +462,8 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Health Risks Package Amount <span>₹<?= $totalHealthRiskPrice ?></span></li>
+                           <li>Total Health Risks Package Amount <span
+                                 id="total_amount_heealthcare">₹<?= $totalHealthRiskPrice ?></span></li>
                         </ul>
                      </div>
                   </div>
@@ -485,7 +488,7 @@
                            <div class="col-md-6">
                               <div class="d-flex justify-content-start">
                                  <button class="header-bottom-btn" style="border-radius: 8px;" type="button"
-                                    onclick="addmore( )">ADD MORE</button>
+                                    onclick="addmore()">ADD MORE</button>
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -515,7 +518,7 @@
                   </section>
                </div>
                <script>
-                  function removeFromCart(serviceId, quantity, type, element) {
+                  function removeFromCart(serviceId, quantity, type, totalAmountId, element) {
                      $.ajax({
                         url: `<?= base_url() ?>removefromcart/${serviceId}/${quantity}/${type}`,
                         type: 'GET',
@@ -523,6 +526,13 @@
                            if (response == 'Removed from cart.') {
                               // Find the row to remove
                               var row = $(element).closest('tr');
+                              var totalPriceOfItem = row.find('td').eq(5).text();
+                              let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
+                              let previousTotalAmount = Number(document.getElementById(totalAmountId).innerText.split('₹')[1]);
+                              finalAmount -= totalPriceOfItem;
+                              previousTotalAmount -= totalPriceOfItem;
+                              document.getElementById('final_amount').innerText = '₹' + finalAmount;
+                              document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                               // Find the table that contains this row
                               var table = row.closest('table');
                               // Remove the row from the table
@@ -1011,7 +1021,7 @@
    <script src="assets/js/jquery.knob.js"></script>
    <script src="assets/js/main.js"></script>
    <script>
-      function updateQuantity(serviceId, newQuantity, price, type, totalPrice, quantity, element) {
+      function updateQuantity(serviceId, newQuantity, price, type, totalPrice, quantity, totalAmountId, element) {
          var newTotalPrice = newQuantity * price;
          console.log(serviceId, newQuantity, price, type)
 
@@ -1030,16 +1040,22 @@
                   count = newQuantity - quantity;
                   totalAmount += (count * price);
                   let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
+                  let previousTotalAmount = Number(document.getElementById(totalAmountId).innerText.split('₹')[1]);
+                  previousTotalAmount += (count * price);
                   finalAmount += (count * price);
                   document.getElementById('final_amount').innerText = '₹' + finalAmount;
+                  document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                   //    console.log(totalAmount)
                }
                else {
                   count = quantity - newQuantity;
                   totalAmount -= (count * price);
                   let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
+                  let previousTotalAmount = Number(document.getElementById(totalAmountId).innerText.split('₹')[1]);
                   finalAmount -= (count * price);
+                  previousTotalAmount -= (count * price);
                   document.getElementById('final_amount').innerText = '₹' + finalAmount;
+                  document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                }
             },
             error: function (xhr, status, error) {
