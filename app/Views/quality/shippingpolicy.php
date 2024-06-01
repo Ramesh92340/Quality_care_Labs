@@ -27,67 +27,8 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
 
-    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-    
-
+    <script src="<?= base_url() ?>https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 </head>
-<style>
-    /* Add custom styling to ensure proper alignment */
-    .semi_half {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 50vh;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .form-control {
-        width: 100%;
-        /* Full width for input fields */
-        max-width: 400px;
-        /* Adjust to your preference */
-    }
-
-
-
-
-    .field-icon {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .login_btn {
-        position: relative;
-    }
-
-
-    @media (min-width:992px) {
-        .login_btn {
-            width: 150%;
-            max-width: 400px;
-            margin: 10px 0;
-        }
-
-        .margin_text {
-            margin-left: 90px;
-        }
-
-    }
-
-    @media (max-width:992px) {
-        .login_btn {
-            width: 100%;
-            max-width: 400px;
-            margin: 10px 0;
-        }
-    }
-</style>
 
 <body>
 
@@ -103,6 +44,7 @@
         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
     </div>
     <!-- preloader end  -->
+
 
 
     <!-- header-area -->
@@ -141,7 +83,7 @@
                             <div class="main-menu main-menu-second">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li><a href="<?= base_url() ?>">Home</a>
+                                        <li><a class="active" href="<?= base_url() ?>">Home</a>
 
                                         </li>
                                         <li><a href="<?= base_url() ?>about">About Us</a>
@@ -154,8 +96,7 @@
                                                 <li><a href="<?= base_url() ?>service3">~ IMMUNOLOGY & SEROLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service4">~ MOLECULAR BIOLOGY</a></li>
                                                 <li><a href="<?= base_url() ?>service5">~ MICROBIOLOGY</a></li>
-                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a>
-                                                </li>
+                                                <li><a href="<?= base_url() ?>service6">~ HISTOPATHOLOGY & CYTOLOGY</a></li>
                                             </ul>
                                         </li>
                                         <li class=" "><a href="<?= base_url() ?>packages">Packages</a>
@@ -196,8 +137,7 @@
 
                                     </div>
                                 </div>
-                                <a class="header-bottom-btn" style="border-radius: 8px;"
-                                    href="<?= base_url() ?>#appointment ">Book
+                                <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                                     Appointment</a>
                             </div>
                         </div>
@@ -222,8 +162,7 @@
                     <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
                         <div class="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
                             <a class="tp-bt-btn" href="<?= base_url() ?> ">
-                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="7" cy="2" r="2" fill="#0E63FF" />
                                     <circle cx="12" cy="2" r="2" fill="#0E63FF" />
@@ -264,24 +203,17 @@
             <br>
             <br>
             <div class="  d-flex" style="gap:25px">
-                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
-                        class="fa-solid fa-cart-plus cart-icon"></i></a>
-                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
-                        class="fa-solid fa-user"></i></a>
+                <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+                <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
             </div>
         </div>
 
         <div class="footer-widget__social mb-30 ">
-            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-                    class="fa-brands fa-facebook-f"></i></a>
-            <a class="tp-f-inst"
-                href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-                target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-                    class="fab fa-youtube"></i></i></a>
+            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
             <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-                    class="fab fa-pinterest"></i></a>
+            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
             <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
         </div>
@@ -293,8 +225,7 @@
                 <?= form_open_multipart('sendonlymail'); ?>
 
                 <input name="mail" type="email" placeholder="Enter Mail" required>
-                <button type="submit" class="footer-widget__fw-news-btn"><i
-                        class="fa-solid fa-paper-plane"></i></button>
+                <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -304,233 +235,27 @@
     </div>
     <!-- sidebar-info-end -->
 
-    <div class="body-overlay"></div>
+
+
 
     <!-- main-area -->
     <main>
 
 
+        <div class="container  " style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="row">
 
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div
-                        class="col-12 col-md-6 semi_half  d-flex flex-column align-items-center justify-content-center">
-                        <?php
-                        $error = session('blog-error');
-                        $success = session('success');
-                        ?>
-                        <?php if (!empty($error)): ?>
-                            <div class="alert alert-danger">
-                                <?php
-                                // Check if $error is an array
-                                if (is_array($error)) {
-                                    foreach ($error as $value) {
-                                        echo $value . '<br>';
-                                    }
-                                } else {
-                                    echo $error;
-                                }
-                                ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if (!empty($success)): ?>
-                            <div class="alert alert-success">
-                                <?= $success ?>
-                            </div>
-                        <?php endif; ?>
-                        <?= form_open_multipart('user-login') ?>
-                        <h1 class="text-center margin_text">Login</h1>
-                        <div class="login_btn">
-
-                            <input name="email" type="email" placeholder="Email" class="form-control my-2">
-                        </div>
-                        <div class="login_btn">
-                            <input id="confirmPassword" name="password" type="password" placeholder="Password"
-                                class="form-control my-2">
-                            <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-
-                        </div>
-                        <p class=" margin_text"><a href="#" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Forgot password?</a></p>
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Reset Password</h1>
-                                        <button type="button" class="btn btn-close  " data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-
-                                        <div class="input-group mb-3">
-                                            <input type="email" id='forgetmail' class="form-control"
-                                                placeholder="Enter Email Id" aria-label="Recipient's username"
-                                                aria-describedby="button-addon2">
-                                            <button class="btn btn-outline-primary send-otp" onClick='EmailValidate()'
-                                                type="button" id="button-addon2">Send Otp</button>
-                                        </div>
-                                        <p class="badge text-bg-danger" id='Emailvalids'>Danger</p>
-                                        <div id="otpcontext">
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Enter Otp"
-                                                    aria-label="Recipient's username" id="otp-input"
-                                                    aria-describedby="button-addon2">
-                                                <button class="btn btn-outline-info" type="button" id="button-addon2"
-                                                    onClick="OTPValidate()">Submit
-                                                    Otp</button>
-                                            </div>
-                                            <div id="resetpassword">
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" id="reset-password-input"
-                                                        placeholder="Enter Password   "
-                                                        aria-label="Recipient's username"
-                                                        aria-describedby="button-addon2">
-                                                    <button class="btn btn-outline-success" type="button"
-                                                        id="button-addon2" onClick="resetPasswordClick()">Reset
-                                                        Password</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button> 
-      </div> -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <button class="tp-btn tp-btn-primary my-2 login_btn">Login</button>
-                        <p class="margin_text">Don’t have an account? <a href="<?= base_url() ?>useregister"><strong>
-                                    Sign Up</strong></a></p>
-                        </form>
-                    </div>
-                    <div
-                        class="col-6 semi_half d-flex flex-column justify-content-center align-items-center d-none d-md-flex">
-                        <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/img/logo (1).png" alt="logo"
-                                class="img-fluid"></a>
-                    </div>
+                <h2><strong>Shipping & Delivery Policy</strong></h2>
 
 
+                <p>
+                    Last updated on May 27th 2024
+                </p>
 
-                </div>
+                <p>For International buyers, orders are shipped and delivered through registered international courier companies and/or International speed post only. For domestic buyers, orders are shipped through registered domestic courier companies and /or speed post only. Orders are shipped within 0-7 days or as per the delivery date agreed at the time of order confirmation and delivering of the shipment subject to Courier Company / post office norms. QUALITY CARE SPECIALITY LAB is not liable for any delay in delivery by the courier company / postal authorities and only guarantees to hand over the consignment to the courier company or postal authorities within 0-7 days rom the date of the order and payment or as per the delivery date agreed at the time of order confirmation. Delivery of all orders will be to the address provided by the buyer. Delivery of our services will be confirmed on your mail ID as specified during registration. For any issues in utilizing our services you may contact our helpdesk on or</p>
             </div>
-        </section>
+        </div>
 
-
-
-        <script>
-            function EmailValidate() {
-                const element = document.getElementById("forgetmail");
-                const errorDiv = document.getElementById("Emailvalids");
-                const resetpassword = document.getElementById("resetpassword");
-                const otpcontext = document.getElementById("otpcontext");
-                const sendOtp = document.getElementsByClassName('send-otp')[0]
-
-                // Validate email format
-                const email = element.value;
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (email === "" || !emailRegex.test(email)) {
-                    errorDiv.innerHTML = "Please enter a valid email address.";
-                    errorDiv.style.display = 'block';
-                    otpcontext.style.display = 'none';
-                    resetpassword.style.display = 'none';
-                } else {
-                    $.ajax({
-                        url: `<?= base_url() ?>send-otp`,
-                        type: 'POST',
-                        data: {
-                            email: email
-                        },
-                        success: function (response) {
-                            if (response.trim() === 'OTP has been sent') {
-                                errorDiv.style.display = 'none';
-                                element.setAttribute('disabled', true);
-                                sendOtp.setAttribute('disabled', true);
-                                resetpassword.style.display = 'none';
-                                otpcontext.style.display = 'block';
-                            } else {
-                                errorDiv.innerHTML = response;
-                                errorDiv.style.display = 'block';
-                                resetpassword.style.display = 'none';
-                                otpcontext.style.display = 'none';
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            errorDiv.innerHTML = error;
-                            errorDiv.style.display = 'block';
-                            otpcontext.style.display = 'none';
-                            console.error('Error sending OTP:', error);
-                        }
-                    });
-                }
-            }
-
-            function OTPValidate() {
-                const resetpassword = document.getElementById("resetpassword");
-                let otp = document.getElementById('otp-input').value;
-                if (otp !== '') {
-                    $.ajax({
-                        url: `<?= base_url() ?>validate-otp`,
-                        type: 'POST',
-                        data: {
-                            otp: otp
-                        },
-                        success: function (response) {
-                            if (response.trim() === 'Correct OTP.') {
-                                resetpassword.style.display = 'block';
-                            } else {
-                                resetpassword.style.display = 'none';
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error('Incorrect otp:', error);
-                        }
-                    })
-                }
-            }
-
-            function resetPasswordClick() {
-                let password = document.getElementById('reset-password-input').value;
-                if (password !== '') {
-                    $.ajax({
-                        url: `<?= base_url() ?>resetpassword`,
-                        type: 'POST',
-                        data: {
-                            password: password,
-                            email: document.getElementById("forgetmail").value
-                        },
-                        success: function (response) {
-                            if (response.trim() === 'Password reset successfully.') {
-                                document.getElementsByClassName('modal')[0].style.display = 'none';
-                            } else {
-                                document.getElementsByClassName('modal')[0].style.display = 'none';
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error('Error sending OTP:', error);
-                        }
-                    })
-                }
-            }
-            document.querySelectorAll('.toggle-password').forEach(item => {
-                item.addEventListener('click', function () {
-                    const input = document.querySelector(this.getAttribute('toggle'));
-                    if (input.getAttribute('type') === 'password') {
-                        input.setAttribute('type', 'text');
-                        this.classList.toggle('fa-eye-slash');
-                    } else {
-                        input.setAttribute('type', 'password');
-                        this.classList.toggle('fa-eye-slash');
-                    }
-                });
-            });
-            EmailValidate()
-
-        </script>
 
     </main>
     <!-- main-area-end -->

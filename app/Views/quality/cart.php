@@ -136,8 +136,7 @@
 
                            </div>
                         </div>
-                        <a class="header-bottom-btn" style="border-radius: 8px;"
-                           href="<?= base_url() ?>#appointment ">Book
+                        <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
                            Appointment</a>
                      </div>
                   </div>
@@ -203,24 +202,17 @@
          <br>
          <br>
          <div class="  d-flex" style="gap:25px">
-            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;"
-                  class="fa-solid fa-cart-plus cart-icon"></i></a>
-            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;"
-                  class="fa-solid fa-user"></i></a>
+            <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
+            <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
          </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -273,10 +265,10 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($services)):
+                           <?php if (isset($services)) :
                               $totalServicesPrice = 0;
-                              ?>
-                              <?php foreach ($services as $index => $sr): ?>
+                           ?>
+                              <?php foreach ($services as $index => $sr) : ?>
                                  <?php
                                  $calculatedservicesPrice = $sr['servicesqty'] * $sr['price'];
                                  $totalServicesPrice += $calculatedservicesPrice;
@@ -289,9 +281,7 @@
                                     <td><?= $sr['price'] ?></td>
                                     <td>
                                        <center>
-                                          <input type="number" class='form-control' style='width:150px;'
-                                             data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>,'total_amount_services', this)">
+                                          <input type="number" class='form-control' style='width:150px;' data-id="<?= $sr['id'] ?>" value='<?= $sr['servicesqty'] ?>' min="1" onchange="updateQuantity(<?= $sr['id'] ?>, this.value, <?= $sr['price'] ?>, 1, <?= $calculatedservicesPrice ?>, <?= $sr['servicesqty'] ?>,'total_amount_services', this)">
                                        </center>
                                     </td>
                                     <td class="total-price">
@@ -300,12 +290,9 @@
                                        ?>
                                     </td>
                                     <td class='text-center'>
-                                       <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $sr['id'] ?>,<?= $sr['servicesqty'] ?>,1,'total_amount_services', this)">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                                             class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                             <path
-                                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                       <div class='btn btn-danger justify-content-center' onclick="removeFromCart(<?= $sr['id'] ?>,<?= $sr['servicesqty'] ?>,1,'total_amount_services', this)">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                           </svg>
                                        </div>
                                     </td>
@@ -345,10 +332,10 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($packages)):
+                           <?php if (isset($packages)) :
                               $totalPackagesPrice = 0;
-                              ?>
-                              <?php foreach ($packages as $index => $pkg): ?>
+                           ?>
+                              <?php foreach ($packages as $index => $pkg) : ?>
                                  <?php
                                  $calculatedHealthRiskPrice = $pkg['packagesqty'] * $pkg['package_price'];
                                  $totalPackagesPrice += $calculatedHealthRiskPrice;
@@ -361,9 +348,7 @@
                                     <td><?= $pkg['package_price'] ?></td>
                                     <td class='text-center justify-content-center'>
                                        <center>
-                                          <input type="number" class='form-control' style='width:150px;'
-                                             data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>,'total_amount_packages', this)">
+                                          <input type="number" class='form-control' style='width:150px;' data-id="<?= $pkg['id'] ?>" value='<?= $pkg['packagesqty'] ?>' min="1" onchange="updateQuantity(<?= $pkg['id'] ?>, this.value, <?= $pkg['package_price'] ?>, 3, <?= $calculatedHealthRiskPrice ?>,<?= $pkg['packagesqty'] ?>,'total_amount_packages', this)">
                                     </td>
                                     <td class="total-price">
                                        <?php
@@ -371,12 +356,9 @@
                                        ?>
                                     </td>
                                     <td class='text-center'>
-                                       <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $pkg['id'] ?>,<?= $pkg['packagesqty'] ?>,3,'total_amount_packages', this)">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                                             class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                             <path
-                                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                       <div class='btn btn-danger justify-content-center' onclick="removeFromCart(<?= $pkg['id'] ?>,<?= $pkg['packagesqty'] ?>,3,'total_amount_packages', this)">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                           </svg>
                                        </div>
                                     </td>
@@ -415,10 +397,10 @@
                            </tr>
                         </thead>
                         <tbody id="cart-items">
-                           <?php if (isset($healthrisk)):
+                           <?php if (isset($healthrisk)) :
                               $totalHealthRiskPrice = 0;
-                              ?>
-                              <?php foreach ($healthrisk as $index => $hr): ?>
+                           ?>
+                              <?php foreach ($healthrisk as $index => $hr) : ?>
                                  <tr>
                                     <?php
                                     $calculatedHealthRiskPrice = $hr['healthriskqty'] * $hr['price'];
@@ -431,9 +413,7 @@
                                     <td><?= $hr['price'] ?></td>
                                     <td>
                                        <center>
-                                          <input type="number" class='form-control' style='width:150px;'
-                                             data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>' min="1"
-                                             onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>,'total_amount_heealthcare', this)">
+                                          <input type="number" class='form-control' style='width:150px;' data-id="<?= $hr['id'] ?>" value='<?= $hr['healthriskqty'] ?>' min="1" onchange="updateQuantity(<?= $hr['id'] ?>, this.value, <?= $hr['price'] ?>, 2, <?= $calculatedHealthRiskPrice ?>, <?= $hr['healthriskqty'] ?>,'total_amount_heealthcare', this)">
                                        </center>
                                     </td>
                                     <td class="total-price">
@@ -442,12 +422,9 @@
                                        ?>
                                     </td>
                                     <td class='text-center'>
-                                       <div class='btn btn-danger justify-content-center'
-                                          onclick="removeFromCart(<?= $hr['id'] ?>,<?= $hr['healthriskqty'] ?>,2, 'total_amount_heealthcare', this)">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                                             class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                             <path
-                                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                       <div class='btn btn-danger justify-content-center' onclick="removeFromCart(<?= $hr['id'] ?>,<?= $hr['healthriskqty'] ?>,2, 'total_amount_heealthcare', this)">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                           </svg>
                                        </div>
                                     </td>
@@ -462,8 +439,7 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Health Risks Package Amount <span
-                                 id="total_amount_heealthcare">₹<?= $totalHealthRiskPrice ?></span></li>
+                           <li>Total Health Risks Package Amount <span id="total_amount_heealthcare">₹<?= $totalHealthRiskPrice ?></span></li>
                         </ul>
                      </div>
                   </div>
@@ -487,14 +463,12 @@
                         <div class="row">
                            <div class="col-md-6">
                               <div class="d-flex justify-content-start">
-                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button"
-                                    onclick="addmore()">ADD MORE</button>
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="addmore()">ADD MORE</button>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="d-flex justify-content-end">
-                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button"
-                                    onclick="redirectToAnotherPage()">Proceed to Buy</button>
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="redirectToAnotherPage()">Proceed to Buy</button>
                               </div>
 
                            </div>
@@ -522,7 +496,7 @@
                      $.ajax({
                         url: `<?= base_url() ?>removefromcart/${serviceId}/${quantity}/${type}`,
                         type: 'GET',
-                        success: function (response) {
+                        success: function(response) {
                            if (response == 'Removed from cart.') {
                               // Find the row to remove
                               var row = $(element).closest('tr');
@@ -541,7 +515,7 @@
                               updateRowNumbers(table);
                            }
                         },
-                        error: function (xhr, status, error) {
+                        error: function(xhr, status, error) {
                            console.error('Error updating cart:', error);
                         }
                      });
@@ -553,7 +527,7 @@
                      // Get all rows in the table body
                      var rows = tableBody.find('tr');
                      // Iterate through each row to update the row numbers
-                     rows.each(function (index) {
+                     rows.each(function(index) {
                         // Get the first <td> of the row and update its text
                         var firstCell = $(this).find('td').eq(0);
                         firstCell.text(index + 1);
@@ -638,7 +612,7 @@
                   // Add event listeners for changing quantity
                   const quantityInputs = document.querySelectorAll(".cart-input");
                   quantityInputs.forEach(input => {
-                     input.addEventListener("change", function (event) {
+                     input.addEventListener("change", function(event) {
                         const index = event.target.dataset.index;
                         const quantity = parseInt(event.target.value);
                         const pricePerUnit = parseFloat(cartItems[index].price);
@@ -654,7 +628,7 @@
                   // Add event listeners for removing items
                   const removeButtons = document.querySelectorAll(".remove-item");
                   removeButtons.forEach(button => {
-                     button.addEventListener("click", function (event) {
+                     button.addEventListener("click", function(event) {
                         const index = event.target.closest("tr").querySelector(".cart-input").dataset.index;
                         cartItems.splice(index, 1);
                         event.target.closest("tr").remove();
@@ -903,22 +877,16 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
-                              style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
-                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst"
-                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-                              class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-                              class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -953,8 +921,10 @@
                            <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
                            <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
-                           <!-- <li>Office Hours: 8AM - 11PM</li>
-                              <li>Sunday - Wekend Day</li> -->
+                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping and Delivery </a></li>
+                           <li><a href="<?= base_url() ?>shippingpolicy"><i class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
+
+
                         </ul>
                      </div>
                   </div>
@@ -964,12 +934,12 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                        <?= form_open_multipart('sendonlymail'); ?>
 
+                        <?= form_open_multipart('sendonlymail'); ?>
                         <input name="mail" type="email" placeholder="Enter Mail" required>
-                        <button type="submit" class="footer-widget__fw-news-btn"><i
-                              class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
+
                      </div>
                   </div>
                </div>
@@ -983,9 +953,7 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
-                              href="https://bhavicreations.com/" target="_blank"><strong
-                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
@@ -1032,7 +1000,7 @@
          $.ajax({
             url: `<?= base_url() ?>addtocart/${serviceId}/${newQuantity}/${type}/2`,
             type: 'GET',
-            success: function (response) {
+            success: function(response) {
                // Handle response if needed
                // window.location.reload()
                let totalAmount = totalPrice;
@@ -1046,8 +1014,7 @@
                   document.getElementById('final_amount').innerText = '₹' + finalAmount;
                   document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                   //    console.log(totalAmount)
-               }
-               else {
+               } else {
                   count = quantity - newQuantity;
                   totalAmount -= (count * price);
                   let finalAmount = Number(document.getElementById('final_amount').innerText.split('₹')[1]);
@@ -1058,7 +1025,7 @@
                   document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                }
             },
-            error: function (xhr, status, error) {
+            error: function(xhr, status, error) {
                console.error('Error updating cart:', error);
             }
          });

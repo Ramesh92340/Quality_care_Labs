@@ -1,14 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Quality Care Labs</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!-- Place favicon.ico in the root directory -->
- <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Quality Care Labs</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    <script src="frontend.js"></script>
    <!-- CSS here -->
@@ -26,24 +27,25 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
 
-      <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-   </head>
-   <body>
-      
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+</head>
 
-      <!-- Scroll-top -->
-      <button class="scroll-top scroll-to-target" data-target="html">
-         <i class="fas fa-angle-up"></i>
-      </button>
-      <!-- Scroll-top-end-->   
-      
-      <!-- preloader -->
-      <div id="preloadertp">
-         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
-      </div>
-      <!-- preloader end  -->      
+<body>
 
-      
+
+   <!-- Scroll-top -->
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="fas fa-angle-up"></i>
+   </button>
+   <!-- Scroll-top-end-->
+
+   <!-- preloader -->
+   <div id="preloadertp">
+      <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
+   </div>
+   <!-- preloader end  -->
+
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
@@ -56,13 +58,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -131,7 +133,7 @@
                            </div>
                            <div class="tp-cart-icon-area ms-4">
                               <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
+
                            </div>
                         </div>
                         <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
@@ -198,23 +200,18 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <br>
-        <div class="  d-flex" style="gap:25px">
+         <div class="  d-flex" style="gap:25px">
             <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
             <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
-        </div>
+         </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -223,10 +220,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -235,130 +232,130 @@
 
    </div>
    <!-- sidebar-info-end -->
- 
-      
-      <!-- main-area -->
-      <main>
 
-         <!-- breadcrumb-area -->
-         <section>
-            <div class="img_body">
-               <img class="title-image" src="<?= base_url() ?>assets/img/services-home-page.png" alt="Title Image">
 
+   <!-- main-area -->
+   <main>
+
+      <!-- breadcrumb-area -->
+      <section>
+         <div class="img_body">
+            <img class="title-image" src="<?= base_url() ?>assets/img/services-home-page.png" alt="Title Image">
+
+         </div>
+      </section>
+      <!-- breadcrumb-area-end -->
+
+      <!-- services-area -->
+      <section class="services-area pt-50 pb-30 grey-bg" data-background="assets/img/shape/shape-bg-01.png">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-lg-12 col-md-12 col-12">
+                  <div class="tp-section">
+                     <span class="tp-section__sub-title left-line right-line mb-20">our Services</span>
+                     <h3 id="addmore" class="tp-section__title mb-50">Service Area</h3>
+                  </div>
+               </div>
             </div>
-         </section>
-         <!-- breadcrumb-area-end -->
-
-         <!-- services-area -->
-         <section class="services-area pt-50 pb-30 grey-bg" data-background="assets/img/shape/shape-bg-01.png">
-            <div class="container">
-               <div class="row text-center">
-                  <div class="col-lg-12 col-md-12 col-12">
-                     <div class="tp-section">
-                        <span class="tp-section__sub-title left-line right-line mb-20">our Services</span>
-                        <h3  id="addmore" class="tp-section__title mb-50">Service Area</h3>
+            <div class="row">
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".2s">
+                     <div class="services-item__icon mb-30">
+                        <!-- <i class="flaticon-hemoglobin-test-meter"></i> -->
+                        <i class="fas fa-flask"></i>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service1">CLINICAL BIOCHEMISTRY</a></h4>
+                        <p>Accurate analysis of biochemical markers plays a vital role in disease diagnosis and monitoring. Our clinical biochemistry services utilize the latest technology to ....</p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa" href="<?= base_url() ?>service1"><i></i>Read More</a>
+                        </div>
                      </div>
                   </div>
                </div>
-               <div class="row">
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="services-item__icon mb-30">
-                           <!-- <i class="flaticon-hemoglobin-test-meter"></i> -->
-                           <i class="fas fa-flask"></i>
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service1">CLINICAL BIOCHEMISTRY</a></h4>
-                           <p>Accurate analysis of biochemical markers plays a vital role in disease diagnosis and monitoring. Our clinical biochemistry services utilize the latest technology to  ....</p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa" href="<?= base_url() ?>service1"><i></i>Read More</a>
-                           </div>
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".4s">
+                     <div class="services-item__icon pink-icon mb-30">
+                        <i class="fas fa-tint"></i>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service2">HEMATOLOGY </a></h4>
+                        <p>Accurate analysis of blood components is essential for diagnosing and monitoring various diseases. Our hematology services provide ....</p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service2"><i></i>Read More</a>
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="services-item__icon pink-icon mb-30">
-                           <i class="fas fa-tint"></i>
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service2">HEMATOLOGY  </a></h4>
-                           <p>Accurate analysis of blood components is essential for diagnosing and monitoring various diseases. Our hematology services provide  ....</p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service2"><i></i>Read More</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="services-item__icon green-icon mb-30">
-                           <!-- <i class="flaticon-biochemistry"></i> -->
-                           <i class="fas fa-microscope"></i>
-                           <i class="fas fa-vial"></i>
+               </div>
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".6s">
+                     <div class="services-item__icon green-icon mb-30">
+                        <!-- <i class="flaticon-biochemistry"></i> -->
+                        <i class="fas fa-microscope"></i>
+                        <i class="fas fa-vial"></i>
 
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service3">IMMUNOLOGY & SEROLOGY</a></h4>
-                           <p>Effective diagnosis and monitoring of infectious and autoimmune diseases require reliable immunology and serology tests.... </p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa green-hexa" href="<?= base_url() ?>service3"><i></i>Read More</a>
-                           </div>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service3">IMMUNOLOGY & SEROLOGY</a></h4>
+                        <p>Effective diagnosis and monitoring of infectious and autoimmune diseases require reliable immunology and serology tests.... </p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa green-hexa" href="<?= base_url() ?>service3"><i></i>Read More</a>
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="services-item__icon sky-icon mb-30">
-                           <i class="flaticon-dna-1"></i>
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a></h4>
-                           <p>Advancements in molecular biology have revolutionized diagnosis, aiding in the identification of genetic disorders, infectious agents, and more. Our molecular....</p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa sky-hexa" href="<?= base_url() ?>service4"><i></i>Read More</a>
-                           </div>
+               </div>
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".2s">
+                     <div class="services-item__icon sky-icon mb-30">
+                        <i class="flaticon-dna-1"></i>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service4">MOLECULAR BIOLOGY</a></h4>
+                        <p>Advancements in molecular biology have revolutionized diagnosis, aiding in the identification of genetic disorders, infectious agents, and more. Our molecular....</p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa sky-hexa" href="<?= base_url() ?>service4"><i></i>Read More</a>
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="services-item__icon mb-30">
-                           <i class="flaticon-bacteria"></i>
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service5">MICROBIOLOGY
+               </div>
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".4s">
+                     <div class="services-item__icon mb-30">
+                        <i class="flaticon-bacteria"></i>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service5">MICROBIOLOGY
                            </a></h4>
-                           <p>Timely and accurate identification of pathogens is crucial in managing infections. Our microbiology services encompass a broad range of ....</p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa" href="<?= base_url() ?>service5"><i></i>Read More</a>
-                           </div>
+                        <p>Timely and accurate identification of pathogens is crucial in managing infections. Our microbiology services encompass a broad range of ....</p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa" href="<?= base_url() ?>service5"><i></i>Read More</a>
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                     <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="services-item__icon pink-icon mb-30">
-                           <!-- <i class="flaticon-dna"></i> -->
-                           <i class="fas fa-vials"></i>
-                           <i class="fas fa-flask"></i> 
-                        </div>
-                        <div class="services-item__content">
-                           <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service6">HISTOPATHOLOGY & CYTOLOGY</a></h4>
-                           <p>Accurate interpretation of tissue and cell samples is vital in diagnosing various diseases, especially cancer.... </p>
-                           <div class="services-item__btn">
-                              <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service6"><i></i>Read More</a>
-                           </div>
+               </div>
+               <div class="col-xl-4 col-md-6">
+                  <div class="services-item mb-40 wow fadeInUp" data-wow-delay=".6s">
+                     <div class="services-item__icon pink-icon mb-30">
+                        <!-- <i class="flaticon-dna"></i> -->
+                        <i class="fas fa-vials"></i>
+                        <i class="fas fa-flask"></i>
+                     </div>
+                     <div class="services-item__content">
+                        <h4 class="services-item__tp-title tp-srv-title mb-30"><a href="<?= base_url() ?>service6">HISTOPATHOLOGY & CYTOLOGY</a></h4>
+                        <p>Accurate interpretation of tissue and cell samples is vital in diagnosing various diseases, especially cancer.... </p>
+                        <div class="services-item__btn">
+                           <a class="btn-hexa pink-hexa" href="<?= base_url() ?>service6"><i></i>Read More</a>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
-         <!-- services-area-end -->
+         </div>
+      </section>
+      <!-- services-area-end -->
 
-         <!-- choose-area -->
-         <!-- <section class="choose-area theme-bg pt-120 pb-130">
+      <!-- choose-area -->
+      <!-- <section class="choose-area theme-bg pt-120 pb-130">
             <div class="container">
                <div class="row">
                   <div class="col-lg-12">
@@ -423,14 +420,14 @@
                </div>
             </div>
          </section> -->
-         <!-- choose-area-end -->
+      <!-- choose-area-end -->
 
-         <!-- pricing-area -->
-         
-         <!-- pricing-area-end -->
+      <!-- pricing-area -->
 
-         <!-- support-area -->
-         <!-- <section class="support-area grey-bg pt-125 pb-130">
+      <!-- pricing-area-end -->
+
+      <!-- support-area -->
+      <!-- <section class="support-area grey-bg pt-125 pb-130">
             <div class="container">
                <div class="row text-center">
                   <div class="col-lg-12 col-md-12 col-12">
@@ -457,13 +454,13 @@
                </div>
             </div>
          </section> -->
-         <!-- support-area-end -->
+      <!-- support-area-end -->
 
-      </main>
-      <!-- main-area-end -->
+   </main>
+   <!-- main-area-end -->
 
-       <!-- footer-area -->
-       <footer>
+   <!-- footer-area -->
+   <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
@@ -514,8 +511,10 @@
                            <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
                            <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
-                           <!-- <li>Office Hours: 8AM - 11PM</li>
-                              <li>Sunday - Wekend Day</li> -->
+                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping and Delivery </a></li>
+                           <li><a href="<?= base_url() ?>shippingpolicy"><i class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
+
+
                         </ul>
                      </div>
                   </div>
@@ -525,11 +524,12 @@
                      <h4 class="footer-widget__title mb-20">Mailing</h4>
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
-                       <?= form_open_multipart('sendonlymail'); ?>
 
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <?= form_open_multipart('sendonlymail'); ?>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
+
                      </div>
                   </div>
                </div>
@@ -560,23 +560,24 @@
    </footer>
    <!-- footer-area-end -->
 
-      <!-- JS here -->
-      <script src="assets/js/jquery.js"></script>
-      <script src="assets/js/waypoints.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/swiper-bundle.js"></script>
-      <script src="assets/js/slick.js"></script>
-      <script src="assets/js/magnific-popup.js"></script>
-      <script src="assets/js/counterup.js"></script>
-      <script src="assets/js/wow.js"></script>
-      <script src="assets/js/isotope-pkgd.js"></script>
-      <script src="assets/js/imagesloaded-pkgd.js"></script>
-      <script src="assets/js/ajax-form.js"></script>
-      <script src="assets/js/aos.js"></script>
-      <script src="assets/js/nice-select.js"></script>
-      <script src="assets/js/meanmenu.js"></script>
-      <script src="assets/js/jquery.appear.js"></script>
-      <script src="assets/js/jquery.knob.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/waypoints.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/counterup.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/aos.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/jquery.appear.js"></script>
+   <script src="assets/js/jquery.knob.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
 </html>

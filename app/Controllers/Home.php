@@ -534,4 +534,14 @@ class Home extends BaseController
         return view('quality/privacy');
 
     }
+    public function refundpolicy()
+    {
+        return view('quality/refundpolicy');
+
+    }
+    public function shippingpolicy()
+    {
+        return view('quality/shippingpolicy');
+
+    }
 }

@@ -1,11 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Quality Care Labs</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Quality Care Labs</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/img/web logo.png">
@@ -26,23 +27,24 @@
    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
 
-      <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-   </head>
-   <body>
-      
-      <!-- Scroll-top -->
-      <button class="scroll-top scroll-to-target" data-target="html">
-         <i class="fas fa-angle-up"></i>
-      </button>
-      <!-- Scroll-top-end-->   
-      
-      <!-- preloader -->
-      <div id="preloadertp">
-         <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
-      </div>
-      <!-- preloader end  -->      
+   <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+</head>
 
-      
+<body>
+
+   <!-- Scroll-top -->
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="fas fa-angle-up"></i>
+   </button>
+   <!-- Scroll-top-end-->
+
+   <!-- preloader -->
+   <div id="preloadertp">
+      <img src="<?= base_url() ?>assets/img/logo (1).png" alt="" style="width: 250px;">
+   </div>
+   <!-- preloader end  -->
+
+
    <!-- header-area -->
    <header class="d-none d-xl-block">
       <div class="header-custom" id="header-sticky">
@@ -55,13 +57,13 @@
                   <div class="col-lg-2">
                      <div class="header-time">
                         <i class="fa-solid fa-phone"></i>
-                         &nbsp; 7658905111  
+                        &nbsp; 7658905111
                      </div>
                   </div>
                   <div class="col-lg-3">
                      <div class="header-time">
                         <i class="fa-solid fa-envelope"></i>
-                       &nbsp; info@qualitycarelabs.com 
+                        &nbsp; info@qualitycarelabs.com
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -130,7 +132,7 @@
                            </div>
                            <div class="tp-cart-icon-area ms-4">
                               <a href="<?= base_url() ?>userlogin"><i class="fa-solid fa-user"></i></a>
-                           
+
                            </div>
                         </div>
                         <a class="header-bottom-btn" style="border-radius: 8px;" href="<?= base_url() ?>#appointment ">Book
@@ -197,23 +199,18 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <br>
-        <div class="  d-flex" style="gap:25px">
+         <div class="  d-flex" style="gap:25px">
             <a href="<?= base_url() ?>cart"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i></a>
             <a href="<?= base_url() ?>userlogin"><i style="font-size: 30px; color: white;" class="fa-solid fa-user"></i></a>
-        </div>
+         </div>
       </div>
 
       <div class="footer-widget__social mb-30 ">
-         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i
-               class="fa-brands fa-facebook-f"></i></a>
-         <a class="tp-f-inst"
-            href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
-            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
-               class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
-               class="fab fa-pinterest"></i></a>
+         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
       </div>
@@ -222,10 +219,10 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-           <?= form_open_multipart('sendonlymail'); ?>
+            <?= form_open_multipart('sendonlymail'); ?>
 
-               <input name="mail" type="email" placeholder="Enter Mail" required>
-               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <input name="mail" type="email" placeholder="Enter Mail" required>
+            <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -234,126 +231,126 @@
 
    </div>
    <!-- sidebar-info-end -->
-      
-      <!-- main-area -->
-      <main>
 
-         <!-- breadcrumb-area -->
-         <section>
-            <div class="img_body">
-               <img class="title-image" src="<?= base_url() ?>assets/img/Contact-us.png" alt="Title Image">
+   <!-- main-area -->
+   <main>
 
-            </div>
-         </section>
-         <!-- breadcrumb-area-end -->
-         
-         <!-- contact-area -->
-         <section class="contact-area pt-70 pb-50">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-4 col-md-5 col-12 wow fadeInLeft" data-wow-delay=".4s">
-                     <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="tpcontact__item text-center">
-                           <div class="tpcontact__icon mb-20">
-                              <img src="<?= base_url() ?>assets/img/icon/contact-01.svg" alt="">
-                           </div>
-                           <div class="tpcontact__address">
-                              <h4 class="tpcontact__title mb-15">Address line</h4>
-                              <span>    #2-34-8/1,<br>Chintavari Street
-                                  <br>Bhanugudi Junction,Kakinada-533003
-                                  </span>
+      <!-- breadcrumb-area -->
+      <section>
+         <div class="img_body">
+            <img class="title-image" src="<?= base_url() ?>assets/img/Contact-us.png" alt="Title Image">
 
-                              
-                              
+         </div>
+      </section>
+      <!-- breadcrumb-area-end -->
 
-
-
-                           </div>
+      <!-- contact-area -->
+      <section class="contact-area pt-70 pb-50">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-5 col-12 wow fadeInLeft" data-wow-delay=".4s">
+                  <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".2s">
+                     <div class="tpcontact__item text-center">
+                        <div class="tpcontact__icon mb-20">
+                           <img src="<?= base_url() ?>assets/img/icon/contact-01.svg" alt="">
                         </div>
-                     </div>
-                     <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tpcontact__item text-center">
-                           <div class="tpcontact__icon mb-20">
-                              <img src="<?= base_url() ?>assets/img/icon/contact-02.svg" alt="">
-                           </div>
-                           <div class="tpcontact__address">
-                              <h4 class="tpcontact__title mb-15">Phone Number</h4>
-                              <span><a  > +91 7658905666 </a></span>
-                              <!-- <span><a href="tel:2556523">+1255 - 568 - 6523</a></span> -->
-                           </div>
-                        </div>
-                     </div>
-                     <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="tpcontact__item text-center">
-                           <div class="tpcontact__icon mb-20">
-                              <img src="<?= base_url() ?>assets/img/icon/contact-03.svg" alt="">
-                           </div>
-                           <div class="tpcontact__address">
-                              <h4 class="tpcontact__title mb-15">Opening Hours</h4>
-                              <span>Moday - Friday <br>09:00 AM - 05:00 PM</span>
-                           </div>
+                        <div class="tpcontact__address">
+                           <h4 class="tpcontact__title mb-15">Address line</h4>
+                           <span> #2-34-8/1,<br>Chintavari Street
+                              <br>Bhanugudi Junction,Kakinada-533003
+                           </span>
+
+
+
+
+
+
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-8 col-md-7 col-12">
-                     <div class="contactform wow fadeInRight" data-wow-delay=".4s">
-                        <h4 class="contactform__title mb-35">Send us a Message :</h4>
-                        <div class="contactform__list mb-20">
-                           <?= form_open_multipart('sendcontact'); ?>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="contactform__input mb-30">
-                                       <input name="name" type="text" placeholder="Enter your Name">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="contactform__input mb-30">
-                                       <input name="email" type="email" placeholder="Enter your mail">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="contactform__input mb-30">
-                                       <input name="number" type="text" placeholder="Enter your number">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="contactform__input mb-30">
-                                       <input name="requirements" type="text" placeholder="Enter your requirements">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="contactform__input mb-30">
-                                       <textarea name="message" placeholder="Type your message"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="contactform__input mb-30-btn">
-                                       <button type="submit" class="tp-btn">Send Massage</button>
-                                    </div>
-                                    <p class="ajax-response"></p>
-                                 </div>
-                              </div>
-                           </form>
+                  <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".4s">
+                     <div class="tpcontact__item text-center">
+                        <div class="tpcontact__icon mb-20">
+                           <img src="<?= base_url() ?>assets/img/icon/contact-02.svg" alt="">
                         </div>
+                        <div class="tpcontact__address">
+                           <h4 class="tpcontact__title mb-15">Phone Number</h4>
+                           <span><a> +91 7658905666 </a></span>
+                           <!-- <span><a href="tel:2556523">+1255 - 568 - 6523</a></span> -->
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tpcontact mr-60 mb-60 wow fadeInUp" data-wow-delay=".6s">
+                     <div class="tpcontact__item text-center">
+                        <div class="tpcontact__icon mb-20">
+                           <img src="<?= base_url() ?>assets/img/icon/contact-03.svg" alt="">
+                        </div>
+                        <div class="tpcontact__address">
+                           <h4 class="tpcontact__title mb-15">Opening Hours</h4>
+                           <span>Moday - Friday <br>09:00 AM - 05:00 PM</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8 col-md-7 col-12">
+                  <div class="contactform wow fadeInRight" data-wow-delay=".4s">
+                     <h4 class="contactform__title mb-35">Send us a Message :</h4>
+                     <div class="contactform__list mb-20">
+                        <?= form_open_multipart('sendcontact'); ?>
                         <div class="row">
-                           <div class="col-lg-12">
-                              <div class="tpcontactmap">
-                                 <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15263.626823204037!2d82.22854155031115!3d16.979138741438938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d16.9902174!2d82.2413419!4m5!1s0x3a38286d29ab4d8f%3A0x5497a7f1df337003!2sQuality%20Care%20Speciality%20Lab%2C%202-34-8%2F1%2C%20Chinta%20Vari%20St%2C%20opp.%20St.%20Anthony%20High%20School%2C%20Bhanugudi%20Junction%2C%20Jn%2C%20Kakinada%2C%20Andhra%20Pradesh%20533003!3m2!1d16.9679644!2d82.2371027!5e0!3m2!1sen!2sin!4v1706590032977!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                           <div class="col-lg-6">
+                              <div class="contactform__input mb-30">
+                                 <input name="name" type="text" placeholder="Enter your Name">
                               </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="contactform__input mb-30">
+                                 <input name="email" type="email" placeholder="Enter your mail">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="contactform__input mb-30">
+                                 <input name="number" type="text" placeholder="Enter your number">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="contactform__input mb-30">
+                                 <input name="requirements" type="text" placeholder="Enter your requirements">
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="contactform__input mb-30">
+                                 <textarea name="message" placeholder="Type your message"></textarea>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="contactform__input mb-30-btn">
+                                 <button type="submit" class="tp-btn">Send Massage</button>
+                              </div>
+                              <p class="ajax-response"></p>
+                           </div>
+                        </div>
+                        </form>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-12">
+                           <div class="tpcontactmap">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15263.626823204037!2d82.22854155031115!3d16.979138741438938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d16.9902174!2d82.2413419!4m5!1s0x3a38286d29ab4d8f%3A0x5497a7f1df337003!2sQuality%20Care%20Speciality%20Lab%2C%202-34-8%2F1%2C%20Chinta%20Vari%20St%2C%20opp.%20St.%20Anthony%20High%20School%2C%20Bhanugudi%20Junction%2C%20Jn%2C%20Kakinada%2C%20Andhra%20Pradesh%20533003!3m2!1d16.9679644!2d82.2371027!5e0!3m2!1sen!2sin!4v1706590032977!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
-         <!-- contact-area-end -->
+         </div>
+      </section>
+      <!-- contact-area-end -->
 
-      </main>
-      <!-- main-area-end -->
+   </main>
+   <!-- main-area-end -->
 
-       <!-- footer-area -->
-       <footer>
+   <!-- footer-area -->
+   <footer>
       <div class="footer-area theme-bg pt-50  ">
          <div class="container">
             <div class="row">
@@ -404,8 +401,10 @@
                            <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
                            <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
-                           <!-- <li>Office Hours: 8AM - 11PM</li>
-                              <li>Sunday - Wekend Day</li> -->
+                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping and Delivery </a></li>
+                           <li><a href="<?= base_url() ?>shippingpolicy"><i class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
+
+
                         </ul>
                      </div>
                   </div>
@@ -416,9 +415,9 @@
                      <p>Sign up for our mailing list to get</p>
                      <div class="footer-widget__newsletter p-relative">
 
-                     <?= form_open_multipart('sendonlymail'); ?>
-                           <input name="mail" type="email" placeholder="Enter Mail" required>
-                           <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <?= form_open_multipart('sendonlymail'); ?>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         </form>
 
                      </div>
@@ -451,23 +450,24 @@
    </footer>
    <!-- footer-area-end -->
 
-      <!-- JS here -->
-      <script src="assets/js/jquery.js"></script>
-      <script src="assets/js/waypoints.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/swiper-bundle.js"></script>
-      <script src="assets/js/slick.js"></script>
-      <script src="assets/js/magnific-popup.js"></script>
-      <script src="assets/js/counterup.js"></script>
-      <script src="assets/js/wow.js"></script>
-      <script src="assets/js/isotope-pkgd.js"></script>
-      <script src="assets/js/imagesloaded-pkgd.js"></script>
-      <script src="assets/js/ajax-form.js"></script>
-      <script src="assets/js/aos.js"></script>
-      <script src="assets/js/meanmenu.js"></script>
-      <script src="assets/js/jquery.appear.js"></script>
-      <script src="assets/js/nice-select.js"></script>
-      <script src="assets/js/jquery.knob.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/waypoints.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/counterup.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/aos.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/jquery.appear.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/jquery.knob.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
 </html>

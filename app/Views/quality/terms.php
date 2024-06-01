@@ -253,26 +253,52 @@
                 Last updated on May 27 2024
              </p>
 
-             <p>These terms and conditions outline the rules and regulations for the use of Quality Care labs's Website, located at https://www.qualitycarelabs.com/index.aspx.</p>
+             <p>
+                For the purpose of these Terms and Conditions, The term "we", "us", "our" used anywhere on this page shall mean QUALITY CARE SPECIALITY LAB, whose registered/operational office is D.NO : 3-34-8/B,CHINTAVARI STREET,PERRAJUPETA, East Godavari ANDHRA PRADESH 533003 . "you", “your”, "user", “visitor” shall mean any natural or legal person who is visiting our website and/or agreed to purchase from us.
+             </p>
 
-             <p>For the purpose of these Terms and Conditions, The term "we", "us", "our" used anywhere on this page shall mean QUALITY CARE SPECIALITY LAB, whose registered/operational office is D.NO : 3-34-8/B,CHINTAVARI STREET,PERRAJUPETA, East Godavari ANDHRA PRADESH 533003 . "you", “your”, "user", “visitor” shall mean any natural or legal person who is visiting our website and/or agreed to purchase from us. </p>
-             <h3><strong> our use of the website and/or purchase from us are governed by following Terms and Conditions:</strong></h3>
+             <p><strong>Your use of the website and/or purchase from us are governed by following Terms and Conditions:</strong></p>
 
-             <p>The content of the pages of this website is subject to change without notice.</p>
 
-             <p>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</p>
-           <p>Your use of any information or materials on our website and/or product pages is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through our website and/or product pages meet your specific requirements.</p>
-             <p>Our website contains material which is owned by or licensed to us. This material includes, but are not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</p>
-             <p>All trademarks reproduced in our website which are not the property of, or licensed to, the operator are acknowledged on the website.</p>
-             <p>Unauthorized use of information provided by us shall give rise to a claim for damages and/or be a criminal offense.</p>
-             <p>From time to time our website may also include links to other websites. These links are provided for your convenience to provide further information.</p>
+             <p>The content of the pages of this website is subject to change without notice.
+
+             </p>
+
+             <p>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+
+             </p>
+
+             <p>Your use of any information or materials on our website and/or product pages is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through our website and/or product pages meet your specific requirements.
+
+             </p>
+
+             <p> Our website contains material which is owned by or licensed to us. This material includes, but are not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
+
+             </p>
+
+             <p> All trademarks reproduced in our website which are not the property of, or licensed to, the operator are acknowledged on the website.
+
+             </p>
+
+             <p>Unauthorized use of information provided by us shall give rise to a claim for damages and/or be a criminal offense.
+
+             </p>
+
+             <p> From time to time our website may also include links to other websites. These links are provided for your convenience to provide further information.
+
+             </p>
+
              <p>You may not create a link to our website from another website or document without QUALITY CARE SPECIALITY LAB’s prior written consent.
 
-</p>
-             <p>Any dispute arising out of use of our website and/or purchase with us and/or any engagement with us is subject to the laws of India .
+             </p>
 
-</p>
-             <p>We, shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out of the decline of authorization for any Transaction, on Account of the Cardholder having exceeded the preset limit mutually agreed by us with our acquiring bank from time to time</p>
+             <p> Any dispute arising out of use of our website and/or purchase with us and/or any engagement with us is subject to the laws of India .
+
+             </p>
+
+             <p>We, shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out of the decline of authorization for any Transaction, on Account of the Cardholder having exceeded the preset limit mutually agreed by us with our acquiring bank from time to time
+
+             </p>
 
           </div>
        </div>
@@ -283,100 +309,103 @@
 
     <!-- footer-area -->
     <footer>
-       <div class="footer-area theme-bg pt-50  ">
-          <div class="container">
-             <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
-                      <h4 class="footer-widget__title mb-30">
-                         <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
-                      </h4>
-                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
-                         sustainable health laboratory services with state-of-the art technology to our customers</p>
-                      <div class="footer-widget__social">
-                         <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                         <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
-                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                         <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
-                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <div class="footer-area theme-bg pt-50  ">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
+                     <h4 class="footer-widget__title mb-30">
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                     </h4>
+                     <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
+                        sustainable health laboratory services with state-of-the art technology to our customers</p>
+                     <div class="footer-widget__social">
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                   <div class="footer-widget footer-col-2 mb-50 wow fadeInUp" data-wow-delay=".4s">
-                      <h4 class="footer-widget__title mb-20">Menu</h4>
-                      <div class="footer-widget__links">
-                         <ul>
-                            <li><a href="<?= base_url() ?> ">Home</a></li>
-                            <li><a href="<?= base_url() ?>about">About us</a></li>
-                            <li><a href="<?= base_url() ?>lab">Lab</a></li>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="footer-widget footer-col-2 mb-50 wow fadeInUp" data-wow-delay=".4s">
+                     <h4 class="footer-widget__title mb-20">Menu</h4>
+                     <div class="footer-widget__links">
+                        <ul>
+                           <li><a href="<?= base_url() ?> ">Home</a></li>
+                           <li><a href="<?= base_url() ?>about">About us</a></li>
+                           <li><a href="<?= base_url() ?>lab">Lab</a></li>
 
-                            <li><a href="<?= base_url() ?>services">Services</a></li>
-                            <li><a href="<?= base_url() ?>packages">Packages</a></li>
-                            <li><a href="<?= base_url() ?>contact">Contact us</a></li>
+                           <li><a href="<?= base_url() ?>services">Services</a></li>
+                           <li><a href="<?= base_url() ?>packages">Packages</a></li>
+                           <li><a href="<?= base_url() ?>contact">Contact us</a></li>
 
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                   <div class="footer-widget footer-col-3 mb-50 wow fadeInUp" data-wow-delay=".6s">
-                      <h4 class="footer-widget__title mb-20">Contact info</h4>
-                      <div class="footer-widget__info">
-                         <ul>
-                            <li> <i class="fa-solid fa-location-dot"></i> &nbsp; #2-34-8/1,Chintavari Street
-                               <br> Bhanugudi Junction, <br>Kakinada-533003
-                            </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="footer-widget footer-col-3 mb-50 wow fadeInUp" data-wow-delay=".6s">
+                     <h4 class="footer-widget__title mb-20">Contact info</h4>
+                     <div class="footer-widget__info">
+                        <ul>
+                           <li> <i class="fa-solid fa-location-dot"></i> &nbsp; #2-34-8/1,Chintavari Street
+                              <br> Bhanugudi Junction, <br>Kakinada-533003
+                           </li>
 
-                            <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
+                           <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
-                            <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
-                            <!-- <li>Office Hours: 8AM - 11PM</li>
-                              <li>Sunday - Wekend Day</li> -->
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                   <div class="footer-widget footer-col-4 mb-50 wow fadeInUp" data-wow-delay=".8s">
-                      <h4 class="footer-widget__title mb-20">Mailing</h4>
-                      <p>Sign up for our mailing list to get</p>
-                      <div class="footer-widget__newsletter p-relative">
-                         <?= form_open_multipart('sendonlymail'); ?>
-
-                         <input name="mail" type="email" placeholder="Enter Mail" required>
-                         <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
-                         </form>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
+                           <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
+                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping and Delivery </a></li>
+                           <li><a href="<?= base_url() ?>shippingpolicy"><i class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
 
 
-       <div class="footer-area-bottom theme-bg">
-          <div class="container">
-             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-                   <div class="footer-widget__copyright">
-                      <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
-                   </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-                   <div class="footer-widget__copyright-info info-direction">
-                      <ul class="d-flex align-items-center">
-                         <li><a href="<?= base_url() ?>terms">Terms and conditions</a></li>
-                         <li><a href="<?= base_url() ?>privacy">Privacy policy</a></li>
-                      </ul>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </footer>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-6 col-md-6">
+                  <div class="footer-widget footer-col-4 mb-50 wow fadeInUp" data-wow-delay=".8s">
+                     <h4 class="footer-widget__title mb-20">Mailing</h4>
+                     <p>Sign up for our mailing list to get</p>
+                     <div class="footer-widget__newsletter p-relative">
+
+                        <?= form_open_multipart('sendonlymail'); ?>
+                        <input name="mail" type="email" placeholder="Enter Mail" required>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="footer-area-bottom theme-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+                  <div class="footer-widget__copyright">
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+                  <div class="footer-widget__copyright-info info-direction">
+                     <ul class="d-flex align-items-center">
+                        <li><a href="<?= base_url() ?>terms">Terms and conditions</a></li>
+                        <li><a href="<?= base_url() ?>privacy">Privacy policy</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
     <!-- footer-area-end -->
 
     <!-- JS here -->

@@ -26,6 +26,9 @@ $routes->get('useregister', 'Home::useregister');
 $routes->get('userprofile', 'Home::userprofile');
 $routes->get('terms', 'Home::terms');
 $routes->get('privacy', 'Home::privacy');
+$routes->get('refundpolicy', 'Home::refundpolicy');
+$routes->get('shippingpolicy', 'Home::shippingpolicy');
+
 $routes->post('send-otp', 'OtpController::sendOtp');
 $routes->post('resetpassword', 'User::resetpassword');
 $routes->post('validate-otp', 'OtpController::validateOtp');
