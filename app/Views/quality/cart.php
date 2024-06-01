@@ -619,13 +619,13 @@
                      removeButton.appendChild(trashIcon);
                      cell7.appendChild(removeButton);
 
-                     row.appendChild(cell1);
-                     row.appendChild(cell2);
-                     row.appendChild(cell3);
-                     row.appendChild(cell4);
-                     row.appendChild(cell5);
-                     row.appendChild(cell6);
-                     row.appendChild(cell7);
+                     // row.appendChild(cell1);
+                     // row.appendChild(cell2);
+                     // row.appendChild(cell3);
+                     // row.appendChild(cell4);
+                     // row.appendChild(cell5);
+                     // row.appendChild(cell6);
+                     // row.appendChild(cell7);
 
                      cartContainer.appendChild(row);
 
@@ -1028,7 +1028,7 @@
    <script>
       function updateQuantity(serviceId, newQuantity, price, type, totalPrice, quantity, totalAmountId, element) {
          var newTotalPrice = newQuantity * price;
-         console.log(serviceId, newQuantity, price, type)
+         element.setAttribute('disabled', true)
 
          // Update the total price for the service
          $(element).closest('tr').find('.total-price').text(newTotalPrice);
@@ -1050,7 +1050,6 @@
                   finalAmount += (count * price);
                   document.getElementById('final_amount').innerText = '₹' + finalAmount;
                   document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
-                  //    console.log(totalAmount)
                } else {
                   count = quantity - newQuantity;
                   totalAmount -= (count * price);
@@ -1061,9 +1060,12 @@
                   document.getElementById('final_amount').innerText = '₹' + finalAmount;
                   document.getElementById(totalAmountId).innerText = '₹' + previousTotalAmount;
                }
+               element.setAttribute('onchange', 'updateQuantity(' + serviceId + ', this.value,' + price + ',' + type + ',' + totalPrice + ',' + newQuantity + ',\'' + totalAmountId + '\', this)')
+               element.removeAttribute('disabled');
             },
             error: function (xhr, status, error) {
                console.error('Error updating cart:', error);
+               element.removeAttribute('disabled');
             }
          });
       }
