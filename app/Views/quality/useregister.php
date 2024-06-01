@@ -344,7 +344,7 @@
                         <h1 class="text-center margin_text">Signup</h1>
                         <div class="login_btn">
 
-                            <input name="first_name" type="name" placeholder=First"Name" class="form-control my-2">
+                            <input name="first_name" type="name" placeholder="First Name" class="form-control my-2">
                         </div>
                         <div class="login_btn">
 
