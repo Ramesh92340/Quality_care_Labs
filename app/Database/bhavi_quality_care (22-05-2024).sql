@@ -39,7 +39,8 @@ CREATE TABLE `cart` (
   `healthriskqty` int(11) DEFAULT NULL,
   `user` int(11) NOT NULL,
   `createdat` timestamp NOT NULL DEFAULT current_timestamp(),
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `is_done` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -1553,6 +1554,23 @@ INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`,
 (1, 'raj', '', 2147483647, NULL, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-24 17:09:15'),
 (2, 'raj', '', 2147483647, NULL, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `cart_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`cart_ids`)),
+  `details` text NOT NULL,
+  `payment_id` text DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `total_amount` double NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -1561,6 +1579,12 @@ INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`,
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1651,6 +1675,13 @@ ALTER TABLE `category`
 --
 ALTER TABLE `department`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+COMMIT;
 
 --
 -- AUTO_INCREMENT for table `healthrisks`

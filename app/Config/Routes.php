@@ -34,6 +34,8 @@ $routes->post('resetpassword', 'User::resetpassword');
 $routes->post('validate-otp', 'OtpController::validateOtp');
 
 $routes->get('checkout', 'Home::checkout');
+$routes->post('checkout', 'Home::addUserDetailsToSession');
+$routes->post('paymentsuccess/(:num)', 'Orders::Success/$1');
 
 $routes->post('sendappointment', 'Home::sendappointment');
 $routes->post('sendcontact', 'Home::sendcontact');

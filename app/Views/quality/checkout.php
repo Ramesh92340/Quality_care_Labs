@@ -31,10 +31,6 @@
 </head>
 
 <body>
-
-
-   <!-- Scroll-top -->
-
    <button class="scroll-top scroll-to-target" data-target="html">
       <i class="fas fa-angle-up"></i>
    </button>
@@ -275,7 +271,7 @@
          $userData = $session->get('userData');
          ?>
          <div class="container">
-            <form action="#">
+            <form id="myForm" onsubmit="return handleFormSubmit(this)" method="POST">
                <div class="row">
                   <div class="col-lg-6 col-md-12">
                      <div class="checkbox-form">
@@ -298,68 +294,74 @@
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>First Name <span class="required">*</span></label>
-                                 <input type="text" placeholder="" required value="<?= $userData['first_name'] ?>" />
+                                 <input type="text" name="first_name" placeholder="" required
+                                    value="<?= $userData['first_name'] ?>" />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Last Name <span class="required">*</span></label>
-                                 <input type="text" placeholder="" required value="<?= $userData['last_name'] ?>" />
+                                 <input type="text" name="last_name" placeholder="" required
+                                    value="<?= $userData['last_name'] ?>" />
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Company Name</label>
-                                 <input type="text" placeholder="" required value="<?= $userData['first_name'] ?>" />
+                                 <input type="text" name="company_name" placeholder="" required
+                                    value="<?= $userData['first_name'] ?>" />
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Address <span class="required">*</span></label>
-                                 <input type="text" placeholder="Street address" required
+                                 <input type="text" name="address" placeholder="Street address" required
                                     value="<?= $userData['address'] ?>" />
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
-                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
+                                 <input type="text" name="apartment"
+                                    placeholder="Apartment, suite, unit etc. (optional)" />
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
                                  <label>Town / City <span class="required">*</span></label>
-                                 <input type="text" placeholder=" " / required>
+                                 <input type="text" name="town" placeholder=" " / required>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>State <span class="required">*</span></label>
-                                 <input type="text" placeholder="" required />
+                                 <input type="text" name="state" placeholder="" required />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Postcode / Zip <span class="required">*</span></label>
-                                 <input type="text" placeholder=" " required />
+                                 <input type="text" name="pincode" placeholder=" " required />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Email Address <span class="required">*</span></label>
-                                 <input type="email" placeholder="" required value="<?= $userData['email'] ?>" />
+                                 <input type="email" name="email" placeholder="" required
+                                    value="<?= $userData['email'] ?>" />
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="checkout-form-list">
                                  <label>Phone <span class="required">*</span></label>
-                                 <input type="text" placeholder=" " required value="<?= $userData['phone'] ?>" />
+                                 <input type="text" name="phone" placeholder=" " required
+                                    value="<?= $userData['phone'] ?>" />
                               </div>
                            </div>
                            <!-- <div class="col-md-12">
-                              <div class="checkout-form-list create-acc">
-                                 <label>Don't have an account? <a href="<?= base_url() ?>register"
-                                       class="register_color"> Register </a></label>
-                              </div>
+                                 <div class="checkout-form-list create-acc">
+                                    <label>Don't have an account? <a href="<?= base_url() ?>register"
+                                    class="register_color"> Register </a></label>
+                                 </div>
                            </div> -->
                         </div>
                         <!-- <div class="different-address">
@@ -371,7 +373,7 @@
                            </div>
                            <div id="ship-box-info">
                               <div class="row">
-
+                                 
                                  <div class="col-md-6">
                                     <div class="checkout-form-list">
                                        <label>First Name <span class="required">*</span></label>
@@ -395,12 +397,12 @@
                                        <label>Address <span class="required">*</span></label>
                                        <input type="text" placeholder="Street address"
                                           value="<?= $userData['address'] ?>" />
+                                       </div>
                                     </div>
-                                 </div>
-                                 <div class="col-md-12">
-                                    <div class="checkout-form-list">
-                                       <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
-                                    </div>
+                                    <div class="col-md-12">
+                                       <div class="checkout-form-list">
+                                          <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
+                                       </div>
                                  </div>
                                  <div class="col-md-12">
                                     <div class="checkout-form-list">
@@ -440,7 +442,7 @@
                                  <label>Order Notes</label>
                                  <textarea id="checkout-mess" cols="30" rows="10"
                                     placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                              </div>
+                                 </div>
                            </div>
                         </div> -->
                      </div>
@@ -517,11 +519,10 @@
                               <tbody>
                                  <?php foreach ($cart_items as $ci): ?>
                                     <tr>
+                                       <td style="display: none"><?= $ci['id'] ?></td>
                                        <td class="ps-2"><?= $ci['type'] ?></td>
                                        <td class="ps-2"><?= $ci['quantity'] ?></td>
-
                                        <td class="ps-2"><?= $ci['price'] ?></td>
-
                                     </tr>
                                  <?php endforeach ?>
 
@@ -642,16 +643,22 @@
                <div class="col-xl-3 col-lg-4 col-md-6">
                   <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                      <h4 class="footer-widget__title mb-30">
-                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png" style="border-radius: 3px;" alt="logo"></a>
+                        <a href="<?= base_url() ?> "><img src="<?= base_url() ?>assets/img/footer logo.png"
+                              style="border-radius: 3px;" alt="logo"></a>
                      </h4>
                      <p>Quality Care Lab is committed to providing patient focused, high quality, affordable and
                         sustainable health laboratory services with state-of-the art technology to our customers</p>
                      <div class="footer-widget__social">
-                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                        <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="tp-f-inst"
+                           href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "
+                           target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i
+                              class="fab fa-youtube"></i></i></a>
                         <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i
+                              class="fab fa-pinterest"></i></a>
                         <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
 
                      </div>
@@ -686,8 +693,10 @@
                            <li><i class="fa-solid fa-phone"></i> &nbsp; 7658905111 </li>
 
                            <li><i class="fa-solid fa-envelope"></i> &nbsp; info@qualitycarelabs.com </li>
-                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping and Delivery </a></li>
-                           <li><a href="<?= base_url() ?>shippingpolicy"><i class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
+                           <li><a href="<?= base_url() ?>refundpolicy"><i class="fa-solid fa-truck"></i>&nbsp;Shipping
+                                 and Delivery </a></li>
+                           <li><a href="<?= base_url() ?>shippingpolicy"><i
+                                    class="fa-solid fa-ban"></i>&nbsp;Cancellation and Refund </a></li>
 
 
                         </ul>
@@ -702,7 +711,8 @@
 
                         <?= form_open_multipart('sendonlymail'); ?>
                         <input name="mail" type="email" placeholder="Enter Mail" required>
-                        <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="footer-widget__fw-news-btn"><i
+                              class="fa-solid fa-paper-plane"></i></button>
                         </form>
 
                      </div>
@@ -718,7 +728,9 @@
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="footer-widget__copyright">
-                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank"><strong style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
+                     <span> ©2023 Quality Care . <i>All Rights Reserved. Designed & Developed by <a
+                              href="https://bhavicreations.com/" target="_blank"><strong
+                                 style="font-weight: bold; font-style: italic;">Bhavi Creations</strong> </a></i></span>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
@@ -753,6 +765,62 @@
    <script src="assets/js/jquery.appear.js"></script>
    <script src="assets/js/jquery.knob.js"></script>
    <script src="assets/js/main.js"></script>
+
+   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+   <script>
+      var form = document.getElementById("myForm");
+      function handleForm(event) { event.preventDefault(); }
+      form.addEventListener('submit', handleForm);
+      var options = {
+         key: "rzp_test_p81YeQRNlRe9qx",
+         amount: Number(document.getElementById('checkout-totalAmount').innerHTML.split('₹')[1]) * 100,
+         currency: "INR",
+         // order_id: "' . $order_IluGWxBm9U8zJ8 . '",
+         theme: {
+            "color": "#3399cc"
+         },
+         callback_url: "paymentsuccess/<?= session('user_id') ?>"
+      };
+      // var options = {
+      //    "key": "rzp_test_p81YeQRNlRe9qx",
+      //    "callback_url": "paymentsuccess/<?= session('user_id') ?>",
+      //    "redirect": true,
+      //    "theme": {
+      //       "color": "#F37254"
+      //    },
+      //    "amount": Number(document.getElementById('checkout-totalAmount').innerHTML.split('₹')[1]) * 100,
+      //    "currency": "INR",
+      // };
+      var rzp1 = new Razorpay(options);
+      function payAmount() {
+         rzp1.open()
+      }
+      function handleFormSubmit(event) {
+         // event.preventDefault();
+
+         // Create a FormData object from the form
+         var formData = new FormData(form);
+         formData.append('ajax', true); // Add an additional field to indicate AJAX request
+
+         // Send the form data using AJAX
+         var xhr = new XMLHttpRequest();
+         xhr.open("POST", "", true); // POST to the same file
+         xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+               var response = JSON.parse(xhr.responseText);
+               if (response.status === 'success') {
+                  payAmount();
+               } else {
+                  // Handle error
+                  alert('There was an error processing your request. Please try again.');
+               }
+            }
+         };
+         xhr.send(formData);
+
+         return false;
+      }
+   </script>
 </body>
 
 </html>

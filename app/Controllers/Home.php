@@ -450,10 +450,13 @@ class Home extends BaseController
             $data = [];
 
             $finalAmount = 0;
+            $cartIds = [];
 
             // Sum the total price for packages
             foreach ($packages as $pkg):
+                $cartIds[] = $pkg['cartid'];
                 $data['cart_items'][] = [
+                    'id' => $pkg['cartid'],
                     'name' => $pkg['package_name'],
                     'type' => 'Package',
                     'price' => $pkg['package_price'],
@@ -464,7 +467,9 @@ class Home extends BaseController
 
             // Sum the total price for services
             foreach ($services as $sr):
+                $cartIds[] = $sr['cartid'];
                 $data['cart_items'][] = [
+                    'id' => $sr['cartid'],
                     'name' => $sr['test_name'],
                     'type' => 'Service',
                     'price' => $sr['price'],
@@ -475,7 +480,9 @@ class Home extends BaseController
 
             // Sum the total price for health risks
             foreach ($healthrisk as $hr):
+                $cartIds[] = $hr['cartid'];
                 $data['cart_items'][] = [
+                    'id' => $hr['cartid'],
                     'name' => $hr['name'],
                     'type' => 'Health Risk',
                     'price' => $hr['price'],
@@ -485,10 +492,26 @@ class Home extends BaseController
             endforeach;
 
             $data['grand_total'] = $finalAmount;
+            $session->set('grand_total', $finalAmount);
+            $session->set('cart_ids', $cartIds);
             return view('quality/checkout', $data);
         }
     }
 
+
+    public function addUserDetailsToSession()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajax'])) {
+            // Process form data here and store it
+            // // Example: store data in the session or database
+            $session = \Config\Services::session();
+            $session->set('formData', $_POST);
+
+            // // Return a response
+            echo json_encode(['status' => 'success']);
+            exit;
+        }
+    }
 
 
     public function healthrisks($id)

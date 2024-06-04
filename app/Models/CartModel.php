@@ -18,7 +18,8 @@ class CartModel extends Model
         'healthrisk',
         'healthriskqty',
         'user',
-        'status'
+        'status',
+        'is_done'
     ];
 
     public function checkIfExists($userId, $type, $typeid)
@@ -32,6 +33,7 @@ class CartModel extends Model
             $this->where('crt.packages', $typeid);
         }
         $this->where('crt.status', 1);
+        $this->where('crt.is_done', 0);
         $this->where('crt.user', $userId);
         return $this->first();
     }
@@ -42,6 +44,7 @@ class CartModel extends Model
         $this->join('service-tests as st', 'crt.services = st.id');
         $this->select('crt.*, st.id as stid, st.*, crt.id as cartid');
         $this->where('crt.status', 1);
+        $this->where('crt.is_done', 0);
         $this->where('crt.user', $id);
         $this->distinct();
         return $this->findAll();
@@ -53,6 +56,7 @@ class CartModel extends Model
         $this->join('healthrisk_packs as hrp', 'crt.healthrisk = hrp.id');
         $this->select('crt.*, hrp.id as hrpid, hrp.*, crt.id as cartid');
         $this->where('crt.status', 1);
+        $this->where('crt.is_done', 0);
         $this->where('crt.user', $id);
         $this->distinct();
         return $this->findAll();
@@ -63,9 +67,17 @@ class CartModel extends Model
         $this->from('cart as crt');
         $this->join('packages as pkgs', 'crt.packages = pkgs.id');
         $this->select('crt.*, pkgs.id as pkgsid, pkgs.*,  (SELECT COUNT(*) FROM tests WHERE tests.package_id = pkgs.id) as test_count, crt.id as cartid');
+        $this->where('crt.is_done', 0);
         $this->where('crt.status', 1);
         $this->where('crt.user', $id);
         $this->distinct();
         return $this->findAll();
+    }
+
+    public function updateBatchData($data, $ids)
+    {
+        return $this->whereIn('id', $ids)
+            ->set(['is_done' => 1])
+            ->update();
     }
 }
