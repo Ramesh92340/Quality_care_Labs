@@ -452,44 +452,59 @@ class Home extends BaseController
             $finalAmount = 0;
             $cartIds = [];
 
+            $pkgQty = 0;
+            $pkgFinalAmount = 0;
             // Sum the total price for packages
             foreach ($packages as $pkg):
                 $cartIds[] = $pkg['cartid'];
-                $data['cart_items'][] = [
-                    'id' => $pkg['cartid'],
-                    'name' => $pkg['package_name'],
-                    'type' => 'Package',
-                    'price' => $pkg['package_price'],
-                    'quantity' => $pkg['packagesqty']
-                ];
+                $pkgQty += $pkg['packagesqty'];
                 $finalAmount += $pkg['packagesqty'] * $pkg['package_price'];
+                $pkgFinalAmount += $pkg['packagesqty'] * $pkg['package_price'];
             endforeach;
+            if ($pkgQty != 0) {
+                $data['cart_items'][] = [
+                    'id' => 1,
+                    'type' => 'Package',
+                    'price' => $pkgFinalAmount,
+                    'quantity' => $pkgQty
+                ];
+            }
 
+            $srQty = 0;
+            $srFinalAmount = 0;
             // Sum the total price for services
             foreach ($services as $sr):
                 $cartIds[] = $sr['cartid'];
-                $data['cart_items'][] = [
-                    'id' => $sr['cartid'],
-                    'name' => $sr['test_name'],
-                    'type' => 'Service',
-                    'price' => $sr['price'],
-                    'quantity' => $sr['servicesqty']
-                ];
+                $srQty += $sr['servicesqty'];
+                $srFinalAmount += $sr['servicesqty'] * $sr['price'];
                 $finalAmount += $sr['servicesqty'] * $sr['price'];
             endforeach;
+            if ($srQty != 0) {
+                $data['cart_items'][] = [
+                    'id' => 2,
+                    'type' => 'Service',
+                    'price' => $srFinalAmount,
+                    'quantity' => $srQty
+                ];
+            }
 
+            $hrQty = 0;
+            $hrFinalAmount = 0;
             // Sum the total price for health risks
             foreach ($healthrisk as $hr):
                 $cartIds[] = $hr['cartid'];
-                $data['cart_items'][] = [
-                    'id' => $hr['cartid'],
-                    'name' => $hr['name'],
-                    'type' => 'Health Risk',
-                    'price' => $hr['price'],
-                    'quantity' => $hr['healthriskqty']
-                ];
+                $hrQty += $sr['servicesqty'];
+                $hrFinalAmount += $sr['servicesqty'] * $sr['price'];
                 $finalAmount += $hr['healthriskqty'] * $hr['price'];
             endforeach;
+            if ($hrQty != 0) {
+                $data['cart_items'][] = [
+                    'id' => 3,
+                    'type' => 'Health Risk',
+                    'price' => $hrFinalAmount,
+                    'quantity' => $hrQty
+                ];
+            }
 
             $data['grand_total'] = $finalAmount;
             $session->set('grand_total', $finalAmount);
