@@ -16,6 +16,14 @@ class Orders extends BaseController
         $this->cartItemsModel = new CartModel();
     }
 
+    public function ShowOrders()
+    {
+        $session = \Config\Services::session();
+        $data['orders'] = $this->ordersModel->getOrders($session->get('userId'));
+        echo json_encode($data);
+        // return view('quality/orders', $data);
+    }
+
     public function Success($userId)
     {
         $session = \Config\Services::session();
@@ -30,7 +38,7 @@ class Orders extends BaseController
                     $orderData = [
                         'payment_id' => $this->request->getPost('razorpay_payment_id'),
                         'user_id' => $user['id'],
-                        'cart_ids' => json_encode($session->get('cartIds')),
+                        'cart_ids' => json_encode($session->get('cart_ids')),
                         'details' => json_encode($session->get('formData')),
                         'status' => 1,
                         'total_amount' => $session->get('grand_total')
@@ -38,14 +46,17 @@ class Orders extends BaseController
 
                     // Insert order data into the database
                     $orderInsertResult = $this->ordersModel->insert($orderData);
-
                     if ($orderInsertResult) {
                         log_message('info', 'Order successfully inserted: ' . print_r($orderData, true));
-                        $cartIds = $session->get('cartIds');
+                        $cartIds = $session->get('cart_ids');
                         if (!empty($cartIds)) {
+                            $cartIdsData = [];
+                            foreach ($cartIds as $cartId => $value):
+                                $cartIdsData[] = $cartId;
+                            endforeach;
                             $this->cartItemsModel->updateBatchData(
                                 ['is_done' => 1],
-                                $cartIds
+                                $cartIdsData
                             );
                         }
                         return redirect()->to('/');

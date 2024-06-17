@@ -3,11 +3,13 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\OrdersModel;
 use App\Models\PackageModel;
 use App\Models\CategoryModel;
 use App\Models\HealthModel;
 use App\Models\ServiceModel;
 use App\Models\TestModel;
+use App\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -30,19 +32,22 @@ class Admin extends BaseController
     {
         $session = \Config\Services::session();
         $loginmodel = new Loginmodel();
+        $usermodel = new UserModel();
 
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
         $hashedpassword = md5($password);
-
+        echo $hashedpassword;
         $user = $loginmodel->where('username', $username)->first();
 
         if ($user && $user['password'] === $hashedpassword) {
             $session = session();
+
             $session->set([
                 'user_id' => $user['id'],
                 'username' => $user['username'],
                 'usertype' => $user['user_type'],
+                'userdata' => $usermodel->where('username', $user['username'])->first(),
                 'isLoggedIn' => true,
             ]);
 
@@ -74,13 +79,69 @@ class Admin extends BaseController
 
     public function admin_profile()
     {
+        $usermodel = new UserModel();
         $pack = new PackageModel();
         $data['pack'] = $pack->findAll();
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
         $data['health'] = $this->healthcate->getItems();
+        $data['userData'] = $usermodel->where('username', session()->get('username'))->first();
         return view('admin/admin_profile', $data);
+    }
+
+    public function updateuser()
+    {
+        // Retrieve POST data
+        $password = $this->request->getPost('password');
+        $firstName = $this->request->getPost('first_name');
+        $lastName = $this->request->getPost('last_name');
+        $phone = $this->request->getPost('phone');
+        $email = $this->request->getPost('email');
+        $address = $this->request->getPost('address');
+
+        $session = \Config\Services::session();
+        $userData = $session->get('userdata');
+        // Check if passwords match
+        if ($password != '') {
+            if ($password != ($userData['password'] ?? '')) {
+                $hashedPassword = md5($password);
+            } else {
+                $hashedPassword = $password;
+            }
+        } else {
+            $hashedPassword = $userData['password'];
+        }
+
+        // Prepare data for insertion
+        $userData = [
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'phone' => $phone,
+            'address' => $address,
+            'email' => $email,
+            'password' => $hashedPassword, // Store hashed password
+        ];
+
+        $lgData = [
+            'password' => $hashedPassword, // Store hashed password
+            'user_type' => 1,
+        ];
+        $userModal = new UserModel();
+        $lgtable = new LoginModel();
+        // Insert user data
+        $userInsertResult = $userModal->update($session->get('userdata')['id'], $userData);
+        if ($userInsertResult) {
+            $userData['id'] = $session->get('userdata')['id'];
+            $lgInsertResult = $lgtable->update($session->get('user_id'), $lgData);
+            $session->set(['userdata' => $userData]);
+            if ($lgInsertResult) {
+                return redirect()->to('admin/admin_profile')->with('success', "Update successfully completed");
+            } else {
+                return redirect()->to('admin/admin_profile')->with('blog-error', "Updating user Failed during login data insertion");
+            }
+        }
+        return redirect()->to('admin/admin_profile')->with('blog-error', "Updating user Failed during login data insertion");
     }
 
     public function coustmers()
@@ -91,8 +152,50 @@ class Admin extends BaseController
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
         $data['health'] = $this->healthcate->getItems();
+        $loginModel = new LoginModel();
+        $userModel = new UserModel();
+        $orders = new OrdersModel();
+        $loginUsers = $loginModel->where('user_type', 2)->findAll();
+        foreach ($loginUsers as &$loginUser) {
+            $loginUser['userData'] = $userModel->where('email', $loginUser['username'])->first();
+            if ($loginUser['userData']) {
+                $loginUser['orders'] = $orders->getOrders($loginUser['userData']['id']);
+            } else {
+                $loginUser['orders'] = [];
+            }
+        }
+        $data['customers'] = $loginUsers;
         return view('admin/coustmers', $data);
     }
+
+    public function cutsomersOrders($userId)
+    {
+        $pack = new PackageModel();
+        $data['pack'] = $pack->findAll();
+        $cate = new CategoryModel();
+        $data['cate'] = $cate->findAll();
+        $data['service'] = $this->service->findAll();
+        $data['health'] = $this->healthcate->getItems();
+        $loginModel = new LoginModel();
+        $userModel = new UserModel();
+        $ordersModel = new OrdersModel();
+        $userData = $userModel->where('id', $userId)->first();
+        if ($userData) {
+            $orders = $ordersModel->getOrders($userData['id']);
+        } else {
+            $orders = [];
+        }
+        $data['orders'] = $orders;
+        return view('admin/orders', $data);
+    }
+
+    public function orders()
+    {
+        $orders = new OrdersModel();
+        $data['orders'] = $orders->getAllOrders();
+        return view('admin/orders', $data);
+    }
+
     public function info()
     {
         $pack = new PackageModel();
@@ -140,7 +243,7 @@ class Admin extends BaseController
         $cate = new CategoryModel();
         $data['cate'] = $cate->findAll();
         $data['service'] = $this->service->findAll();
-        return view('admin/packages',  $data);
+        return view('admin/packages', $data);
     }
 
     public function add_package()
@@ -189,7 +292,7 @@ class Admin extends BaseController
 
     public function update_data()
     {
-        $package = new  PackageModel();
+        $package = new PackageModel();
 
         $id = $this->request->getPost('pack_id');
 
@@ -210,11 +313,11 @@ class Admin extends BaseController
 
     public function delete($id)
     {
-        $package = new  PackageModel();
+        $package = new PackageModel();
         $cate = new CategoryModel();
         $test = new TestModel();
 
-        $data2 = $package->where('id',$id)->delete();
+        $data2 = $package->where('id', $id)->delete();
         $date3 = $cate->where('Package', $id)->delete();
         $data4 = $test->where('package_id', $id)->delete();
 

@@ -49,8 +49,10 @@ class OtpController extends BaseController
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
             $mail->SMTPAuth = true;
-            $mail->Username = 'youremail@gmail.com'; // SMTP username
-            $mail->Password = 'yourpassword'; // SMTP password
+            // $mail->Username = 'koyiladavignesh@gmail.com'; // SMTP username
+            $mail->Username = config('Email')->SMTPUser; // SMTP username
+            // $mail->Password = 'bofigeusuhftespu'; // SMTP password
+            $mail->Password = config('Email')->SMTPPass; // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 

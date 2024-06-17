@@ -17,7 +17,7 @@
     $error = session('blog-error');
     $success = session('success');
     ?>
-    <?php if (!empty($error)) : ?>
+    <?php if (!empty($error)): ?>
         <div class="alert alert-danger">
             <?php
             // Check if $error is an array
@@ -31,7 +31,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <?php if (!empty($success)) : ?>
+    <?php if (!empty($success)): ?>
         <div class="alert alert-success">
             <?= $success ?>
         </div>
@@ -44,7 +44,8 @@
                         <div class="card-stats">
                             <div class="card-stats-title">Order Statistics -
                                 <div class="dropdown d-inline">
-                                    <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
+                                    <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#"
+                                        id="orders-month">August</a>
                                     <ul class="dropdown-menu dropdown-menu-sm">
                                         <li class="dropdown-title">Select Month</li>
                                         <li><a href="#" class="dropdown-item">January</a></li>
@@ -156,7 +157,8 @@
                         <div class="card-body" id="top-5-scroll">
                             <ul class="list-unstyled list-unstyled-border">
                                 <li class="media">
-                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png"
+                                        alt="product">
                                     <div class="media-body">
                                         <div class="float-right">
                                             <div class="font-weight-600 text-muted text-small">86 Sales</div>
@@ -175,7 +177,8 @@
                                     </div>
                                 </li>
                                 <li class="media">
-                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-4-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-4-50.png"
+                                        alt="product">
                                     <div class="media-body">
                                         <div class="float-right">
                                             <div class="font-weight-600 text-muted text-small">67 Sales</div>
@@ -194,7 +197,8 @@
                                     </div>
                                 </li>
                                 <li class="media">
-                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-1-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-1-50.png"
+                                        alt="product">
                                     <div class="media-body">
                                         <div class="float-right">
                                             <div class="font-weight-600 text-muted text-small">63 Sales</div>
@@ -213,7 +217,8 @@
                                     </div>
                                 </li>
                                 <li class="media">
-                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png"
+                                        alt="product">
                                     <div class="media-body">
                                         <div class="float-right">
                                             <div class="font-weight-600 text-muted text-small">28 Sales</div>
@@ -232,7 +237,8 @@
                                     </div>
                                 </li>
                                 <li class="media">
-                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-5-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="55" src="assets/img/products/product-5-50.png"
+                                        alt="product">
                                     <div class="media-body">
                                         <div class="float-right">
                                             <div class="font-weight-600 text-muted text-small">19 Sales</div>
@@ -541,7 +547,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 <script>
 
 </script>

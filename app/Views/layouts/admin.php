@@ -107,6 +107,9 @@
                                 <li class="">
                                     <a href="<?= base_url() ?>admin/coustmers" class="nav-link n"><i class="fas fa-users"></i><span>Customers</span></a>
                                 </li>
+                                <!-- <li class="">
+                                    <a href="<?= base_url() ?>admin/orders" class="nav-link n"><i class="fas fa-users"></i><span>Orders</span></a>
+                                </li> -->
 
                                 <li class="menu-header">Packages</li>
                                 <?php if (isset($pack)) :

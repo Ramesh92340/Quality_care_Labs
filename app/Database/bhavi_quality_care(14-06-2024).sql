@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2024 at 10:35 AM
+-- Generation Time: Jun 14, 2024 at 08:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -299,9 +299,24 @@ CREATE TABLE `lgtable` (
 --
 
 INSERT INTO `lgtable` (`id`, `username`, `password`, `user_type`) VALUES
-(1, 'rajkumar', '6e46595a57e6d7219340d2c163273ab9', 1),
-(2, 'raj', 'e10adc3949ba59abbe56e057f20f883e', 2),
-(3, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2);
+(1, 'qualitycare', '81dc9bdb52d04dc20036dbd8313ed055', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `cart_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`cart_ids`)),
+  `details` text NOT NULL,
+  `payment_id` text DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `total_amount` double NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -1540,7 +1555,8 @@ CREATE TABLE `user_details` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `address` text DEFAULT NULL,
-  `phone` int(11) NOT NULL,
+  `username` text NOT NULL,
+  `phone` bigint(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -1550,26 +1566,8 @@ CREATE TABLE `user_details` (
 -- Dumping data for table `user_details`
 --
 
-INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `phone`, `address`, `email`, `password`, `created_at`) VALUES
-(1, 'raj', '', 2147483647, NULL, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-24 17:09:15'),
-(2, 'raj', '', 2147483647, NULL, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
-
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `cart_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`cart_ids`)),
-  `details` text NOT NULL,
-  `payment_id` text DEFAULT NULL,
-  `status` tinyint(1) NOT NULL,
-  `total_amount` double NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `address`, `username`, `phone`, `email`, `password`, `created_at`) VALUES
+(1, 'test', 'test', '', 'qualitycare', 99999999999, 'test@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2024-06-14 05:49:56');
 
 --
 -- Indexes for dumped tables
@@ -1579,12 +1577,6 @@ CREATE TABLE `orders` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1621,6 +1613,13 @@ ALTER TABLE `healthrisk_packs`
 -- Indexes for table `lgtable`
 --
 ALTER TABLE `lgtable`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1652,7 +1651,8 @@ ALTER TABLE `tests`
 -- Indexes for table `user_details`
 --
 ALTER TABLE `user_details`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1677,13 +1677,6 @@ ALTER TABLE `department`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-COMMIT;
-
---
 -- AUTO_INCREMENT for table `healthrisks`
 --
 ALTER TABLE `healthrisks`
@@ -1705,7 +1698,13 @@ ALTER TABLE `healthrisk_packs`
 -- AUTO_INCREMENT for table `lgtable`
 --
 ALTER TABLE `lgtable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `packages`
@@ -1735,7 +1734,7 @@ ALTER TABLE `tests`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

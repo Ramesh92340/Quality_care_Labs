@@ -450,13 +450,12 @@ class Home extends BaseController
             $data = [];
 
             $finalAmount = 0;
-            $cartIds = [];
 
             $pkgQty = 0;
             $pkgFinalAmount = 0;
             // Sum the total price for packages
             foreach ($packages as $pkg):
-                $cartIds[] = $pkg['cartid'];
+                $cartIds[$pkg['cartid']] = $pkg['packagesqty'] * $pkg['package_price'];
                 $pkgQty += $pkg['packagesqty'];
                 $finalAmount += $pkg['packagesqty'] * $pkg['package_price'];
                 $pkgFinalAmount += $pkg['packagesqty'] * $pkg['package_price'];
@@ -474,7 +473,7 @@ class Home extends BaseController
             $srFinalAmount = 0;
             // Sum the total price for services
             foreach ($services as $sr):
-                $cartIds[] = $sr['cartid'];
+                $cartIds[$sr['cartid']] = $sr['servicesqty'] * $sr['price'];
                 $srQty += $sr['servicesqty'];
                 $srFinalAmount += $sr['servicesqty'] * $sr['price'];
                 $finalAmount += $sr['servicesqty'] * $sr['price'];
@@ -492,9 +491,9 @@ class Home extends BaseController
             $hrFinalAmount = 0;
             // Sum the total price for health risks
             foreach ($healthrisk as $hr):
-                $cartIds[] = $hr['cartid'];
-                $hrQty += $sr['servicesqty'];
-                $hrFinalAmount += $sr['servicesqty'] * $sr['price'];
+                $cartIds[$hr['cartid']] = $hr['healthriskqty'] * $hr['price'];
+                $hrQty += $hr['healthriskqty'];
+                $hrFinalAmount += $hr['healthriskqty'] * $hr['price'];
                 $finalAmount += $hr['healthriskqty'] * $hr['price'];
             endforeach;
             if ($hrQty != 0) {
@@ -512,7 +511,6 @@ class Home extends BaseController
             return view('quality/checkout', $data);
         }
     }
-
 
     public function addUserDetailsToSession()
     {

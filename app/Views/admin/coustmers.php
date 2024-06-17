@@ -24,30 +24,34 @@
                         <thead>
                             <tr>
                                 <th class="text-center">S.No</th>
-                                <th class="text-center">Name</th>
+                                <th class="text-center">First Name</th>
+                                <th class="text-center">Last Name</th>
                                 <th class="text-center">Phone</th>
-                                <th class="text-center">Quantity</th>
-                                <th class="text-center">Total Price</th>
-                                <th class="text-center">Time</th>
                                 <th class="text-center">Info</th>
                             </tr>
                         </thead>
 
-                        
+
                         <tbody>
-                            <tr>
-
-
-                                <td class="text-center">1</td>
-                                <td>rahul</td>
-                                <td class="text-center">9988989999</td>
-                                <td class="text-center">6</td>
-                                <td class="text-center">6000</td>
-                                <td class="text-center">22/05/2024</td>
-                                <td class="text-center"><a href="<?= base_url() ?>admin/info"><i class="fas fa-eye"></i></a> </td>
-
-
-                            </tr>
+                            <?php if (isset($customers) && !empty($customers)): ?>
+                                <?php $i = 1; ?>
+                                <?php foreach ($customers as $customer): ?>
+                                    <tr>
+                                        <td class="text-center"><?php echo $i; ?></td>
+                                        <td><?php echo $customer['userData']['first_name'] ?? '' ?></td>
+                                        <td><?php echo $customer['userData']['last_name'] ?? '' ?></td>
+                                        <td class="text-center"><?php echo $customer['userData']['phone'] ?? '' ?></td>
+                                        <td class="text-center">
+                                            <?php if ($customer['userData']['id']): ?>
+                                                <a href="<?= base_url() ?>admin/coustmers/<?= $customer['userData']['id'] ?>"><i
+                                                        class="fas fa-eye"></i>
+                                                </a>
+                                            <?php endif ?>
+                                        </td>
+                                    </tr>
+                                    <?php $i++; ?>
+                                <?php endforeach ?>
+                            <?php endif ?>
                         </tbody>
 
                     </table>

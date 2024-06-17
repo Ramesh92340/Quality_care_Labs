@@ -505,7 +505,7 @@
                         },
                         success: function (response) {
                             if (response.trim() === 'Password reset successfully.') {
-                                document.getElementsByClassName('modal')[0].style.display = 'none';
+                                document.getElementsById('staticBackdrop')[0].style.display = 'none';
                             } else {
                                 document.getElementsByClassName('modal')[0].style.display = 'none';
                             }

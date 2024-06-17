@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2024 at 02:43 PM
+-- Generation Time: Jun 12, 2024 at 10:14 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,10 +35,22 @@ CREATE TABLE `cart` (
   `packagesqty` int(11) DEFAULT NULL,
   `minipackages` int(11) DEFAULT NULL,
   `minipackagesqty` int(11) DEFAULT NULL,
+  `healthrisk` int(11) DEFAULT NULL,
+  `healthriskqty` int(11) DEFAULT NULL,
   `user` int(11) NOT NULL,
   `createdat` timestamp NOT NULL DEFAULT current_timestamp(),
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `is_done` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `services`, `servicesqty`, `packages`, `packagesqty`, `minipackages`, `minipackagesqty`, `healthrisk`, `healthriskqty`, `user`, `createdat`, `status`, `is_done`) VALUES
+(1, NULL, NULL, 12, 2, NULL, NULL, NULL, NULL, 2, '2024-06-10 11:13:32', 1, 1),
+(2, 597, 1, NULL, NULL, NULL, NULL, NULL, NULL, 2, '2024-06-12 20:03:10', 1, 0),
+(3, 598, 1, NULL, NULL, NULL, NULL, NULL, NULL, 2, '2024-06-12 20:03:12', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -287,15 +299,52 @@ INSERT INTO `healthrisk_packs` (`id`, `name`, `price`, `parameters`, `health_id`
 CREATE TABLE `lgtable` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `user_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lgtable`
 --
 
-INSERT INTO `lgtable` (`id`, `username`, `password`) VALUES
-(1, 'rajkumar', '6e46595a57e6d7219340d2c163273ab9');
+INSERT INTO `lgtable` (`id`, `username`, `password`, `user_type`) VALUES
+(1, 'rajkumar', '81dc9bdb52d04dc20036dbd8313ed055', 1),
+(2, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', 2),
+(3, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `cart_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`cart_ids`)),
+  `details` text NOT NULL,
+  `payment_id` text DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `total_amount` double NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `cart_ids`, `details`, `payment_id`, `status`, `total_amount`, `created_at`) VALUES
+(1, 2, '{\"1\":99}', '{\"first_name\":\"raj\",\"last_name\":\"test\",\"company_name\":\"raj\",\"address\":\"test\",\"apartment\":\"test\",\"town\":\"test\",\"state\":\"test\",\"pincode\":\"test\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OL2PDxRKyj1t9G', 1, 999, '2024-06-10 16:45:07'),
+(2, 2, '{\"1\":999}', '{\"first_name\":\"raj\",\"last_name\":\"dxfcgvh\",\"company_name\":\"fdxcgvhbj\",\"address\":\"dfxcgvhbj\",\"apartment\":\"fdxcghbj\",\"town\":\"fdcghj\",\"state\":\"dfxcghj\",\"pincode\":\"fgcvhbjk\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyJ0NtN9OIaKr', 1, 999, '2024-06-13 01:24:03'),
+(3, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dxfghj\",\"company_name\":\"fdxcghj\",\"address\":\"fdxcg\",\"apartment\":\"hjfdxgc\",\"town\":\"hjfdxcghj\",\"state\":\"dfxcgh\",\"pincode\":\"fdxcghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyOLufVcdKo3p', 1, 1998, '2024-06-13 01:29:07'),
+(4, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:30:20'),
+(5, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:30:36'),
+(6, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:30:47'),
+(7, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:30:56'),
+(8, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:31:09'),
+(9, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:31:50'),
+(10, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:31:58'),
+(11, 2, '{\"1\":1998}', '{\"first_name\":\"raj\",\"last_name\":\"dfxgh\",\"company_name\":\"dfxcgh\",\"address\":\"jfdxcgh\",\"apartment\":\"jfdcgh\",\"town\":\"jfdxgch\",\"state\":\"jfghj\",\"pincode\":\"fghj\",\"email\":\"raj@gmail.com\",\"phone\":\"2147483647\",\"ajax\":\"true\"}', 'pay_OLyPdytQ1UeddY', 1, 1998, '2024-06-13 01:32:18');
 
 -- --------------------------------------------------------
 
@@ -1523,6 +1572,33 @@ INSERT INTO `tests` (`id`, `test_name`, `package_id`, `category_id`, `created_at
 (472, '% TRANSFERRIN SATURATION', 16, 71, '2024-05-11 11:52:22'),
 (473, 'ERYTHROCYTE SEDIMENTATION RATE (ESR)', 16, 72, '2024-05-11 11:52:40');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_details`
+--
+
+CREATE TABLE `user_details` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `address` text DEFAULT NULL,
+  `username` text NOT NULL,
+  `phone` bigint(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_details`
+--
+
+INSERT INTO `user_details` (`id`, `first_name`, `last_name`, `address`, `username`, `phone`, `email`, `password`, `created_at`) VALUES
+(1, 'raj', 'cfgvhbj', NULL, '', 2147483647, 'raj@gmail.cm', 'e10adc3949ba59abbe56e057f20f883e', '2024-06-12 17:26:35'),
+(2, 'raj', '', NULL, '', 2147483647, 'raj@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2024-05-22 08:10:24'),
+(3, 'Rajcfgvhbjfcgvhbj', 'Kumarfgvhbjn', 'dfcgvhbjnk', 'rajkumar', 9876567898, 'raj@gmail.com9876', '81dc9bdb52d04dc20036dbd8313ed055', '2024-06-12 17:16:05');
+
 --
 -- Indexes for dumped tables
 --
@@ -1570,6 +1646,12 @@ ALTER TABLE `lgtable`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `packages`
 --
 ALTER TABLE `packages`
@@ -1595,6 +1677,12 @@ ALTER TABLE `tests`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_details`
+--
+ALTER TABLE `user_details`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1602,7 +1690,7 @@ ALTER TABLE `tests`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -1638,7 +1726,13 @@ ALTER TABLE `healthrisk_packs`
 -- AUTO_INCREMENT for table `lgtable`
 --
 ALTER TABLE `lgtable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `packages`
@@ -1663,6 +1757,12 @@ ALTER TABLE `services`
 --
 ALTER TABLE `tests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=474;
+
+--
+-- AUTO_INCREMENT for table `user_details`
+--
+ALTER TABLE `user_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

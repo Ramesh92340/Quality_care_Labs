@@ -49,8 +49,11 @@ $routes->get('admin/admin_profile', 'Admin::admin_profile');
 
 $routes->get('login', 'Admin');
 $routes->post('login_dashboard', 'Admin::login');
+$routes->post('admin/admin-update', 'Admin::updateuser');
 $routes->get('admin/dashboard', 'Admin::dashboard');
 $routes->get('admin/coustmers', 'Admin::coustmers');
+$routes->get('admin/coustmers/(:num)', 'Admin::cutsomersOrders/$1');
+$routes->get('admin/orders', 'Admin::orders');
 $routes->get('admin/info', 'Admin::info');
 $routes->get('admin/cust_services', 'Admin::cust_services');
 $routes->get('admin/cust_packages', 'Admin::cust_packages');
